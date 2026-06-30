@@ -1,0 +1,58 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# ── Virtual envs ──
+.venv/
+venv/
+env/
+ENV/
+
+# ── Env / secrets ──
+.env
+.env.*
+!.env.example
+
+# ── Test / coverage ──
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.cache/
+
+# ── Type checkers / linters ──
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# ── ML model weights / datasets (registry는 .gitkeep만 추적) ──
+app/models_registry/**/*.pt
+app/models_registry/**/*.pth
+app/models_registry/**/*.onnx
+app/models_registry/**/*.h5
+app/models_registry/**/*.pb
+app/models_registry/**/*.tflite
+app/models_registry/**/*.bin
+app/models_registry/**/*.safetensors
+training/dataset/**
+!training/dataset/.gitkeep
+*.ckpt
+runs/
+wandb/
+mlruns/
+
+# ── IDE / OS ──
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

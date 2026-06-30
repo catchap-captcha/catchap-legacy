@@ -32,7 +32,6 @@ interface ServiceIntroProps {
  */
 export default function ServiceIntro({
   logoSrc = logo,
-  onSeeExample,
 }: ServiceIntroProps) {
   return (
     <div

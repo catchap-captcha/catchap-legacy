@@ -6,9 +6,9 @@ const NAVY = "#1e3a5f";
 const FONT = "'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif";
 
 const NAV = [
-  { label: "서비스 소개", href: "/Service", active: false },
-  { label: "학교·기관 안내", href: "/schoolpage", active: true },
-  { label: "로그인", href: "/login", active: false },
+  { label: "서비스 소개", to: "/about", active: false },
+  { label: "학교·기관 안내", to: "/orgintro", active: true },
+  { label: "로그인", to: "/login", active: false },
 ];
 
 const CARDS = [
@@ -58,7 +58,7 @@ export default function SchoolPage({
             gap: 24,
           }}
         >
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+        <Link to="/main" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
         <img
             src={logoSrc}
             alt="캣챱 로고"
@@ -76,9 +76,9 @@ export default function SchoolPage({
 
           <nav className="cc-nav" style={{ display: "flex", alignItems: "center", gap: 6, marginLeft: -100 }}>
             {NAV.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.to}
                 style={{
                   padding: "8px 16px",
                   borderRadius: 999,
@@ -90,7 +90,7 @@ export default function SchoolPage({
                 }}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

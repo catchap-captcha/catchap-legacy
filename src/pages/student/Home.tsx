@@ -1,194 +1,591 @@
+import { useNavigate } from 'react-router-dom'
+import logo from '../../assets/images/logo.png'
+
 interface NavItem {
   icon: string;
   label: string;
   active: boolean;
 }
 
+const NAV_PATH: Record<string, string> = {
+  "홈": "/student/home",
+  "놀이": "/student/pick-play",
+  "모으기": "/student/stickers",
+  "나": "/student/profile",
+};
+
 const NAV: NavItem[] = [
-  { icon: "🏠", label: "홈", active: false },
-  { icon: "🧩", label: "놀이", active: true },
+  { icon: "🏠", label: "홈", active: true },
+  { icon: "🧩", label: "놀이", active: false },
   { icon: "⭐", label: "모으기", active: false },
   { icon: "🐱", label: "나", active: false },
 ];
 
+const TAGS = ["⏱ 3분", "📊 쉬움", "⭐ 별 2개 지급"];
+const PROBLEM_TAGS = ["예상 시간 5분", "난이도 보통"];
+
 export default function StudentHome() {
+  const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-[#eef0ee] font-sans text-slate-700 antialiased">
+    <div
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        background: "#eef0ee",
+        fontFamily:
+          "'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif",
+        color: "#334155",
+        WebkitFontSmoothing: "antialiased",
+        boxSizing: "border-box",
+      }}
+    >
       {/* HEADER */}
-      <header className="flex h-21 items-center justify-between bg-gradient-to-r from-[#5f9e87] to-[#9ec3b4] px-9 py-5">
-        <div className="flex items-baseline gap-2.5">
-          <span className="text-[28px] font-extrabold tracking-tight text-white">캣챱</span>
-          <span className="text-[15px] font-semibold text-emerald-50">Catchap</span>
+      <header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "20px 36px",
+          background:
+            "linear-gradient(to right, #5f9e87, #9ec3b4)",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <img
+            src={logo}
+            alt="캣챱 로고"
+            style={{ width: 38, height: 38, display: "block" }}
+          />
+          <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+            <span style={{ fontSize: 28, fontWeight: 800, color: "#fff", letterSpacing: "-0.5px" }}>
+              캣챱
+            </span>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#ecfdf5" }}>
+              Catchap
+            </span>
+          </div>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="text-[22px]">🐱</span>
-          <span className="text-[17px] font-extrabold text-white">토리</span>
-          <span className="rounded-full bg-white/20 px-3.5 py-1.5 text-[13px] font-bold text-white">
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span style={{ fontSize: 22 }}>🐱</span>
+          <span style={{ fontSize: 17, fontWeight: 800, color: "#fff" }}>토리</span>
+          <span
+            style={{
+              borderRadius: 999,
+              background: "rgba(255,255,255,0.2)",
+              padding: "6px 14px",
+              fontSize: 13,
+              fontWeight: 700,
+              color: "#fff",
+            }}
+          >
             별님반·유치원
           </span>
         </div>
       </header>
 
       {/* BODY: 3열 */}
-      <div className="mx-auto grid max-w-[1840px] grid-cols-[200px_1fr_380px] items-start gap-7 px-9 pb-12 pt-7">
+      <div
+        style={{
+          width: "100%",
+          boxSizing: "border-box",
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "200px 1fr 380px",
+          alignItems: "start",
+          gap: 28,
+          padding: "28px 36px 48px",
+        }}
+      >
         {/* 좌측 사이드바 */}
-        <aside className="flex min-h-[760px] flex-col gap-2.5 rounded-[20px] bg-white p-[22px_14px] shadow-sm">
+        <aside
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+            minHeight: 760,
+            borderRadius: 20,
+            background: "#fff",
+            padding: "22px 14px",
+            boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+          }}
+        >
           {NAV.map((it) => (
             <div
               key={it.label}
-              className={`flex cursor-pointer flex-col items-center gap-1.5 rounded-2xl px-2 py-[18px] ${
-                it.active ? "bg-[#e3f3ea] text-[#3d9d70]" : "text-slate-500"
-              }`}
+              onClick={() => navigate(NAV_PATH[it.label])}
+              style={{
+                display: "flex",
+                cursor: "pointer",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 6,
+                borderRadius: 16,
+                padding: "18px 8px",
+                background: it.active ? "#e3f3ea" : "transparent",
+                color: it.active ? "#3d9d70" : "#64748b",
+              }}
             >
-              <span className="text-[28px]">{it.icon}</span>
-              <span className="text-sm font-bold">{it.label}</span>
+              <span style={{ fontSize: 28 }}>{it.icon}</span>
+              <span style={{ fontSize: 14, fontWeight: 700 }}>{it.label}</span>
             </div>
           ))}
         </aside>
 
         {/* 중앙 메인 */}
-        <main className="flex flex-col gap-[22px]">
+        <main style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           {/* 인사 카드 */}
-          <div className="rounded-[18px] bg-white px-7 py-6 shadow-sm">
-            <h1 className="mb-2 text-[22px] font-extrabold text-slate-700">
+          <div
+            style={{
+              borderRadius: 18,
+              background: "#fff",
+              padding: "24px 28px",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+              textAlign: "left",
+            }}
+          >
+            <h1 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800, color: "#334155" }}>
               별님반 토리야, 오늘도 반가워!
             </h1>
-            <p className="text-sm text-slate-400">오늘도 즐겁게 놀면서 실력을 키워보자!</p>
+            <p style={{ margin: 0, fontSize: 14, color: "#94a3b8" }}>
+              오늘도 즐겁게 놀면서 실력을 키워보자!
+            </p>
           </div>
 
           {/* 추천 놀이 배너 */}
-          <div className="relative flex min-h-[360px] flex-col overflow-hidden rounded-[22px] bg-gradient-to-br from-[#6f8fd6] via-[#7d7fcf] to-[#8aa0db] px-10 py-9">
-            <div className="pointer-events-none absolute -right-10 -top-10 rotate-[-12deg] text-[240px] opacity-10">
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              minHeight: 360,
+              overflow: "hidden",
+              borderRadius: 22,
+              background: "linear-gradient(135deg, #6f8fd6, #7d7fcf, #8aa0db)",
+              padding: "36px 40px",
+              textAlign: "left",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                right: -40,
+                top: -40,
+                transform: "rotate(-12deg)",
+                fontSize: 240,
+                opacity: 0.1,
+                pointerEvents: "none",
+              }}
+            >
               🐟
             </div>
 
-            <span className="relative self-start rounded-full bg-[#4caf82] px-3.5 py-1.5 text-[13px] font-extrabold text-white">
+            <span
+              style={{
+                position: "relative",
+                alignSelf: "flex-start",
+                borderRadius: 999,
+                background: "#4caf82",
+                padding: "6px 14px",
+                fontSize: 13,
+                fontWeight: 800,
+                color: "#fff",
+              }}
+            >
               오늘의 추천 놀이
             </span>
-            <h2 className="relative mb-2.5 mt-[18px] text-[46px] font-extrabold tracking-tight text-white">
+            <h2
+              style={{
+                position: "relative",
+                margin: "18px 0 10px",
+                fontSize: 46,
+                fontWeight: 800,
+                letterSpacing: "-1px",
+                color: "#fff",
+              }}
+            >
               생선 세기 놀이
             </h2>
-            <p className="relative mb-[18px] text-base text-indigo-50">
+            <p style={{ position: "relative", margin: "0 0 18px", fontSize: 16, color: "#eef2ff" }}>
               그림을 보고 물고기를 세어 보자!
             </p>
-            <div className="relative flex gap-2.5">
-              {["⏱ 3분", "📊 쉬움", "⭐ 별 2개 지급"].map((t) => (
+            <div style={{ position: "relative", display: "flex", gap: 10 }}>
+              {TAGS.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full bg-white/90 px-3.5 py-2 text-[13px] font-bold text-slate-500"
+                  style={{
+                    borderRadius: 999,
+                    background: "rgba(255,255,255,0.9)",
+                    padding: "8px 14px",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    color: "#64748b",
+                  }}
                 >
                   {t}
                 </span>
               ))}
             </div>
-            <div className="relative mt-[18px] flex flex-1 items-end justify-center">
-              <button className="flex items-center gap-2.5 rounded-2xl bg-gradient-to-br from-[#74c79b] to-[#5fae84] px-10 py-[18px] text-xl font-extrabold text-white shadow-lg shadow-emerald-700/30">
-                놀이 시작하기 <span className="text-base">▶</span>
+            <div
+              style={{
+                position: "relative",
+                marginTop: 18,
+                display: "flex",
+                flex: 1,
+                alignItems: "flex-end",
+                justifyContent: "center",
+              }}
+            >
+              <button
+                onClick={() => navigate('/student/play-start')}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  borderRadius: 16,
+                  border: "none",
+                  background: "linear-gradient(135deg, #74c79b, #5fae84)",
+                  padding: "18px 40px",
+                  fontSize: 20,
+                  fontWeight: 800,
+                  color: "#fff",
+                  cursor: "pointer",
+                  boxShadow: "0 10px 25px rgba(16,80,50,0.3)",
+                  fontFamily: "inherit",
+                }}
+              >
+                놀이 시작하기 <span style={{ fontSize: 16 }}>▶</span>
               </button>
             </div>
           </div>
 
           {/* AI 추천 문제 */}
-          <div className="rounded-[18px] bg-white px-7 py-6 shadow-sm">
-            <div className="mb-[18px] flex items-center gap-2.5">
-              <h3 className="text-[19px] font-extrabold text-slate-700">토리를 위한 추천 문제</h3>
-              <span className="rounded-full bg-[#7c3aed] px-3 py-1 text-xs font-extrabold text-white">
+          <div
+            style={{
+              borderRadius: 18,
+              background: "#fff",
+              padding: "24px 28px",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+              textAlign: "left",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
+              <h3 style={{ margin: 0, fontSize: 19, fontWeight: 800, color: "#334155" }}>
+                토리를 위한 추천 문제
+              </h3>
+              <span
+                style={{
+                  borderRadius: 999,
+                  background: "#7c3aed",
+                  padding: "4px 12px",
+                  fontSize: 12,
+                  fontWeight: 800,
+                  color: "#fff",
+                }}
+              >
                 AI
               </span>
             </div>
-            <div className="flex items-center gap-5">
-              <div className="flex h-[74px] w-[108px] flex-shrink-0 items-center justify-center gap-[18px] rounded-[14px] bg-[#cfe5fb] text-[26px] font-extrabold text-[#2f6fb0]">
+            <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexShrink: 0,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 18,
+                  width: 108,
+                  height: 74,
+                  borderRadius: 14,
+                  background: "#cfe5fb",
+                  fontSize: 26,
+                  fontWeight: 800,
+                  color: "#2f6fb0",
+                }}
+              >
                 <span>3</span>
                 <span>7</span>
               </div>
-              <div className="flex-1">
-                <h4 className="mb-1.5 text-base font-extrabold text-slate-700">수 세기 연습 문제</h4>
-                <p className="mb-2.5 text-sm text-slate-400">
+              <div style={{ flex: 1 }}>
+                <h4 style={{ margin: "0 0 6px", fontSize: 16, fontWeight: 800, color: "#334155" }}>
+                  수 세기 연습 문제
+                </h4>
+                <p style={{ margin: "0 0 10px", fontSize: 14, color: "#94a3b8" }}>
                   6~10까지의 수를 정확히 세는 연습을 해봐요.
                 </p>
-                <div className="flex gap-2">
-                  {["예상 시간 5분", "난이도 보통"].map((t) => (
+                <div style={{ display: "flex", gap: 8 }}>
+                  {PROBLEM_TAGS.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-[#f1ecfd] px-3 py-[5px] text-xs font-bold text-[#7c3aed]"
+                      style={{
+                        borderRadius: 999,
+                        background: "#f1ecfd",
+                        padding: "5px 12px",
+                        fontSize: 12,
+                        fontWeight: 700,
+                        color: "#7c3aed",
+                      }}
                     >
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
-              <button className="flex-shrink-0 rounded-xl bg-[#7c3aed] px-[22px] py-3.5 text-sm font-extrabold text-white">
+              <button
+                onClick={() => navigate('/student/recommend')}
+                style={{
+                  flexShrink: 0,
+                  borderRadius: 12,
+                  border: "none",
+                  background: "#7c3aed",
+                  padding: "14px 22px",
+                  fontSize: 14,
+                  fontWeight: 800,
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                }}
+              >
                 추천 문제 풀기 ▶
               </button>
             </div>
           </div>
 
           {/* 지난 기록 */}
-          <div className="mt-1.5 flex justify-center">
-            <button className="rounded-full bg-white px-[22px] py-[11px] text-sm font-bold text-slate-400 shadow-sm">
+          <div style={{ marginTop: 6, display: "flex", justifyContent: "center" }}>
+            <button
+              onClick={() => navigate('/student/history')}
+              style={{
+                marginLeft: 200,
+                borderRadius: 999,
+                border: "none",
+                background: "#fff",
+                padding: "11px 22px",
+                fontSize: 14,
+                fontWeight: 700,
+                color: "#94a3b8",
+                cursor: "pointer",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+                fontFamily: "inherit",
+              }}
+            >
               ⟳ 지난 기록 보기
             </button>
           </div>
         </main>
 
         {/* 우측 사이드 패널 */}
-        <aside className="flex flex-col gap-5">
+        <aside style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {/* 오늘 목표 */}
-          <div className="flex items-center gap-4 rounded-[18px] bg-[#fbf3df] px-6 py-5">
-            <span className="whitespace-nowrap text-sm font-extrabold text-[#b07e2e]">오늘 목표</span>
-            <span className="text-xl tracking-widest text-[#e0c074]">☆☆</span>
-            <span className="text-[13px] font-bold text-[#9b7b3e]">별 2개 더 모으면 스티커 선물!</span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+              borderRadius: 18,
+              background: "#fbf3df",
+              padding: "20px 24px",
+              textAlign: "left",
+            }}
+          >
+            <span style={{ whiteSpace: "nowrap", fontSize: 14, fontWeight: 800, color: "#b07e2e" }}>
+              오늘 목표
+            </span>
+            <span style={{ fontSize: 20, letterSpacing: "0.2em", color: "#e0c074" }}>☆☆</span>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#9b7b3e" }}>
+              별 2개 더 모으면 스티커 선물!
+            </span>
           </div>
 
           {/* 놀이 고르기 */}
-          <div className="rounded-[18px] bg-white px-6 py-[22px] shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="h-12 w-12 flex-shrink-0 rounded-[14px] bg-[#d8ede2]" />
-              <div className="flex-1">
-                <h4 className="mb-1 text-[17px] font-extrabold text-slate-700">놀이 고르기</h4>
-                <p className="text-[13px] text-slate-400">새로운 놀이를 선택해보자!</p>
+          <div
+            style={{
+              borderRadius: 18,
+              background: "#fff",
+              padding: "22px 24px",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+              textAlign: "left",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <div
+                style={{
+                  flexShrink: 0,
+                  width: 48,
+                  height: 48,
+                  borderRadius: 14,
+                  background: "#d8ede2",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 24,
+                }}
+              >
+                🧩
               </div>
-              <button className="h-[42px] w-[42px] flex-shrink-0 rounded-full bg-[#4caf82] text-lg text-white">
+              <div style={{ flex: 1 }}>
+                <h4 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 800, color: "#334155" }}>
+                  놀이 고르기
+                </h4>
+                <p style={{ margin: 0, fontSize: 13, color: "#94a3b8" }}>
+                  새로운 놀이를 선택해보자!
+                </p>
+              </div>
+              <button
+                onClick={() => navigate('/student/pick-play')}
+                style={{
+                  flexShrink: 0,
+                  width: 42,
+                  height: 42,
+                  borderRadius: 999,
+                  border: "none",
+                  background: "#4caf82",
+                  fontSize: 18,
+                  color: "#fff",
+                  cursor: "pointer",
+                }}
+              >
                 ›
               </button>
             </div>
-            <span className="mt-3.5 inline-block rounded-full bg-[#e8f5ee] px-3.5 py-1.5 text-xs font-bold text-[#3d9d70]">
+            <span
+              style={{
+                marginTop: 14,
+                display: "inline-block",
+                borderRadius: 999,
+                background: "#e8f5ee",
+                padding: "6px 14px",
+                fontSize: 12,
+                fontWeight: 700,
+                color: "#3d9d70",
+              }}
+            >
               오늘 새로 나온 놀이 2개
             </span>
           </div>
 
           {/* 내 스티커 */}
-          <div className="rounded-[18px] bg-white px-6 py-[22px] shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="h-12 w-12 flex-shrink-0 rounded-[14px] bg-[#ece4fb]" />
-              <div className="flex-1">
-                <h4 className="mb-1 text-[17px] font-extrabold text-slate-700">내 스티커</h4>
-                <p className="text-[13px] text-slate-400">모은 스티커를 확인해보자!</p>
+          <div
+            style={{
+              borderRadius: 18,
+              background: "#fff",
+              padding: "22px 24px",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+              textAlign: "left",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <div
+                style={{
+                  flexShrink: 0,
+                  width: 48,
+                  height: 48,
+                  borderRadius: 14,
+                  background: "#ece4fb",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 24,
+                }}
+              >
+                ⭐
               </div>
-              <button className="h-[42px] w-[42px] flex-shrink-0 rounded-full bg-[#7c3aed] text-lg text-white">
+              <div style={{ flex: 1 }}>
+                <h4 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 800, color: "#334155" }}>
+                  내 스티커
+                </h4>
+                <p style={{ margin: 0, fontSize: 13, color: "#94a3b8" }}>
+                  모은 스티커를 확인해보자!
+                </p>
+              </div>
+              <button
+                onClick={() => navigate('/student/stickers')}
+                style={{
+                  flexShrink: 0,
+                  width: 42,
+                  height: 42,
+                  borderRadius: 999,
+                  border: "none",
+                  background: "#7c3aed",
+                  fontSize: 18,
+                  color: "#fff",
+                  cursor: "pointer",
+                }}
+              >
                 ›
               </button>
             </div>
-            <span className="mt-3.5 inline-block rounded-full bg-[#f1ecfd] px-3.5 py-1.5 text-xs font-bold text-[#7c3aed]">
+            <span
+              style={{
+                marginTop: 14,
+                display: "inline-block",
+                borderRadius: 999,
+                background: "#f1ecfd",
+                padding: "6px 14px",
+                fontSize: 12,
+                fontWeight: 700,
+                color: "#7c3aed",
+              }}
+            >
               보유 스티커 15개
             </span>
           </div>
 
           {/* 오늘 모은 별 */}
-          <div className="rounded-[18px] bg-white p-6 shadow-sm">
-            <h4 className="mb-[18px] text-[17px] font-extrabold text-slate-700">오늘 모은 별</h4>
-            <div className="mb-4 flex items-center justify-between">
-              <span className="text-[26px] tracking-widest">
-                ⭐⭐⭐<span className="text-slate-200">☆☆</span>
+          <div
+            style={{
+              borderRadius: 18,
+              background: "#fff",
+              padding: 24,
+              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+              textAlign: "left",
+            }}
+          >
+            <h4 style={{ margin: "0 0 18px", fontSize: 17, fontWeight: 800, color: "#334155" }}>
+              오늘 모은 별
+            </h4>
+            <div
+              style={{
+                marginBottom: 16,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <span style={{ fontSize: 26, letterSpacing: "0.2em" }}>
+                ⭐⭐⭐<span style={{ color: "#e2e8f0" }}>☆☆</span>
               </span>
-              <span className="text-3xl font-extrabold text-slate-700">3 / 5</span>
+              <span style={{ fontSize: 30, fontWeight: 800, color: "#334155" }}>3 / 5</span>
             </div>
-            <div className="mb-4 h-3 overflow-hidden rounded-full bg-[#eef0ee]">
-              <div className="h-full w-[60%] rounded-full bg-gradient-to-r from-[#f5c451] to-[#f0a93a]" />
+            <div
+              style={{
+                marginBottom: 16,
+                height: 12,
+                overflow: "hidden",
+                borderRadius: 999,
+                background: "#eef0ee",
+              }}
+            >
+              <div
+                style={{
+                  height: "100%",
+                  width: "60%",
+                  borderRadius: 999,
+                  background: "linear-gradient(to right, #f5c451, #f0a93a)",
+                }}
+              />
             </div>
-            <div className="flex items-start gap-2 rounded-xl bg-[#fbf3df] px-3.5 py-3">
-              <span className="text-[13px]">🔴</span>
-              <span className="text-[13px] font-bold leading-relaxed text-[#9b7b3e]">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: 8,
+                borderRadius: 12,
+                background: "#fbf3df",
+                padding: "12px 14px",
+              }}
+            >
+              <span style={{ fontSize: 13 }}>🔴</span>
+              <span style={{ fontSize: 13, fontWeight: 700, lineHeight: 1.6, color: "#9b7b3e" }}>
                 오늘 별 2개 더 모으면 새 스티커를 받을 수 있어요!
               </span>
             </div>

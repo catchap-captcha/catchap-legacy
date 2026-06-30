@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 import welcome_logo from '../../assets/images/welcome_logo.png'
 
@@ -18,9 +19,9 @@ const FEATURES = [
 ];
 
 const NAV = [
-  { label: "서비스 소개", href: "/Service", active: false },
-  { label: "학교·기관 안내", href: "/schoolpage", active: false },
-  { label: "로그인", href: "/login", active: false },
+  { label: "서비스 소개", to: "/about", active: false },
+  { label: "학교·기관 안내", to: "/orgintro", active: false },
+  { label: "로그인", to: "/login", active: false },
 ];
 
 interface MainProps {
@@ -65,7 +66,7 @@ export default function Main({
             gap: 24,
           }}
         >
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <Link to="/main" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: "inherit" }}>
         {logoSrc
             ? <img src={logoSrc} alt="캣챱 로고" style={{ width: 38, height: 38, display: "block" }} />
             : <span style={{ fontSize: 28 }}>🐱</span>
@@ -78,13 +79,13 @@ export default function Main({
             Catchap
             </span>
         </div>
-        </div>
+        </Link>
 
           <nav className="cc-nav" style={{ display: "flex", alignItems: "center", gap: 6, marginLeft: -100 }}>
             {NAV.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.to}
                 style={{
                   padding: "8px 16px",
                   borderRadius: 999,
@@ -96,7 +97,7 @@ export default function Main({
                 }}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -316,12 +317,12 @@ export default function Main({
               src={welcome_logo}
               alt="캣챱 캐릭터"
               style={{
-                width: 180,
-                height: 180,
+                width: 270,
+                height: 270,
                 display: "block",
               }}
             />
-            <p style={{ margin: "40px 0 0 0", fontSize: 18, fontWeight: 700, color: NAVY }}>
+            <p style={{ margin: "40px 0 0 0", fontSize: 20, fontWeight: 700, color: NAVY }}>
             오늘은 어떤 스테이지에 도전할까요?
             </p>
             </div>
@@ -367,8 +368,8 @@ export default function Main({
             <a href="mailto:contact@catchap.kr" style={{ fontSize: 12, color: "#5f6368", textDecoration: "none" }}>비즈니스</a>
           </div>
           <div style={{ display: "flex", gap: 26 }}>
-            <a href="/privacy" style={{ fontSize: 12, color: "#5f6368", textDecoration: "none" }}>이용·개인정보 안내</a>
-            <a href="/login" style={{ fontSize: 12, color: "#5f6368", textDecoration: "none" }}>로그인</a>
+            <Link to="/privacy" style={{ fontSize: 12, color: "#5f6368", textDecoration: "none" }}>이용·개인정보 안내</Link>
+            <Link to="/login" style={{ fontSize: 12, color: "#5f6368", textDecoration: "none" }}>로그인</Link>
           </div>
         </div>
       </footer>

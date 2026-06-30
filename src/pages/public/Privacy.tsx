@@ -7,9 +7,9 @@ const NAVY = "#1e3a5f";
 const FONT = "'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif";
 
 const NAV = [
-  { label: "서비스 소개", href: "/Service", active: true },
-  { label: "학교·기관 안내", href: "/schoolpage", active: false },
-  { label: "로그인", href: "/login", active: false },
+  { label: "서비스 소개", to: "/about", active: true },
+  { label: "학교·기관 안내", to: "/orgintro", active: false },
+  { label: "로그인", to: "/login", active: false },
 ];
 
 const ITEMS = [
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
       {/* HEADER */}
       <header style={{ background: "#ffffff", borderBottom: "1px solid #e6e6e0" }}>
         <div style={{ margin: "0 auto", padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
-          <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+          <Link to="/main" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <img src={logo} alt="캣챱 로고" style={{ width: 38, height: 38, display: "block" }} />
             <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
               <span style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-0.5px", color: NAVY }}>캣챱</span>
@@ -42,9 +42,9 @@ export default function PrivacyPolicy() {
           </Link>
           <nav className="cc-nav" style={{ display: "flex", alignItems: "center", gap: 6, marginLeft: -100 }}>
             {NAV.map((item) => (
-              <a key={item.label} href={item.href} style={{ padding: "8px 16px", borderRadius: 999, fontSize: 14, fontWeight: item.active ? 700 : 500, color: item.active ? NAVY : "#5a6b7a", background: item.active ? "#eef2ef" : "transparent", textDecoration: "none" }}>
+              <Link key={item.label} to={item.to} style={{ padding: "8px 16px", borderRadius: 999, fontSize: 14, fontWeight: item.active ? 700 : 500, color: item.active ? NAVY : "#5a6b7a", background: item.active ? "#eef2ef" : "transparent", textDecoration: "none" }}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <button style={{ padding: "8px 18px", borderRadius: 999, border: "1px solid #d6d6cf", background: "#f6f6f1", color: NAVY, fontSize: 13, fontWeight: 700, fontFamily: "inherit", cursor: "pointer" }}>

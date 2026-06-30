@@ -46,6 +46,7 @@ export default function Main({
     <div
       style={{
         minHeight: "100vh",
+        width: "100%",
         background: BG,
         fontFamily: FONT,
         color: NAVY,
@@ -56,7 +57,6 @@ export default function Main({
       <header style={{ background: "#ffffff", borderBottom: "1px solid #e6e6e0" }}>
         <div
           style={{
-            maxWidth: 1160,
             margin: "0 auto",
             padding: "18px 32px",
             display: "flex",
@@ -118,7 +118,7 @@ export default function Main({
         </div>
       </header>
 
-      <main style={{ maxWidth: 1160, margin: "0 auto", padding: "48px 32px 72px" }}>
+      <main style={{ width: "100%", boxSizing: "border-box", padding: "48px 32px 72px" }}>
         {/* HERO */}
         <section
           style={{

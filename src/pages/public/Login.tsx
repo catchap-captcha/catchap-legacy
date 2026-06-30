@@ -89,7 +89,6 @@ export default function Login({ logoSrc = logo, onSubmit }: LoginProps) {
       <header style={{ background: "#ffffff", borderBottom: "1px solid #e6e6e0" }}>
         <div
           style={{
-            maxWidth: 1160,
             margin: "0 auto",
             padding: "18px 32px",
             display: "flex",
@@ -155,7 +154,6 @@ export default function Login({ logoSrc = logo, onSubmit }: LoginProps) {
       {/* MAIN */}
       <main
         style={{
-          maxWidth: 1160,
           margin: "0 auto",
           padding: "64px 32px",
           display: "flex",

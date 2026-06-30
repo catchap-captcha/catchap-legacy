@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
     <div style={{ minHeight: "100vh", background: "#f0f0ec", fontFamily: FONT, color: NAVY, WebkitFontSmoothing: "antialiased" }}>
       {/* HEADER */}
       <header style={{ background: "#ffffff", borderBottom: "1px solid #e6e6e0" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div style={{ margin: "0 auto", padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <img src={logo} alt="캣챱 로고" style={{ width: 38, height: 38, display: "block" }} />
             <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>

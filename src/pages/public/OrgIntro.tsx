@@ -50,7 +50,6 @@ export default function SchoolPage({
       <header style={{ background: "#ffffff", borderBottom: "1px solid #e6e6e0" }}>
         <div
           style={{
-            maxWidth: 1160,
             margin: "0 auto",
             padding: "18px 32px",
             display: "flex",
@@ -114,7 +113,7 @@ export default function SchoolPage({
       </header>
 
       {/* MAIN */}
-      <main style={{ maxWidth: 1160, margin: "0 auto", padding: "56px 32px 72px" }}>
+      <main style={{ margin: "0 auto", padding: "56px 32px 72px" }}>
         <p style={{ margin: "0 0 14px", fontSize: 14, fontWeight: 700, color: ACCENT, textAlign: "left" }}>
           학교·교육기관용
         </p>

@@ -1,0 +1,16 @@
+{
+  "name": "catchap-clean-hands-captcha",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CatChap 어린이 생활안전 캡챠 · 손씻기 위생 (5단계 × 5문제)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "db:init": "mysql -u root -p < backend/db/schema.sql"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  }
+}

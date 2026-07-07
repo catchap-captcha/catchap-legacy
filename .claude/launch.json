@@ -1,0 +1,93 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "traffic-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/01-traffic-safety/backend/server.js"
+      ],
+      "port": 4700
+    },
+    {
+      "name": "fire-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/02-fire-safety/backend/server.js"
+      ],
+      "port": 4800
+    },
+    {
+      "name": "clean-hands-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/03-clean-hands/backend/server.js"
+      ],
+      "port": 4900
+    },
+    {
+      "name": "home-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/04-home-safety/backend/server.js"
+      ],
+      "port": 5100
+    },
+    {
+      "name": "emergency-number-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/05-emergency-number/backend/server.js"
+      ],
+      "port": 5200
+    },
+    {
+      "name": "digital-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/06-digital-safety/backend/server.js"
+      ],
+      "port": 5300
+    },
+    {
+      "name": "weather-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/07-weather-safety/backend/server.js"
+      ],
+      "port": 5400
+    },
+    {
+      "name": "playground-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/08-playground-safety/backend/server.js"
+      ],
+      "port": 5500
+    },
+    {
+      "name": "electric-safety-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/09-electric-safety/backend/server.js"
+      ],
+      "port": 5600
+    },
+    {
+      "name": "lost-child-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/10-lost-child/backend/server.js"
+      ],
+      "port": 5700
+    },
+    {
+      "name": "flag-puzzle-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/11-flag-puzzle/backend/server.js"
+      ],
+      "port": 5800
+    }
+  ]
+}

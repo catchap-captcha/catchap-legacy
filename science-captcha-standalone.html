@@ -1,0 +1,2283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>과학 탐험 CAPTCHA</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #312a35;
+      --muted: #81786d;
+      --line: #f0e7dc;
+      --blue: #2f6dcc;
+      --orange: #ff922e;
+      --green: #18a77f;
+      --red: #ef5468;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(780px 460px at 8% 8%, #eaf3ff 0%, rgba(234,243,255,0) 58%),
+        radial-gradient(840px 480px at 92% -6%, #ffe8dc 0%, rgba(255,232,220,0) 58%),
+        #fff8ef;
+      color: var(--ink);
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.92);
+      border-bottom: 2px solid #ffe7dc;
+      backdrop-filter: blur(12px);
+    }
+    .top-inner {
+      max-width: 980px; margin: 0 auto; padding: 12px 22px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .icon-box {
+      width: 40px; height: 40px; border-radius: 13px;
+      display: grid; place-items: center;
+      background: #e6f0ff; font-size: 22px;
+    }
+    .title { line-height: 1.15; }
+    .title strong { display: block; font-size: 19px; }
+    .title span { display: block; margin-top: 3px; color: #a99f92; font-size: 12px; font-weight: 800; }
+    .timer {
+      margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
+      border: 2px solid #ffe7dc; background: #fff; border-radius: 16px;
+      padding: 9px 13px; color: #8a8072; font-weight: 900;
+      min-width: 92px; justify-content: center; font-variant-numeric: tabular-nums;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 26px 22px 90px; }
+
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .chip {
+      border: 2px solid #ffe7dc; background: #fff; color: #8a8072;
+      border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 900;
+      cursor: pointer; transition: all .15s;
+    }
+    .chip:hover { border-color: var(--orange); color: var(--orange); }
+    .chip.on { background: var(--orange); border-color: var(--orange); color: #fff; }
+    .score {
+      margin-left: auto; align-self: center; font-size: 13px; font-weight: 900; color: #8a8072;
+    }
+    .reviewbar {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .chip.mini { padding: 6px 12px; font-size: 12.5px; }
+    .chip.on { background: var(--green); border-color: var(--green); color: #fff; }
+    .wrong-info {
+      font-size: 13px; font-weight: 900; color: #e07b1f;
+      background: #fff0e2; border-radius: 999px; padding: 7px 14px;
+    }
+    .wrongbox summary::before { content: "🗂️ "; }
+    .wrong-list { list-style: none; margin: 0; padding: 0 0 8px; }
+    .wrong-list li {
+      font-size: 13.5px; font-weight: 700; color: #6d655c;
+      padding: 9px 12px; border-radius: 12px; background: #fdf6ec; margin-bottom: 7px;
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .wrong-list li.empty { color: #a99f92; background: transparent; }
+    .wrong-list .wa {
+      font-size: 11.5px; font-weight: 900; color: #0f8f6b;
+      background: #e4f7ef; border-radius: 999px; padding: 2px 9px; white-space: nowrap;
+    }
+    .wrong-list .wc { margin-left: auto; font-size: 12px; font-weight: 900; color: #ef5468; white-space: nowrap; }
+    .wrong-note { margin: 4px 4px 10px; font-size: 12.5px; color: #a99f92; font-weight: 700; line-height: 1.6; }
+
+    .panel {
+      position: relative;
+      background: rgba(255,255,255,.94);
+      border: 2px solid #ffede4;
+      border-radius: 30px;
+      padding: 26px 30px 30px;
+      box-shadow: 0 24px 50px -32px rgba(120,130,170,.55);
+      overflow: hidden;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 7px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 999px;
+      background: #e6f0ff; color: #2e7bff; font-size: 12.5px; font-weight: 900;
+    }
+    .eyebrow.area { background: #e4f7ef; color: #0f8f6b; }
+    .eyebrow.grade { background: #fff0e2; color: #e07b1f; }
+    h1.prompt {
+      margin: 16px 0 6px; font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2;
+    }
+    .sub { margin: 0 0 20px; color: var(--muted); font-size: 14.5px; font-weight: 700; }
+
+    /* ---------- stage ---------- */
+    .stage { min-height: 300px; touch-action: none; }
+
+    /* select grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 12px; }
+    .pick {
+      position: relative;
+      border: 3px solid var(--line); background: #fff; border-radius: 20px;
+      padding: 16px 8px 12px; text-align: center; cursor: pointer;
+      transition: transform .12s, border-color .12s, box-shadow .12s;
+      user-select: none; -webkit-user-select: none;
+    }
+    .pick:hover { transform: translateY(-2px); }
+    .pick .emo { font-size: 46px; line-height: 1; display: block; }
+    .pick .emo svg { width: 104px; height: 78px; display: inline-block; }
+    .pick .lb { display: block; margin-top: 9px; font-size: 14px; font-weight: 900; color: #6d655c; }
+    .pick.sel { border-color: var(--blue); box-shadow: 0 8px 18px -10px rgba(47,109,204,.6); }
+    .pick.sel::after {
+      content: "✓"; position: absolute; top: -10px; right: -8px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--blue); color: #fff; font-size: 15px; font-weight: 900;
+      display: grid; place-items: center; box-shadow: 0 3px 8px rgba(47,109,204,.4);
+    }
+
+    /* drag */
+    .drag-wrap { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+    .dropzone {
+      width: min(320px, 80%); min-height: 150px; border-radius: 26px;
+      border: 4px dashed #d9c9b4; background: #fdf6ec;
+      display: grid; place-items: center; text-align: center;
+      font-weight: 900; color: #a08e77; font-size: 15px;
+      transition: all .15s; padding: 14px;
+    }
+    .dropzone .dz-emo { font-size: 58px; display: block; margin-bottom: 4px; }
+    .dropzone.hot { border-color: var(--green); background: #e9f9f2; color: var(--green); transform: scale(1.03); }
+    .drag-tray { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .dragcard {
+      border: 3px solid var(--line); background: #fff; border-radius: 20px;
+      padding: 14px 18px 10px; text-align: center; cursor: grab;
+      user-select: none; -webkit-user-select: none;
+      box-shadow: 0 8px 16px -10px rgba(90,80,70,.35);
+      touch-action: none;
+    }
+    .dragcard .emo { font-size: 46px; line-height: 1; display: block; pointer-events: none; }
+    .dragcard .lb { display: block; margin-top: 7px; font-size: 13.5px; font-weight: 900; color: #6d655c; pointer-events: none; }
+    .dragcard.lift { cursor: grabbing; opacity: .95; z-index: 40; position: relative; box-shadow: 0 18px 30px -12px rgba(60,50,40,.45); }
+    .dragcard.gone { visibility: hidden; }
+
+    /* order */
+    .slots, .tray { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .slots { margin-bottom: 26px; }
+    .slot {
+      width: 118px; height: 122px; border-radius: 20px;
+      border: 3px dashed #d9c9b4; background: #fdf6ec;
+      display: grid; place-items: center; position: relative; cursor: pointer;
+    }
+    .slot .no {
+      position: absolute; top: -11px; left: -8px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--orange); color: #fff; font-size: 14px; font-weight: 900;
+      display: grid; place-items: center;
+    }
+    .slot .arrow {
+      position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+      color: #d9b28a; font-size: 17px; font-weight: 900; pointer-events: none;
+    }
+    .ocard {
+      border: 3px solid var(--line); background: #fff; border-radius: 18px;
+      width: 112px; padding: 12px 6px 10px; text-align: center; cursor: pointer;
+      user-select: none; -webkit-user-select: none; transition: transform .12s;
+    }
+    .ocard:hover { transform: translateY(-2px); }
+    .ocard .emo { font-size: 40px; line-height: 1; display: block; }
+    .ocard .emo svg { width: 58px; height: 58px; display: inline-block; vertical-align: middle; }
+    .ocard.placed .emo svg { width: 50px; height: 50px; }
+    .ocard .lb { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 900; color: #6d655c; }
+
+    /* classify */
+    .cls-wrap { display: flex; flex-direction: column; gap: 24px; }
+    .bins { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .bin {
+      border: 4px dashed #d9c9b4; background: #fdf6ec; border-radius: 24px;
+      min-height: 140px; padding: 12px; cursor: pointer; transition: all .15s;
+    }
+    .bin.hot { border-color: var(--green); background: #e9f9f2; }
+    .bin h3 { margin: 2px 0 10px; text-align: center; font-size: 16px; color: #8a7a64; }
+    .bin .bin-items { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .cls-tray { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .ccard {
+      border: 3px solid var(--line); background: #fff; border-radius: 16px;
+      padding: 9px 13px 7px; text-align: center; cursor: pointer;
+      user-select: none; -webkit-user-select: none; transition: all .12s;
+    }
+    .ccard .emo { font-size: 34px; line-height: 1; display: block; }
+    .ccard .lb { display: block; margin-top: 4px; font-size: 12px; font-weight: 900; color: #6d655c; }
+    .ccard.sel { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,109,204,.18); }
+    .cls-hint { text-align: center; color: #a99f92; font-size: 13px; font-weight: 800; margin: 0; }
+
+    /* position (svg scene) */
+    .scene-wrap { display: grid; place-items: center; }
+    .scene-wrap svg { max-width: 100%; border-radius: 22px; }
+    .scene-wrap [data-region] { cursor: pointer; }
+
+    /* footer actions */
+    .actions {
+      margin-top: 26px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    }
+    .btn {
+      border: 0; border-radius: 18px; padding: 14px 26px;
+      font-size: 16px; font-weight: 900; cursor: pointer; transition: all .15s;
+      font-family: inherit;
+    }
+    .btn.primary { background: var(--green); color: #fff; box-shadow: 0 10px 20px -10px rgba(24,167,127,.7); }
+    .btn.primary:disabled { background: #d8d1c6; box-shadow: none; cursor: not-allowed; }
+    .btn.primary:not(:disabled):hover { transform: translateY(-2px); }
+    .btn.ghost { background: #fff; border: 2px solid var(--line); color: #8a8072; }
+    .btn.ghost:hover { border-color: var(--orange); color: var(--orange); }
+    .attempts-tag { margin-left: auto; font-size: 13px; font-weight: 900; color: #b3a894; }
+
+    /* feedback overlay */
+    .overlay {
+      position: absolute; inset: 0; z-index: 30;
+      background: rgba(255,252,246,.96);
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 30px; border-radius: 28px;
+    }
+    .overlay.show { display: flex; animation: pop .25s ease; }
+    @keyframes pop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+    .overlay .big { font-size: 74px; line-height: 1; }
+    .overlay h2 { margin: 14px 0 6px; font-size: 26px; }
+    .overlay p.exp {
+      margin: 4px 0 0; max-width: 480px; color: var(--muted);
+      font-size: 15.5px; font-weight: 700; line-height: 1.55;
+    }
+    .overlay .ovl-actions { margin-top: 24px; display: flex; gap: 12px; }
+    .overlay.ok h2 { color: var(--green); }
+    .overlay.no h2 { color: var(--orange); }
+
+    /* shake */
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      25% { transform: translateX(-7px); } 75% { transform: translateX(7px); }
+    }
+    .shake { animation: shake .3s ease 2; }
+
+    /* behavior panel */
+    .behavior {
+      margin-top: 22px; background: rgba(255,255,255,.9);
+      border: 2px solid #ffede4; border-radius: 24px; padding: 4px 24px 8px;
+    }
+    .behavior summary {
+      cursor: pointer; font-weight: 900; font-size: 15px; padding: 14px 0; color: #6d655c;
+      list-style: none;
+    }
+    .behavior summary::-webkit-details-marker { display: none; }
+    .behavior summary::before { content: "📊 "; }
+    .bh-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px; padding-bottom: 14px;
+    }
+    .bh-item { background: #fdf6ec; border-radius: 14px; padding: 10px 13px; }
+    .bh-item b { display: block; font-size: 11.5px; color: #a08e77; font-weight: 900; margin-bottom: 3px; }
+    .bh-item span { font-size: 15px; font-weight: 900; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .flags { grid-column: 1 / -1; }
+    .flags span { font-size: 13px; }
+    .flag-chip {
+      display: inline-block; margin: 2px 4px 2px 0; padding: 3px 10px; border-radius: 999px;
+      background: #ffe3e7; color: var(--red); font-size: 12px; font-weight: 900;
+    }
+    .flag-ok { background: #e4f7ef; color: #0f8f6b; }
+    .note {
+      margin: 18px 4px 0; font-size: 12.5px; color: #b3a894; font-weight: 700; line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <div class="icon-box">🔬</div>
+      <div class="title">
+        <strong>과학 탐험 CAPTCHA</strong>
+        <span>교육형 인증 · 행동 데이터 기반 위험 신호 보조 수집</span>
+      </div>
+      <div class="timer">⏱ <span id="timer">0.0초</span></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="filters" id="filters">
+      <button class="chip on" data-g="all">전체</button>
+      <button class="chip" data-g="1-2">1~2학년</button>
+      <button class="chip" data-g="3-4">3~4학년</button>
+      <button class="chip" data-g="5-6">5~6학년</button>
+      <div class="score" id="score">성공 0 · 도전 0</div>
+    </div>
+
+    <div class="reviewbar">
+      <button class="chip" id="reviewToggle">🔁 비슷한 문제 복습: 꺼짐</button>
+      <span class="wrong-info" id="wrongInfo">오답 노트 0개</span>
+      <button class="chip mini" id="wrongReset">오답 초기화</button>
+    </div>
+
+    <section class="panel" id="panel">
+      <div class="badges">
+        <span class="eyebrow" id="b-type">유형</span>
+        <span class="eyebrow area" id="b-area">영역</span>
+        <span class="eyebrow grade" id="b-grade">학년</span>
+      </div>
+      <h1 class="prompt" id="prompt"></h1>
+      <p class="sub" id="sub"></p>
+
+      <div class="stage" id="stage"></div>
+
+      <div class="actions">
+        <button class="btn primary" id="btnSubmit">확인</button>
+        <span class="attempts-tag" id="attemptsTag"></span>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="big" id="ovlEmo"></div>
+        <h2 id="ovlTitle"></h2>
+        <p class="exp" id="ovlExp"></p>
+        <div class="ovl-actions">
+          <button class="btn ghost" id="btnRetry">비슷한 문제 풀기</button>
+          <button class="btn primary" id="btnNext">다음 문제 →</button>
+        </div>
+      </div>
+    </section>
+
+    <details class="behavior" open>
+      <summary>행동 데이터 (실시간 수집)</summary>
+      <div class="bh-grid">
+        <div class="bh-item"><b>풀이 시간</b><span id="bh-time">-</span></div>
+        <div class="bh-item"><b>첫 조작까지 (망설임)</b><span id="bh-hesi">-</span></div>
+        <div class="bh-item"><b>클릭 수</b><span id="bh-clicks">0</span></div>
+        <div class="bh-item"><b>선택 변경 횟수</b><span id="bh-changes">0</span></div>
+        <div class="bh-item"><b>재배치 횟수</b><span id="bh-reorders">0</span></div>
+        <div class="bh-item"><b>드래그 거리</b><span id="bh-drag">0px</span></div>
+        <div class="bh-item"><b>드래그 직선성</b><span id="bh-straight">-</span></div>
+        <div class="bh-item"><b>재시도 횟수</b><span id="bh-attempts">0</span></div>
+        <div class="bh-item flags"><b>위험 신호 (보조 지표)</b><span id="bh-flags">아직 판정 전이에요</span></div>
+      </div>
+    </details>
+
+    <details class="behavior wrongbox">
+      <summary>오답 노트 (DB에 저장됨 · 같은 문제는 다시 안 나와요)</summary>
+      <ul class="wrong-list" id="wrongList"></ul>
+      <p class="wrong-note">
+        틀린 문제는 브라우저 저장소(localStorage)에 저장되어 새로고침해도 유지돼요.
+        <b>🔁 비슷한 문제 복습</b>을 켜면, 틀린 문제와 <b>같은 과학 영역</b>의 새 문제가 출제되어
+        학생의 행동 데이터를 계속 쌓을 수 있어요.
+      </p>
+    </details>
+
+    <p class="note">
+      ※ 본 데모는 완전한 봇 차단 시스템이 아니라, 초등 과학 개념 학습과 행동 데이터 분석을 결합한
+      <b>교육형 보조 인증</b>입니다. 정답 여부와 풀이 과정(드래그 경로·풀이 시간·재시도 등)을 함께 분석하여
+      자동화 의심 패턴을 보조적으로 탐지하고, 학생의 개념 이해도를 진단합니다.
+    </p>
+  </main>
+
+  <script>
+  "use strict";
+
+  /* ============ 유틸 ============ */
+  const $ = (s) => document.querySelector(s);
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  const pickOne = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  /* ============ 어린이 친화 문구 ============ */
+  const MSG_OK = [
+    "멋져요! 과학 탐험 성공! 🎉", "정확해요! 정말 잘했어요!", "우와, 완벽해요!",
+    "대단해요! 척척박사님인걸요?", "딩동댕! 정답이에요!", "훌륭해요! 잘 관찰했어요!",
+    "최고예요! 과학자 같아요!", "짝짝짝! 정답을 찾았어요!"
+  ];
+  const MSG_NO = [
+    "좋아요! 다시 한 번 살펴볼까요?", "거의 다 왔어요! 조금만 더!",
+    "괜찮아요, 누구나 실수할 수 있어요.", "음~ 조금 더 생각해보면 찾을 수 있어요!",
+    "좋은 시도예요! 한 번 더 해봐요.", "걱정 마요, 다시 도전하면 알 수 있어요!"
+  ];
+
+  /* ============ 회로 SVG 생성 (5~6학년 전기 회로) ============ */
+  function circuitSVG(gap) {
+    // gap: null(닫힌 회로) | 'left' | 'right' | 'top'
+    const wire = 'stroke="#5b5248" stroke-width="4" stroke-linecap="round" fill="none"';
+    let lines = "";
+    // 아래쪽: 전지 (가운데)
+    lines += `<line x1="18" y1="76" x2="44" y2="76" ${wire}/>`;
+    lines += `<line x1="76" y1="76" x2="102" y2="76" ${wire}/>`;
+    // 전지 기호
+    lines += `<line x1="50" y1="64" x2="50" y2="88" stroke="#5b5248" stroke-width="4"/>`;
+    lines += `<line x1="62" y1="69" x2="62" y2="83" stroke="#5b5248" stroke-width="7"/>`;
+    lines += `<line x1="44" y1="76" x2="46" y2="76" ${wire}/>`;
+    lines += `<line x1="66" y1="76" x2="76" y2="76" ${wire}/>`;
+    // 왼쪽 세로
+    if (gap === "left") {
+      lines += `<line x1="18" y1="76" x2="18" y2="56" ${wire}/>`;
+      lines += `<line x1="18" y1="34" x2="18" y2="22" ${wire}/>`;
+    } else {
+      lines += `<line x1="18" y1="76" x2="18" y2="22" ${wire}/>`;
+    }
+    // 오른쪽 세로
+    if (gap === "right") {
+      lines += `<line x1="102" y1="76" x2="102" y2="56" ${wire}/>`;
+      lines += `<line x1="102" y1="34" x2="102" y2="22" ${wire}/>`;
+    } else {
+      lines += `<line x1="102" y1="76" x2="102" y2="22" ${wire}/>`;
+    }
+    // 위쪽: 전구 (가운데)
+    if (gap === "top") {
+      lines += `<line x1="18" y1="22" x2="30" y2="22" ${wire}/>`;
+      lines += `<line x1="48" y1="22" x2="102" y2="22" ${wire}/>`;
+      lines += `<circle cx="74" cy="22" r="10" fill="#eee7db" stroke="#5b5248" stroke-width="3"/>`;
+      lines += `<path d="M69 22 q5 -6 10 0" stroke="#5b5248" stroke-width="2" fill="none"/>`;
+    } else {
+      lines += `<line x1="18" y1="22" x2="50" y2="22" ${wire}/>`;
+      lines += `<line x1="70" y1="22" x2="102" y2="22" ${wire}/>`;
+      lines += `<circle cx="60" cy="22" r="10" fill="#eee7db" stroke="#5b5248" stroke-width="3"/>`;
+      lines += `<path d="M55 22 q5 -6 10 0" stroke="#5b5248" stroke-width="2" fill="none"/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">${lines}</svg>`;
+  }
+
+  /* ============ 행성 SVG (태양계 문제용) ============ */
+  function planetSVG(kind) {
+    const P = {
+      mercury: { grad: ["#e8e4de", "#9b948b"], extra:
+        '<circle cx="30" cy="32" r="6" fill="#a49d93"/><circle cx="50" cy="50" r="8" fill="#a49d93"/>' +
+        '<circle cx="52" cy="24" r="4" fill="#b0a89e"/><circle cx="26" cy="52" r="4" fill="#b0a89e"/>' +
+        '<circle cx="40" cy="62" r="3" fill="#b0a89e"/>' },
+      venus: { grad: ["#ffd98a", "#e08a2d"], extra:
+        '<path d="M8 34 q32 -12 64 2" stroke="#f7b95c" stroke-width="7" fill="none" opacity=".85"/>' +
+        '<path d="M6 50 q34 12 68 -2" stroke="#c97a26" stroke-width="6" fill="none" opacity=".6"/>' +
+        '<path d="M14 20 q26 -8 52 4" stroke="#ffe9b8" stroke-width="5" fill="none" opacity=".85"/>' },
+      earth: { grad: ["#7ec4f2", "#2464b0"], extra:
+        '<path d="M20 26 q12 -10 24 -2 q-2 12 -16 14 q-12 -2 -8 -12 Z" fill="#4ca856"/>' +
+        '<path d="M46 44 q14 -4 16 8 q-4 14 -18 9 q-7 -9 2 -17 Z" fill="#4ca856"/>' +
+        '<ellipse cx="30" cy="54" rx="10" ry="4.5" fill="#fff" opacity=".85"/>' +
+        '<ellipse cx="50" cy="22" rx="9" ry="4" fill="#fff" opacity=".85"/>' },
+      mars: { grad: ["#f2926b", "#c0392b"], extra:
+        '<ellipse cx="40" cy="12" rx="13" ry="5" fill="#fff" opacity=".9"/>' +
+        '<circle cx="30" cy="40" r="7" fill="#a93226" opacity=".8"/>' +
+        '<circle cx="52" cy="50" r="5" fill="#a93226" opacity=".7"/>' +
+        '<circle cx="48" cy="28" r="4" fill="#b03a2e" opacity=".7"/>' },
+      jupiter: { grad: ["#f0d9b5", "#c08a4e"], extra:
+        '<path d="M4 28 h72" stroke="#d9a86a" stroke-width="7" opacity=".8"/>' +
+        '<path d="M4 42 h72" stroke="#b97b3f" stroke-width="6" opacity=".7"/>' +
+        '<path d="M4 56 h72" stroke="#d9a86a" stroke-width="5" opacity=".6"/>' +
+        '<ellipse cx="52" cy="50" rx="9" ry="6" fill="#c0543a"/>' },
+      saturn: { r: 24, grad: ["#f2e0ae", "#cfa763"], extra:
+        '<path d="M16 34 h48" stroke="#dabf85" stroke-width="5" opacity=".8"/>' +
+        '<path d="M16 46 h48" stroke="#bd9a58" stroke-width="4" opacity=".7"/>',
+        post: '<ellipse cx="40" cy="40" rx="37" ry="10" fill="none" stroke="#d8b97a" stroke-width="4.5" transform="rotate(-18 40 40)" opacity=".95"/>' },
+      uranus: { grad: ["#cfeef2", "#6fb9c9"], extra:
+        '<path d="M6 36 h68" stroke="#a8dbe3" stroke-width="6" opacity=".7"/>' +
+        '<path d="M6 50 h68" stroke="#8fcbd6" stroke-width="5" opacity=".6"/>' },
+      neptune: { grad: ["#7f9ff0", "#2b4bb5"], extra:
+        '<path d="M6 34 q20 6 68 -2" stroke="#5f7fe0" stroke-width="6" fill="none" opacity=".8"/>' +
+        '<path d="M6 52 q30 -6 68 2" stroke="#24409c" stroke-width="5" fill="none" opacity=".7"/>' +
+        '<ellipse cx="30" cy="44" rx="7" ry="4" fill="#1d3480" opacity=".8"/>' }
+    }[kind];
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="pg-${kind}" cx="35%" cy="30%" r="80%">
+          <stop offset="0%" stop-color="${P.grad[0]}"/><stop offset="100%" stop-color="${P.grad[1]}"/>
+        </radialGradient>
+        <clipPath id="pc-${kind}"><circle cx="40" cy="40" r="${P.r || 34}"/></clipPath>
+      </defs>
+      <circle cx="40" cy="40" r="${P.r || 34}" fill="url(#pg-${kind})"/>
+      <g clip-path="url(#pc-${kind})">${P.extra}</g>
+      ${P.post || ""}
+    </svg>`;
+  }
+
+  /* ============ 번데기 SVG (나비 한살이용) ============ */
+  function pupaSVG() {
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="12" x2="70" y2="10" stroke="#8a6b45" stroke-width="5" stroke-linecap="round"/>
+      <line x1="40" y1="12" x2="40" y2="22" stroke="#b09a72" stroke-width="2.5"/>
+      <path d="M40 22 C53 30 53 52 40 68 C27 52 27 30 40 22 Z" fill="#a97e4f" stroke="#8a6242" stroke-width="2.5"/>
+      <path d="M33 34 q7 4 14 0 M31 44 q9 5 18 0 M33 55 q7 4 14 0" stroke="#8a6242" stroke-width="2" fill="none"/>
+    </svg>`;
+  }
+
+  /* ============ 그림자 장면 SVG (그림자 방향 문제용) ============ */
+  function shadowSVG(dir) {
+    // dir: 'left'(정답) | 'right' | 'none' — 해는 항상 오른쪽 위
+    let sh = "";
+    if (dir === "left") sh = '<ellipse cx="32" cy="78" rx="28" ry="6" fill="#6b6257" opacity=".55"/>';
+    if (dir === "right") sh = '<ellipse cx="88" cy="78" rx="28" ry="6" fill="#6b6257" opacity=".55"/>';
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="96" rx="10" fill="#e3f2fd"/>
+      <rect y="70" width="120" height="26" fill="#9ccc65"/>
+      <circle cx="100" cy="18" r="11" fill="#ffd54f"/>
+      <path d="M100 3 v-1 M100 33 v1 M85 18 h-1 M115 18 h1" stroke="#ffd54f" stroke-width="3"/>
+      ${sh}
+      <rect x="56" y="48" width="8" height="26" fill="#8d6e63"/>
+      <circle cx="60" cy="40" r="15" fill="#66bb6a"/>
+    </svg>`;
+  }
+
+  /* ============ 빛의 진행 SVG (직진/굽음/꺾임) ============ */
+  function beamSVG(kind) {
+    const fl = '<rect x="6" y="38" width="22" height="20" rx="4" fill="#5b5248"/><rect x="26" y="42" width="8" height="12" fill="#ffd54f"/>';
+    let rays = "";
+    const ray = 'stroke="#ffb300" stroke-width="3.5" fill="none" stroke-linecap="round"';
+    if (kind === "straight") {
+      rays = `<line x1="34" y1="42" x2="114" y2="26" ${ray}/><line x1="34" y1="48" x2="114" y2="48" ${ray}/><line x1="34" y1="54" x2="114" y2="70" ${ray}/>`;
+    } else if (kind === "curve") {
+      rays = `<path d="M34 44 Q80 10 114 40" ${ray}/><path d="M34 48 Q80 80 114 52" ${ray}/><path d="M34 52 Q70 30 114 72" ${ray}/>`;
+    } else {
+      rays = `<polyline points="34,44 60,30 86,52 114,32" ${ray}/><polyline points="34,52 60,70 86,44 114,66" ${ray}/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="96" rx="10" fill="#2b2d42"/>${fl}${rays}</svg>`;
+  }
+
+  /* ============ 물속 굴절 SVG (젓가락) ============ */
+  function refractSVG(kind) {
+    const cup = '<path d="M30 30 L90 30 L82 88 L38 88 Z" fill="#d6eefc" stroke="#7fb4dd" stroke-width="3"/>' +
+      '<path d="M33 52 L87 52 L82 88 L38 88 Z" fill="#8fd0f5" opacity=".85"/>' +
+      '<line x1="33" y1="52" x2="87" y2="52" stroke="#5aa7d8" stroke-width="2"/>';
+    let straw = "";
+    const s = 'stroke="#c0392b" stroke-width="6" stroke-linecap="round"';
+    if (kind === "bent") straw = `<line x1="46" y1="18" x2="58" y2="52" ${s}/><line x1="58" y1="52" x2="76" y2="84" ${s}/>`;
+    else if (kind === "straight") straw = `<line x1="46" y1="18" x2="70" y2="84" ${s}/>`;
+    else straw = `<line x1="46" y1="18" x2="58" y2="52" ${s}/><line x1="58" y1="52" x2="46" y2="84" ${s}/>`;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="96" rx="10" fill="#f4faff"/>${cup}${straw}</svg>`;
+  }
+
+  /* ============ 렌즈 모양 SVG (볼록/오목) ============ */
+  function lensSVG(kind) {
+    const st = 'fill="#c7e6ff" stroke="#4a86c8" stroke-width="3"';
+    const shape = kind === "convex"
+      ? `<path d="M60 14 C44 40 44 56 60 82 C76 56 76 40 60 14 Z" ${st}/>`
+      : `<path d="M46 14 L74 14 C62 40 62 56 74 82 L46 82 C58 56 58 40 46 14 Z" ${st}/>`;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="96" rx="10" fill="#f4faff"/>${shape}</svg>`;
+  }
+
+  /* ============ 렌즈 통과 빛 SVG (모임/퍼짐/그대로) ============ */
+  function lensBeamSVG(kind) {
+    const lens = '<path d="M58 20 C50 40 50 56 58 76 C66 56 66 40 58 20 Z" fill="#c7e6ff" stroke="#4a86c8" stroke-width="2.5"/>';
+    const ray = 'stroke="#ffb300" stroke-width="3" fill="none" stroke-linecap="round"';
+    const pre = `<line x1="8" y1="30" x2="56" y2="30" ${ray}/><line x1="8" y1="48" x2="56" y2="48" ${ray}/><line x1="8" y1="66" x2="56" y2="66" ${ray}/>`;
+    let post = "";
+    if (kind === "converge") post = `<line x1="60" y1="30" x2="106" y2="48" ${ray}/><line x1="60" y1="48" x2="106" y2="48" ${ray}/><line x1="60" y1="66" x2="106" y2="48" ${ray}/>`;
+    else if (kind === "diverge") post = `<line x1="60" y1="30" x2="112" y2="16" ${ray}/><line x1="60" y1="48" x2="112" y2="48" ${ray}/><line x1="60" y1="66" x2="112" y2="80" ${ray}/>`;
+    else post = `<line x1="60" y1="30" x2="112" y2="30" ${ray}/><line x1="60" y1="48" x2="112" y2="48" ${ray}/><line x1="60" y1="66" x2="112" y2="66" ${ray}/>`;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="96" rx="10" fill="#2b2d42"/>${lens}${pre}${post}</svg>`;
+  }
+
+  /* ============ 거울상 SVG ('F' 글자) ============ */
+  function letterFSVG(kind) {
+    const base = 'font-size="66" font-weight="900" fill="#4e6ef2" text-anchor="middle" font-family="sans-serif" x="60" y="72"';
+    let t;
+    if (kind === "normal") t = `<text ${base}>F</text>`;
+    else if (kind === "mirror") t = `<text ${base} transform="translate(120,0) scale(-1,1)">F</text>`;
+    else t = `<text ${base} transform="translate(0,96) scale(1,-1)">F</text>`;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="96" rx="10" fill="#eef3ff"/>${t}</svg>`;
+  }
+
+  /* ============ 담요(접힌 담요) SVG ============ */
+  function blanketSVG() {
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="12" y="48" width="56" height="15" rx="5" fill="#b83f52"/>
+      <rect x="12" y="35" width="56" height="15" rx="5" fill="#d8546a"/>
+      <rect x="12" y="22" width="56" height="15" rx="5" fill="#ef7a89"/>
+      <line x1="20" y1="29.5" x2="60" y2="29.5" stroke="#fff" stroke-width="1.6" opacity=".55"/>
+      <line x1="20" y1="42.5" x2="60" y2="42.5" stroke="#fff" stroke-width="1.6" opacity=".5"/>
+      <line x1="20" y1="55.5" x2="60" y2="55.5" stroke="#fff" stroke-width="1.6" opacity=".45"/>
+    </svg>`;
+  }
+
+  /* ============ 잔잔한 물(호수 반사) SVG ============ */
+  function calmWaterSVG() {
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="96" rx="10" fill="#cdeafd"/>
+      <rect y="50" width="120" height="46" rx="0" fill="#7ab8e6"/>
+      <circle cx="82" cy="28" r="11" fill="#ffd54f"/>
+      <path d="M18 40 h20 l-10 -16 Z" fill="#78b56a"/>
+      <path d="M30 40 h24 l-12 -22 Z" fill="#5fa257"/>
+      <circle cx="82" cy="66" r="10" fill="#ffe6a0" opacity=".75"/>
+      <path d="M18 60 h20 l-10 12 Z" fill="#8fc47f" opacity=".7"/>
+      <path d="M30 58 h24 l-12 16 Z" fill="#7bb56f" opacity=".7"/>
+      <line x1="0" y1="50" x2="120" y2="50" stroke="#5a9bcf" stroke-width="1.5"/>
+      <line x1="60" y1="78" x2="100" y2="78" stroke="#fff" stroke-width="2" opacity=".45"/>
+      <line x1="20" y1="86" x2="70" y2="86" stroke="#fff" stroke-width="2" opacity=".4"/>
+    </svg>`;
+  }
+
+  /* ============ 태양 전지판 SVG ============ */
+  function solarPanelSVG() {
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(-8 40 34)">
+        <rect x="12" y="16" width="56" height="34" rx="2" fill="#2f4d8f" stroke="#1c3260" stroke-width="2.5"/>
+        <line x1="30" y1="16" x2="30" y2="50" stroke="#6f8fd0" stroke-width="1.5"/>
+        <line x1="48" y1="16" x2="48" y2="50" stroke="#6f8fd0" stroke-width="1.5"/>
+        <line x1="12" y1="27" x2="68" y2="27" stroke="#6f8fd0" stroke-width="1.5"/>
+        <line x1="12" y1="39" x2="68" y2="39" stroke="#6f8fd0" stroke-width="1.5"/>
+      </g>
+      <rect x="37" y="50" width="6" height="20" fill="#8a7a64"/>
+      <rect x="28" y="70" width="24" height="5" rx="2" fill="#8a7a64"/>
+    </svg>`;
+  }
+
+  /* ============ 식물 SVG (위치 선택형) ============ */
+  function plantSceneSVG() {
+    return `
+    <svg viewBox="0 0 360 300" width="420" xmlns="http://www.w3.org/2000/svg" id="plantScene">
+      <rect x="0" y="0" width="360" height="200" fill="#dff0ff"/>
+      <circle cx="315" cy="42" r="26" fill="#ffd66e"/>
+      <rect x="0" y="200" width="360" height="100" fill="#c8a06b"/>
+      <rect x="0" y="196" width="360" height="8" fill="#8fbf6a"/>
+      <g data-region="root">
+        <path d="M180 205 L150 245 M180 205 L180 258 M180 205 L212 240 M165 228 L148 252 M195 226 L214 254"
+              stroke="#e8d9be" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <path d="M180 205 L150 245 M180 205 L180 258 M180 205 L212 240"
+              stroke="transparent" stroke-width="26" fill="none"/>
+      </g>
+      <g data-region="stem">
+        <rect x="174" y="96" width="12" height="106" rx="6" fill="#3f9d4e"/>
+        <rect x="162" y="90" width="36" height="118" fill="transparent"/>
+      </g>
+      <g data-region="leaf">
+        <path d="M174 160 C140 150 128 128 132 118 C156 118 176 136 178 152 Z" fill="#57b45f"/>
+        <path d="M186 138 C220 128 232 106 228 96 C204 96 184 114 182 130 Z" fill="#57b45f"/>
+      </g>
+      <g data-region="flower">
+        <circle cx="180" cy="72" r="17" fill="#ffd23e"/>
+        <g fill="#ff8fb0">
+          <circle cx="180" cy="44" r="15"/><circle cx="207" cy="61" r="15"/>
+          <circle cx="200" cy="92" r="15"/><circle cx="160" cy="92" r="15"/>
+          <circle cx="153" cy="61" r="15"/>
+        </g>
+        <circle cx="180" cy="72" r="16" fill="#ffd23e"/>
+      </g>
+    </svg>`;
+  }
+
+  /* ============ 얼굴 SVG (감각기관 위치 선택형) ============ */
+  function faceSceneSVG() {
+    return `
+    <svg viewBox="0 0 360 300" width="420" xmlns="http://www.w3.org/2000/svg" id="faceScene">
+      <rect x="0" y="0" width="360" height="300" rx="22" fill="#eaf3ff"/>
+      <circle cx="180" cy="158" r="96" fill="#ffd9b3" stroke="#eebd90" stroke-width="3"/>
+      <path d="M84 140 C90 70 270 70 276 140 C276 105 250 62 180 62 C110 62 84 105 84 140 Z" fill="#6d4c41"/>
+      <g data-region="ear">
+        <ellipse cx="82" cy="160" rx="17" ry="27" fill="#ffd9b3" stroke="#eebd90" stroke-width="3"/>
+        <path d="M78 150 q8 10 0 20" stroke="#e5a877" stroke-width="3" fill="none"/>
+        <ellipse cx="278" cy="160" rx="17" ry="27" fill="#ffd9b3" stroke="#eebd90" stroke-width="3"/>
+        <path d="M282 150 q-8 10 0 20" stroke="#e5a877" stroke-width="3" fill="none"/>
+        <circle cx="80" cy="160" r="30" fill="transparent"/>
+        <circle cx="280" cy="160" r="30" fill="transparent"/>
+      </g>
+      <g data-region="eye">
+        <ellipse cx="146" cy="146" rx="15" ry="11" fill="#fff" stroke="#caa27a" stroke-width="2"/>
+        <circle cx="146" cy="147" r="6" fill="#4e342e"/>
+        <ellipse cx="214" cy="146" rx="15" ry="11" fill="#fff" stroke="#caa27a" stroke-width="2"/>
+        <circle cx="214" cy="147" r="6" fill="#4e342e"/>
+        <rect x="124" y="128" width="112" height="36" fill="transparent"/>
+      </g>
+      <g data-region="nose">
+        <path d="M180 158 L172 188 q8 7 16 0 Z" fill="#f4b98a"/>
+        <circle cx="180" cy="178" r="22" fill="transparent"/>
+      </g>
+      <g data-region="mouth">
+        <path d="M152 216 q28 22 56 0" stroke="#d1495b" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <rect x="144" y="204" width="72" height="30" fill="transparent"/>
+      </g>
+    </svg>`;
+  }
+
+  /* ============ 개구리 한살이 SVG ============ */
+  function frogEggSVG() {
+    let dots = "";
+    const pos = [[28,34],[46,28],[58,42],[36,52],[52,58],[24,50],[44,44]];
+    for (const [x, y] of pos) {
+      dots += `<circle cx="${x}" cy="${y}" r="11" fill="#cfe8f5" stroke="#a5c9dd" stroke-width="2" opacity=".9"/>` +
+              `<circle cx="${x}" cy="${y}" r="4.5" fill="#3b3a36"/>`;
+    }
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">${dots}</svg>`;
+  }
+  function tadpoleSVG() {
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M44 40 q18 -14 30 -4 q-14 4 -18 10 q6 4 14 12 q-14 2 -26 -8 Z" fill="#4a4f3a"/>
+      <ellipse cx="30" cy="42" rx="20" ry="16" fill="#5b6247"/>
+      <circle cx="22" cy="37" r="3.5" fill="#fff"/><circle cx="22" cy="37" r="1.8" fill="#222"/>
+    </svg>`;
+  }
+
+  /* ============ 문제 은행 (과학 콘텐츠 전용) ============ */
+  const PROBLEMS = [
+    /* ---------- 1~2학년 ---------- */
+    {
+      id: "animals", type: "select", grade: "1-2", area: "생명과학/생물",
+      prompt: "동물을 모두 골라주세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "강아지·고양이·참새는 스스로 움직이는 동물이에요. 나무와 꽃은 식물이랍니다!",
+      items: [
+        { e: "🐶", label: "강아지", ok: true }, { e: "🐱", label: "고양이", ok: true },
+        { e: "🐦", label: "참새", ok: true }, { e: "🌳", label: "나무" },
+        { e: "🌸", label: "꽃" }, { e: "🪨", label: "돌" },
+        { e: "🍎", label: "사과" }, { e: "🍄", label: "버섯" }, { e: "🚗", label: "자동차" }
+      ]
+    },
+    {
+      id: "rainy", type: "select", grade: "1-2", area: "생활 과학/안전",
+      prompt: "비 오는 날 필요한 물건을 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "비가 오면 우산과 장화가 필요해요. 선글라스와 부채는 맑고 더운 날에 쓰지요!",
+      items: [
+        { e: "☂️", label: "우산", ok: true }, { e: "🥾", label: "장화", ok: true },
+        { e: "🕶️", label: "선글라스" }, { e: "🪭", label: "부채" },
+        { e: "🧢", label: "모자" }, { e: "🍦", label: "아이스크림" }
+      ]
+    },
+    {
+      id: "danger", type: "select", grade: "1-2", area: "생활 과학/안전",
+      prompt: "만지면 위험한 물건을 골라주세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "가위와 칼은 날카로워서 다칠 수 있어요. 어른과 함께 조심해서 사용해요!",
+      items: [
+        { e: "✂️", label: "가위", ok: true }, { e: "🔪", label: "칼", ok: true },
+        { e: "🧸", label: "인형" }, { e: "📖", label: "책" },
+        { e: "⚽", label: "공" }, { e: "🖍️", label: "크레용" }
+      ]
+    },
+    {
+      id: "seed", type: "drag", grade: "1-2", area: "생명과학/생물",
+      prompt: "씨앗을 흙 속에 넣어주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "씨앗은 흙 속에서 물과 햇빛을 만나 싹을 틔워요! 🌱",
+      target: { e: "🪴", label: "화분 속 흙에 쏙!" },
+      items: [
+        { e: "🌰", label: "씨앗", ok: true },
+        { e: "🪨", label: "돌" }, { e: "🍬", label: "사탕" }
+      ]
+    },
+    {
+      id: "fish", type: "drag", grade: "1-2", area: "생명과학/생물",
+      prompt: "물고기를 물속으로 옮겨주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "물고기는 물속에서 아가미로 숨 쉬며 살아요!",
+      target: { e: "🌊", label: "물속으로 풍덩!" },
+      items: [
+        { e: "🐟", label: "물고기", ok: true },
+        { e: "🐦", label: "새" }, { e: "🐰", label: "토끼" }
+      ]
+    },
+    {
+      id: "handwash", type: "order", grade: "1-2", area: "생활 과학/안전",
+      prompt: "손 씻는 순서를 맞춰주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "물 묻히기 → 비누칠 → 거품 문지르기 → 헹구고 닦기 순서예요!",
+      cards: [
+        { e: "💧", label: "물 묻히기" }, { e: "🧼", label: "비누칠하기" },
+        { e: "🫧", label: "거품 문지르기" }, { e: "🧻", label: "헹구고 닦기" }
+      ]
+    },
+    {
+      id: "daynight", type: "classify", grade: "1-2", area: "지구과학",
+      prompt: "낮과 밤에 볼 수 있는 것을 나눠주세요",
+      sub: "카드를 누르고, 알맞은 바구니를 눌러 담아요!",
+      explanation: "해와 무지개는 낮에, 달과 별은 밤에 볼 수 있어요!",
+      bins: [ { id: "day", label: "☀️ 낮" }, { id: "night", label: "🌙 밤" } ],
+      items: [
+        { e: "☀️", label: "해", bin: "day" }, { e: "🌈", label: "무지개", bin: "day" },
+        { e: "🌙", label: "달", bin: "night" }, { e: "⭐", label: "별", bin: "night" }
+      ]
+    },
+    {
+      id: "nightsky", type: "select", grade: "1-2", area: "지구과학",
+      prompt: "밤하늘에서 볼 수 있는 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "깜깜한 밤하늘에는 달과 별이 반짝여요. 해와 무지개는 낮에 볼 수 있지요!",
+      items: [
+        { e: "🌙", label: "달", ok: true }, { e: "⭐", label: "별", ok: true },
+        { e: "☀️", label: "해" }, { e: "🌈", label: "무지개" },
+        { e: "🦋", label: "나비" }, { e: "⚽", label: "공" }
+      ]
+    },
+    {
+      id: "nest", type: "drag", grade: "1-2", area: "생명과학/생물",
+      prompt: "아기 새를 둥지로 보내주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "새는 나무 위 둥지에서 살아요. 물고기는 물속, 강아지는 개집에서 살지요!",
+      target: { e: "🪺", label: "포근한 둥지로!" },
+      items: [
+        { e: "🐤", label: "아기 새", ok: true },
+        { e: "🐟", label: "물고기" }, { e: "🐶", label: "강아지" }
+      ]
+    },
+    {
+      id: "sealand", type: "classify", grade: "1-2", area: "생명과학/생물",
+      prompt: "바다에 사는 동물과 땅에 사는 동물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "물고기와 문어는 바닷속에서, 강아지와 토끼는 땅 위에서 살아요!",
+      bins: [ { id: "sea", label: "🌊 바다" }, { id: "land", label: "⛰️ 땅" } ],
+      items: [
+        { e: "🐟", label: "물고기", bin: "sea" }, { e: "🐙", label: "문어", bin: "sea" },
+        { e: "🐶", label: "강아지", bin: "land" }, { e: "🐰", label: "토끼", bin: "land" }
+      ]
+    },
+    {
+      id: "plants", type: "select", grade: "1-2", area: "생명과학/생물",
+      prompt: "식물을 모두 골라주세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "나무·해바라기·선인장은 땅에 뿌리를 내리고 사는 식물이에요!",
+      items: [
+        { e: "🌳", label: "나무", ok: true }, { e: "🌻", label: "해바라기", ok: true },
+        { e: "🌵", label: "선인장", ok: true }, { e: "🐶", label: "강아지" },
+        { e: "🐟", label: "물고기" }, { e: "🪨", label: "돌" }
+      ]
+    },
+    {
+      id: "trash", type: "drag", grade: "1-2", area: "생활 과학/안전",
+      prompt: "쓰레기를 쓰레기통에 넣어주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "바나나 껍질 같은 쓰레기는 쓰레기통에 버려요. 꽃과 책은 소중히 아껴야지요!",
+      target: { e: "🗑️", label: "쓰레기통에 쏙!" },
+      items: [
+        { e: "🍌", label: "바나나 껍질", ok: true },
+        { e: "🌷", label: "꽃" }, { e: "📖", label: "책" }
+      ]
+    },
+    {
+      id: "ear", type: "position", grade: "1-2", area: "생명과학/생물",
+      prompt: "소리를 듣는 곳을 눌러주세요",
+      sub: "그림에서 알맞은 곳을 찾아 눌러요!",
+      explanation: "귀는 소리를 듣는 감각기관이에요!",
+      scene: "face", answer: "ear",
+      regionNames: { ear: "귀", eye: "눈", nose: "코", mouth: "입" }
+    },
+    {
+      id: "seasoncloth", type: "classify", grade: "1-2", area: "지구과학",
+      prompt: "여름과 겨울에 필요한 것을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "더운 여름엔 반바지와 밀짚모자, 추운 겨울엔 목도리와 장갑이 필요해요!",
+      bins: [ { id: "summer", label: "☀️ 여름" }, { id: "winter", label: "⛄ 겨울" } ],
+      items: [
+        { e: "🩳", label: "반바지", bin: "summer" }, { e: "👒", label: "밀짚모자", bin: "summer" },
+        { e: "🧣", label: "목도리", bin: "winter" }, { e: "🧤", label: "장갑", bin: "winter" }
+      ]
+    },
+    {
+      id: "icecream", type: "drag", grade: "1-2", area: "생활 과학/안전",
+      prompt: "아이스크림을 냉동실에 넣어주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "아이스크림처럼 차갑게 보관해야 하는 음식은 냉동실에 넣어야 녹지 않아요!",
+      target: { e: "🧊", label: "냉동실에 쏙!" },
+      items: [
+        { e: "🍦", label: "아이스크림", ok: true },
+        { e: "👟", label: "운동화" }, { e: "🧸", label: "곰인형" }
+      ]
+    },
+    {
+      id: "dayorder", type: "order", grade: "1-2", area: "지구과학",
+      prompt: "하루가 지나가는 순서대로 놓아주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "해가 뜨는 아침, 해가 높은 낮, 해가 지는 저녁, 어두운 밤 순서로 하루가 지나가요!",
+      cards: [
+        { e: "🌅", label: "아침" }, { e: "☀️", label: "낮" },
+        { e: "🌇", label: "저녁" }, { e: "🌃", label: "밤" }
+      ]
+    },
+    {
+      id: "flywalk", type: "classify", grade: "1-2", area: "생명과학/생물",
+      prompt: "하늘을 나는 동물과 땅을 걷는 동물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "참새와 나비는 날개로 하늘을 날고, 강아지와 거북이는 땅 위를 걸어다녀요!",
+      bins: [ { id: "fly", label: "🌤️ 하늘을 날아요" }, { id: "walk", label: "🌱 땅을 걸어요" } ],
+      items: [
+        { e: "🐦", label: "참새", bin: "fly" }, { e: "🦋", label: "나비", bin: "fly" },
+        { e: "🐶", label: "강아지", bin: "walk" }, { e: "🐢", label: "거북이", bin: "walk" }
+      ]
+    },
+    {
+      id: "snowy", type: "select", grade: "1-2", area: "지구과학",
+      prompt: "눈 오는 날 필요한 물건을 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "추운 눈 오는 날엔 장갑과 목도리로 몸을 따뜻하게 해요!",
+      items: [
+        { e: "🧤", label: "장갑", ok: true }, { e: "🧣", label: "목도리", ok: true },
+        { e: "🩱", label: "수영복" }, { e: "🪭", label: "부채" },
+        { e: "🍉", label: "수박" }, { e: "🕶️", label: "선글라스" }
+      ]
+    },
+    {
+      id: "root", type: "position", grade: "1-2", area: "생명과학/생물",
+      prompt: "식물의 뿌리를 눌러주세요",
+      sub: "그림에서 알맞은 곳을 찾아 눌러요!",
+      explanation: "뿌리는 땅속에서 물과 양분을 빨아들여요!",
+      scene: "plant", answer: "root",
+      regionNames: { flower: "꽃", leaf: "잎", stem: "줄기", root: "뿌리" }
+    },
+
+    /* ---------- 3~4학년 ---------- */
+    {
+      id: "soundloud", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "큰 소리와 작은 소리를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "천둥·사자 울음·확성기 소리는 크고, 속삭임·나뭇잎 스치는 소리는 작아요!",
+      bins: [ { id: "loud", label: "🔊 큰 소리" }, { id: "soft", label: "🔉 작은 소리" } ],
+      items: [
+        { e: "⛈️", label: "천둥", bin: "loud" }, { e: "🦁", label: "사자 울음", bin: "loud" },
+        { e: "📢", label: "확성기", bin: "loud" },
+        { e: "🤫", label: "속삭임", bin: "soft" }, { e: "🍃", label: "나뭇잎 소리", bin: "soft" }
+      ]
+    },
+    {
+      id: "habitat", type: "classify", grade: "3-4", area: "생명과학/생물",
+      prompt: "더운 곳과 추운 곳에 사는 동물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "낙타와 도마뱀은 더운 사막에, 펭귄과 북극곰은 추운 극지방에 살아요!",
+      bins: [ { id: "hot", label: "🏜️ 더운 사막" }, { id: "cold", label: "❄️ 추운 극지방" } ],
+      items: [
+        { e: "🐫", label: "낙타", bin: "hot" }, { e: "🦎", label: "도마뱀", bin: "hot" },
+        { e: "🐧", label: "펭귄", bin: "cold" }, { e: "🐻‍❄️", label: "북극곰", bin: "cold" }
+      ]
+    },
+    {
+      id: "herbivore", type: "classify", grade: "3-4", area: "생명과학/생물",
+      prompt: "풀을 먹는 동물과 고기를 먹는 동물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "토끼·소·사슴은 풀을 먹는 초식동물, 사자·늑대는 고기를 먹는 육식동물이에요!",
+      bins: [ { id: "herb", label: "🌿 풀을 먹어요" }, { id: "carn", label: "🍖 고기를 먹어요" } ],
+      items: [
+        { e: "🐰", label: "토끼", bin: "herb" }, { e: "🐮", label: "소", bin: "herb" },
+        { e: "🦌", label: "사슴", bin: "herb" },
+        { e: "🦁", label: "사자", bin: "carn" }, { e: "🐺", label: "늑대", bin: "carn" }
+      ]
+    },
+    {
+      id: "waterplant", type: "classify", grade: "3-4", area: "생명과학/생물",
+      prompt: "물에 사는 식물과 땅에 사는 식물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "연꽃과 벼는 물에서, 선인장과 해바라기는 땅에서 자라요!",
+      bins: [ { id: "water", label: "💧 물에 사는 식물" }, { id: "land", label: "🌱 땅에 사는 식물" } ],
+      items: [
+        { e: "🪷", label: "연꽃", bin: "water" }, { e: "🌾", label: "벼", bin: "water" },
+        { e: "🌵", label: "선인장", bin: "land" }, { e: "🌻", label: "해바라기", bin: "land" }
+      ]
+    },
+    {
+      id: "gasair", type: "select", grade: "3-4", area: "물리/에너지",
+      prompt: "공기(기체)가 들어 있는 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "풍선·튜브·축구공 속에는 공기(기체)가 들어 있어요. 기체는 담는 그릇에 따라 모양이 변해요!",
+      items: [
+        { e: "🎈", label: "풍선", ok: true }, { e: "🛟", label: "튜브", ok: true },
+        { e: "⚽", label: "축구공", ok: true }, { e: "🧱", label: "벽돌" },
+        { e: "🍎", label: "사과" }
+      ]
+    },
+    {
+      id: "evaporation", type: "select", grade: "3-4", area: "물리/에너지",
+      prompt: "물이 증발하여 마르는 모습을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "젖은 빨래·물웅덩이·머리카락의 물이 공기 중으로 날아가는 것을 '증발'이라고 해요!",
+      items: [
+        { e: "👕", label: "젖은 빨래가 마름", ok: true }, { e: "💦", label: "물웅덩이가 마름", ok: true },
+        { e: "💇", label: "젖은 머리가 마름", ok: true }, { e: "🧊", label: "물이 얼어붙음" },
+        { e: "🌧️", label: "비가 내림" }
+      ]
+    },
+    {
+      id: "fossil", type: "select", grade: "3-4", area: "지구과학",
+      prompt: "화석으로 발견될 수 있는 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "화석은 아주 오랜 옛날 살았던 생물의 몸이나 흔적이에요. 공룡 뼈·조개껍데기·나뭇잎 자국이 화석이 될 수 있어요!",
+      items: [
+        { e: "🦕", label: "공룡 뼈", ok: true }, { e: "🐚", label: "조개껍데기", ok: true },
+        { e: "🍃", label: "나뭇잎 자국", ok: true }, { e: "📱", label: "휴대폰" },
+        { e: "🚗", label: "자동차" }
+      ]
+    },
+    {
+      id: "labsafe", type: "select", grade: "3-4", area: "생활 과학/안전",
+      prompt: "실험할 때 안전한 행동을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "보안경과 장갑으로 몸을 보호하고, 모르면 선생님께 여쭤봐요. 함부로 맛보거나 뛰어다니면 위험해요!",
+      items: [
+        { e: "🥽", label: "보안경 쓰기", ok: true }, { e: "🧤", label: "실험용 장갑 끼기", ok: true },
+        { e: "🙋", label: "모르면 선생님께 묻기", ok: true }, { e: "👅", label: "함부로 맛보기" },
+        { e: "🏃", label: "뛰어다니기" }
+      ]
+    },
+    {
+      id: "plantgrow", type: "order", grade: "3-4", area: "생명과학/생물",
+      prompt: "식물이 자라는 순서대로 놓아주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "씨앗에서 새싹이 나고, 잎과 줄기가 자란 뒤 꽃이 핀답니다!",
+      cards: [
+        { e: "🌰", label: "씨앗" }, { e: "🌱", label: "새싹" },
+        { e: "🌿", label: "잎과 줄기" }, { e: "🌸", label: "꽃" }
+      ]
+    },
+    {
+      id: "magnet", type: "select", grade: "3-4", area: "물리/에너지",
+      prompt: "자석에 붙는 물건을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "못·클립·가위는 철로 만들어져 자석에 붙어요. 유리·나무·플라스틱은 붙지 않아요!",
+      items: [
+        { e: "🔩", label: "못", ok: true }, { e: "📎", label: "클립", ok: true },
+        { e: "✂️", label: "가위", ok: true }, { e: "🥛", label: "유리컵" },
+        { e: "✏️", label: "연필" }, { e: "🥤", label: "플라스틱 컵" }
+      ]
+    },
+    {
+      id: "electric", type: "select", grade: "3-4", area: "물리/에너지",
+      prompt: "전기가 필요한 물건을 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "TV·컴퓨터·전등은 전기로 작동해요. 양초는 불로 밝히니 전기가 필요 없지요!",
+      items: [
+        { e: "📺", label: "텔레비전", ok: true }, { e: "💻", label: "컴퓨터", ok: true },
+        { e: "💡", label: "전등", ok: true }, { e: "🕯️", label: "양초" },
+        { e: "📖", label: "책" }, { e: "🚲", label: "자전거" }
+      ]
+    },
+    {
+      id: "insect", type: "select", grade: "3-4", area: "생명과학/생물",
+      prompt: "곤충을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "나비·개미·벌은 다리가 6개인 곤충이에요. 거미는 8개, 지렁이는 다리가 없어서 곤충이 아니랍니다!",
+      items: [
+        { e: "🦋", label: "나비", ok: true }, { e: "🐜", label: "개미", ok: true },
+        { e: "🐝", label: "벌", ok: true }, { e: "🕷️", label: "거미" },
+        { e: "🪱", label: "지렁이" }, { e: "🐌", label: "달팽이" }
+      ]
+    },
+    {
+      id: "battery", type: "drag", grade: "3-4", area: "물리/에너지",
+      prompt: "건전지를 손전등에 넣어주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "건전지는 전기 에너지를 담고 있어서 손전등을 켤 수 있어요!",
+      target: { e: "🔦", label: "손전등에 쏙!" },
+      items: [
+        { e: "🔋", label: "건전지", ok: true },
+        { e: "🥕", label: "당근" }, { e: "🧃", label: "주스" }
+      ]
+    },
+    {
+      id: "float", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "물에 뜨는 것과 가라앉는 것을 나눠주세요",
+      sub: "카드를 누르고, 알맞은 곳을 눌러 담아요!",
+      explanation: "가벼운 나뭇잎과 공기가 든 튜브는 뜨고, 무거운 돌과 못은 가라앉아요!",
+      bins: [ { id: "float", label: "🛟 물에 떠요" }, { id: "sink", label: "⬇️ 가라앉아요" } ],
+      items: [
+        { e: "🍃", label: "나뭇잎", bin: "float" }, { e: "🛟", label: "튜브", bin: "float" },
+        { e: "🪨", label: "돌", bin: "sink" }, { e: "🔩", label: "못", bin: "sink" }
+      ]
+    },
+    {
+      id: "recycle", type: "classify", grade: "3-4", area: "생활 과학/안전",
+      prompt: "재활용과 일반 쓰레기를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "페트병·캔·신문지는 재활용할 수 있어요. 쓴 휴지와 먹다 남은 뼈는 일반 쓰레기예요!",
+      bins: [ { id: "re", label: "♻️ 재활용" }, { id: "trash", label: "🗑️ 일반 쓰레기" } ],
+      items: [
+        { e: "🧴", label: "페트병", bin: "re" }, { e: "🥫", label: "캔", bin: "re" },
+        { e: "📰", label: "신문지", bin: "re" },
+        { e: "🧻", label: "쓴 휴지", bin: "trash" }, { e: "🍗", label: "닭뼈", bin: "trash" }
+      ]
+    },
+    {
+      id: "butterfly", type: "order", grade: "3-4", area: "생명과학/생물",
+      prompt: "나비의 한살이 순서를 맞추세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "알에서 애벌레가 나오고, 번데기를 거쳐 나비가 돼요!",
+      cards: [
+        { e: "🥚", label: "알" }, { e: "🐛", label: "애벌레" },
+        { svg: pupaSVG(), label: "번데기" }, { e: "🦋", label: "나비" }
+      ]
+    },
+
+    {
+      id: "nose", type: "position", grade: "3-4", area: "생명과학/생물",
+      prompt: "냄새를 맡는 감각기관을 눌러주세요",
+      sub: "그림에서 알맞은 곳을 찾아 눌러요!",
+      explanation: "코는 냄새를 맡는 감각기관이에요. 눈은 보고, 귀는 듣고, 입(혀)은 맛을 봐요!",
+      scene: "face", answer: "nose",
+      regionNames: { ear: "귀", eye: "눈", nose: "코", mouth: "입" }
+    },
+    {
+      id: "froglife", type: "order", grade: "3-4", area: "생명과학/생물",
+      prompt: "개구리의 한살이 순서를 맞추세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "알에서 올챙이가 나오고, 다리가 생기고 꼬리가 없어지면서 개구리가 돼요!",
+      cards: [
+        { svg: frogEggSVG(), label: "알" }, { svg: tadpoleSVG(), label: "올챙이" },
+        { e: "🐸", label: "개구리" }
+      ]
+    },
+    {
+      id: "magnetcls", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "자석에 붙는 것과 안 붙는 것을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "철로 만든 못과 클립은 자석에 붙고, 연필과 플라스틱 컵은 붙지 않아요!",
+      bins: [ { id: "stick", label: "🧲 붙어요" }, { id: "nostick", label: "🚫 안 붙어요" } ],
+      items: [
+        { e: "🔩", label: "못", bin: "stick" }, { e: "📎", label: "클립", bin: "stick" },
+        { e: "✏️", label: "연필", bin: "nostick" }, { e: "🥤", label: "플라스틱 컵", bin: "nostick" }
+      ]
+    },
+    {
+      id: "lightsource", type: "select", grade: "3-4", area: "물리/에너지",
+      prompt: "스스로 빛을 내는 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "해·전등·촛불은 스스로 빛을 내는 광원이에요. 거울과 돌은 스스로 빛을 내지 못해요!",
+      items: [
+        { e: "☀️", label: "해", ok: true }, { e: "💡", label: "전등", ok: true },
+        { e: "🕯️", label: "촛불", ok: true }, { e: "🪞", label: "거울" },
+        { e: "📖", label: "책" }, { e: "🪨", label: "돌" }
+      ]
+    },
+    {
+      id: "clip2magnet", type: "drag", grade: "3-4", area: "물리/에너지",
+      prompt: "자석에 붙는 물건을 자석에 붙여주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "클립은 철로 만들어져 자석에 착! 붙어요. 연필과 스펀지는 붙지 않아요!",
+      target: { e: "🧲", label: "자석에 착!" },
+      items: [
+        { e: "📎", label: "클립", ok: true },
+        { e: "✏️", label: "연필" }, { e: "🧽", label: "스펀지" }
+      ]
+    },
+    {
+      id: "states", type: "order", grade: "3-4", area: "물리/에너지",
+      prompt: "얼음을 계속 데우면 변하는 순서를 맞추세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "단단한 얼음이 녹아 물이 되고, 더 데우면 수증기가 되어 하늘로 날아가요!",
+      cards: [
+        { e: "🧊", label: "얼음" }, { e: "💧", label: "물" }, { e: "♨️", label: "수증기" }
+      ]
+    },
+    {
+      id: "hibernate", type: "select", grade: "3-4", area: "생명과학/생물",
+      prompt: "겨울잠을 자는 동물을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "곰·개구리·뱀은 먹이가 부족한 추운 겨울 동안 겨울잠을 자요. 참새와 소는 겨울에도 활동해요!",
+      items: [
+        { e: "🐻", label: "곰", ok: true }, { e: "🐸", label: "개구리", ok: true },
+        { e: "🐍", label: "뱀", ok: true }, { e: "🐦", label: "참새" },
+        { e: "🐄", label: "소" }, { e: "🐶", label: "강아지" }
+      ]
+    },
+    {
+      id: "nocturnal", type: "classify", grade: "3-4", area: "생명과학/생물",
+      prompt: "낮에 활동하는 동물과 밤에 활동하는 동물을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "나비와 참새는 낮에, 부엉이와 박쥐는 깜깜한 밤에 활동해요!",
+      bins: [ { id: "day", label: "☀️ 낮에 활동" }, { id: "night", label: "🌙 밤에 활동" } ],
+      items: [
+        { e: "🦋", label: "나비", bin: "day" }, { e: "🐦", label: "참새", bin: "day" },
+        { e: "🦉", label: "부엉이", bin: "night" }, { e: "🦇", label: "박쥐", bin: "night" }
+      ]
+    },
+    {
+      id: "shadow", type: "select", grade: "3-4", area: "물리/에너지", single: true,
+      prompt: "그림자가 알맞게 생긴 그림을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "그림자는 빛의 반대쪽에 생겨요. 해가 오른쪽에 있으면 그림자는 왼쪽으로 길어져요!",
+      items: [
+        { svg: shadowSVG("left"), label: "그림 A", ok: true },
+        { svg: shadowSVG("right"), label: "그림 B" },
+        { svg: shadowSVG("none"), label: "그림 C" }
+      ]
+    },
+    {
+      id: "solidliquid", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "고체와 액체를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "돌과 책은 모양이 변하지 않는 고체, 우유와 주스는 흐르는 액체예요!",
+      bins: [ { id: "solid", label: "🧱 고체" }, { id: "liquid", label: "💧 액체" } ],
+      items: [
+        { e: "🪨", label: "돌", bin: "solid" }, { e: "📕", label: "책", bin: "solid" },
+        { e: "🥛", label: "우유", bin: "liquid" }, { e: "🧃", label: "주스", bin: "liquid" }
+      ]
+    },
+    {
+      id: "sproutneeds", type: "select", grade: "3-4", area: "생명과학/생물",
+      prompt: "씨앗이 싹 트는 데 필요한 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "씨앗은 물과 햇빛이 있어야 싹을 틔울 수 있어요. 사탕과 장난감은 필요 없지요!",
+      items: [
+        { e: "💧", label: "물", ok: true }, { e: "☀️", label: "햇빛", ok: true },
+        { e: "🍬", label: "사탕" }, { e: "🧸", label: "장난감" }, { e: "📺", label: "텔레비전" }
+      ]
+    },
+    {
+      id: "watersprout", type: "drag", grade: "3-4", area: "생명과학/생물",
+      prompt: "새싹에게 필요한 것을 주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "식물은 물을 마시고 자라요. 뿌리가 물을 빨아들인답니다!",
+      target: { e: "🌱", label: "새싹에게 주세요!" },
+      items: [
+        { e: "💧", label: "물", ok: true },
+        { e: "🍭", label: "막대사탕" }, { e: "⚽", label: "축구공" }
+      ]
+    },
+
+    /* ---------- 5~6학년 : 빛 ---------- */
+    {
+      id: "straightlight", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "손전등을 켰을 때 빛이 나아가는 모습으로 알맞은 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "빛은 곧게 나아가요. 이것을 '빛의 직진'이라고 해요!",
+      items: [
+        { svg: beamSVG("straight"), label: "가 그림", ok: true },
+        { svg: beamSVG("curve"), label: "나 그림" },
+        { svg: beamSVG("zigzag"), label: "다 그림" }
+      ]
+    },
+    {
+      id: "shadowmake", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "그림자가 생기는 까닭으로 알맞은 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "빛이 곧게 나아가다가 불투명한 물체에 막히면, 물체 뒤쪽에 그림자가 생겨요!",
+      items: [
+        { e: "🚫", label: "빛이 물체에 막혀서", ok: true },
+        { e: "💡", label: "물체가 스스로 빛을 내서" },
+        { e: "💧", label: "물체가 물을 빨아들여서" }
+      ]
+    },
+    {
+      id: "shadowobj", type: "classify", grade: "1-2", area: "물리/에너지",
+      prompt: "그림자가 진하게 생기는 것과 잘 생기지 않는 것을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "빛을 막는 불투명한 물체(책·나무판)는 진한 그림자가 생기고, 빛이 통과하는 투명한 물체(유리·비닐)는 그림자가 잘 생기지 않아요!",
+      bins: [ { id: "dark", label: "⬛ 진한 그림자" }, { id: "none", label: "🔆 그림자 약함" } ],
+      items: [
+        { e: "📕", label: "책", bin: "dark" }, { e: "🪵", label: "나무판", bin: "dark" },
+        { e: "🪟", label: "유리", bin: "none" }, { e: "🛍️", label: "비닐", bin: "none" }
+      ]
+    },
+    {
+      id: "shadowobj34", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "그림자가 진하게 생기는 것과 잘 생기지 않는 것을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "빛을 막는 불투명한 물체(책·나무판)는 진한 그림자가 생기고, 빛이 통과하는 투명한 물체(유리·비닐)는 그림자가 잘 생기지 않아요!",
+      bins: [ { id: "dark", label: "⬛ 진한 그림자" }, { id: "none", label: "🔆 그림자 약함" } ],
+      items: [
+        { e: "📕", label: "책", bin: "dark" }, { e: "🪵", label: "나무판", bin: "dark" },
+        { e: "🪟", label: "유리", bin: "none" }, { e: "🛍️", label: "비닐", bin: "none" }
+      ]
+    },
+    {
+      id: "reflection", type: "select", grade: "5-6", area: "물리/에너지",
+      prompt: "빛의 반사를 이용하는 물건을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "거울·자동차 뒷거울·잔잔한 물은 빛을 되튕겨(반사) 모습을 보여줘요. 촛불과 돋보기는 반사를 이용하지 않아요!",
+      items: [
+        { e: "🪞", label: "거울", ok: true }, { e: "🚗", label: "자동차 뒷거울", ok: true },
+        { svg: calmWaterSVG(), label: "잔잔한 물", ok: true }, { e: "🕯️", label: "촛불" },
+        { e: "🔍", label: "돋보기" }, { e: "📕", label: "책" }
+      ]
+    },
+    {
+      id: "mirrorimg", type: "select", grade: "3-4", area: "물리/에너지", single: true,
+      prompt: "글자 F를 거울에 비추면 어떻게 보이는지 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "거울에 비친 모습은 좌우가 바뀌어 보여요. 위아래는 그대로랍니다!",
+      items: [
+        { svg: letterFSVG("mirror"), label: "가 그림", ok: true },
+        { svg: letterFSVG("normal"), label: "나 그림" },
+        { svg: letterFSVG("flip"), label: "다 그림" }
+      ]
+    },
+    {
+      id: "refraction", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "물이 담긴 컵에 젓가락을 넣으면 어떻게 보이는지 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "빛이 물과 공기의 경계에서 꺾이기 때문에(빛의 굴절), 물속 젓가락이 꺾여 보여요!",
+      items: [
+        { svg: refractSVG("bent"), label: "가 그림", ok: true },
+        { svg: refractSVG("straight"), label: "나 그림" },
+        { svg: refractSVG("broken"), label: "다 그림" }
+      ]
+    },
+    {
+      id: "convexlens", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "볼록 렌즈를 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "가운데가 볼록하게 두꺼운 렌즈가 볼록 렌즈예요. 가운데가 얇으면 오목 렌즈랍니다!",
+      items: [
+        { svg: lensSVG("convex"), label: "가 렌즈", ok: true },
+        { svg: lensSVG("concave"), label: "나 렌즈" }
+      ]
+    },
+    {
+      id: "lensbeam", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "볼록 렌즈를 지난 빛이 나아가는 모습으로 알맞은 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "볼록 렌즈를 지난 빛은 한 점으로 모여요. 그래서 햇빛을 모아 종이를 태울 수도 있어요!",
+      items: [
+        { svg: lensBeamSVG("converge"), label: "가 그림", ok: true },
+        { svg: lensBeamSVG("diverge"), label: "나 그림" },
+        { svg: lensBeamSVG("parallel"), label: "다 그림" }
+      ]
+    },
+    {
+      id: "magnifier", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "작은 글씨를 크게 보려면 어떤 렌즈를 써야 하는지 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "돋보기는 볼록 렌즈예요. 볼록 렌즈는 물체를 크게 보이게 해서 작은 글씨를 잘 볼 수 있어요!",
+      items: [
+        { svg: lensSVG("convex"), label: "볼록 렌즈(돋보기)", ok: true },
+        { svg: lensSVG("concave"), label: "오목 렌즈" }
+      ]
+    },
+    {
+      id: "transparent", type: "classify", grade: "5-6", area: "물리/에너지",
+      prompt: "빛이 통과하는 물체와 통과하지 못하는 물체를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "유리·비닐·물처럼 빛이 통과하는 것은 투명한 물체, 나무·철판·책처럼 빛을 막는 것은 불투명한 물체예요!",
+      bins: [ { id: "clear", label: "🔆 투명 (빛 통과)" }, { id: "opaque", label: "⬛ 불투명 (빛 막음)" } ],
+      items: [
+        { e: "🪟", label: "유리", bin: "clear" }, { e: "🛍️", label: "비닐", bin: "clear" },
+        { e: "💧", label: "물", bin: "clear" },
+        { e: "🪵", label: "나무판", bin: "opaque" }, { e: "📕", label: "책", bin: "opaque" }
+      ]
+    },
+
+    /* ---------- 5~6학년 : 우리 몸(소화) ---------- */
+    {
+      id: "digestorder", type: "order", grade: "5-6", area: "생명과학/생물",
+      prompt: "음식물이 소화되며 지나가는 순서를 놓으세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "음식물은 입 → 식도 → 위 → 작은창자 → 큰창자를 지나며 소화돼요!",
+      cards: [
+        { e: "👄", label: "입" }, { e: "🫄", label: "식도" }, { e: "🎈", label: "위" },
+        { e: "🌀", label: "작은창자" }, { e: "➰", label: "큰창자" }
+      ]
+    },
+    {
+      id: "saliva", type: "select", grade: "5-6", area: "생명과학/생물", single: true,
+      prompt: "침이 하는 일로 알맞은 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "입에서 나오는 침은 음식물을 부드럽게 만들고, 잘게 부수어 소화가 잘 되도록 도와줘요!",
+      items: [
+        { e: "💧", label: "음식을 부드럽게 해 소화를 도와요", ok: true },
+        { e: "🫁", label: "숨을 쉬게 해줘요" },
+        { e: "👀", label: "물체를 보게 해줘요" }
+      ]
+    },
+
+    /* ---------- 5~6학년 : 연소와 소화(불) ---------- */
+    {
+      id: "burnmean", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "연소가 무엇인지 알맞은 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "연소는 물질이 산소와 빠르게 반응하면서 빛과 열을 내는 현상이에요!",
+      items: [
+        { e: "🔥", label: "물질이 산소와 반응해 빛과 열을 내는 것", ok: true },
+        { e: "🧊", label: "물이 얼어 얼음이 되는 것" },
+        { e: "💨", label: "물이 증발해 수증기가 되는 것" }
+      ]
+    },
+    {
+      id: "burncond", type: "select", grade: "5-6", area: "물리/에너지",
+      prompt: "불이 붙기 위해 필요한 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "불이 붙으려면 탈 물질, 산소, 발화점 이상의 높은 온도 세 가지가 모두 필요해요!",
+      items: [
+        { e: "🪵", label: "탈 물질(나무)", ok: true }, { e: "🅾️", label: "산소", ok: true },
+        { e: "🌡️", label: "높은 온도(발화점)", ok: true }, { e: "🧊", label: "얼음" },
+        { e: "💧", label: "물" }
+      ]
+    },
+    {
+      id: "extinguish", type: "select", grade: "3-4", area: "생활 과학/안전",
+      prompt: "불을 끄는 올바른 방법을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "물을 뿌려 온도를 낮추거나, 담요를 덮고 소화기를 뿌려 산소를 막으면 불이 꺼져요. 기름을 붓거나 부채질하면 더 커져요!",
+      items: [
+        { e: "💦", label: "물 뿌리기", ok: true }, { e: "🧯", label: "소화기 뿌리기", ok: true },
+        { svg: blanketSVG(), label: "담요 덮기", ok: true }, { e: "🛢️", label: "기름 붓기" },
+        { e: "🪭", label: "부채질하기" }
+      ]
+    },
+    {
+      id: "waterext", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "물을 뿌리면 불이 꺼지는 까닭을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "물이 온도를 발화점 아래로 낮추기 때문에 불이 꺼져요!",
+      items: [
+        { e: "🌡️", label: "온도를 발화점보다 낮춰서", ok: true },
+        { e: "🪵", label: "탈 물질을 더 많이 만들어서" },
+        { e: "🅾️", label: "산소를 더 많이 공급해서" }
+      ]
+    },
+    {
+      id: "oxyext", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "촛불에 유리컵을 덮으면 불이 꺼지는 까닭을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "유리컵을 덮으면 산소가 더 이상 공급되지 않아(산소 차단) 불이 꺼져요!",
+      items: [
+        { e: "🚫", label: "산소가 차단되어서", ok: true },
+        { e: "🌡️", label: "온도가 더 높아져서" },
+        { e: "🪵", label: "탈 물질이 늘어나서" }
+      ]
+    },
+
+    /* ---------- 5~6학년 (기존) ---------- */
+    {
+      id: "producer", type: "classify", grade: "5-6", area: "생명과학/생물",
+      prompt: "생산자와 소비자를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "스스로 양분을 만드는 벼와 나무는 생산자, 다른 생물을 먹고 사는 토끼·매·메뚜기는 소비자예요!",
+      bins: [ { id: "prod", label: "🌱 생산자" }, { id: "cons", label: "🍽️ 소비자" } ],
+      items: [
+        { e: "🌾", label: "벼", bin: "prod" }, { e: "🌳", label: "나무", bin: "prod" },
+        { e: "🐰", label: "토끼", bin: "cons" }, { e: "🦅", label: "매", bin: "cons" },
+        { e: "🦗", label: "메뚜기", bin: "cons" }
+      ]
+    },
+    {
+      id: "heatconduct", type: "select", grade: "3-4", area: "물리/에너지", single: true,
+      prompt: "뜨거운 국에 넣었을 때 손잡이가 가장 빨리 뜨거워지는 것을 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "금속(쇠)은 열을 빨리 전달해요. 나무·고무·털실은 열이 천천히 전달된답니다!",
+      items: [
+        { e: "🥄", label: "쇠숟가락", ok: true }, { e: "🥢", label: "나무젓가락" },
+        { e: "🧤", label: "고무장갑" }, { e: "🧣", label: "털장갑" }
+      ]
+    },
+    {
+      id: "elecconduct", type: "classify", grade: "3-4", area: "물리/에너지",
+      prompt: "전기가 통하는 것과 통하지 않는 것을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "금속인 쇠숟가락과 클립은 전기가 통하는 도체, 나무젓가락과 유리컵은 통하지 않는 부도체예요!",
+      bins: [ { id: "cond", label: "⚡ 전기가 통해요" }, { id: "insul", label: "🚫 안 통해요" } ],
+      items: [
+        { e: "🥄", label: "쇠숟가락", bin: "cond" }, { e: "📎", label: "클립", bin: "cond" },
+        { e: "🥢", label: "나무젓가락", bin: "insul" }, { e: "🥛", label: "유리컵", bin: "insul" }
+      ]
+    },
+    {
+      id: "drying", type: "select", grade: "5-6", area: "지구과학",
+      prompt: "빨래가 잘 마르는 날씨를 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "맑고 바람 부는 날엔 물이 빨리 증발해서 빨래가 잘 말라요!",
+      items: [
+        { e: "☀️", label: "맑은 날", ok: true }, { e: "💨", label: "바람 부는 날", ok: true },
+        { e: "🌧️", label: "비 오는 날" }, { e: "🌫️", label: "안개 낀 날" }
+      ]
+    },
+    {
+      id: "ecoact", type: "classify", grade: "5-6", area: "생활 과학/안전",
+      prompt: "지구를 지키는 행동과 아닌 행동을 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "자전거 타기·나무 심기·분리배출은 지구를 지켜요. 물을 틀어놓거나 쓰레기를 함부로 버리면 지구가 아파요!",
+      bins: [ { id: "good", label: "💚 지구를 지켜요" }, { id: "bad", label: "💔 지구가 아파요" } ],
+      items: [
+        { e: "🚲", label: "자전거 타기", bin: "good" }, { e: "🌳", label: "나무 심기", bin: "good" },
+        { e: "♻️", label: "분리배출하기", bin: "good" },
+        { e: "🚿", label: "물 틀어놓기", bin: "bad" }, { e: "🚯", label: "쓰레기 함부로 버리기", bin: "bad" }
+      ]
+    },
+    {
+      id: "chainfill", type: "drag", grade: "5-6", area: "생명과학/생물",
+      prompt: "먹이 사슬의 빈칸에 알맞은 동물을 넣어주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "벼를 먹는 메뚜기가 빈칸에 들어가요. 메뚜기는 다시 개구리에게 먹힌답니다!",
+      target: { e: "🌾 ➡️ ❓ ➡️ 🐸", label: "빈칸에 들어갈 동물을 넣어요!" },
+      items: [
+        { e: "🦗", label: "메뚜기", ok: true },
+        { e: "🐍", label: "뱀" }, { e: "🦅", label: "매" }
+      ]
+    },
+    {
+      id: "volcano", type: "select", grade: "5-6", area: "지구과학",
+      prompt: "화산이 분출할 때 나오는 것을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "화산이 분출하면 뜨거운 용암과 화산재가 나와요. 눈과 무지개는 나오지 않지요!",
+      items: [
+        { e: "🌋", label: "용암", ok: true }, { e: "🌫️", label: "화산재", ok: true },
+        { e: "❄️", label: "눈" }, { e: "🌈", label: "무지개" }, { e: "🐟", label: "물고기" }
+      ]
+    },
+    {
+      id: "planets2", type: "order", grade: "5-6", area: "지구과학",
+      prompt: "태양에서 가까운 순서로 놓으세요 (바깥쪽 행성)",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "화성 바깥쪽으로는 목성 → 토성 → 천왕성 → 해왕성 순서로 있어요!",
+      cards: [
+        { svg: planetSVG("jupiter"), label: "목성" }, { svg: planetSVG("saturn"), label: "토성" },
+        { svg: planetSVG("uranus"), label: "천왕성" }, { svg: planetSVG("neptune"), label: "해왕성" }
+      ]
+    },
+    {
+      id: "selflight", type: "select", grade: "5-6", area: "지구과학",
+      prompt: "스스로 빛을 내는 천체를 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "태양과 별은 스스로 빛을 내요. 달과 지구는 태양 빛을 반사할 뿐, 스스로 빛나지 않아요!",
+      items: [
+        { e: "☀️", label: "태양", ok: true }, { e: "⭐", label: "별", ok: true },
+        { e: "🌙", label: "달" }, { e: "🌍", label: "지구" }
+      ]
+    },
+    {
+      id: "magnetpole", type: "drag", grade: "3-4", area: "물리/에너지",
+      prompt: "자석의 N극에 붙는 것을 가져다 붙여주세요",
+      sub: "알맞은 카드를 골라 끌어다 놓아요!",
+      explanation: "자석은 서로 다른 극끼리 끌어당겨요. N극에는 S극이 착! 붙는답니다!",
+      target: { e: "🧲", label: "여기는 N극! 무엇이 붙을까요?" },
+      items: [
+        { e: "🟦", label: "S극", ok: true },
+        { e: "🟥", label: "N극" }, { e: "🪵", label: "나무토막" }
+      ]
+    },
+    {
+      id: "photosyn", type: "order", grade: "5-6", area: "생명과학/생물",
+      prompt: "식물이 열매를 맺는 과정을 순서대로 놓으세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "식물은 햇빛을 받아 잎에서 양분을 만들고, 그 양분으로 열매를 맺어요!",
+      cards: [
+        { e: "☀️", label: "햇빛 받기" }, { e: "🌿", label: "잎에서 양분 만들기" },
+        { e: "🍎", label: "열매 맺기" }
+      ]
+    },
+    {
+      id: "energyconv", type: "order", grade: "5-6", area: "물리/에너지",
+      prompt: "태양광 발전으로 전등이 켜지는 순서대로 놓아주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "태양빛이 태양 전지판에 닿으면 전지판이 전기를 만들고, 그 전기가 전등으로 이동해 전등이 켜져요!",
+      cards: [
+        { e: "☀️", label: "태양빛이 태양 전지판에 닿음" },
+        { svg: solarPanelSVG(), label: "태양 전지판이 전기를 만듦" },
+        { e: "⚡", label: "전기가 전등으로 이동함" },
+        { e: "💡", label: "전등이 켜짐" }
+      ]
+    },
+    {
+      id: "mammalbird", type: "classify", grade: "5-6", area: "생명과학/생물",
+      prompt: "포유류와 조류를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "새끼를 낳아 젖을 먹이는 사자·고래·박쥐는 포유류! 알을 낳고 깃털이 있는 독수리·펭귄은 조류예요. 고래와 박쥐, 헷갈리기 쉽죠?",
+      bins: [ { id: "mammal", label: "🦁 포유류" }, { id: "bird", label: "🦅 조류" } ],
+      items: [
+        { e: "🦁", label: "사자", bin: "mammal" }, { e: "🐳", label: "고래", bin: "mammal" },
+        { e: "🦇", label: "박쥐", bin: "mammal" },
+        { e: "🦅", label: "독수리", bin: "bird" }, { e: "🐧", label: "펭귄", bin: "bird" }
+      ]
+    },
+    {
+      id: "transport", type: "select", grade: "5-6", area: "지구과학", single: true,
+      prompt: "운반 작용이 일어난 모습을 골라주세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "흐르는 물이 모래와 흙, 자갈을 다른 곳으로 옮기는 것을 '운반 작용'이라고 해요!",
+      items: [
+        { e: "🌊", label: "물이 흐르며 모래와 흙을 옮기는 모습", ok: true },
+        { e: "🏖️", label: "강가에 모래가 차곡차곡 쌓인 모습" },
+        { e: "⛰️", label: "산비탈의 흙이 깎여 파인 모습" },
+        { e: "❄️", label: "눈이 운동장 위에 쌓인 모습" }
+      ]
+    },
+    {
+      id: "erosion", type: "select", grade: "5-6", area: "지구과학", single: true,
+      prompt: "침식 작용이 일어난 곳을 골라주세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "흐르는 물이나 바람이 땅을 깎아 내는 것을 '침식 작용'이라고 해요!",
+      items: [
+        { e: "⛰️", label: "흙이 깎여 파인 산비탈", ok: true },
+        { e: "🏖️", label: "모래가 쌓인 강 하류" },
+        { e: "❄️", label: "눈이 쌓인 운동장" },
+        { e: "🍂", label: "나뭇잎이 떨어진 길" }
+      ]
+    },
+    {
+      id: "deposit", type: "select", grade: "5-6", area: "지구과학", single: true,
+      prompt: "퇴적 작용이 일어난 곳을 골라주세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "운반된 모래와 흙이 한곳에 차곡차곡 쌓이는 것을 '퇴적 작용'이라고 해요!",
+      items: [
+        { e: "🏖️", label: "강 하류에 모래와 흙이 쌓인 곳", ok: true },
+        { e: "⛰️", label: "산비탈의 흙이 깎여 파인 곳" },
+        { e: "🌊", label: "물이 빠르게 흐르며 자갈을 옮기는 곳" },
+        { e: "🪨", label: "바위가 금이 가서 부서지는 곳" }
+      ]
+    },
+    {
+      id: "fireact", type: "select", grade: "5-6", area: "생활 과학/안전",
+      prompt: "불이 났을 때 올바른 행동을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "연기는 위로 올라가니 몸을 낮추고, 젖은 수건으로 코와 입을 막고 대피해요. 엘리베이터는 위험해요!",
+      items: [
+        { e: "🧎", label: "몸을 낮춰 이동하기", ok: true }, { e: "🧻", label: "젖은 수건으로 코 막기", ok: true },
+        { e: "🛗", label: "엘리베이터 타기" }, { e: "🛏️", label: "침대 밑에 숨기" }
+      ]
+    },
+    {
+      id: "elecsafe", type: "select", grade: "5-6", area: "생활 과학/안전",
+      prompt: "전기를 안전하게 사용하는 행동을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "플러그는 머리를 잡고 바르게 뽑고, 물 묻은 손으로는 절대 만지지 않아요. 콘센트에 물건을 넣으면 큰일나요!",
+      items: [
+        { e: "🔌", label: "플러그 바르게 뽑기", ok: true }, { e: "🧻", label: "손 닦고 만지기", ok: true },
+        { e: "💦", label: "젖은 손으로 만지기" }, { e: "🥢", label: "콘센트에 젓가락 넣기" }
+      ]
+    },
+    {
+      id: "foodstore", type: "select", grade: "5-6", area: "생활 과학/안전",
+      prompt: "음식이 상하지 않게 하는 방법을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "차가운 냉장고에 넣거나 잘 익히면 세균이 자라기 어려워 음식이 상하지 않아요!",
+      items: [
+        { e: "🧊", label: "냉장고에 넣기", ok: true }, { e: "🔥", label: "잘 익혀 먹기", ok: true },
+        { e: "☀️", label: "햇볕에 두기" }, { e: "🪰", label: "뚜껑 열어두기" }
+      ]
+    },
+    {
+      id: "savenergy", type: "select", grade: "5-6", area: "물리/에너지",
+      prompt: "에너지를 절약하는 행동을 모두 고르세요",
+      sub: "알맞은 그림을 모두 골라 눌러요!",
+      explanation: "빈 방의 불을 끄고 안 쓰는 플러그를 뽑으면 전기 에너지를 아낄 수 있어요!",
+      items: [
+        { e: "💡", label: "빈 방 불 끄기", ok: true }, { e: "🔌", label: "안 쓰는 플러그 뽑기", ok: true },
+        { e: "📺", label: "TV 켜 놓고 자기" }, { e: "🧊", label: "냉장고 문 열어두기" }
+      ]
+    },
+    {
+      id: "renewable", type: "classify", grade: "5-6", area: "물리/에너지",
+      prompt: "재생 에너지와 화석 연료를 나눠주세요",
+      sub: "카드를 알맞은 곳에 나눠 담아요!",
+      explanation: "햇빛·바람·물은 계속 다시 얻을 수 있는 재생 에너지, 석유와 석탄은 쓰면 없어지는 화석 연료예요!",
+      bins: [ { id: "re", label: "♻️ 재생 에너지" }, { id: "fossil", label: "🏭 화석 연료" } ],
+      items: [
+        { e: "☀️", label: "햇빛(태양광)", bin: "re" }, { e: "💨", label: "바람(풍력)", bin: "re" },
+        { e: "💧", label: "물(수력)", bin: "re" },
+        { e: "🛢️", label: "석유", bin: "fossil" }, { e: "⚫", label: "석탄", bin: "fossil" }
+      ]
+    },
+    {
+      id: "foodchain", type: "order", grade: "5-6", area: "생명과학/생물",
+      prompt: "먹이 사슬 순서대로 놓아주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "벼(풀)를 메뚜기가 먹고, 메뚜기를 개구리가, 개구리를 뱀이 먹어요. 에너지가 차례로 이동해요!",
+      cards: [
+        { e: "🌾", label: "벼(풀)" }, { e: "🦗", label: "메뚜기" },
+        { e: "🐸", label: "개구리" }, { e: "🐍", label: "뱀" }
+      ]
+    },
+    {
+      id: "moon", type: "order", grade: "5-6", area: "지구과학", cyclic: true,
+      prompt: "달의 모양이 변하는 순서대로 놓아주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "달은 초승달 → 상현달 → 보름달 → 하현달 순서로 돌고 돌며 모양이 변해요!",
+      cards: [
+        { e: "🌒", label: "초승달" }, { e: "🌓", label: "상현달" },
+        { e: "🌕", label: "보름달" }, { e: "🌗", label: "하현달" }
+      ]
+    },
+    {
+      id: "watercycle", type: "order", grade: "5-6", area: "지구과학", cyclic: true,
+      prompt: "물이 순환하는 순서를 맞춰주세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "바닷물이 증발해 수증기가 되고, 하늘에서 구름이 되어 비로 내린 뒤 강으로 모여요!",
+      cards: [
+        { e: "🌊", label: "바닷물 증발" }, { e: "☁️", label: "구름 되기" },
+        { e: "🌧️", label: "비 내리기" }, { e: "🏞️", label: "강으로 모임" }
+      ]
+    },
+    {
+      id: "planets", type: "order", grade: "5-6", area: "지구과학",
+      prompt: "태양에서 가까운 순서로 행성을 놓으세요",
+      sub: "카드를 눌러 1번부터 차례대로 놓아요!",
+      explanation: "태양에서 가까운 순서는 수성 → 금성 → 지구 → 화성이에요!",
+      cards: [
+        { svg: planetSVG("mercury"), label: "수성" }, { svg: planetSVG("venus"), label: "금성" },
+        { svg: planetSVG("earth"), label: "지구" }, { svg: planetSVG("mars"), label: "화성" }
+      ]
+    },
+    {
+      id: "circuit", type: "select", grade: "5-6", area: "물리/에너지", single: true,
+      prompt: "전구에 불이 켜지는 회로를 고르세요",
+      sub: "그림을 잘 보고 하나만 골라요!",
+      explanation: "전선이 끊어진 곳 없이 완전히 연결된 '닫힌 회로'여야 전기가 돌아 불이 켜져요!",
+      items: [
+        { svg: circuitSVG(null), label: "회로 A", ok: true },
+        { svg: circuitSVG("right"), label: "회로 B" },
+        { svg: circuitSVG("top"), label: "회로 C" },
+        { svg: circuitSVG("left"), label: "회로 D" }
+      ]
+    }
+  ];
+
+  /* ============ 상태 ============ */
+  let gradeFilter = "all";
+  let current = null;          // 현재 문제
+  let lastId = null;           // 직전 문제(연속 중복 방지)
+  let engineState = null;      // 유형별 상태
+  let stats = { tried: 0, solved: 0 };
+  let judged = false;
+  let reviewMode = false;      // 비슷한 문제 복습 모드
+
+  /* ============ 오답 DB (localStorage 저장) ============
+     - 틀린 문제는 DB에 저장하고, 같은 문제는 다시 출제하지 않아요.
+     - 저장된 오답의 '과학 영역'을 바탕으로 비슷한(같은 영역) 새 문제를 출제해
+       학생 행동 데이터를 계속 쌓을 수 있어요. */
+  const WRONG_KEY = "catchap_wrongdb_v1";
+  const SOLVED_KEY = "catchap_solved_v1";
+  let wrongDB = loadWrongDB();
+  let solvedIds = loadSolved();
+  let completed = false;
+  function loadWrongDB() {
+    try { return JSON.parse(localStorage.getItem(WRONG_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+  function saveWrongDB() {
+    try { localStorage.setItem(WRONG_KEY, JSON.stringify(wrongDB)); } catch (e) {}
+  }
+  function loadSolved() {
+    try { return new Set(JSON.parse(localStorage.getItem(SOLVED_KEY)) || []); }
+    catch (e) { return new Set(); }
+  }
+  function saveSolved() {
+    try { localStorage.setItem(SOLVED_KEY, JSON.stringify([...solvedIds])); } catch (e) {}
+  }
+  // 현재 학년 필터 기준 진행률 표시
+  function renderProgress() {
+    const inFilter = PROBLEMS.filter((p) => gradeFilter === "all" || p.grade === gradeFilter);
+    const done = inFilter.filter((p) => solvedIds.has(p.id) || wrongDB[p.id]).length;
+    $("#score").textContent = `완료 ${done} / ${inFilter.length} · 성공 ${stats.solved}`;
+  }
+  function recordWrong(p, behavior) {
+    const k = p.id;
+    if (!wrongDB[k]) {
+      wrongDB[k] = { id: k, prompt: p.prompt, area: p.area, grade: p.grade, type: p.type, count: 0 };
+    }
+    wrongDB[k].count++;
+    wrongDB[k].lastAt = new Date().toISOString();
+    // 마지막 오답의 행동 데이터 스냅샷(학습 진단용)
+    wrongDB[k].lastBehavior = {
+      durationMs: Math.round(behavior.duration), changes: behavior.changes,
+      reorders: behavior.reorders, attempts: behavior.attempts, flags: behavior.flags.slice()
+    };
+    saveWrongDB();
+    renderWrongDB();
+  }
+  function renderWrongDB() {
+    const items = Object.values(wrongDB);
+    $("#wrongInfo").textContent = "오답 노트 " + items.length + "개";
+    const list = $("#wrongList");
+    if (!list) return;
+    list.innerHTML = items.length
+      ? items.map((w) =>
+          `<li><span class="wa">${w.area}</span> ${w.prompt}<span class="wc">틀린 횟수 ${w.count}</span></li>`
+        ).join("")
+      : `<li class="empty">아직 틀린 문제가 없어요. 잘하고 있어요! 🎉</li>`;
+  }
+
+  /* ============ 행동 데이터 레코더 ============ */
+  const B = {};
+  function resetBehavior(keepAttempts) {
+    const prevAttempts = keepAttempts && B.attempts ? B.attempts : 0;
+    Object.assign(B, {
+      start: performance.now(), firstAction: null,
+      clicks: 0, changes: 0, reorders: 0,
+      dragLen: 0, dragDirect: 0, straight: null,
+      attempts: prevAttempts, flags: []
+    });
+    renderBehavior();
+    $("#bh-flags").textContent = "아직 판정 전이에요";
+  }
+  function touchAction() {
+    if (B.firstAction === null) B.firstAction = performance.now() - B.start;
+  }
+  function renderBehavior() {
+    $("#bh-hesi").textContent = B.firstAction === null ? "-" : (B.firstAction / 1000).toFixed(1) + "초";
+    $("#bh-clicks").textContent = B.clicks;
+    $("#bh-changes").textContent = B.changes;
+    $("#bh-reorders").textContent = B.reorders;
+    $("#bh-drag").textContent = Math.round(B.dragLen) + "px";
+    $("#bh-straight").textContent = B.straight === null ? "-" : (B.straight * 100).toFixed(0) + "%";
+    $("#bh-attempts").textContent = B.attempts;
+  }
+  function computeFlags(elapsedMs) {
+    const flags = [];
+    if (elapsedMs < 1500) flags.push("too_fast (1.5초 미만 제출)");
+    if (B.firstAction !== null && B.firstAction < 200) flags.push("no_hesitation (즉시 조작)");
+    if (B.straight !== null && B.straight > 0.98) flags.push("perfect_line (완벽 직선 드래그)");
+    if (B.changes === 0 && B.reorders === 0 && elapsedMs < 3000 && current.type !== "position")
+      flags.push("zero_correction (수정 없이 초고속)");
+    B.flags = flags;
+    const el = $("#bh-flags");
+    el.innerHTML = flags.length
+      ? flags.map((f) => `<span class="flag-chip">${f}</span>`).join("")
+      : `<span class="flag-chip flag-ok">특이 신호 없음 · 사람다운 풀이예요</span>`;
+  }
+
+  // 타이머
+  setInterval(() => {
+    if (!current || judged) return;
+    $("#timer").textContent = ((performance.now() - B.start) / 1000).toFixed(1) + "초";
+    $("#bh-time").textContent = $("#timer").textContent;
+  }, 100);
+
+  // 전역 클릭 수집
+  document.addEventListener("pointerdown", (ev) => {
+    if (!current || judged) return;
+    if (!$("#stage").contains(ev.target)) return;
+    B.clicks++;
+    touchAction();
+    renderBehavior();
+  });
+
+  /* ============ 공통 렌더 ============ */
+  const TYPE_NAMES = {
+    select: "🖼️ 이미지 선택형", drag: "👆 드래그형", order: "🔢 순서 배열형",
+    classify: "🗂️ 분류형", position: "📍 위치 선택형"
+  };
+  // 아직 안 푼(=정답도 오답도 아닌) 새 문제 풀
+  //  - 이미 맞힌 문제, 틀려서 DB에 저장된 문제는 제외(같은 문제 다시 안 풀기)
+  //  - 복습 모드면 오답에 저장된 '영역'과 같은 영역의 새 문제만 출제
+  function freshPool() {
+    const byGrade = (p) => gradeFilter === "all" || p.grade === gradeFilter;
+    let pool = PROBLEMS.filter(byGrade);
+    if (reviewMode) {
+      const wrongAreas = new Set(Object.values(wrongDB).map((w) => w.area));
+      if (wrongAreas.size) pool = pool.filter((p) => wrongAreas.has(p.area));
+    }
+    return pool.filter((p) => !solvedIds.has(p.id) && !wrongDB[p.id]);
+  }
+
+  function loadProblem() {
+    const pool = freshPool();
+    if (!pool.length) { showComplete(); return; }   // 전부 다 풀었어요!
+    const choices = pool.filter((p) => p.id !== lastId);
+    current = pickOne(choices.length ? choices : pool);
+    renderCurrent();
+  }
+
+  // 방금 틀린 문제와 '비슷한'(같은 과학 영역) 새 문제를 출제 → 행동 데이터 축적
+  function loadSimilar(area) {
+    const pool = freshPool().filter((p) => p.area === area && p.id !== lastId);
+    if (pool.length) { current = pickOne(pool); renderCurrent(); }
+    else loadProblem();
+  }
+
+  // 모든 문제를 다 푼 경우 축하 화면
+  function showComplete() {
+    completed = true;
+    judged = true;
+    current = null;
+    $("#prompt").textContent = "";
+    $("#sub").textContent = "";
+    $("#stage").innerHTML = "";
+    $("#btnSubmit").style.display = "none";
+    const ovl = $("#overlay");
+    ovl.className = "overlay show ok";
+    $("#ovlEmo").textContent = "🏆";
+    $("#ovlTitle").textContent = "수고했어! 넌 최고야";
+    $("#ovlExp").textContent = "과학 문제를 모두 풀었어요! 정말 대단해요 🎉";
+    $("#btnRetry").style.display = "none";
+    $("#btnNext").textContent = "처음부터 다시 풀기 🔄";
+    renderProgress();
+  }
+
+  function renderCurrent() {
+    lastId = current.id;
+    judged = false;
+    completed = false;
+    $("#btnNext").textContent = "다음 문제 →";
+    resetBehavior(false);
+    renderProgress();
+
+    $("#b-type").textContent = TYPE_NAMES[current.type];
+    $("#b-area").textContent = "🧪 " + current.area;
+    $("#b-grade").textContent = "🎒 초등 " + current.grade + "학년";
+    $("#prompt").textContent = current.prompt;
+    $("#sub").textContent = current.sub;
+    $("#overlay").className = "overlay";
+    $("#attemptsTag").textContent = "";
+
+    const stage = $("#stage");
+    stage.innerHTML = "";
+    if (current.type === "select") buildSelect(stage);
+    else if (current.type === "drag") buildDrag(stage);
+    else if (current.type === "order") buildOrder(stage);
+    else if (current.type === "classify") buildClassify(stage);
+    else if (current.type === "position") buildPosition(stage);
+
+    $("#btnSubmit").style.display = (current.type === "drag" || current.type === "position") ? "none" : "";
+    updateSubmit();
+  }
+
+  function updateSubmit() {
+    const btn = $("#btnSubmit");
+    if (!current) return;
+    if (current.type === "select") btn.disabled = engineState.selected.size === 0;
+    else if (current.type === "order") btn.disabled = engineState.slots.some((s) => s === null);
+    else if (current.type === "classify") btn.disabled = Object.keys(engineState.placed).length < current.items.length;
+  }
+
+  /* ============ 판정/피드백 ============ */
+  function judge(ok) {
+    judged = true;
+    const elapsed = performance.now() - B.start;
+    $("#bh-time").textContent = (elapsed / 1000).toFixed(1) + "초";
+    computeFlags(elapsed);
+    renderBehavior();
+
+    stats.tried++;
+    if (ok) {
+      stats.solved++;
+      solvedIds.add(current.id);   // 맞힌 문제 저장 (다시 출제 안 됨)
+      saveSolved();
+    } else {
+      // 틀린 문제는 오답 DB에 저장 (같은 문제는 다시 출제되지 않아요)
+      recordWrong(current, {
+        duration: elapsed, changes: B.changes, reorders: B.reorders,
+        attempts: B.attempts, flags: B.flags
+      });
+    }
+    renderProgress();
+
+    const ovl = $("#overlay");
+    ovl.classList.add("show", ok ? "ok" : "no");
+    $("#ovlEmo").textContent = ok ? "🎉" : "🌈";
+    $("#ovlTitle").textContent = ok ? pickOne(MSG_OK) : pickOne(MSG_NO);
+    $("#ovlExp").textContent = ok
+      ? current.explanation
+      : "이 문제는 오답 노트에 저장했어요. 비슷한 문제로 다시 도전해볼까요?";
+    $("#btnRetry").style.display = ok ? "none" : "";
+  }
+
+  // 오답 시: 같은 문제를 다시 풀지 않고, 비슷한(같은 영역) 새 문제를 출제
+  $("#btnRetry").addEventListener("click", () => { if (current) loadSimilar(current.area); });
+  $("#btnNext").addEventListener("click", () => {
+    if (completed) { solvedIds = new Set(); saveSolved(); }  // 처음부터 다시 풀기
+    loadProblem();
+  });
+
+  /* ============ 1) 이미지 선택형 ============ */
+  function buildSelect(stage) {
+    engineState = { selected: new Set() };
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    const items = shuffle(current.items.map((it, i) => ({ ...it, _i: i })));
+    items.forEach((it) => {
+      const card = document.createElement("div");
+      card.className = "pick";
+      card.innerHTML = `<span class="emo">${it.svg ? it.svg : it.e}</span><span class="lb">${it.label}</span>`;
+      card.addEventListener("click", () => {
+        if (judged) return;
+        touchAction();
+        if (engineState.selected.has(it._i)) {
+          engineState.selected.delete(it._i);
+          card.classList.remove("sel");
+          B.changes++;
+        } else {
+          if (current.single) {
+            engineState.selected.forEach(() => B.changes++);
+            engineState.selected.clear();
+            grid.querySelectorAll(".pick.sel").forEach((el) => el.classList.remove("sel"));
+          }
+          engineState.selected.add(it._i);
+          card.classList.add("sel");
+        }
+        renderBehavior();
+        updateSubmit();
+      });
+      grid.appendChild(card);
+    });
+    stage.appendChild(grid);
+  }
+
+  /* ============ 2) 드래그형 ============ */
+  function buildDrag(stage) {
+    engineState = {};
+    const wrap = document.createElement("div");
+    wrap.className = "drag-wrap";
+    const dz = document.createElement("div");
+    dz.className = "dropzone";
+    dz.innerHTML = `<div><span class="dz-emo">${current.target.e}</span>${current.target.label}</div>`;
+    const tray = document.createElement("div");
+    tray.className = "drag-tray";
+
+    shuffle(current.items).forEach((it) => {
+      const card = document.createElement("div");
+      card.className = "dragcard";
+      card.innerHTML = `<span class="emo">${it.e}</span><span class="lb">${it.label}</span>`;
+      makeDraggable(card, dz, it, tray);
+      tray.appendChild(card);
+    });
+    wrap.appendChild(dz);
+    wrap.appendChild(tray);
+    stage.appendChild(wrap);
+  }
+
+  function makeDraggable(card, dz, item, tray) {
+    let sx = 0, sy = 0, lx = 0, ly = 0, dragging = false, path = 0;
+    card.addEventListener("pointerdown", (ev) => {
+      if (judged) return;
+      dragging = true;
+      touchAction();
+      card.setPointerCapture(ev.pointerId);
+      card.classList.add("lift");
+      sx = lx = ev.clientX; sy = ly = ev.clientY;
+      path = 0;
+    });
+    card.addEventListener("pointermove", (ev) => {
+      if (!dragging) return;
+      const dx = ev.clientX - lx, dy = ev.clientY - ly;
+      path += Math.hypot(dx, dy);
+      lx = ev.clientX; ly = ev.clientY;
+      card.style.transform = `translate(${ev.clientX - sx}px, ${ev.clientY - sy}px)`;
+      const r = dz.getBoundingClientRect();
+      const inside = ev.clientX > r.left && ev.clientX < r.right && ev.clientY > r.top && ev.clientY < r.bottom;
+      dz.classList.toggle("hot", inside);
+      // 실시간 드래그 데이터
+      B.dragLen = path;
+      B.dragDirect = Math.hypot(ev.clientX - sx, ev.clientY - sy);
+      B.straight = path > 8 ? Math.min(1, B.dragDirect / path) : null;
+      renderBehavior();
+    });
+    card.addEventListener("pointerup", (ev) => {
+      if (!dragging) return;
+      dragging = false;
+      card.classList.remove("lift");
+      const r = dz.getBoundingClientRect();
+      const inside = ev.clientX > r.left && ev.clientX < r.right && ev.clientY > r.top && ev.clientY < r.bottom;
+      dz.classList.remove("hot");
+      if (inside) {
+        if (item.ok) {
+          card.classList.add("gone");
+          dz.innerHTML = `<div><span class="dz-emo">${item.e}</span>성공! ${item.label}을(를) 잘 넣었어요!</div>`;
+          judge(true);
+        } else {
+          B.changes++;              // 잘못된 카드 시도 = near miss
+          card.style.transform = "";
+          card.classList.add("shake");
+          setTimeout(() => card.classList.remove("shake"), 700);
+          judge(false);
+        }
+      } else {
+        card.style.transform = "";  // 드롭존 밖: 원위치 (실패 아님)
+      }
+      renderBehavior();
+    });
+  }
+
+  /* ============ 3) 순서 배열형 ============ */
+  function buildOrder(stage) {
+    const n = current.cards.length;
+    engineState = { slots: new Array(n).fill(null) };
+
+    const slotsRow = document.createElement("div");
+    slotsRow.className = "slots";
+    const trayRow = document.createElement("div");
+    trayRow.className = "tray";
+
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement("div");
+      s.className = "slot";
+      s.dataset.idx = i;
+      s.innerHTML = `<span class="no">${i + 1}</span>` + (i < n - 1 ? `<span class="arrow">→</span>` : "");
+      s.addEventListener("click", () => {
+        if (judged) return;
+        const idx = +s.dataset.idx;
+        const cardIdx = engineState.slots[idx];
+        if (cardIdx === null) return;
+        // 슬롯에서 빼서 트레이로 복귀
+        engineState.slots[idx] = null;
+        B.reorders++;
+        touchAction();
+        const back = trayRow.querySelector(`.ocard[data-i="${cardIdx}"]`);
+        back.style.display = "";
+        s.querySelectorAll(".placed").forEach((el) => el.remove());
+        renderBehavior();
+        updateSubmit();
+      });
+      slotsRow.appendChild(s);
+    }
+
+    // 정답 순서가 그대로 나오지 않게 셔플
+    let order = shuffle(current.cards.map((_, i) => i));
+    if (order.every((v, i) => v === i)) order = order.slice(1).concat(order[0]);
+
+    order.forEach((cardIdx) => {
+      const c = current.cards[cardIdx];
+      const el = document.createElement("div");
+      el.className = "ocard";
+      el.dataset.i = cardIdx;
+      el.innerHTML = `<span class="emo">${c.svg ? c.svg : c.e}</span><span class="lb">${c.label}</span>`;
+      el.addEventListener("click", () => {
+        if (judged) return;
+        const empty = engineState.slots.indexOf(null);
+        if (empty === -1) return;
+        touchAction();
+        engineState.slots[empty] = cardIdx;
+        el.style.display = "none";
+        const slot = slotsRow.querySelector(`.slot[data-idx="${empty}"]`);
+        const mini = document.createElement("div");
+        mini.className = "ocard placed";
+        mini.style.cursor = "pointer";
+        mini.style.width = "100px";
+        mini.innerHTML = `<span class="emo" style="font-size:34px">${c.svg ? c.svg : c.e}</span><span class="lb">${c.label}</span>`;
+        slot.appendChild(mini);
+        renderBehavior();
+        updateSubmit();
+      });
+      trayRow.appendChild(el);
+    });
+
+    stage.appendChild(slotsRow);
+    stage.appendChild(trayRow);
+  }
+
+  /* ============ 4) 분류형 ============ */
+  function buildClassify(stage) {
+    engineState = { placed: {}, selectedCard: null };
+    const wrap = document.createElement("div");
+    wrap.className = "cls-wrap";
+
+    const bins = document.createElement("div");
+    bins.className = "bins";
+    current.bins.forEach((b) => {
+      const bin = document.createElement("div");
+      bin.className = "bin";
+      bin.dataset.bin = b.id;
+      bin.innerHTML = `<h3>${b.label}</h3><div class="bin-items"></div>`;
+      bin.addEventListener("click", () => {
+        if (judged || engineState.selectedCard === null) return;
+        const i = engineState.selectedCard;
+        if (engineState.placed[i] !== undefined && engineState.placed[i] !== b.id) B.changes++;
+        engineState.placed[i] = b.id;
+        touchAction();
+        // 카드 이동
+        const chip = wrap.querySelector(`.ccard[data-i="${i}"]`);
+        chip.classList.remove("sel");
+        bin.querySelector(".bin-items").appendChild(chip);
+        engineState.selectedCard = null;
+        bin.classList.add("hot");
+        setTimeout(() => bin.classList.remove("hot"), 250);
+        renderBehavior();
+        updateSubmit();
+      });
+      bins.appendChild(bin);
+    });
+
+    const tray = document.createElement("div");
+    tray.className = "cls-tray";
+    shuffle(current.items.map((it, i) => ({ ...it, _i: i }))).forEach((it) => {
+      const c = document.createElement("div");
+      c.className = "ccard";
+      c.dataset.i = it._i;
+      c.innerHTML = `<span class="emo">${it.e}</span><span class="lb">${it.label}</span>`;
+      c.addEventListener("click", (ev) => {
+        if (judged) return;
+        ev.stopPropagation();
+        touchAction();
+        // 이미 담긴 카드를 누르면 트레이로 복귀
+        if (engineState.placed[it._i] !== undefined && !tray.contains(c)) {
+          delete engineState.placed[it._i];
+          B.reorders++;
+          tray.appendChild(c);
+          c.classList.remove("sel");
+          engineState.selectedCard = null;
+          renderBehavior();
+          updateSubmit();
+          return;
+        }
+        // 선택 토글
+        wrap.querySelectorAll(".ccard.sel").forEach((el) => el.classList.remove("sel"));
+        if (engineState.selectedCard === it._i) {
+          engineState.selectedCard = null;
+        } else {
+          engineState.selectedCard = it._i;
+          c.classList.add("sel");
+        }
+        renderBehavior();
+      });
+      tray.appendChild(c);
+    });
+
+    const hint = document.createElement("p");
+    hint.className = "cls-hint";
+    hint.textContent = "① 카드를 눌러 고르고 → ② 알맞은 바구니를 눌러 담아요. (담은 카드를 누르면 다시 꺼내요)";
+
+    wrap.appendChild(bins);
+    wrap.appendChild(tray);
+    wrap.appendChild(hint);
+    stage.appendChild(wrap);
+  }
+
+  /* ============ 5) 위치 선택형 ============ */
+  function buildPosition(stage) {
+    engineState = {};
+    const wrap = document.createElement("div");
+    wrap.className = "scene-wrap";
+    wrap.innerHTML = current.scene === "face" ? faceSceneSVG() : plantSceneSVG();
+    wrap.querySelectorAll("[data-region]").forEach((g) => {
+      g.addEventListener("click", () => {
+        if (judged) return;
+        touchAction();
+        const region = g.dataset.region;
+        if (region !== current.answer) B.changes++;
+        renderBehavior();
+        judge(region === current.answer);
+        if (region !== current.answer) {
+          $("#ovlExp").textContent =
+            `방금 누른 곳은 '${current.regionNames[region]}'이에요. 다시 한 번 찾아볼까요?`;
+        }
+      });
+    });
+    stage.appendChild(wrap);
+  }
+
+  /* ============ 제출 판정 ============ */
+  $("#btnSubmit").addEventListener("click", () => {
+    if (judged || !current) return;
+    let ok = false;
+    if (current.type === "select") {
+      const answer = new Set(current.items.map((it, i) => (it.ok ? i : -1)).filter((i) => i >= 0));
+      ok = answer.size === engineState.selected.size &&
+           [...engineState.selected].every((i) => answer.has(i));
+    } else if (current.type === "order") {
+      const s = engineState.slots, n = s.length;
+      if (current.cyclic) {
+        // 순환 순서: 어느 지점에서 시작해도 방향만 맞으면 정답 (회전 허용)
+        ok = s.every((v, i) => s[(i + 1) % n] === (v + 1) % n);
+      } else {
+        ok = s.every((cardIdx, pos) => cardIdx === pos);
+      }
+    } else if (current.type === "classify") {
+      ok = current.items.every((it, i) => engineState.placed[i] === it.bin);
+    }
+    judge(ok);
+  });
+
+  /* ============ 학년 필터 ============ */
+  $("#filters").addEventListener("click", (ev) => {
+    const chip = ev.target.closest(".chip");
+    if (!chip) return;
+    $("#filters").querySelectorAll(".chip").forEach((c) => c.classList.remove("on"));
+    chip.classList.add("on");
+    gradeFilter = chip.dataset.g;
+    loadProblem();
+  });
+
+  /* ============ 오답 DB 컨트롤 ============ */
+  $("#reviewToggle").addEventListener("click", () => {
+    reviewMode = !reviewMode;
+    $("#reviewToggle").textContent = "🔁 비슷한 문제 복습: " + (reviewMode ? "켜짐" : "꺼짐");
+    $("#reviewToggle").classList.toggle("on", reviewMode);
+    if (reviewMode && !Object.keys(wrongDB).length) {
+      $("#reviewToggle").textContent = "🔁 비슷한 문제 복습: 켜짐 (오답 생기면 시작)";
+    }
+    loadProblem();
+  });
+  $("#wrongReset").addEventListener("click", () => {
+    wrongDB = {};
+    saveWrongDB();
+    renderWrongDB();
+    renderProgress();
+  });
+
+  /* ============ 시작 ============ */
+  renderWrongDB();
+  renderProgress();
+  loadProblem();
+  </script>
+</body>
+</html>

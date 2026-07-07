@@ -1,0 +1,1829 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>수학 탐험 CAPTCHA</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #312a35;
+      --muted: #81786d;
+      --line: #f0e7dc;
+      --blue: #2f6dcc;
+      --orange: #ff922e;
+      --green: #18a77f;
+      --red: #ef5468;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(780px 460px at 8% 8%, #eaf3ff 0%, rgba(234,243,255,0) 58%),
+        radial-gradient(840px 480px at 92% -6%, #ffe8dc 0%, rgba(255,232,220,0) 58%),
+        #fff8ef;
+      color: var(--ink);
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.92);
+      border-bottom: 2px solid #ffe7dc;
+      backdrop-filter: blur(12px);
+    }
+    .top-inner {
+      max-width: 980px; margin: 0 auto; padding: 12px 22px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .icon-box {
+      width: 40px; height: 40px; border-radius: 13px;
+      display: grid; place-items: center;
+      background: #e6f0ff; font-size: 22px;
+    }
+    .title { line-height: 1.15; }
+    .title strong { display: block; font-size: 19px; }
+    .title span { display: block; margin-top: 3px; color: #a99f92; font-size: 12px; font-weight: 800; }
+    .timer {
+      margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
+      border: 2px solid #ffe7dc; background: #fff; border-radius: 16px;
+      padding: 9px 13px; color: #8a8072; font-weight: 900;
+      min-width: 92px; justify-content: center; font-variant-numeric: tabular-nums;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 26px 22px 90px; }
+
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .chip {
+      border: 2px solid #ffe7dc; background: #fff; color: #8a8072;
+      border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 900;
+      cursor: pointer; transition: all .15s;
+    }
+    .chip:hover { border-color: var(--orange); color: var(--orange); }
+    .chip.on { background: var(--green); border-color: var(--green); color: #fff; }
+    #filters .chip.on { background: var(--orange); border-color: var(--orange); }
+    .score {
+      margin-left: auto; align-self: center; font-size: 13px; font-weight: 900; color: #8a8072;
+    }
+    .reviewbar {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .chip.mini { padding: 6px 12px; font-size: 12.5px; }
+    .wrong-info {
+      font-size: 13px; font-weight: 900; color: #e07b1f;
+      background: #fff0e2; border-radius: 999px; padding: 7px 14px;
+    }
+
+    .panel {
+      position: relative;
+      background: rgba(255,255,255,.94);
+      border: 2px solid #ffede4;
+      border-radius: 30px;
+      padding: 26px 30px 30px;
+      box-shadow: 0 24px 50px -32px rgba(120,130,170,.55);
+      overflow: hidden;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 7px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 999px;
+      background: #e6f0ff; color: #2e7bff; font-size: 12.5px; font-weight: 900;
+    }
+    .eyebrow.area { background: #e4f7ef; color: #0f8f6b; }
+    .eyebrow.grade { background: #fff0e2; color: #e07b1f; }
+    .eyebrow.stars { background: #fff3c4; color: #b98a00; }
+    .eyebrow.stars.challenge { background: #ffe3ec; color: #d6336c; }
+    h1.prompt {
+      margin: 16px 0 6px; font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2;
+    }
+    .sub { margin: 0 0 20px; color: var(--muted); font-size: 14.5px; font-weight: 700; }
+
+    /* ---------- stage ---------- */
+    .stage { min-height: 300px; touch-action: none; }
+    .figure { display: flex; justify-content: center; margin: 0 0 22px; }
+    .figure svg { max-width: 100%; }
+    .fig-seq { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .fig-card {
+      background: #fff; border: 3px solid var(--line); border-radius: 14px;
+      padding: 10px 16px; font-size: 30px; font-weight: 900; color: var(--ink);
+      min-width: 54px; text-align: center;
+    }
+    .fig-card.q { background: #fff3c4; border-color: #ffce4f; color: #b98a00; }
+    .fig-table { border-collapse: collapse; font-size: 15px; font-weight: 800; }
+    .fig-table th, .fig-table td {
+      border: 2px solid #f0e0cc; padding: 9px 18px; text-align: center; background: #fff;
+    }
+    .fig-table th { background: #fdf2e4; color: #a0764a; }
+
+    /* select grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 12px; }
+    .pick {
+      position: relative;
+      border: 3px solid var(--line); background: #fff; border-radius: 20px;
+      padding: 16px 8px 12px; text-align: center; cursor: pointer;
+      transition: transform .12s, border-color .12s, box-shadow .12s;
+      user-select: none; -webkit-user-select: none;
+    }
+    .pick:hover { transform: translateY(-2px); }
+    .pick .emo { font-size: 46px; line-height: 1; display: block; font-weight: 900; }
+    .pick .emo svg { width: 104px; height: 84px; display: inline-block; }
+    .pick .lb { display: block; margin-top: 9px; font-size: 14px; font-weight: 900; color: #6d655c; min-height: 5px; }
+    .pick.sel { border-color: var(--blue); box-shadow: 0 8px 18px -10px rgba(47,109,204,.6); }
+    .pick.sel::after {
+      content: "✓"; position: absolute; top: -10px; right: -8px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--blue); color: #fff; font-size: 15px; font-weight: 900;
+      display: grid; place-items: center; box-shadow: 0 3px 8px rgba(47,109,204,.4);
+    }
+
+    /* drag */
+    .drag-wrap { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+    .dropzone {
+      width: min(340px, 86%); min-height: 150px; border-radius: 26px;
+      border: 4px dashed #d9c9b4; background: #fdf6ec;
+      display: grid; place-items: center; text-align: center;
+      font-weight: 900; color: #a08e77; font-size: 15px;
+      transition: all .15s; padding: 14px;
+    }
+    .dropzone .dz-emo { font-size: 44px; display: block; margin-bottom: 4px; font-weight: 900; }
+    .dropzone.hot { border-color: var(--green); background: #e9f9f2; color: var(--green); transform: scale(1.03); }
+    .drag-tray { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .dragcard {
+      border: 3px solid var(--line); background: #fff; border-radius: 20px;
+      padding: 14px 18px 10px; text-align: center; cursor: grab;
+      user-select: none; -webkit-user-select: none;
+      box-shadow: 0 8px 16px -10px rgba(90,80,70,.35);
+      touch-action: none; min-width: 84px;
+    }
+    .dragcard .emo { font-size: 42px; line-height: 1; display: block; pointer-events: none; font-weight: 900; }
+    .dragcard .lb { display: block; margin-top: 7px; font-size: 13.5px; font-weight: 900; color: #6d655c; pointer-events: none; min-height: 4px; }
+    .dragcard.lift { cursor: grabbing; opacity: .95; z-index: 40; position: relative; box-shadow: 0 18px 30px -12px rgba(60,50,40,.45); }
+    .dragcard.gone { visibility: hidden; }
+
+    /* order */
+    .slots, .tray { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .slots { margin-bottom: 26px; }
+    .slot {
+      width: 118px; height: 122px; border-radius: 20px;
+      border: 3px dashed #d9c9b4; background: #fdf6ec;
+      display: grid; place-items: center; position: relative; cursor: pointer;
+    }
+    .slot .no {
+      position: absolute; top: -11px; left: -8px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--orange); color: #fff; font-size: 14px; font-weight: 900;
+      display: grid; place-items: center;
+    }
+    .slot .arrow {
+      position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+      color: #d9b28a; font-size: 17px; font-weight: 900; pointer-events: none;
+    }
+    .ocard {
+      border: 3px solid var(--line); background: #fff; border-radius: 18px;
+      width: 112px; padding: 12px 6px 10px; text-align: center; cursor: pointer;
+      user-select: none; -webkit-user-select: none; transition: transform .12s;
+    }
+    .ocard:hover { transform: translateY(-2px); }
+    .ocard .emo { font-size: 38px; line-height: 1; display: block; font-weight: 900; }
+    .ocard .emo svg { width: 58px; height: 58px; display: inline-block; vertical-align: middle; }
+    .ocard.placed .emo svg { width: 50px; height: 50px; }
+    .ocard .lb { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 900; color: #6d655c; min-height: 4px; }
+
+    /* classify */
+    .cls-wrap { display: flex; flex-direction: column; gap: 24px; }
+    .bins { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .bin {
+      border: 4px dashed #d9c9b4; background: #fdf6ec; border-radius: 24px;
+      min-height: 140px; padding: 12px; cursor: pointer; transition: all .15s;
+    }
+    .bin.hot { border-color: var(--green); background: #e9f9f2; }
+    .bin h3 { margin: 2px 0 10px; text-align: center; font-size: 16px; color: #8a7a64; }
+    .bin .bin-items { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .cls-tray { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .ccard {
+      border: 3px solid var(--line); background: #fff; border-radius: 16px;
+      padding: 9px 13px 7px; text-align: center; cursor: pointer;
+      user-select: none; -webkit-user-select: none; transition: all .12s;
+      min-width: 64px;
+    }
+    .ccard .emo { font-size: 30px; line-height: 1; display: block; font-weight: 900; }
+    .ccard .lb { display: block; margin-top: 4px; font-size: 12px; font-weight: 900; color: #6d655c; min-height: 3px; }
+    .ccard.sel { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,109,204,.18); }
+    .cls-hint { text-align: center; color: #a99f92; font-size: 13px; font-weight: 800; margin: 0; }
+
+    /* position (svg scene) */
+    .scene-wrap { display: grid; place-items: center; }
+    .scene-wrap svg { max-width: 100%; border-radius: 22px; }
+    .scene-wrap [data-region] { cursor: pointer; }
+
+    /* footer actions */
+    .actions {
+      margin-top: 26px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    }
+    .btn {
+      border: 0; border-radius: 18px; padding: 14px 26px;
+      font-size: 16px; font-weight: 900; cursor: pointer; transition: all .15s;
+      font-family: inherit;
+    }
+    .btn.primary { background: var(--green); color: #fff; box-shadow: 0 10px 20px -10px rgba(24,167,127,.7); }
+    .btn.primary:disabled { background: #d8d1c6; box-shadow: none; cursor: not-allowed; }
+    .btn.primary:not(:disabled):hover { transform: translateY(-2px); }
+    .btn.ghost { background: #fff; border: 2px solid var(--line); color: #8a8072; }
+    .btn.ghost:hover { border-color: var(--orange); color: var(--orange); }
+    .attempts-tag { margin-left: auto; font-size: 13px; font-weight: 900; color: #b3a894; }
+
+    /* feedback overlay */
+    .overlay {
+      position: absolute; inset: 0; z-index: 30;
+      background: rgba(255,252,246,.96);
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 30px; border-radius: 28px;
+    }
+    .overlay.show { display: flex; animation: pop .25s ease; }
+    @keyframes pop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+    .overlay .big { font-size: 74px; line-height: 1; }
+    .overlay h2 { margin: 14px 0 6px; font-size: 26px; }
+    .overlay p.exp {
+      margin: 4px 0 0; max-width: 480px; color: var(--muted);
+      font-size: 15.5px; font-weight: 700; line-height: 1.55;
+    }
+    .overlay .ovl-actions { margin-top: 24px; display: flex; gap: 12px; }
+    .overlay.ok h2 { color: var(--green); }
+    .overlay.no h2 { color: var(--orange); }
+
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      25% { transform: translateX(-7px); } 75% { transform: translateX(7px); }
+    }
+    .shake { animation: shake .3s ease 2; }
+
+    /* behavior panel */
+    .behavior {
+      margin-top: 22px; background: rgba(255,255,255,.9);
+      border: 2px solid #ffede4; border-radius: 24px; padding: 4px 24px 8px;
+    }
+    .behavior summary {
+      cursor: pointer; font-weight: 900; font-size: 15px; padding: 14px 0; color: #6d655c;
+      list-style: none;
+    }
+    .behavior summary::-webkit-details-marker { display: none; }
+    .behavior summary::before { content: "📊 "; }
+    .wrongbox summary::before { content: "🗂️ "; }
+    .bh-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px; padding-bottom: 14px;
+    }
+    .bh-item { background: #fdf6ec; border-radius: 14px; padding: 10px 13px; }
+    .bh-item b { display: block; font-size: 11.5px; color: #a08e77; font-weight: 900; margin-bottom: 3px; }
+    .bh-item span { font-size: 15px; font-weight: 900; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .flags { grid-column: 1 / -1; }
+    .flags span { font-size: 13px; }
+    .flag-chip {
+      display: inline-block; margin: 2px 4px 2px 0; padding: 3px 10px; border-radius: 999px;
+      background: #ffe3e7; color: var(--red); font-size: 12px; font-weight: 900;
+    }
+    .flag-ok { background: #e4f7ef; color: #0f8f6b; }
+    .wrong-list { list-style: none; margin: 0; padding: 0 0 8px; }
+    .wrong-list li {
+      font-size: 13.5px; font-weight: 700; color: #6d655c;
+      padding: 9px 12px; border-radius: 12px; background: #fdf6ec; margin-bottom: 7px;
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .wrong-list li.empty { color: #a99f92; background: transparent; }
+    .wrong-list .wa {
+      font-size: 11.5px; font-weight: 900; color: #0f8f6b;
+      background: #e4f7ef; border-radius: 999px; padding: 2px 9px; white-space: nowrap;
+    }
+    .wrong-list .wc { margin-left: auto; font-size: 12px; font-weight: 900; color: #ef5468; white-space: nowrap; }
+    .wrong-note { margin: 4px 4px 10px; font-size: 12.5px; color: #a99f92; font-weight: 700; line-height: 1.6; }
+    .note {
+      margin: 18px 4px 0; font-size: 12.5px; color: #b3a894; font-weight: 700; line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <div class="icon-box">🧮</div>
+      <div class="title">
+        <strong>수학 탐험 CAPTCHA</strong>
+        <span>교육형 인증 · 행동 데이터 기반 위험 신호 보조 수집</span>
+      </div>
+      <div class="timer">⏱ <span id="timer">0.0초</span></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="filters" id="filters">
+      <button class="chip on" data-g="all">전체</button>
+      <button class="chip" data-g="1-2">1~2학년</button>
+      <button class="chip" data-g="3-4">3~4학년</button>
+      <button class="chip" data-g="5-6">5~6학년</button>
+      <div class="score" id="score">완료 0 / 0 · 성공 0</div>
+    </div>
+
+    <div class="reviewbar">
+      <button class="chip" id="reviewToggle">🔁 비슷한 문제 복습: 꺼짐</button>
+      <span class="wrong-info" id="wrongInfo">오답 노트 0개</span>
+      <button class="chip mini" id="wrongReset">오답 초기화</button>
+    </div>
+
+    <section class="panel" id="panel">
+      <div class="badges">
+        <span class="eyebrow" id="b-type">유형</span>
+        <span class="eyebrow area" id="b-area">영역</span>
+        <span class="eyebrow grade" id="b-grade">학년</span>
+        <span class="eyebrow stars" id="b-stars">난이도</span>
+      </div>
+      <h1 class="prompt" id="prompt"></h1>
+      <p class="sub" id="sub"></p>
+
+      <div class="stage" id="stage"></div>
+
+      <div class="actions">
+        <button class="btn primary" id="btnSubmit">확인</button>
+        <span class="attempts-tag" id="attemptsTag"></span>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="big" id="ovlEmo"></div>
+        <h2 id="ovlTitle"></h2>
+        <p class="exp" id="ovlExp"></p>
+        <div class="ovl-actions">
+          <button class="btn ghost" id="btnRetry">비슷한 문제 풀기</button>
+          <button class="btn primary" id="btnNext">다음 문제 →</button>
+        </div>
+      </div>
+    </section>
+
+    <details class="behavior" open>
+      <summary>행동 데이터 (실시간 수집)</summary>
+      <div class="bh-grid">
+        <div class="bh-item"><b>풀이 시간</b><span id="bh-time">-</span></div>
+        <div class="bh-item"><b>첫 조작까지 (망설임)</b><span id="bh-hesi">-</span></div>
+        <div class="bh-item"><b>클릭 수</b><span id="bh-clicks">0</span></div>
+        <div class="bh-item"><b>선택 변경 횟수</b><span id="bh-changes">0</span></div>
+        <div class="bh-item"><b>재배치 횟수</b><span id="bh-reorders">0</span></div>
+        <div class="bh-item"><b>드래그 거리</b><span id="bh-drag">0px</span></div>
+        <div class="bh-item"><b>드래그 직선성</b><span id="bh-straight">-</span></div>
+        <div class="bh-item"><b>재시도 횟수</b><span id="bh-attempts">0</span></div>
+        <div class="bh-item flags"><b>위험 신호 (보조 지표)</b><span id="bh-flags">아직 판정 전이에요</span></div>
+      </div>
+    </details>
+
+    <details class="behavior wrongbox">
+      <summary>오답 노트 (DB에 저장됨 · 같은 문제는 다시 안 나와요)</summary>
+      <ul class="wrong-list" id="wrongList"></ul>
+      <p class="wrong-note">
+        틀린 문제는 브라우저 저장소(localStorage)에 저장되어 새로고침해도 유지돼요.
+        <b>🔁 비슷한 문제 복습</b>을 켜면, 틀린 문제와 <b>같은 수학 영역</b>의 새 문제가 출제되어
+        학생의 행동 데이터를 계속 쌓을 수 있어요.
+      </p>
+    </details>
+
+    <p class="note">
+      ※ 본 데모는 완전한 봇 차단 시스템이 아니라, 초등 수학 개념 학습과 행동 데이터 분석을 결합한
+      <b>교육형 보조 인증</b>입니다. 정답 여부와 풀이 과정(드래그 경로·풀이 시간·재시도 등)을 함께 분석하여
+      자동화 의심 패턴을 보조적으로 탐지하고, 학생의 개념 이해도를 진단합니다.
+    </p>
+  </main>
+
+  <script>
+  "use strict";
+
+  /* ============ 유틸 ============ */
+  const $ = (s) => document.querySelector(s);
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  const pickOne = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  /* ============ 어린이 친화 문구 ============ */
+  const MSG_OK = [
+    "멋져요! 수학 미션 성공! 🎉", "딩동댕! 정답이에요!", "우와, 수학 박사님인걸요?",
+    "정확해요! 정말 잘했어요!", "최고예요! 척척 풀었네요!", "훌륭해요! 규칙을 찾아냈군요!",
+    "짝짝짝! 계산 완벽!", "대단해요! 어려운 문제였는데!"
+  ];
+  const MSG_NO = [
+    "좋아요! 다시 한 번 살펴볼까요?", "거의 다 왔어요! 조금만 더!",
+    "괜찮아요, 실수는 배우는 과정이에요.", "음~ 한 번 더 세어볼까요?",
+    "좋은 시도예요! 다시 도전!", "조금만 더 생각해보면 찾을 수 있어요!"
+  ];
+
+  /* ============ SVG 헬퍼들 ============ */
+  function countSVG(n, color) {
+    let dots = "";
+    for (let i = 0; i < n; i++) {
+      const cx = 26 + (i % 3) * 34, cy = 20 + Math.floor(i / 3) * 28;
+      dots += `<circle cx="${cx}" cy="${cy}" r="11" fill="${color}" stroke="#00000022" stroke-width="1.5"/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">${dots}</svg>`;
+  }
+
+  function clockSVG(h, m) {
+    let ticks = "";
+    for (let i = 0; i < 12; i++) {
+      ticks += `<line x1="60" y1="10" x2="60" y2="15" stroke="#8a8072" stroke-width="2.5" transform="rotate(${i * 30} 60 48)"/>`;
+    }
+    const ha = (h % 12) * 30 + m * 0.5, ma = m * 6;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="48" r="40" fill="#fff" stroke="#5b5248" stroke-width="4"/>${ticks}
+      <line x1="60" y1="48" x2="60" y2="28" stroke="#2f6dcc" stroke-width="5" stroke-linecap="round" transform="rotate(${ha} 60 48)"/>
+      <line x1="60" y1="48" x2="60" y2="16" stroke="#ef5468" stroke-width="3.5" stroke-linecap="round" transform="rotate(${ma} 60 48)"/>
+      <circle cx="60" cy="48" r="4" fill="#5b5248"/>
+    </svg>`;
+  }
+
+  function fractionCircleSVG(parts, filled) {
+    const cx = 60, cy = 48, r = 38;
+    let paths = "";
+    for (let i = 0; i < parts; i++) {
+      const a0 = (i * 360 / parts - 90) * Math.PI / 180;
+      const a1 = ((i + 1) * 360 / parts - 90) * Math.PI / 180;
+      const x0 = (cx + r * Math.cos(a0)).toFixed(1), y0 = (cy + r * Math.sin(a0)).toFixed(1);
+      const x1 = (cx + r * Math.cos(a1)).toFixed(1), y1 = (cy + r * Math.sin(a1)).toFixed(1);
+      paths += `<path d="M${cx} ${cy} L${x0} ${y0} A${r} ${r} 0 0 1 ${x1} ${y1} Z" fill="${i < filled ? "#5a9cf0" : "#fff"}" stroke="#3a6fb0" stroke-width="2.5"/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">${paths}</svg>`;
+  }
+
+  function fractionBarSVG(parts, filled) {
+    let cells = "";
+    const w = 104 / parts;
+    for (let i = 0; i < parts; i++) {
+      cells += `<rect x="${(8 + i * w).toFixed(1)}" y="32" width="${w.toFixed(1)}" height="34" fill="${i < filled ? "#5a9cf0" : "#fff"}" stroke="#3a6fb0" stroke-width="2.5"/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">${cells}</svg>`;
+  }
+
+  function angleSVG(deg) {
+    const vx = 22, vy = 78, len = 84;
+    const a = deg * Math.PI / 180;
+    const x2 = (vx + len * Math.cos(a)).toFixed(1), y2 = (vy - len * Math.sin(a)).toFixed(1);
+    const ax = (vx + 20 * Math.cos(a / 2)).toFixed(1)? null : null;
+    const arcx = (vx + 20 * Math.cos(a)).toFixed(1), arcy = (vy - 20 * Math.sin(a)).toFixed(1);
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <line x1="${vx}" y1="${vy}" x2="${vx + len}" y2="${vy}" stroke="#5b5248" stroke-width="4" stroke-linecap="round"/>
+      <line x1="${vx}" y1="${vy}" x2="${x2}" y2="${y2}" stroke="#5b5248" stroke-width="4" stroke-linecap="round"/>
+      <path d="M ${vx + 20} ${vy} A 20 20 0 0 0 ${arcx} ${arcy}" fill="none" stroke="#ff922e" stroke-width="3"/>
+    </svg>`;
+  }
+
+  function arrowSVG(rot) {
+    return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(${rot} 40 40)">
+        <path d="M40 10 L60 34 L47 34 L47 70 L33 70 L33 34 L20 34 Z" fill="#4e6ef2" stroke="#3550c0" stroke-width="2"/>
+      </g>
+    </svg>`;
+  }
+
+  function pyramidSVG(rows) {
+    const bw = 64, bh = 40, gap = 6;
+    const maxLen = rows[rows.length - 1].length;
+    const W = maxLen * (bw + gap) + 20, H = rows.length * (bh + gap) + 14;
+    let boxes = "";
+    rows.forEach((row, ri) => {
+      const x0 = (W - row.length * (bw + gap)) / 2 + gap / 2;
+      row.forEach((val, ci) => {
+        const x = x0 + ci * (bw + gap), y = 8 + ri * (bh + gap);
+        const isStar = val === "★", isQ = val === "?";
+        const fill = isStar ? "#ffe9b8" : isQ ? "#eef3ff" : "#fff";
+        const stroke = isStar ? "#e8a33d" : "#b39b7d";
+        boxes += `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="9" fill="${fill}" stroke="${stroke}" stroke-width="3"/>`;
+        boxes += `<text x="${x + bw / 2}" y="${y + bh / 2 + 8}" text-anchor="middle" font-size="22" font-weight="900" fill="${isStar ? "#d07b13" : isQ ? "#4e6ef2" : "#312a35"}" font-family="inherit">${val}</text>`;
+      });
+    });
+    return `<svg viewBox="0 0 ${W} ${H}" width="${Math.min(W, 380)}" xmlns="http://www.w3.org/2000/svg">${boxes}</svg>`;
+  }
+
+  function dotRowsSVG() {
+    let dots = "";
+    for (let r = 0; r < 3; r++) {
+      const n = 2 * r + 1;
+      const x0 = 110 - n * 13;
+      for (let i = 0; i < n; i++) {
+        dots += `<circle cx="${x0 + i * 26 + 13}" cy="${22 + r * 32}" r="10" fill="#5a9cf0" stroke="#3a6fb0" stroke-width="2"/>`;
+      }
+      dots += `<text x="16" y="${28 + r * 32}" font-size="15" font-weight="900" fill="#8a8072" font-family="inherit">${r + 1}층</text>`;
+    }
+    dots += `<text x="16" y="${28 + 3 * 32}" font-size="15" font-weight="900" fill="#d07b13" font-family="inherit">4층</text>`;
+    dots += `<text x="105" y="${29 + 3 * 32}" font-size="22" font-weight="900" fill="#d07b13" font-family="inherit">?</text>`;
+    return `<svg viewBox="0 0 220 140" width="260" xmlns="http://www.w3.org/2000/svg">${dots}</svg>`;
+  }
+
+  function gridSquaresSVG() {
+    let lines = "";
+    for (let i = 0; i <= 2; i++) {
+      lines += `<line x1="${20 + i * 50}" y1="20" x2="${20 + i * 50}" y2="120" stroke="#5b5248" stroke-width="4"/>`;
+      lines += `<line x1="20" y1="${20 + i * 50}" x2="120" y2="${20 + i * 50}" stroke="#5b5248" stroke-width="4"/>`;
+    }
+    return `<svg viewBox="0 0 140 140" width="170" xmlns="http://www.w3.org/2000/svg">${lines}</svg>`;
+  }
+
+  function netSVG(kind) {
+    const cells = {
+      cross: [[1,0],[0,1],[1,1],[2,1],[1,2],[1,3]],
+      t: [[0,0],[1,0],[2,0],[1,1],[1,2],[1,3]],
+      bad: [[0,0],[1,0],[2,0],[3,0],[0,1],[1,1]]
+    }[kind];
+    const u = 20;
+    const maxX = Math.max(...cells.map(c => c[0])) + 1;
+    const maxY = Math.max(...cells.map(c => c[1])) + 1;
+    const ox = (120 - maxX * u) / 2, oy = (96 - maxY * u) / 2;
+    let rects = "";
+    cells.forEach(([x, y]) => {
+      rects += `<rect x="${ox + x * u}" y="${oy + y * u}" width="${u}" height="${u}" fill="#cfe3ff" stroke="#3a6fb0" stroke-width="2"/>`;
+    });
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">${rects}</svg>`;
+  }
+
+  function rectSVG(w, h) {
+    const s = 17;
+    const rw = w * s, rh = h * s;
+    const x = (170 - rw) / 2, y = (130 - rh) / 2 - 4;
+    return `<svg viewBox="0 0 170 130" width="190" xmlns="http://www.w3.org/2000/svg">
+      <rect x="${x}" y="${y}" width="${rw}" height="${rh}" fill="#dfeeff" stroke="#3a6fb0" stroke-width="3.5"/>
+      <text x="${x + rw / 2}" y="${y + rh + 20}" text-anchor="middle" font-size="15" font-weight="900" fill="#5b5248" font-family="inherit">${w}cm</text>
+      <text x="${x - 8}" y="${y + rh / 2 + 5}" text-anchor="end" font-size="15" font-weight="900" fill="#5b5248" font-family="inherit">${h}cm</text>
+    </svg>`;
+  }
+
+  function rectCardSVG(w, h) {
+    const s = 11;
+    const rw = w * s, rh = h * s;
+    const x = (120 - rw) / 2, y = (96 - rh) / 2;
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <rect x="${x}" y="${y}" width="${rw}" height="${rh}" fill="#dfeeff" stroke="#3a6fb0" stroke-width="3"/>
+    </svg>`;
+  }
+
+  function pouchSVG(red, total) {
+    let dots = "";
+    for (let i = 0; i < total; i++) {
+      const cx = 38 + (i % 3) * 23, cy = 34 + Math.floor(i / 3) * 21;
+      dots += `<circle cx="${cx}" cy="${cy}" r="8.5" fill="${i < red ? "#ef5468" : "#fff"}" stroke="#8a8072" stroke-width="2"/>`;
+    }
+    return `<svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 24 Q60 4 95 24 L100 74 Q60 94 20 74 Z" fill="#fdf0dc" stroke="#c9a35e" stroke-width="3"/>
+      ${dots}
+    </svg>`;
+  }
+
+  function barChartSVG(items, withRegions, title) {
+    const max = Math.max(...items.map(i => i.v));
+    const W = 380, base = 200;
+    let bars = "";
+    items.forEach((it, i) => {
+      const hpx = it.v / max * 145;
+      const x = 52 + i * 78;
+      const bar = `<rect x="${x}" y="${base - hpx}" width="46" height="${hpx}" rx="5" fill="${it.color}"/>
+        <text x="${x + 23}" y="${base - hpx - 8}" text-anchor="middle" font-size="16" font-weight="900" fill="#5b5248" font-family="inherit">${it.v}</text>
+        <text x="${x + 23}" y="${base + 22}" text-anchor="middle" font-size="14" font-weight="900" fill="#8a8072" font-family="inherit">${it.label}</text>`;
+      bars += withRegions
+        ? `<g data-region="${it.k}">${bar}<rect x="${x - 8}" y="30" width="62" height="${base - 22}" fill="transparent"/></g>`
+        : bar;
+    });
+    return `<svg viewBox="0 0 ${W} 245" width="430" xmlns="http://www.w3.org/2000/svg">
+      <rect width="${W}" height="245" rx="16" fill="#fefaf3"/>
+      ${title ? `<text x="${W / 2}" y="22" text-anchor="middle" font-size="15" font-weight="900" fill="#a0764a" font-family="inherit">${title}</text>` : ""}
+      <line x1="36" y1="28" x2="36" y2="${base}" stroke="#c9b8a0" stroke-width="2.5"/>
+      <line x1="36" y1="${base}" x2="${W - 16}" y2="${base}" stroke="#c9b8a0" stroke-width="2.5"/>
+      ${bars}
+    </svg>`;
+  }
+
+  const CHART_A = [
+    { k: "apple", label: "사과", v: 4, color: "#ef5468" },
+    { k: "banana", label: "바나나", v: 7, color: "#f5c33b" },
+    { k: "grape", label: "포도", v: 5, color: "#9b6ef2" },
+    { k: "berry", label: "딸기", v: 3, color: "#f78fb3" }
+  ];
+  const CHART_B = [
+    { k: "milk", label: "우유", v: 6, color: "#8fc47f" },
+    { k: "juice", label: "주스", v: 4, color: "#f5a33b" },
+    { k: "water", label: "물", v: 8, color: "#5a9cf0" },
+    { k: "cocoa", label: "코코아", v: 3, color: "#b08968" }
+  ];
+  const CHART_AVG = [
+    { k: "ga", label: "가", v: 4, color: "#ef5468" },
+    { k: "na", label: "나", v: 8, color: "#f5c33b" },
+    { k: "da", label: "다", v: 6, color: "#8fc47f" },
+    { k: "ra", label: "라", v: 9, color: "#5a9cf0" },
+    { k: "ma", label: "마", v: 3, color: "#9b6ef2" }
+  ];
+
+  function seqFigure(arr) {
+    return `<div class="fig-seq">${arr.map(v =>
+      v === "❓" ? `<span class="fig-card q">❓</span>` : `<span class="fig-card">${v}</span>`
+    ).join("")}</div>`;
+  }
+
+  function ratioTableFigure() {
+    return `<table class="fig-table">
+      <tr><th>친구</th><th>던진 횟수</th><th>성공한 골</th></tr>
+      <tr><td>가</td><td>5번</td><td>3골</td></tr>
+      <tr><td>나</td><td>10번</td><td>5골</td></tr>
+      <tr><td>다</td><td>8번</td><td>4골</td></tr>
+    </table>`;
+  }
+
+  /* ============ 위치 선택형 장면들 ============ */
+  function pencilsScene() {
+    function pencil(y, len, color, region) {
+      return `<g data-region="${region}">
+        <rect x="40" y="${y}" width="${len}" height="26" rx="6" fill="${color}" stroke="#00000022" stroke-width="2"/>
+        <path d="M${40 + len} ${y} L${40 + len + 26} ${y + 13} L${40 + len} ${y + 26} Z" fill="#f0cf9e" stroke="#c9a35e" stroke-width="2"/>
+        <rect x="30" y="${y - 8}" width="${len + 46}" height="42" fill="transparent"/>
+      </g>`;
+    }
+    return `<svg viewBox="0 0 360 300" width="420" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="300" rx="22" fill="#fdf6ec"/>
+      ${pencil(56, 190, "#ef5468", "p1")}
+      ${pencil(140, 265, "#5a9cf0", "p2")}
+      ${pencil(224, 140, "#8fc47f", "p3")}
+    </svg>`;
+  }
+
+  function anglesScene() {
+    return `<svg viewBox="0 0 360 300" width="420" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="300" rx="22" fill="#fdf6ec"/>
+      <path d="M100 60 L100 240 L310 240 Z" fill="#dfeeff" stroke="#3a6fb0" stroke-width="4"/>
+      <g data-region="a"><circle cx="100" cy="60" r="10" fill="#ff922e"/><circle cx="100" cy="60" r="34" fill="transparent"/></g>
+      <g data-region="b"><circle cx="100" cy="240" r="10" fill="#ff922e"/><circle cx="100" cy="240" r="34" fill="transparent"/></g>
+      <g data-region="c"><circle cx="310" cy="240" r="10" fill="#ff922e"/><circle cx="310" cy="240" r="34" fill="transparent"/></g>
+    </svg>`;
+  }
+
+  function chartSceneA() {
+    return `<div style="width:100%;display:grid;place-items:center">${barChartSVG(CHART_A, true, "지난주 팔린 과일 수")}</div>`;
+  }
+  function chartSceneB() {
+    return `<div style="width:100%;display:grid;place-items:center">${barChartSVG(CHART_B, true, "좋아하는 음료 조사")}</div>`;
+  }
+
+  function butterflyScene() {
+    return `<svg viewBox="0 0 360 300" width="420" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="300" rx="22" fill="#eaf3ff"/>
+      <path d="M175 150 C120 70 60 80 70 140 C76 176 130 176 175 156 Z" fill="#f5a33b" stroke="#d07b13" stroke-width="3"/>
+      <path d="M185 150 C240 70 300 80 290 140 C284 176 230 176 185 156 Z" fill="#f5a33b" stroke="#d07b13" stroke-width="3"/>
+      <path d="M175 160 C130 220 90 226 96 190 C100 166 140 160 175 166 Z" fill="#f7c34f" stroke="#d07b13" stroke-width="3"/>
+      <path d="M185 160 C230 220 270 226 264 190 C260 166 220 160 185 166 Z" fill="#f7c34f" stroke="#d07b13" stroke-width="3"/>
+      <ellipse cx="180" cy="158" rx="10" ry="42" fill="#6d4c41"/>
+      <g data-region="v"><line x1="180" y1="30" x2="180" y2="278" stroke="#2f6dcc" stroke-width="3.5" stroke-dasharray="9 7"/><line x1="180" y1="30" x2="180" y2="278" stroke="transparent" stroke-width="30"/></g>
+      <g data-region="h"><line x1="30" y1="150" x2="330" y2="150" stroke="#ef5468" stroke-width="3.5" stroke-dasharray="9 7"/><line x1="30" y1="150" x2="330" y2="150" stroke="transparent" stroke-width="30"/></g>
+      <g data-region="d"><line x1="60" y1="50" x2="310" y2="260" stroke="#18a77f" stroke-width="3.5" stroke-dasharray="9 7"/><line x1="60" y1="50" x2="310" y2="260" stroke="transparent" stroke-width="30"/></g>
+    </svg>`;
+  }
+
+  function netScene() {
+    const u = 62, ox = 46, oy = 40;
+    const faces = [
+      { k: "f1", x: 0, y: 1 }, { k: "f2", x: 1, y: 1, colored: true },
+      { k: "f3", x: 2, y: 1 }, { k: "f4", x: 3, y: 1 },
+      { k: "f5", x: 1, y: 0 }, { k: "f6", x: 1, y: 2 }
+    ];
+    let cells = "";
+    faces.forEach(f => {
+      const rect = `<rect x="${ox + f.x * u}" y="${oy + f.y * u}" width="${u}" height="${u}" fill="${f.colored ? "#5a9cf0" : "#fff"}" stroke="#3a6fb0" stroke-width="3.5"/>`;
+      cells += f.colored ? rect : `<g data-region="${f.k}">${rect}</g>`;
+    });
+    return `<svg viewBox="0 0 360 270" width="420" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="270" rx="22" fill="#fdf6ec"/>${cells}
+    </svg>`;
+  }
+
+  const SCENES = {
+    pencils: pencilsScene, angles: anglesScene, chartA: chartSceneA,
+    chartB: chartSceneB, butterfly: butterflyScene, net: netScene
+  };
+  </script>
+  <script>
+  /* ============ 문제 은행 (수학 전용 · 89문제) ============ */
+  const SUB = {
+    sel: "알맞은 그림을 모두 골라 눌러요!",
+    sel1: "그림을 잘 보고 하나만 골라요!",
+    drag: "알맞은 카드를 골라 끌어다 놓아요!",
+    order: "카드를 눌러 1번부터 차례대로 놓아요!",
+    cls: "카드를 알맞은 곳에 나눠 담아요!",
+    pos: "그림에서 알맞은 곳을 찾아 눌러요!",
+    star: "🌟 별 5개 도전 문제! 천천히 생각해도 좋아요."
+  };
+
+  const PROBLEMS = [
+    /* ================= 1~2학년 (28 · 별5 도전 2개) ================= */
+    { id: "m34_mult42", type: "drag", grade: "1-2", area: "수와 연산", stars: 3,
+      prompt: "7 × 6의 답 카드를 상자에 넣어주세요", sub: SUB.drag,
+      explanation: "7 × 6 = 42예요!",
+      target: { e: "7 × 6 = ?", label: "답 카드를 상자에!" },
+      items: [ { e: "42", label: "", ok: true }, { e: "36", label: "" }, { e: "48", label: "" } ] },
+    { id: "m34_frac14", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "1/4을 색칠한 그림을 골라주세요", sub: SUB.sel1,
+      explanation: "4조각으로 똑같이 나눈 것 중 1조각이 1/4이에요!",
+      items: [
+        { svg: fractionCircleSVG(4, 1), label: "가 그림", ok: true },
+        { svg: fractionCircleSVG(4, 2), label: "나 그림" },
+        { svg: fractionCircleSVG(4, 3), label: "다 그림" }
+      ] },
+    { id: "m34_rightangle", type: "position", grade: "1-2", area: "도형", stars: 3,
+      prompt: "직각인 꼭짓점을 눌러주세요", sub: SUB.pos,
+      explanation: "종이 모서리처럼 반듯하게 90°를 이루는 각이 직각이에요!",
+      scene: "angles", answer: "b",
+      regionNames: { a: "위 꼭짓점", b: "아래 왼쪽 꼭짓점", c: "아래 오른쪽 꼭짓점" } },
+    { id: "m34_graphmax", type: "position", grade: "1-2", area: "규칙과 자료", stars: 3,
+      prompt: "가장 많이 팔린 과일의 막대를 눌러주세요", sub: SUB.pos,
+      explanation: "바나나가 7개로 가장 많이 팔렸어요!",
+      scene: "chartA", answer: "banana",
+      regionNames: { apple: "사과", banana: "바나나", grape: "포도", berry: "딸기" } },
+    { id: "m34_bigdec", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "가장 큰 수를 골라주세요", sub: SUB.sel1,
+      explanation: "0.70 > 0.65 > 0.09예요. 소수는 앞자리부터 비교!",
+      items: [ { e: "0.7", label: "", ok: true }, { e: "0.65", label: "" }, { e: "0.09", label: "" } ] },
+    { id: "m34_unitfit", type: "classify", grade: "1-2", area: "측정", stars: 3,
+      prompt: "길이를 잴 때 어울리는 단위로 나눠주세요", sub: SUB.cls,
+      explanation: "운동장과 버스처럼 긴 것은 m, 연필과 지우개처럼 짧은 것은 cm!",
+      bins: [ { id: "m", label: "📏 m가 어울려요" }, { id: "cm", label: "📐 cm가 어울려요" } ],
+      items: [
+        { e: "🏟️", label: "운동장", bin: "m" }, { e: "🚌", label: "버스", bin: "m" },
+        { e: "✏️", label: "연필", bin: "cm" }, { e: "🩹", label: "지우개", bin: "cm" }
+      ] },
+    { id: "m34_seq14", type: "select", grade: "1-2", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "규칙을 보고 ❓에 들어갈 수를 고르세요", sub: SUB.sel1,
+      figure: seqFigure(["2", "5", "8", "11", "❓"]),
+      explanation: "3씩 커지는 규칙! 11 + 3 = 14예요.",
+      items: [ { e: "14", label: "", ok: true }, { e: "13", label: "" }, { e: "15", label: "" } ] },
+    { id: "m34_div24", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "사탕 24개를 6명이 똑같이 나누면 한 명이 몇 개씩 가질까요?", sub: SUB.sel1,
+      explanation: "24 ÷ 6 = 4개씩!",
+      items: [ { e: "4", label: "", ok: true }, { e: "3", label: "" }, { e: "8", label: "" } ] },
+    { id: "m34_pyramid3", type: "select", grade: "1-2", area: "수와 연산", stars: 5, single: true, challenge: true,
+      prompt: "[별 5개 도전] 위 칸은 아래 두 칸의 합! ★에 들어갈 수를 고르세요", sub: SUB.star,
+      figure: pyramidSVG([["20"], ["8", "?"], ["3", "5", "★"]]),
+      explanation: "20 − 8 = 12가 ? 자리, 12 − 5 = 7이 ★ 자리예요! 거꾸로 생각하는 게 열쇠!",
+      items: [ { e: "7", label: "", ok: true }, { e: "6", label: "" }, { e: "8", label: "" } ] },
+    { id: "m34_rotate", type: "select", grade: "1-2", area: "도형", stars: 5, single: true, challenge: true,
+      prompt: "[별 5개 도전] 화살표가 규칙대로 돌아요. ❓에 올 모양을 고르세요", sub: SUB.star,
+      figure: `<div class="fig-seq">
+        <span class="fig-card">${arrowSVG(0).replace('viewBox="0 0 80 80"', 'viewBox="0 0 80 80" width="44" height="44"')}</span>
+        <span class="fig-card">${arrowSVG(90).replace('viewBox="0 0 80 80"', 'viewBox="0 0 80 80" width="44" height="44"')}</span>
+        <span class="fig-card">${arrowSVG(180).replace('viewBox="0 0 80 80"', 'viewBox="0 0 80 80" width="44" height="44"')}</span>
+        <span class="fig-card">${arrowSVG(270).replace('viewBox="0 0 80 80"', 'viewBox="0 0 80 80" width="44" height="44"')}</span>
+        <span class="fig-card q">❓</span></div>`,
+      explanation: "시계 방향으로 90°씩 도는 규칙! ← 다음은 다시 ↑예요.",
+      items: [
+        { svg: arrowSVG(0), label: "가", ok: true },
+        { svg: arrowSVG(180), label: "나" },
+        { svg: arrowSVG(270), label: "다" }
+      ] },
+    { id: "m34_clock430", type: "select", grade: "1-2", area: "측정", stars: 3, single: true,
+      prompt: "4시 30분을 나타내는 시계를 골라주세요", sub: SUB.sel1,
+      explanation: "긴바늘이 6을 가리키면 30분! 짧은바늘은 4와 5 사이에 있어요.",
+      items: [
+        { svg: clockSVG(4, 30), label: "가 시계", ok: true },
+        { svg: clockSVG(4, 0), label: "나 시계" },
+        { svg: clockSVG(5, 30), label: "다 시계" }
+      ] },
+    { id: "m34_capacity", type: "select", grade: "1-2", area: "측정", stars: 2, single: true,
+      prompt: "물이 가장 많이 들어가는 것을 골라주세요", sub: SUB.sel1,
+      explanation: "욕조가 컵과 숟가락보다 훨씬 많은 물이 들어가요!",
+      items: [ { e: "🛁", label: "욕조", ok: true }, { e: "🥛", label: "컵" }, { e: "🥄", label: "숟가락" } ] },
+    { id: "m34_frac23", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "2/3를 색칠한 그림을 골라주세요", sub: SUB.sel1,
+      explanation: "3칸 중 2칸을 색칠하면 2/3!",
+      items: [
+        { svg: fractionBarSVG(3, 2), label: "가 그림", ok: true },
+        { svg: fractionBarSVG(3, 1), label: "나 그림" },
+        { svg: fractionBarSVG(4, 2), label: "다 그림" }
+      ] },
+    { id: "m34_samemult", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "6 × 4와 계산 결과가 같은 것을 골라주세요", sub: SUB.sel1,
+      explanation: "6 × 4 = 24 = 8 × 3! 곱하는 순서와 짝을 바꿔도 결과가 같을 수 있어요.",
+      items: [ { e: "8 × 3", label: "", ok: true }, { e: "5 × 5", label: "" }, { e: "7 × 3", label: "" } ] },
+    { id: "m34_dotrows", type: "select", grade: "1-2", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "규칙을 보고 4층에 놓을 구슬 수를 고르세요", sub: SUB.sel1,
+      figure: dotRowsSVG(),
+      explanation: "1개 → 3개 → 5개, 2개씩 늘어나요. 4층은 7개!",
+      items: [ { e: "7", label: "", ok: true }, { e: "6", label: "" }, { e: "8", label: "" } ] },
+    { id: "m34_share20", type: "drag", grade: "1-2", area: "생활 수학", stars: 3,
+      prompt: "사탕 20개를 5명이 똑같이 나눌 때, 한 명이 갖는 개수 카드를 넣어주세요", sub: SUB.drag,
+      explanation: "20 ÷ 5 = 4개씩!",
+      target: { e: "🍬 20 ÷ 5", label: "한 명이 갖는 수는?" },
+      items: [ { e: "4", label: "", ok: true }, { e: "5", label: "" }, { e: "15", label: "" } ] },
+    { id: "m34_bigangle", type: "select", grade: "1-2", area: "도형", stars: 3, single: true,
+      prompt: "가장 큰 각을 골라주세요", sub: SUB.sel1,
+      explanation: "각은 두 변이 벌어진 정도! 많이 벌어질수록 큰 각이에요.",
+      items: [
+        { svg: angleSVG(120), label: "가", ok: true },
+        { svg: angleSVG(90), label: "나" },
+        { svg: angleSVG(30), label: "다" }
+      ] },
+    { id: "m34_km", type: "select", grade: "1-2", area: "측정", stars: 3, single: true,
+      prompt: "1km는 몇 m일까요?", sub: SUB.sel1,
+      explanation: "1km = 1000m! k(킬로)는 1000배라는 뜻이에요.",
+      items: [ { e: "1000m", label: "", ok: true }, { e: "100m", label: "" }, { e: "10000m", label: "" } ] },
+    { id: "m34_juice", type: "select", grade: "1-2", area: "규칙과 자료", stars: 3, single: true,
+      prompt: "그래프에서 주스를 고른 학생은 몇 명일까요?", sub: SUB.sel1,
+      figure: `<div>${barChartSVG(CHART_B, false, "좋아하는 음료 조사")}</div>`,
+      explanation: "주스 막대의 높이를 읽으면 4명이에요!",
+      items: [ { e: "4명", label: "", ok: true }, { e: "3명", label: "" }, { e: "5명", label: "" } ] },
+    { id: "m34_fraccomp", type: "select", grade: "1-2", area: "수와 연산", stars: 4, single: true,
+      prompt: "1/3과 1/5 중 더 큰 분수를 골라주세요", sub: SUB.sel1,
+      explanation: "같은 피자를 3조각으로 나눈 것이 5조각으로 나눈 것보다 커요! 분모가 작을수록 한 조각이 커요.",
+      items: [ { e: "1/3", label: "", ok: true }, { e: "1/5", label: "" } ] },
+    { id: "m34_after30", type: "select", grade: "1-2", area: "측정", stars: 3, single: true,
+      prompt: "2시 30분에서 30분이 지나면 몇 시일까요?", sub: SUB.sel1,
+      explanation: "30분 + 30분 = 1시간이니까 3시!",
+      items: [
+        { svg: clockSVG(3, 0), label: "가 시계", ok: true },
+        { svg: clockSVG(2, 0), label: "나 시계" },
+        { svg: clockSVG(4, 0), label: "다 시계" }
+      ] },
+    { id: "m34_skip5", type: "order", grade: "1-2", area: "규칙과 자료", stars: 2,
+      prompt: "5씩 뛰어 세며 차례대로 놓아주세요", sub: SUB.order,
+      explanation: "5 → 10 → 15 → 20!",
+      cards: [ { e: "5", label: "" }, { e: "10", label: "" }, { e: "15", label: "" }, { e: "20", label: "" } ] },
+    { id: "m34_lenliq", type: "classify", grade: "1-2", area: "측정", stars: 3,
+      prompt: "길이 단위와 들이 단위를 나눠주세요", sub: SUB.cls,
+      explanation: "cm와 km는 길이, L와 mL는 물의 양(들이)을 재는 단위예요!",
+      bins: [ { id: "len", label: "📏 길이 단위" }, { id: "liq", label: "🥤 들이 단위" } ],
+      items: [
+        { e: "cm", label: "", bin: "len" }, { e: "km", label: "", bin: "len" },
+        { e: "L", label: "", bin: "liq" }, { e: "mL", label: "", bin: "liq" }
+      ] },
+    { id: "m34_sqcount", type: "select", grade: "1-2", area: "도형", stars: 4, single: true,
+      prompt: "그림에서 찾을 수 있는 크고 작은 정사각형은 모두 몇 개일까요?", sub: SUB.sel1,
+      figure: gridSquaresSVG(),
+      explanation: "작은 정사각형 4개 + 큰 정사각형 1개 = 5개! 큰 것도 잊지 마세요.",
+      items: [ { e: "5", label: "", ok: true }, { e: "4", label: "" }, { e: "6", label: "" } ] },
+    { id: "m34_shop", type: "select", grade: "1-2", area: "생활 수학", stars: 3, single: true,
+      prompt: "700원 사탕과 500원 초콜릿을 사면 모두 얼마일까요?", sub: SUB.sel1,
+      explanation: "700 + 500 = 1200원!",
+      items: [ { e: "1200원", label: "", ok: true }, { e: "1100원", label: "" }, { e: "1300원", label: "" } ] },
+    { id: "m34_flatsolid", type: "classify", grade: "1-2", area: "도형", stars: 3,
+      prompt: "평면도형과 입체도형을 나눠주세요", sub: SUB.cls,
+      explanation: "종이처럼 납작하면 평면도형, 공이나 상자처럼 통통하면 입체도형!",
+      bins: [ { id: "flat", label: "▱ 평면도형" }, { id: "solid", label: "📦 입체도형" } ],
+      items: [
+        { e: "🔺", label: "삼각형", bin: "flat" }, { e: "⬜", label: "사각형", bin: "flat" },
+        { e: "⚽", label: "공(구)", bin: "solid" }, { e: "📦", label: "상자", bin: "solid" }
+      ] },
+    { id: "m34_halfof8", type: "select", grade: "1-2", area: "수와 연산", stars: 3, single: true,
+      prompt: "8의 1/2은 얼마일까요?", sub: SUB.sel1,
+      explanation: "8을 똑같이 둘로 나누면 4!",
+      items: [ { e: "4", label: "", ok: true }, { e: "2", label: "" }, { e: "6", label: "" } ] },
+    { id: "m34_graphmin", type: "position", grade: "1-2", area: "규칙과 자료", stars: 3,
+      prompt: "가장 적은 학생이 고른 음료의 막대를 눌러주세요", sub: SUB.pos,
+      explanation: "코코아가 3명으로 가장 적어요!",
+      scene: "chartB", answer: "cocoa",
+      regionNames: { milk: "우유", juice: "주스", water: "물", cocoa: "코코아" } },
+
+    /* ================= 3~4학년 (35 · 별5 도전 3개) ================= */
+    { id: "m56_divisors", type: "classify", grade: "3-4", area: "수와 연산", stars: 4,
+      prompt: "12의 약수인 것과 아닌 것을 나눠주세요", sub: SUB.cls,
+      explanation: "12를 나누어떨어지게 하는 수: 1, 2, 3, 4, 6, 12. 1과 자기 자신도 약수예요!",
+      bins: [ { id: "yes", label: "⭕ 12의 약수" }, { id: "no", label: "❌ 약수가 아님" } ],
+      items: [
+        { e: "1", label: "", bin: "yes" }, { e: "2", label: "", bin: "yes" },
+        { e: "3", label: "", bin: "yes" }, { e: "4", label: "", bin: "yes" },
+        { e: "6", label: "", bin: "yes" }, { e: "12", label: "", bin: "yes" },
+        { e: "5", label: "", bin: "no" }, { e: "8", label: "", bin: "no" }
+      ] },
+    { id: "m56_lcm", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "4와 6의 최소공배수를 골라주세요", sub: SUB.sel1,
+      explanation: "4의 배수: 4,8,12… / 6의 배수: 6,12… 공통 배수 중 가장 작은 수는 12!",
+      items: [ { e: "12", label: "", ok: true }, { e: "24", label: "" }, { e: "2", label: "" } ] },
+    { id: "m56_gcd", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "12와 18의 최대공약수를 골라주세요", sub: SUB.sel1,
+      explanation: "공통 약수 1, 2, 3, 6 중 가장 큰 수는 6!",
+      items: [ { e: "6", label: "", ok: true }, { e: "3", label: "" }, { e: "36", label: "" } ] },
+    { id: "m56_fracorder", type: "order", grade: "3-4", area: "수와 연산", stars: 4,
+      prompt: "작은 분수부터 차례대로 놓아주세요", sub: SUB.order,
+      explanation: "3/8 < 1/2(=4/8) < 2/3! 1/2을 기준으로 비교하면 쉬워요.",
+      cards: [ { e: "3/8", label: "" }, { e: "1/2", label: "" }, { e: "2/3", label: "" } ] },
+    { id: "m56_avg8", type: "drag", grade: "3-4", area: "규칙과 자료", stars: 4,
+      prompt: "네 수의 평균이 8이 되도록 빈칸에 카드를 넣어주세요", sub: SUB.drag,
+      explanation: "평균 8 × 4개 = 합 32. 7 + 9 + 6 = 22이니 빈칸은 10!",
+      target: { e: "7, 9, 6, ❓", label: "평균이 8이 되게!" },
+      items: [ { e: "10", label: "", ok: true }, { e: "8", label: "" }, { e: "12", label: "" } ] },
+    { id: "m56_discount", type: "select", grade: "3-4", area: "생활 수학", stars: 4, single: true,
+      prompt: "8000원 신발을 25% 할인하면 얼마일까요?", sub: SUB.sel1,
+      explanation: "25%는 1/4이니 할인액은 2000원. 8000 − 2000 = 6000원!",
+      items: [ { e: "6000원", label: "", ok: true }, { e: "2000원", label: "" }, { e: "7500원", label: "" } ] },
+    { id: "m56_ratio", type: "select", grade: "3-4", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "골 성공률이 가장 높은 친구를 골라주세요", sub: SUB.sel1,
+      figure: ratioTableFigure(),
+      explanation: "가: 3/5=60%, 나: 5/10=50%, 다: 4/8=50%. 많이 던진 것과 잘 넣는 것은 달라요!",
+      items: [ { e: "가", label: "", ok: true }, { e: "나", label: "" }, { e: "다", label: "" } ] },
+    { id: "m56_badnet", type: "select", grade: "3-4", area: "도형", stars: 4, single: true,
+      prompt: "정육면체를 만들 수 없는 전개도를 골라주세요", sub: SUB.sel1,
+      explanation: "접었을 때 두 면이 겹치면 정육면체가 될 수 없어요!",
+      items: [
+        { svg: netSVG("bad"), label: "가", ok: true },
+        { svg: netSVG("cross"), label: "나" },
+        { svg: netSVG("t"), label: "다" }
+      ] },
+    { id: "m56_frac34", type: "select", grade: "3-4", area: "수와 연산", stars: 3, single: true,
+      prompt: "3/4과 같은 크기를 나타낸 그림을 골라주세요", sub: SUB.sel1,
+      explanation: "8칸 중 6칸 = 6/8 = 3/4! 크기가 같은 분수를 찾는 문제예요.",
+      items: [
+        { svg: fractionBarSVG(8, 6), label: "가 그림", ok: true },
+        { svg: fractionBarSVG(8, 3), label: "나 그림" },
+        { svg: fractionBarSVG(6, 4), label: "다 그림" }
+      ] },
+    { id: "m56_symmetry", type: "position", grade: "3-4", area: "도형", stars: 3,
+      prompt: "나비의 대칭축을 눌러주세요", sub: SUB.pos,
+      explanation: "세로 파란 선으로 접으면 양쪽 날개가 딱 겹쳐요!",
+      scene: "butterfly", answer: "v",
+      regionNames: { v: "세로선", h: "가로선", d: "비스듬한 선" } },
+    { id: "m56_pouch", type: "select", grade: "3-4", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "빨간 구슬을 뽑을 가능성이 더 큰 주머니를 골라주세요", sub: SUB.sel1,
+      explanation: "가: 4개 중 2개(1/2), 나: 9개 중 3개(1/3). 빨간 구슬 개수가 아니라 비율로 비교해요!",
+      items: [
+        { svg: pouchSVG(2, 4), label: "가 주머니", ok: true },
+        { svg: pouchSVG(3, 9), label: "나 주머니" }
+      ] },
+    { id: "m56_perimeter", type: "select", grade: "3-4", area: "측정", stars: 3, single: true,
+      prompt: "이 직사각형의 둘레를 골라주세요", sub: SUB.sel1,
+      figure: rectSVG(6, 4),
+      explanation: "(6 + 4) × 2 = 20cm!",
+      items: [ { e: "20cm", label: "", ok: true }, { e: "24cm", label: "" }, { e: "10cm", label: "" } ] },
+    { id: "m56_area", type: "select", grade: "3-4", area: "측정", stars: 3, single: true,
+      prompt: "이 직사각형의 넓이를 골라주세요", sub: SUB.sel1,
+      figure: rectSVG(6, 4),
+      explanation: "6 × 4 = 24㎠! 둘레와 헷갈리지 마세요.",
+      items: [ { e: "24㎠", label: "", ok: true }, { e: "20㎠", label: "" }, { e: "10㎠", label: "" } ] },
+    { id: "m56_netface", type: "position", grade: "3-4", area: "도형", stars: 4,
+      prompt: "전개도를 접었을 때, 색칠된 면과 마주 보는 면을 눌러주세요", sub: SUB.pos,
+      explanation: "가로줄에서 한 칸 건너뛴 면이 마주 보는 면이 돼요!",
+      scene: "net", answer: "f4",
+      regionNames: { f1: "왼쪽 끝 면", f3: "색칠된 면의 옆 면", f4: "오른쪽 끝 면", f5: "위쪽 면", f6: "아래쪽 면" } },
+    { id: "m56_percent", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "전체 40개 중 10개는 몇 %일까요?", sub: SUB.sel1,
+      explanation: "10/40 = 1/4 = 25%!",
+      items: [ { e: "25%", label: "", ok: true }, { e: "40%", label: "" }, { e: "10%", label: "" } ] },
+    { id: "m56_dec2frac", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "0.75와 같은 분수를 골라주세요", sub: SUB.sel1,
+      explanation: "0.75 = 75/100 = 3/4!",
+      items: [ { e: "3/4", label: "", ok: true }, { e: "3/5", label: "" }, { e: "7/5", label: "" } ] },
+    { id: "m56_multiples", type: "select", grade: "3-4", area: "수와 연산", stars: 4,
+      prompt: "6의 배수를 모두 골라주세요", sub: SUB.sel,
+      explanation: "12, 18, 30은 6으로 나누어떨어져요. 26과 32는 아니에요!",
+      items: [
+        { e: "12", label: "", ok: true }, { e: "18", label: "", ok: true },
+        { e: "30", label: "", ok: true }, { e: "26", label: "" }, { e: "32", label: "" }
+      ] },
+    { id: "m56_mean", type: "select", grade: "3-4", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "시험 점수 80, 90, 70, 100점의 평균을 골라주세요", sub: SUB.sel1,
+      explanation: "합 340 ÷ 4 = 85점!",
+      items: [ { e: "85점", label: "", ok: true }, { e: "80점", label: "" }, { e: "90점", label: "" } ] },
+    { id: "m56_circum", type: "select", grade: "3-4", area: "측정", stars: 4, single: true,
+      prompt: "원의 둘레(원주)를 구하는 방법을 골라주세요", sub: SUB.sel1,
+      explanation: "원주 = 지름 × 원주율(3.14)!",
+      items: [
+        { e: "🟠", label: "지름 × 3.14", ok: true },
+        { e: "🟠", label: "반지름 × 3.14" },
+        { e: "🟠", label: "지름 + 3.14" }
+      ] },
+    { id: "m56_eqratio", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "2 : 3과 같은 비를 골라주세요", sub: SUB.sel1,
+      explanation: "양쪽에 2를 곱하면 4 : 6! 비의 성질이에요.",
+      items: [ { e: "4 : 6", label: "", ok: true }, { e: "3 : 2", label: "" }, { e: "2 : 6", label: "" } ] },
+    { id: "m56_volume", type: "select", grade: "3-4", area: "측정", stars: 4, single: true,
+      prompt: "가로 2cm, 세로 3cm, 높이 4cm인 직육면체의 부피를 골라주세요", sub: SUB.sel1,
+      explanation: "2 × 3 × 4 = 24㎤!",
+      items: [ { e: "24㎤", label: "", ok: true }, { e: "9㎤", label: "" }, { e: "20㎤", label: "" } ] },
+    { id: "m56_pyramid4", type: "select", grade: "3-4", area: "수와 연산", stars: 5, single: true, challenge: true,
+      prompt: "[별 5개 도전] 위 칸은 아래 두 칸의 합! ★에 들어갈 수를 고르세요", sub: SUB.star,
+      figure: pyramidSVG([["52"], ["?", "27"], ["11", "?", "?"], ["4", "7", "★", "6"]]),
+      explanation: "★를 7이라 하면 둘째 줄이 14와 13, 셋째 줄 오른쪽이 27로 딱 맞아요! (52도 25+27로 확인 완료)",
+      items: [ { e: "7", label: "", ok: true }, { e: "6", label: "" }, { e: "8", label: "" } ] },
+    { id: "m56_fibo", type: "select", grade: "3-4", area: "규칙과 자료", stars: 5, single: true, challenge: true,
+      prompt: "[별 5개 도전] 수의 규칙을 찾아 ❓에 들어갈 수를 고르세요", sub: SUB.star,
+      figure: seqFigure(["1", "1", "2", "3", "5", "8", "❓"]),
+      explanation: "앞의 두 수를 더하면 다음 수! 5 + 8 = 13이에요. (피보나치 수열)",
+      items: [ { e: "13", label: "", ok: true }, { e: "12", label: "" }, { e: "16", label: "" } ] },
+    { id: "m56_perimax", type: "select", grade: "3-4", area: "측정", stars: 5, single: true, challenge: true,
+      prompt: "[별 5개 도전] 둘레가 모두 20cm인 직사각형이에요. 넓이가 가장 큰 것을 고르세요", sub: SUB.star,
+      explanation: "넓이는 5×5=25, 6×4=24, 7×3=21. 둘레가 같으면 정사각형에 가까울수록 넓어요!",
+      items: [
+        { svg: rectCardSVG(5, 5), label: "5 × 5", ok: true },
+        { svg: rectCardSVG(6, 4), label: "6 × 4" },
+        { svg: rectCardSVG(7, 3), label: "7 × 3" }
+      ] },
+    { id: "m56_properfrac", type: "classify", grade: "3-4", area: "수와 연산", stars: 4,
+      prompt: "1보다 큰 분수와 1보다 작은 분수를 나눠주세요", sub: SUB.cls,
+      explanation: "분자가 분모보다 크면 1보다 커요! 5/3와 7/4는 가분수예요.",
+      bins: [ { id: "big", label: "🔼 1보다 커요" }, { id: "small", label: "🔽 1보다 작아요" } ],
+      items: [
+        { e: "5/3", label: "", bin: "big" }, { e: "7/4", label: "", bin: "big" },
+        { e: "2/5", label: "", bin: "small" }, { e: "3/8", label: "", bin: "small" }
+      ] },
+    { id: "m56_oddsum", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "홀수 + 홀수의 결과는 어떻게 될까요?", sub: SUB.sel1,
+      explanation: "3+5=8, 7+9=16… 홀수끼리 더하면 항상 짝수가 돼요!",
+      items: [
+        { e: "2️⃣", label: "항상 짝수", ok: true },
+        { e: "1️⃣", label: "항상 홀수" },
+        { e: "❔", label: "알 수 없다" }
+      ] },
+    { id: "m56_proportion", type: "select", grade: "3-4", area: "생활 수학", stars: 4, single: true,
+      prompt: "연필 3자루에 1500원이에요. 5자루는 얼마일까요?", sub: SUB.sel1,
+      explanation: "한 자루 500원 × 5자루 = 2500원!",
+      items: [ { e: "2500원", label: "", ok: true }, { e: "2000원", label: "" }, { e: "3000원", label: "" } ] },
+    { id: "m56_waterml", type: "select", grade: "3-4", area: "측정", stars: 4, single: true,
+      prompt: "물 2L를 4명이 똑같이 나누면 한 명이 몇 mL씩 마실까요?", sub: SUB.sel1,
+      explanation: "2L = 2000mL, 2000 ÷ 4 = 500mL!",
+      items: [ { e: "500mL", label: "", ok: true }, { e: "250mL", label: "" }, { e: "400mL", label: "" } ] },
+    { id: "m56_anglesum", type: "select", grade: "3-4", area: "도형", stars: 4, single: true,
+      prompt: "삼각형 세 각의 크기의 합은 얼마일까요?", sub: SUB.sel1,
+      explanation: "어떤 삼각형이든 세 각의 합은 180°예요!",
+      items: [ { e: "180°", label: "", ok: true }, { e: "90°", label: "" }, { e: "360°", label: "" } ] },
+    { id: "m56_symcount", type: "select", grade: "3-4", area: "도형", stars: 4, single: true,
+      prompt: "정사각형의 대칭축은 모두 몇 개일까요?", sub: SUB.sel1,
+      explanation: "가로, 세로, 대각선 2개 — 모두 4개예요!",
+      items: [ { e: "4개", label: "", ok: true }, { e: "2개", label: "" }, { e: "8개", label: "" } ] },
+    { id: "m56_reduce", type: "select", grade: "3-4", area: "수와 연산", stars: 4, single: true,
+      prompt: "12/18를 기약분수로 나타내면?", sub: SUB.sel1,
+      explanation: "최대공약수 6으로 나누면 2/3!",
+      items: [ { e: "2/3", label: "", ok: true }, { e: "3/4", label: "" }, { e: "2/5", label: "" } ] },
+    { id: "m56_graphavg", type: "select", grade: "3-4", area: "규칙과 자료", stars: 4,
+      prompt: "다섯 항목의 평균보다 큰 항목을 모두 골라주세요", sub: SUB.sel,
+      figure: `<div>${barChartSVG(CHART_AVG, false, "모둠별 점수")}</div>`,
+      explanation: "평균 = (4+8+6+9+3) ÷ 5 = 6. 평균 6보다 큰 것은 나(8)와 라(9)!",
+      items: [
+        { e: "나", label: "", ok: true }, { e: "라", label: "", ok: true },
+        { e: "가", label: "" }, { e: "다", label: "" }, { e: "마", label: "" }
+      ] },
+    { id: "m56_decmult", type: "select", grade: "3-4", area: "수와 연산", stars: 3, single: true,
+      prompt: "0.5 × 6의 값을 골라주세요", sub: SUB.sel1,
+      explanation: "0.5는 절반! 6의 절반은 3이에요.",
+      items: [ { e: "3", label: "", ok: true }, { e: "30", label: "" }, { e: "0.3", label: "" } ] },
+    { id: "m56_literml", type: "select", grade: "3-4", area: "측정", stars: 4, single: true,
+      prompt: "1.2L와 1250mL 중 더 많은 양을 골라주세요", sub: SUB.sel1,
+      explanation: "1.2L = 1200mL < 1250mL! 단위를 통일해서 비교해요.",
+      items: [ { e: "1250mL", label: "", ok: true }, { e: "1.2L", label: "" }, { e: "🟰", label: "같다" } ] },
+    { id: "m56_clockangle", type: "select", grade: "3-4", area: "측정", stars: 4, single: true,
+      prompt: "시계가 3시일 때 두 바늘이 이루는 작은 쪽 각은 몇 도일까요?", sub: SUB.sel1,
+      figure: `<div>${clockSVG(3, 0).replace('viewBox="0 0 120 96"', 'viewBox="0 0 120 96" width="220"')}</div>`,
+      explanation: "시계 한 바퀴 360° ÷ 12칸 = 30°. 12에서 3까지 3칸이니 90°!",
+      items: [ { e: "90°", label: "", ok: true }, { e: "60°", label: "" }, { e: "120°", label: "" } ] },
+
+    /* ================= 5~6학년 (25 · 실전 문장제) ================= */
+    { id: "n56_decmul", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "한 개에 0.45kg인 사과가 한 상자에 12개씩 들어 있어요. 사과 한 상자의 전체 무게는 몇 kg일까요? (상자 무게는 생각하지 않아요)", sub: SUB.sel1,
+      explanation: "0.45 × 12 = 5.4kg! 소수점 위치에 주의해요.",
+      items: [
+        { e: "5.4", label: "kg", ok: true }, { e: "4.5", label: "kg" },
+        { e: "54", label: "kg" }, { e: "5.45", label: "kg" }
+      ] },
+    { id: "n56_fracrect", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "어떤 직사각형의 넓이는 8/9㎡이고, 가로의 길이는 2/3m예요. 이 직사각형의 세로의 길이는 몇 m일까요?", sub: SUB.sel1,
+      explanation: "세로 = 넓이 ÷ 가로 = 8/9 ÷ 2/3 = 8/9 × 3/2 = 4/3m!",
+      items: [
+        { e: "4/3", label: "m", ok: true }, { e: "16/27", label: "m" },
+        { e: "3/4", label: "m" }, { e: "10/27", label: "m" }
+      ] },
+    { id: "n56_pencil53", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "지수와 민우는 연필 24자루를 5 : 3의 비로 나누어 가지려고 해요. 지수가 가지게 되는 연필은 모두 몇 자루일까요?", sub: SUB.sel1,
+      explanation: "전체 5+3=8묶음 중 지수는 5묶음! 24 × 5/8 = 15자루예요.",
+      items: [
+        { e: "15", label: "자루", ok: true }, { e: "8", label: "자루" },
+        { e: "9", label: "자루" }, { e: "16", label: "자루" }
+      ] },
+    { id: "n56_ribbon", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "리본 7.2m를 한 도막에 0.9m씩 자르면 모두 몇 도막이 될까요?", sub: SUB.sel1,
+      explanation: "7.2 ÷ 0.9 = 8도막!",
+      items: [
+        { e: "8", label: "도막", ok: true }, { e: "7", label: "도막" },
+        { e: "9", label: "도막" }, { e: "80", label: "도막" }
+      ] },
+    { id: "n56_juicecup", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "주스 3/4L를 한 컵에 1/8L씩 나누어 담으면 모두 몇 컵이 될까요?", sub: SUB.sel1,
+      explanation: "3/4 ÷ 1/8 = 3/4 × 8 = 6컵!",
+      items: [
+        { e: "6", label: "컵", ok: true }, { e: "3", label: "컵" },
+        { e: "8", label: "컵" }, { e: "12", label: "컵" }
+      ] },
+    { id: "n56_propeq", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "비례식 3 : 4 = 9 : □ 에서 □에 알맞은 수를 골라주세요", sub: SUB.sel1,
+      explanation: "3에 3을 곱해 9가 되었으니, 4에도 3을 곱하면 12!",
+      items: [
+        { e: "12", label: "", ok: true }, { e: "10", label: "" },
+        { e: "16", label: "" }, { e: "27", label: "" }
+      ] },
+    { id: "n56_salepct", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "정가 15000원인 옷을 12000원에 샀어요. 몇 % 할인받은 것일까요?", sub: SUB.sel1,
+      explanation: "할인받은 금액은 3000원. 3000 ÷ 15000 = 0.2 = 20%!",
+      items: [
+        { e: "20%", label: "", ok: true }, { e: "15%", label: "" },
+        { e: "25%", label: "" }, { e: "30%", label: "" }
+      ] },
+    { id: "n56_avg96", type: "select", grade: "5-6", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "수학 시험 4회의 평균이 86점이에요. 5회까지의 평균이 88점이 되려면 5회에 몇 점을 받아야 할까요?", sub: SUB.sel1,
+      explanation: "5회까지 총점은 88×5=440점, 지금까지 총점은 86×4=344점. 440−344=96점!",
+      items: [
+        { e: "96", label: "점", ok: true }, { e: "90", label: "점" },
+        { e: "92", label: "점" }, { e: "94", label: "점" }
+      ] },
+    { id: "n56_circum", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "지름이 10cm인 원의 둘레는 몇 cm일까요? (원주율 3.14)", sub: SUB.sel1,
+      explanation: "원주 = 지름 × 원주율 = 10 × 3.14 = 31.4cm!",
+      items: [
+        { e: "31.4", label: "cm", ok: true }, { e: "15.7", label: "cm" },
+        { e: "78.5", label: "cm" }, { e: "314", label: "cm" }
+      ] },
+    { id: "n56_carea", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "반지름이 5cm인 원의 넓이는 몇 ㎠일까요? (원주율 3.14)", sub: SUB.sel1,
+      explanation: "원의 넓이 = 반지름 × 반지름 × 원주율 = 5 × 5 × 3.14 = 78.5㎠!",
+      items: [
+        { e: "78.5", label: "㎠", ok: true }, { e: "31.4", label: "㎠" },
+        { e: "157", label: "㎠" }, { e: "25", label: "㎠" }
+      ] },
+    { id: "n56_volume", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "가로 5cm, 세로 4cm, 높이 3cm인 직육면체의 부피는 몇 ㎤일까요?", sub: SUB.sel1,
+      explanation: "부피 = 가로 × 세로 × 높이 = 5 × 4 × 3 = 60㎤!",
+      items: [
+        { e: "60", label: "㎤", ok: true }, { e: "12", label: "㎤" },
+        { e: "47", label: "㎤" }, { e: "94", label: "㎤" }
+      ] },
+    { id: "n56_surface", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "한 모서리가 4cm인 정육면체의 겉넓이는 몇 ㎠일까요?", sub: SUB.sel1,
+      explanation: "한 면의 넓이 4×4=16㎠, 면이 6개니까 16×6=96㎠!",
+      items: [
+        { e: "96", label: "㎠", ok: true }, { e: "64", label: "㎠" },
+        { e: "48", label: "㎠" }, { e: "16", label: "㎠" }
+      ] },
+    { id: "n56_buslcm", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "버스 A는 6분마다, 버스 B는 8분마다 출발해요. 두 버스가 동시에 출발한 뒤, 다음에 또 동시에 출발하는 것은 몇 분 후일까요?", sub: SUB.sel1,
+      explanation: "6과 8의 최소공배수는 24! 24분 후에 다시 동시에 출발해요.",
+      items: [
+        { e: "24", label: "분 후", ok: true }, { e: "12", label: "분 후" },
+        { e: "14", label: "분 후" }, { e: "48", label: "분 후" }
+      ] },
+    { id: "n56_gcdshare", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "사과 36개와 귤 48개를 최대한 많은 친구에게 남김없이 똑같이 나누어 주려고 해요. 몇 명에게 나누어 줄 수 있을까요?", sub: SUB.sel1,
+      explanation: "36과 48의 최대공약수는 12! 12명에게 사과 3개, 귤 4개씩 줄 수 있어요.",
+      items: [
+        { e: "12", label: "명", ok: true }, { e: "6", label: "명" },
+        { e: "8", label: "명" }, { e: "16", label: "명" }
+      ] },
+    { id: "n56_water", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "1분에 0.75L씩 물이 나오는 수도로 8분 동안 물을 받으면 모두 몇 L일까요?", sub: SUB.sel1,
+      explanation: "0.75 × 8 = 6L!",
+      items: [
+        { e: "6", label: "L", ok: true }, { e: "5.6", label: "L" },
+        { e: "60", label: "L" }, { e: "0.6", label: "L" }
+      ] },
+    { id: "n56_fracmul", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "철사 5/6m 중에서 전체의 3/5을 사용했어요. 사용한 철사는 몇 m일까요?", sub: SUB.sel1,
+      explanation: "5/6 × 3/5 = 15/30 = 1/2m!",
+      items: [
+        { e: "1/2", label: "m", ok: true }, { e: "2/5", label: "m" },
+        { e: "3/10", label: "m" }, { e: "8/15", label: "m" }
+      ] },
+    { id: "n56_pocket", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "용돈 5000원을 언니와 동생이 3 : 2의 비로 나누어 가져요. 언니가 가지는 돈은 얼마일까요?", sub: SUB.sel1,
+      explanation: "전체 5묶음 중 언니는 3묶음! 5000 × 3/5 = 3000원.",
+      items: [
+        { e: "3000", label: "원", ok: true }, { e: "2000", label: "원" },
+        { e: "2500", label: "원" }, { e: "3500", label: "원" }
+      ] },
+    { id: "n56_riserate", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "500원이던 과자 가격이 650원이 되었어요. 가격이 몇 % 오른 것일까요?", sub: SUB.sel1,
+      explanation: "오른 금액은 150원. 150 ÷ 500 = 0.3 = 30%!",
+      items: [
+        { e: "30%", label: "", ok: true }, { e: "13%", label: "" },
+        { e: "15%", label: "" }, { e: "65%", label: "" }
+      ] },
+    { id: "n56_diameter", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "둘레가 25.12cm인 원의 지름은 몇 cm일까요? (원주율 3.14)", sub: SUB.sel1,
+      explanation: "지름 = 원주 ÷ 원주율 = 25.12 ÷ 3.14 = 8cm!",
+      items: [
+        { e: "8", label: "cm", ok: true }, { e: "4", label: "cm" },
+        { e: "12.56", label: "cm" }, { e: "16", label: "cm" }
+      ] },
+    { id: "n56_fracdiv2", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "4/5 ÷ 2/15의 값을 골라주세요", sub: SUB.sel1,
+      explanation: "나눗셈은 뒤집어 곱하기! 4/5 × 15/2 = 60/10 = 6!",
+      items: [
+        { e: "6", label: "", ok: true }, { e: "8/75", label: "" },
+        { e: "1/6", label: "" }, { e: "2/3", label: "" }
+      ] },
+    { id: "n56_avg3", type: "select", grade: "5-6", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "세 수의 평균이 24예요. 두 수가 20과 25라면, 나머지 한 수는 얼마일까요?", sub: SUB.sel1,
+      explanation: "세 수의 합은 24×3=72. 72−20−25=27!",
+      items: [
+        { e: "27", label: "", ok: true }, { e: "23", label: "" },
+        { e: "24", label: "" }, { e: "29", label: "" }
+      ] },
+    { id: "n56_correct", type: "select", grade: "5-6", area: "규칙과 자료", stars: 4, single: true,
+      prompt: "20문제 중 17문제를 맞혔어요. 정답률은 몇 %일까요?", sub: SUB.sel1,
+      explanation: "17/20 = 85/100 = 85%!",
+      items: [
+        { e: "85%", label: "", ok: true }, { e: "80%", label: "" },
+        { e: "90%", label: "" }, { e: "75%", label: "" }
+      ] },
+    { id: "n56_surface2", type: "select", grade: "5-6", area: "측정", stars: 4, single: true,
+      prompt: "가로 3cm, 세로 4cm, 높이 5cm인 직육면체의 겉넓이는 몇 ㎠일까요?", sub: SUB.sel1,
+      explanation: "(3×4 + 4×5 + 3×5) × 2 = (12+20+15) × 2 = 94㎠!",
+      items: [
+        { e: "94", label: "㎠", ok: true }, { e: "60", label: "㎠" },
+        { e: "47", label: "㎠" }, { e: "120", label: "㎠" }
+      ] },
+    { id: "n56_shadow", type: "select", grade: "5-6", area: "수와 연산", stars: 4, single: true,
+      prompt: "길이가 1m인 막대의 그림자가 1.5m예요. 같은 시각, 그림자 길이가 6m인 나무의 높이는 몇 m일까요?", sub: SUB.sel1,
+      explanation: "1 : 1.5 = □ : 6 이니까, 나무 높이는 4m예요!",
+      items: [
+        { e: "4", label: "m", ok: true }, { e: "3", label: "m" },
+        { e: "4.5", label: "m" }, { e: "9", label: "m" }
+      ] },
+    { id: "n56_fuel", type: "select", grade: "5-6", area: "생활 수학", stars: 4, single: true,
+      prompt: "휘발유 1.4L로 16.8km를 가는 자동차가 있어요. 이 자동차는 휘발유 1L로 몇 km를 갈 수 있을까요?", sub: SUB.sel1,
+      explanation: "16.8 ÷ 1.4 = 12km!",
+      items: [
+        { e: "12", label: "km", ok: true }, { e: "10", label: "km" },
+        { e: "11.2", label: "km" }, { e: "15", label: "km" }
+      ] }
+  ];
+  </script>
+  <script>
+  /* ============ 상태 ============ */
+  let gradeFilter = "all";
+  let current = null;
+  let lastId = null;
+  let engineState = null;
+  let stats = { tried: 0, solved: 0 };
+  let judged = false;
+  let reviewMode = false;
+  let completed = false;
+
+  /* ============ 오답/완료 DB (localStorage) ============ */
+  const WRONG_KEY = "catchap_math_wrongdb_v1";
+  const SOLVED_KEY = "catchap_math_solved_v1";
+  let wrongDB = loadWrongDB();
+  let solvedIds = loadSolved();
+  function loadWrongDB() {
+    try { return JSON.parse(localStorage.getItem(WRONG_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+  function saveWrongDB() {
+    try { localStorage.setItem(WRONG_KEY, JSON.stringify(wrongDB)); } catch (e) {}
+  }
+  function loadSolved() {
+    try { return new Set(JSON.parse(localStorage.getItem(SOLVED_KEY)) || []); }
+    catch (e) { return new Set(); }
+  }
+  function saveSolved() {
+    try { localStorage.setItem(SOLVED_KEY, JSON.stringify([...solvedIds])); } catch (e) {}
+  }
+  function recordWrong(p, behavior) {
+    const k = p.id;
+    if (!wrongDB[k]) {
+      wrongDB[k] = { id: k, prompt: p.prompt, area: p.area, grade: p.grade, type: p.type, count: 0 };
+    }
+    wrongDB[k].count++;
+    wrongDB[k].lastAt = new Date().toISOString();
+    wrongDB[k].lastBehavior = {
+      durationMs: Math.round(behavior.duration), changes: behavior.changes,
+      reorders: behavior.reorders, attempts: behavior.attempts, flags: behavior.flags.slice()
+    };
+    saveWrongDB();
+    renderWrongDB();
+  }
+  function renderWrongDB() {
+    const items = Object.values(wrongDB);
+    $("#wrongInfo").textContent = "오답 노트 " + items.length + "개";
+    const list = $("#wrongList");
+    if (!list) return;
+    list.innerHTML = items.length
+      ? items.map((w) =>
+          `<li><span class="wa">${w.area}</span> ${w.prompt}<span class="wc">틀린 횟수 ${w.count}</span></li>`
+        ).join("")
+      : `<li class="empty">아직 틀린 문제가 없어요. 잘하고 있어요! 🎉</li>`;
+  }
+  function renderProgress() {
+    const inFilter = PROBLEMS.filter((p) => gradeFilter === "all" || p.grade === gradeFilter);
+    const done = inFilter.filter((p) => solvedIds.has(p.id) || wrongDB[p.id]).length;
+    $("#score").textContent = `완료 ${done} / ${inFilter.length} · 성공 ${stats.solved}`;
+  }
+
+  /* ============ 행동 데이터 레코더 ============ */
+  const B = {};
+  function resetBehavior(keepAttempts) {
+    const prevAttempts = keepAttempts && B.attempts ? B.attempts : 0;
+    Object.assign(B, {
+      start: performance.now(), firstAction: null,
+      clicks: 0, changes: 0, reorders: 0,
+      dragLen: 0, dragDirect: 0, straight: null,
+      attempts: prevAttempts, flags: []
+    });
+    renderBehavior();
+    $("#bh-flags").textContent = "아직 판정 전이에요";
+  }
+  function touchAction() {
+    if (B.firstAction === null) B.firstAction = performance.now() - B.start;
+  }
+  function renderBehavior() {
+    $("#bh-hesi").textContent = B.firstAction === null ? "-" : (B.firstAction / 1000).toFixed(1) + "초";
+    $("#bh-clicks").textContent = B.clicks;
+    $("#bh-changes").textContent = B.changes;
+    $("#bh-reorders").textContent = B.reorders;
+    $("#bh-drag").textContent = Math.round(B.dragLen) + "px";
+    $("#bh-straight").textContent = B.straight === null ? "-" : (B.straight * 100).toFixed(0) + "%";
+    $("#bh-attempts").textContent = B.attempts;
+  }
+  function computeFlags(elapsedMs) {
+    const flags = [];
+    if (elapsedMs < 1500) flags.push("too_fast (1.5초 미만 제출)");
+    if (B.firstAction !== null && B.firstAction < 200) flags.push("no_hesitation (즉시 조작)");
+    if (B.straight !== null && B.straight > 0.98) flags.push("perfect_line (완벽 직선 드래그)");
+    if (B.changes === 0 && B.reorders === 0 && elapsedMs < 3000 && current && current.type !== "position")
+      flags.push("zero_correction (수정 없이 초고속)");
+    B.flags = flags;
+    const el = $("#bh-flags");
+    el.innerHTML = flags.length
+      ? flags.map((f) => `<span class="flag-chip">${f}</span>`).join("")
+      : `<span class="flag-chip flag-ok">특이 신호 없음 · 사람다운 풀이예요</span>`;
+  }
+
+  setInterval(() => {
+    if (!current || judged) return;
+    $("#timer").textContent = ((performance.now() - B.start) / 1000).toFixed(1) + "초";
+    $("#bh-time").textContent = $("#timer").textContent;
+  }, 100);
+
+  document.addEventListener("pointerdown", (ev) => {
+    if (!current || judged) return;
+    if (!$("#stage").contains(ev.target)) return;
+    B.clicks++;
+    touchAction();
+    renderBehavior();
+  });
+
+  /* ============ 공통 렌더 ============ */
+  const TYPE_NAMES = {
+    select: "🖼️ 이미지 선택형", drag: "👆 드래그형", order: "🔢 순서 배열형",
+    classify: "🗂️ 분류형", position: "📍 위치 선택형"
+  };
+
+  function freshPool() {
+    const byGrade = (p) => gradeFilter === "all" || p.grade === gradeFilter;
+    let pool = PROBLEMS.filter(byGrade);
+    if (reviewMode) {
+      const wrongAreas = new Set(Object.values(wrongDB).map((w) => w.area));
+      if (wrongAreas.size) pool = pool.filter((p) => wrongAreas.has(p.area));
+    }
+    return pool.filter((p) => !solvedIds.has(p.id) && !wrongDB[p.id]);
+  }
+
+  function loadProblem() {
+    const pool = freshPool();
+    if (!pool.length) { showComplete(); return; }
+    const choices = pool.filter((p) => p.id !== lastId);
+    current = pickOne(choices.length ? choices : pool);
+    renderCurrent();
+  }
+
+  function loadSimilar(area) {
+    const pool = freshPool().filter((p) => p.area === area && p.id !== lastId);
+    if (pool.length) { current = pickOne(pool); renderCurrent(); }
+    else loadProblem();
+  }
+
+  function showComplete() {
+    completed = true;
+    judged = true;
+    current = null;
+    $("#prompt").textContent = "";
+    $("#sub").textContent = "";
+    $("#stage").innerHTML = "";
+    $("#btnSubmit").style.display = "none";
+    const ovl = $("#overlay");
+    ovl.className = "overlay show ok";
+    $("#ovlEmo").textContent = "🏆";
+    $("#ovlTitle").textContent = "수고했어! 넌 최고야";
+    $("#ovlExp").textContent = "수학 문제를 모두 풀었어요! 정말 대단해요 🎉";
+    $("#btnRetry").style.display = "none";
+    $("#btnNext").textContent = "처음부터 다시 풀기 🔄";
+    renderProgress();
+  }
+
+  function buildStage() {
+    const stage = $("#stage");
+    stage.innerHTML = "";
+    if (current.figure) {
+      const f = document.createElement("div");
+      f.className = "figure";
+      f.innerHTML = current.figure;
+      stage.appendChild(f);
+    }
+    if (current.type === "select") buildSelect(stage);
+    else if (current.type === "drag") buildDrag(stage);
+    else if (current.type === "order") buildOrder(stage);
+    else if (current.type === "classify") buildClassify(stage);
+    else if (current.type === "position") buildPosition(stage);
+  }
+
+  function renderCurrent() {
+    lastId = current.id;
+    judged = false;
+    completed = false;
+    $("#btnNext").textContent = "다음 문제 →";
+    resetBehavior(false);
+    renderProgress();
+
+    $("#b-type").textContent = TYPE_NAMES[current.type];
+    $("#b-area").textContent = "➗ " + current.area;
+    $("#b-grade").textContent = "🎒 초등 " + current.grade + "학년";
+    const bs = $("#b-stars");
+    if (current.challenge) {
+      bs.textContent = "🌟 별 5개 도전";
+      bs.className = "eyebrow stars challenge";
+    } else {
+      bs.textContent = "난이도 " + "★".repeat(current.stars || 1);
+      bs.className = "eyebrow stars";
+    }
+    $("#prompt").textContent = current.prompt;
+    $("#sub").textContent = current.sub;
+    $("#overlay").className = "overlay";
+    $("#attemptsTag").textContent = "";
+
+    buildStage();
+
+    $("#btnSubmit").style.display = (current.type === "drag" || current.type === "position") ? "none" : "";
+    updateSubmit();
+  }
+
+  function updateSubmit() {
+    const btn = $("#btnSubmit");
+    if (!current) return;
+    if (current.type === "select") btn.disabled = engineState.selected.size === 0;
+    else if (current.type === "order") btn.disabled = engineState.slots.some((s) => s === null);
+    else if (current.type === "classify") btn.disabled = Object.keys(engineState.placed).length < current.items.length;
+  }
+
+  /* ============ 판정/피드백 ============ */
+  function judge(ok) {
+    judged = true;
+    const elapsed = performance.now() - B.start;
+    $("#bh-time").textContent = (elapsed / 1000).toFixed(1) + "초";
+    computeFlags(elapsed);
+    renderBehavior();
+
+    stats.tried++;
+    if (ok) {
+      stats.solved++;
+      solvedIds.add(current.id);
+      saveSolved();
+    } else {
+      recordWrong(current, {
+        duration: elapsed, changes: B.changes, reorders: B.reorders,
+        attempts: B.attempts, flags: B.flags
+      });
+    }
+    renderProgress();
+
+    const ovl = $("#overlay");
+    ovl.classList.add("show", ok ? "ok" : "no");
+    $("#ovlEmo").textContent = ok ? "🎉" : "🌈";
+    $("#ovlTitle").textContent = ok ? pickOne(MSG_OK) : pickOne(MSG_NO);
+    $("#ovlExp").textContent = ok
+      ? current.explanation
+      : "이 문제는 오답 노트에 저장했어요. 비슷한 문제로 다시 도전해볼까요?";
+    $("#btnRetry").style.display = ok ? "none" : "";
+  }
+
+  $("#btnRetry").addEventListener("click", () => { if (current) loadSimilar(current.area); });
+  $("#btnNext").addEventListener("click", () => {
+    if (completed) { solvedIds = new Set(); saveSolved(); }
+    loadProblem();
+  });
+
+  /* ============ 1) 이미지 선택형 ============ */
+  function buildSelect(stage) {
+    engineState = { selected: new Set() };
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    const items = shuffle(current.items.map((it, i) => ({ ...it, _i: i })));
+    items.forEach((it) => {
+      const card = document.createElement("div");
+      card.className = "pick";
+      card.innerHTML = `<span class="emo">${it.svg ? it.svg : it.e}</span><span class="lb">${it.label}</span>`;
+      card.addEventListener("click", () => {
+        if (judged) return;
+        touchAction();
+        if (engineState.selected.has(it._i)) {
+          engineState.selected.delete(it._i);
+          card.classList.remove("sel");
+          B.changes++;
+        } else {
+          if (current.single) {
+            engineState.selected.forEach(() => B.changes++);
+            engineState.selected.clear();
+            grid.querySelectorAll(".pick.sel").forEach((el) => el.classList.remove("sel"));
+          }
+          engineState.selected.add(it._i);
+          card.classList.add("sel");
+        }
+        renderBehavior();
+        updateSubmit();
+      });
+      grid.appendChild(card);
+    });
+    stage.appendChild(grid);
+  }
+
+  /* ============ 2) 드래그형 ============ */
+  function buildDrag(stage) {
+    engineState = {};
+    const wrap = document.createElement("div");
+    wrap.className = "drag-wrap";
+    const dz = document.createElement("div");
+    dz.className = "dropzone";
+    dz.innerHTML = `<div><span class="dz-emo">${current.target.e}</span>${current.target.label}</div>`;
+    const tray = document.createElement("div");
+    tray.className = "drag-tray";
+
+    shuffle(current.items).forEach((it) => {
+      const card = document.createElement("div");
+      card.className = "dragcard";
+      card.innerHTML = `<span class="emo">${it.e}</span><span class="lb">${it.label}</span>`;
+      makeDraggable(card, dz, it);
+      tray.appendChild(card);
+    });
+    wrap.appendChild(dz);
+    wrap.appendChild(tray);
+    stage.appendChild(wrap);
+  }
+
+  function makeDraggable(card, dz, item) {
+    let sx = 0, sy = 0, lx = 0, ly = 0, dragging = false, path = 0;
+    card.addEventListener("pointerdown", (ev) => {
+      if (judged) return;
+      dragging = true;
+      touchAction();
+      card.setPointerCapture(ev.pointerId);
+      card.classList.add("lift");
+      sx = lx = ev.clientX; sy = ly = ev.clientY;
+      path = 0;
+    });
+    card.addEventListener("pointermove", (ev) => {
+      if (!dragging) return;
+      const dx = ev.clientX - lx, dy = ev.clientY - ly;
+      path += Math.hypot(dx, dy);
+      lx = ev.clientX; ly = ev.clientY;
+      card.style.transform = `translate(${ev.clientX - sx}px, ${ev.clientY - sy}px)`;
+      const r = dz.getBoundingClientRect();
+      const inside = ev.clientX > r.left && ev.clientX < r.right && ev.clientY > r.top && ev.clientY < r.bottom;
+      dz.classList.toggle("hot", inside);
+      B.dragLen = path;
+      B.dragDirect = Math.hypot(ev.clientX - sx, ev.clientY - sy);
+      B.straight = path > 8 ? Math.min(1, B.dragDirect / path) : null;
+      renderBehavior();
+    });
+    card.addEventListener("pointerup", (ev) => {
+      if (!dragging) return;
+      dragging = false;
+      card.classList.remove("lift");
+      const r = dz.getBoundingClientRect();
+      const inside = ev.clientX > r.left && ev.clientX < r.right && ev.clientY > r.top && ev.clientY < r.bottom;
+      dz.classList.remove("hot");
+      if (inside) {
+        if (item.ok) {
+          card.classList.add("gone");
+          dz.innerHTML = `<div><span class="dz-emo">${item.e}</span>성공! 정답 카드를 잘 넣었어요!</div>`;
+          judge(true);
+        } else {
+          B.changes++;
+          card.style.transform = "";
+          card.classList.add("shake");
+          setTimeout(() => card.classList.remove("shake"), 700);
+          judge(false);
+        }
+      } else {
+        card.style.transform = "";
+      }
+      renderBehavior();
+    });
+  }
+
+  /* ============ 3) 순서 배열형 ============ */
+  function buildOrder(stage) {
+    const n = current.cards.length;
+    engineState = { slots: new Array(n).fill(null) };
+
+    const slotsRow = document.createElement("div");
+    slotsRow.className = "slots";
+    const trayRow = document.createElement("div");
+    trayRow.className = "tray";
+
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement("div");
+      s.className = "slot";
+      s.dataset.idx = i;
+      s.innerHTML = `<span class="no">${i + 1}</span>` + (i < n - 1 ? `<span class="arrow">→</span>` : "");
+      s.addEventListener("click", () => {
+        if (judged) return;
+        const idx = +s.dataset.idx;
+        const cardIdx = engineState.slots[idx];
+        if (cardIdx === null) return;
+        engineState.slots[idx] = null;
+        B.reorders++;
+        touchAction();
+        const back = trayRow.querySelector(`.ocard[data-i="${cardIdx}"]`);
+        back.style.display = "";
+        s.querySelectorAll(".placed").forEach((el) => el.remove());
+        renderBehavior();
+        updateSubmit();
+      });
+      slotsRow.appendChild(s);
+    }
+
+    let order = shuffle(current.cards.map((_, i) => i));
+    if (order.every((v, i) => v === i)) order = order.slice(1).concat(order[0]);
+
+    order.forEach((cardIdx) => {
+      const c = current.cards[cardIdx];
+      const el = document.createElement("div");
+      el.className = "ocard";
+      el.dataset.i = cardIdx;
+      el.innerHTML = `<span class="emo">${c.svg ? c.svg : c.e}</span><span class="lb">${c.label}</span>`;
+      el.addEventListener("click", () => {
+        if (judged) return;
+        const empty = engineState.slots.indexOf(null);
+        if (empty === -1) return;
+        touchAction();
+        engineState.slots[empty] = cardIdx;
+        el.style.display = "none";
+        const slot = slotsRow.querySelector(`.slot[data-idx="${empty}"]`);
+        const mini = document.createElement("div");
+        mini.className = "ocard placed";
+        mini.style.cursor = "pointer";
+        mini.style.width = "100px";
+        mini.innerHTML = `<span class="emo" style="font-size:32px">${c.svg ? c.svg : c.e}</span><span class="lb">${c.label}</span>`;
+        slot.appendChild(mini);
+        renderBehavior();
+        updateSubmit();
+      });
+      trayRow.appendChild(el);
+    });
+
+    stage.appendChild(slotsRow);
+    stage.appendChild(trayRow);
+  }
+
+  /* ============ 4) 분류형 ============ */
+  function buildClassify(stage) {
+    engineState = { placed: {}, selectedCard: null };
+    const wrap = document.createElement("div");
+    wrap.className = "cls-wrap";
+
+    const bins = document.createElement("div");
+    bins.className = "bins";
+    current.bins.forEach((b) => {
+      const bin = document.createElement("div");
+      bin.className = "bin";
+      bin.dataset.bin = b.id;
+      bin.innerHTML = `<h3>${b.label}</h3><div class="bin-items"></div>`;
+      bin.addEventListener("click", () => {
+        if (judged || engineState.selectedCard === null) return;
+        const i = engineState.selectedCard;
+        if (engineState.placed[i] !== undefined && engineState.placed[i] !== b.id) B.changes++;
+        engineState.placed[i] = b.id;
+        touchAction();
+        const chip = wrap.querySelector(`.ccard[data-i="${i}"]`);
+        chip.classList.remove("sel");
+        bin.querySelector(".bin-items").appendChild(chip);
+        engineState.selectedCard = null;
+        bin.classList.add("hot");
+        setTimeout(() => bin.classList.remove("hot"), 250);
+        renderBehavior();
+        updateSubmit();
+      });
+      bins.appendChild(bin);
+    });
+
+    const tray = document.createElement("div");
+    tray.className = "cls-tray";
+    shuffle(current.items.map((it, i) => ({ ...it, _i: i }))).forEach((it) => {
+      const c = document.createElement("div");
+      c.className = "ccard";
+      c.dataset.i = it._i;
+      c.innerHTML = `<span class="emo">${it.e}</span><span class="lb">${it.label}</span>`;
+      c.addEventListener("click", (ev) => {
+        if (judged) return;
+        ev.stopPropagation();
+        touchAction();
+        if (engineState.placed[it._i] !== undefined && !tray.contains(c)) {
+          delete engineState.placed[it._i];
+          B.reorders++;
+          tray.appendChild(c);
+          c.classList.remove("sel");
+          engineState.selectedCard = null;
+          renderBehavior();
+          updateSubmit();
+          return;
+        }
+        wrap.querySelectorAll(".ccard.sel").forEach((el) => el.classList.remove("sel"));
+        if (engineState.selectedCard === it._i) {
+          engineState.selectedCard = null;
+        } else {
+          engineState.selectedCard = it._i;
+          c.classList.add("sel");
+        }
+        renderBehavior();
+      });
+      tray.appendChild(c);
+    });
+
+    const hint = document.createElement("p");
+    hint.className = "cls-hint";
+    hint.textContent = "① 카드를 눌러 고르고 → ② 알맞은 바구니를 눌러 담아요. (담은 카드를 누르면 다시 꺼내요)";
+
+    wrap.appendChild(bins);
+    wrap.appendChild(tray);
+    wrap.appendChild(hint);
+    stage.appendChild(wrap);
+  }
+
+  /* ============ 5) 위치 선택형 ============ */
+  function buildPosition(stage) {
+    engineState = {};
+    const wrap = document.createElement("div");
+    wrap.className = "scene-wrap";
+    wrap.innerHTML = SCENES[current.scene]();
+    wrap.querySelectorAll("[data-region]").forEach((g) => {
+      g.addEventListener("click", () => {
+        if (judged) return;
+        touchAction();
+        const region = g.dataset.region;
+        if (region !== current.answer) B.changes++;
+        renderBehavior();
+        judge(region === current.answer);
+        if (region !== current.answer) {
+          $("#ovlExp").textContent =
+            `방금 누른 곳은 '${current.regionNames[region]}'이에요. 다시 한 번 찾아볼까요?`;
+        }
+      });
+    });
+    stage.appendChild(wrap);
+  }
+
+  /* ============ 제출 판정 ============ */
+  $("#btnSubmit").addEventListener("click", () => {
+    if (judged || !current) return;
+    let ok = false;
+    if (current.type === "select") {
+      const answer = new Set(current.items.map((it, i) => (it.ok ? i : -1)).filter((i) => i >= 0));
+      ok = answer.size === engineState.selected.size &&
+           [...engineState.selected].every((i) => answer.has(i));
+    } else if (current.type === "order") {
+      const s = engineState.slots, n = s.length;
+      if (current.cyclic) {
+        ok = s.every((v, i) => s[(i + 1) % n] === (v + 1) % n);
+      } else {
+        ok = s.every((cardIdx, pos) => cardIdx === pos);
+      }
+    } else if (current.type === "classify") {
+      ok = current.items.every((it, i) => engineState.placed[i] === it.bin);
+    }
+    judge(ok);
+  });
+
+  /* ============ 학년 필터 ============ */
+  $("#filters").addEventListener("click", (ev) => {
+    const chip = ev.target.closest(".chip");
+    if (!chip) return;
+    $("#filters").querySelectorAll(".chip").forEach((c) => c.classList.remove("on"));
+    chip.classList.add("on");
+    gradeFilter = chip.dataset.g;
+    loadProblem();
+  });
+
+  /* ============ 오답 DB 컨트롤 ============ */
+  $("#reviewToggle").addEventListener("click", () => {
+    reviewMode = !reviewMode;
+    $("#reviewToggle").textContent = "🔁 비슷한 문제 복습: " + (reviewMode ? "켜짐" : "꺼짐");
+    $("#reviewToggle").classList.toggle("on", reviewMode);
+    if (reviewMode && !Object.keys(wrongDB).length) {
+      $("#reviewToggle").textContent = "🔁 비슷한 문제 복습: 켜짐 (오답 생기면 시작)";
+    }
+    loadProblem();
+  });
+  $("#wrongReset").addEventListener("click", () => {
+    wrongDB = {};
+    saveWrongDB();
+    renderWrongDB();
+    renderProgress();
+  });
+
+  /* ============ 시작 ============ */
+  renderWrongDB();
+  renderProgress();
+  loadProblem();
+  </script>
+</body>
+</html>

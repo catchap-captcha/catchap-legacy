@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 /* 3종 캡챠 공통 디자인 토큰 (선택적 공유용) */
 :root{--catchap-orange:#ff9a3d;--catchap-orange-deep:#f97316;--catchap-cream:#fff7ee;--catchap-ink:#4a3b2f;}
+=======
+/* 3종 생활안전 캡챠 공통 디자인 토큰 (선택적 공유용) — 핑크 "생활 안전" 테마 */
+:root{--catchap-pink:#ff6fa5;--catchap-pink-deep:#ff3f86;--catchap-cream:#fff5f8;--catchap-ink:#4a2f3b;}
+>>>>>>> aecc0847d385f4c405f11b4d1b409f719af7e989

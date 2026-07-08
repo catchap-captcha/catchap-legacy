@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/apple/Desktop/캣챱/**)",
+      "Read(//Users/apple/Desktop/**)",
+      "Bash(cd /Users/apple/Desktop/캣챱/catchap.english && find . -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*/dist/*' -not -path '*/build/*' | head -100)",
+      "Bash(cd /Users/apple/Desktop/캣챱/catchap.english/captcha/01-word-drag *)"
+    ]
+  }
+}

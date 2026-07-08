@@ -1,0 +1,167 @@
+/* 아래 내용을 src/index.css 맨 아래에 그대로 붙여넣으세요 */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.captcha-fade-in {
+  animation: fadeInUp 0.35s ease;
+}
+
+.captcha-pop-correct {
+  animation: pop 0.4s ease;
+}
+
+.captcha-shake {
+  animation: shake 0.4s ease;
+}
+
+.captcha-mascot-bounce {
+  animation: bounce 1.8s ease-in-out infinite;
+}
+
+.game-shell-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 22px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 980px) {
+  .game-shell-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.captcha-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #fff3ef, #ffe3db 60%, #ffd8cd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 64px;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.captcha-header {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.captcha-back {
+  color: #ef6f5c;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.captcha-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #3a2e2a;
+}
+
+.captcha-title-emoji {
+  font-size: 22px;
+}
+
+.captcha-round {
+  background: #fff;
+  color: #ef6f5c;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(239, 111, 92, 0.18);
+}
+
+.captcha-card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 32px;
+  padding: 40px 28px 32px;
+  box-shadow: 0 12px 32px rgba(239, 111, 92, 0.14);
+  position: relative;
+}
+
+.captcha-mascot {
+  position: absolute;
+  top: -22px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.captcha-mascot span {
+  font-size: 40px;
+}
+
+.captcha-mascot p {
+  background: #3a2e2a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin: 0;
+}

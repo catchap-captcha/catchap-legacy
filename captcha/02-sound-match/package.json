@@ -1,0 +1,17 @@
+{
+  "name": "catchap-sound-match-captcha",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CatChap 어린이 교육용 영어 듣기(Sound Match) 캡챠 (5단계 × 5문제)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "db:init": "mysql -u root -p < backend/db/schema.sql",
+    "gen:audio": "node scripts/generate-audio.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  }
+}

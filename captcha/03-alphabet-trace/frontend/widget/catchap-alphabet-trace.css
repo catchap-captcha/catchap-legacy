@@ -1,0 +1,100 @@
+/* ============================================================================
+ *  CatChap · Alphabet Trace CAPTCHA  —  위젯 스타일
+ *  전부 .cat- 프리픽스로 스코프.
+ * ========================================================================== */
+
+.cat-root {
+  --cat-orange: #ff9a3d;
+  --cat-orange-deep: #f97316;
+  --cat-orange-soft: #ffe6cc;
+  --cat-cream: #fff7ee;
+  --cat-cream-2: #fff1e2;
+  --cat-ink: #4a3b2f;
+  --cat-ink-soft: #9a8b7d;
+  --cat-green: #34c759;
+  --cat-green-soft: #d7f5df;
+  --cat-red: #ff5a7a;
+  --cat-red-soft: #ffe0e7;
+  --cat-radius: 20px;
+  --cat-shadow: 0 10px 30px rgba(249, 115, 22, 0.12);
+
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--cat-ink);
+  -webkit-user-select: none; user-select: none;
+  width: 100%; box-sizing: border-box;
+}
+.cat-root *, .cat-root *::before, .cat-root *::after { box-sizing: border-box; }
+
+.cat-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.cat-stage-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--cat-orange); color: #fff; font-weight: 800; font-size: 14px;
+  padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+.cat-progress { flex: 1; height: 12px; background: var(--cat-orange-soft); border-radius: 999px; overflow: hidden; }
+.cat-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #ffc078, var(--cat-orange-deep)); border-radius: 999px; transition: width 0.4s cubic-bezier(0.22,1,0.36,1); }
+.cat-count { font-weight: 800; font-size: 14px; color: var(--cat-orange-deep); white-space: nowrap; }
+
+.cat-card {
+  background: linear-gradient(180deg, var(--cat-cream), var(--cat-cream-2));
+  border: 2px dashed #ffd9b0; border-radius: var(--cat-radius);
+  padding: 22px; min-height: 320px;
+}
+.cat-prompt { font-size: 20px; font-weight: 900; margin: 0 0 4px; letter-spacing: -0.3px; }
+.cat-hint { font-size: 14px; color: var(--cat-ink-soft); margin: 0 0 16px; }
+
+/* 5단계 예시 글자 */
+.cat-example {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-bottom: 14px;
+}
+.cat-example .cat-ex-label { font-weight: 800; color: var(--cat-ink-soft); font-size: 14px; }
+.cat-example canvas { background: #fff; border: 2px solid #ffe0bd; border-radius: 14px; }
+
+/* 캔버스 그리기 영역 */
+.cat-canvas-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.cat-canvas-frame {
+  position: relative; background: #fff; border: 3px solid #ffe0bd; border-radius: 20px;
+  box-shadow: var(--cat-shadow); touch-action: none; overflow: hidden;
+}
+.cat-canvas-frame.cat-ok { border-color: var(--cat-green); }
+.cat-canvas-frame.cat-no { border-color: var(--cat-red); }
+.cat-canvas-frame canvas { display: block; cursor: crosshair; touch-action: none; }
+.cat-canvas-hint { font-size: 12px; color: var(--cat-ink-soft); font-weight: 700; }
+
+/* 하단 컨트롤 */
+.cat-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.cat-feedback { font-weight: 800; font-size: 15px; min-height: 22px; }
+.cat-feedback.cat-ok { color: var(--cat-green); }
+.cat-feedback.cat-no { color: var(--cat-red); }
+.cat-btns { display: flex; gap: 10px; }
+.cat-btn {
+  border: none; cursor: pointer; font-weight: 900; font-size: 16px;
+  padding: 12px 22px; border-radius: 14px; background: var(--cat-orange); color: #fff;
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.3); transition: transform 0.12s, filter 0.12s;
+}
+.cat-btn:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.cat-btn:disabled { background: #f0ddc9; color: #c3ad97; cursor: not-allowed; box-shadow: none; }
+.cat-btn.cat-ghostbtn { background: #fff; color: var(--cat-orange-deep); border: 2px solid var(--cat-orange-soft); box-shadow: none; }
+
+/* 완료 화면 */
+.cat-done { text-align: center; padding: 30px 10px; }
+.cat-done .cat-mascot { font-size: 72px; }
+.cat-done h3 { font-size: 24px; font-weight: 900; margin: 12px 0 6px; }
+.cat-done p { color: var(--cat-ink-soft); font-weight: 700; margin: 0 0 16px; }
+.cat-stage-summary { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 18px; }
+.cat-summary-pill { padding: 8px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; background: var(--cat-green-soft); color: #1f9d45; }
+.cat-summary-pill.cat-fail { background: var(--cat-red-soft); color: #d63a5a; }
+
+@keyframes cat-pop { 0%{transform:scale(0.6);opacity:0} 100%{transform:scale(1);opacity:1} }
+.cat-card { animation: cat-pop 0.25s ease-out; }
+
+/* ═══ 교육용 조작 강조 업그레이드 ═══ */
+.cat-canvas-frame { animation: cat-zone-pulse 2s ease-in-out infinite; }
+.cat-canvas-frame.cat-ok, .cat-canvas-frame.cat-no { animation: none; }
+.cat-canvas-hint { animation: cat-hint-bounce 2.2s ease-in-out infinite; color: var(--cat-orange-deep); }
+@keyframes cat-zone-pulse { 0%,100%{box-shadow:var(--cat-shadow)} 50%{box-shadow:var(--cat-shadow),0 0 0 6px rgba(255,154,61,.15)} }
+@keyframes cat-hint-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }

@@ -1,0 +1,83 @@
+/* ============================================================================
+ *  CatChap · Picture Sentence Match CAPTCHA — 위젯 스타일 (.cpm- 프리픽스)
+ *  교육용 드래그 강조: 문장 카드를 그림 옆 칸으로 끌어 연결하는 UX
+ * ========================================================================== */
+.cpm-root {
+  --cpm-orange:#ff9a3d; --cpm-orange-deep:#f97316; --cpm-orange-soft:#ffe6cc;
+  --cpm-cream:#fff7ee; --cpm-cream-2:#fff1e2; --cpm-ink:#4a3b2f; --cpm-ink-soft:#9a8b7d;
+  --cpm-green:#34c759; --cpm-green-soft:#d7f5df; --cpm-red:#ff5a7a; --cpm-red-soft:#ffe0e7;
+  --cpm-radius:20px; --cpm-shadow:0 10px 30px rgba(249,115,22,.12);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color:var(--cpm-ink); -webkit-user-select:none; user-select:none; width:100%; box-sizing:border-box;
+}
+.cpm-root *,.cpm-root *::before,.cpm-root *::after{box-sizing:border-box;}
+
+.cpm-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.cpm-stage-chip{display:inline-flex;align-items:center;gap:6px;background:var(--cpm-orange);color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(249,115,22,.3);}
+.cpm-progress{flex:1;height:12px;background:var(--cpm-orange-soft);border-radius:999px;overflow:hidden;}
+.cpm-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#ffc078,var(--cpm-orange-deep));border-radius:999px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+.cpm-count{font-weight:800;font-size:14px;color:var(--cpm-orange-deep);white-space:nowrap;}
+
+.cpm-card{background:linear-gradient(180deg,var(--cpm-cream),var(--cpm-cream-2));border:2px dashed #ffd9b0;border-radius:var(--cpm-radius);padding:22px;min-height:320px;}
+.cpm-prompt{font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.3px;}
+.cpm-hint{font-size:14px;color:var(--cpm-ink-soft);margin:0 0 14px;}
+.cpm-image{font-size:64px;text-align:center;line-height:1;margin-bottom:14px;}
+
+/* ── pick(1~3단계): 문장 카드 선택 ── */
+.cpm-choices{display:flex;flex-direction:column;gap:12px;max-width:520px;margin:0 auto;}
+.cpm-choice{background:#fff;border:3px solid var(--cpm-orange-soft);border-radius:16px;padding:14px 18px;font-size:18px;font-weight:800;color:var(--cpm-ink);cursor:pointer;box-shadow:0 5px 12px rgba(249,115,22,.1);transition:transform .12s,border-color .12s,background .12s;}
+.cpm-choice:hover{transform:translateY(-2px) scale(1.01);border-color:var(--cpm-orange);box-shadow:0 10px 22px rgba(249,115,22,.22);}
+.cpm-choice.cpm-selected{border-color:var(--cpm-orange-deep);background:#fff4e6;transform:scale(1.02);}
+.cpm-choice.cpm-ok{border-color:var(--cpm-green);background:var(--cpm-green-soft);}
+.cpm-choice.cpm-no{border-color:var(--cpm-red);background:var(--cpm-red-soft);animation:cpm-shake .4s;}
+
+/* ── connect(4~5단계): 그림 행 + 문장 드롭 칸 ── */
+.cpm-rows{display:flex;flex-direction:column;gap:14px;margin-bottom:8px;}
+.cpm-row{display:flex;align-items:center;gap:14px;justify-content:center;}
+.cpm-pic{width:96px;height:84px;background:#fff;border:3px solid #ffe0bd;border-radius:16px;display:grid;place-items:center;font-size:40px;box-shadow:var(--cpm-shadow);flex-shrink:0;}
+.cpm-link{font-size:22px;color:var(--cpm-orange-deep);font-weight:900;}
+.cpm-drop{flex:1;max-width:360px;min-height:62px;border-radius:14px;background:#fff;border:3px dashed var(--cpm-orange);display:grid;place-items:center;cursor:pointer;font-size:15px;color:var(--cpm-orange-deep);font-weight:800;transition:border-color .12s,background .12s,transform .12s;animation:cpm-slot-pulse 1.8s ease-in-out infinite;padding:6px;}
+.cpm-drop.cpm-filled{border-style:solid;animation:none;}
+.cpm-drop.cpm-drop-hot{background:#fff4e6;transform:scale(1.04);box-shadow:0 0 0 6px rgba(255,154,61,.25);animation:none;}
+.cpm-drop.cpm-ok{border-color:var(--cpm-green);background:var(--cpm-green-soft);animation:none;}
+.cpm-drop.cpm-no{border-color:var(--cpm-red);background:var(--cpm-red-soft);animation:cpm-shake .4s;}
+.cpm-drag-guide{text-align:center;font-size:13px;font-weight:800;color:var(--cpm-orange-deep);margin:0 0 14px;}
+
+/* 문장 카드 트레이 */
+.cpm-tray-label{font-weight:800;font-size:13px;color:var(--cpm-ink-soft);margin:0 0 8px;}
+.cpm-tray{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:72px;background:#fffdfa;border:2px dashed #ffe0bd;border-radius:16px;padding:14px;}
+.cpm-tray.cpm-drop-hot{border-color:var(--cpm-orange);background:#fff4e6;}
+.cpm-tile{position:relative;border-radius:14px;background:#fff;border:3px solid var(--cpm-orange-soft);color:var(--cpm-ink);font-size:16px;font-weight:800;padding:12px 16px;cursor:grab;touch-action:none;box-shadow:0 6px 14px rgba(249,115,22,.15);transition:transform .12s,box-shadow .12s,opacity .2s;max-width:340px;text-align:center;}
+.cpm-tray .cpm-tile{animation:cpm-float 2.6s ease-in-out infinite;}
+.cpm-tray .cpm-tile:nth-child(2n){animation-delay:.45s;}
+.cpm-tray .cpm-tile:nth-child(3n){animation-delay:.9s;}
+.cpm-tile:hover{transform:translateY(-4px) rotate(-1deg);box-shadow:0 12px 24px rgba(249,115,22,.28);animation-play-state:paused;}
+.cpm-tile:active{cursor:grabbing;}
+.cpm-tile.cpm-dragging{opacity:.3;animation:none;}
+.cpm-tile.cpm-in-drop{cursor:pointer;animation:none;box-shadow:none;max-width:100%;}
+.cpm-tile::after{content:"✋";position:absolute;top:-9px;right:-7px;font-size:13px;opacity:0;transition:opacity .15s;}
+.cpm-tray .cpm-tile:hover::after{opacity:1;}
+.cpm-ghost{position:fixed;z-index:99999;pointer-events:none;border-radius:14px;background:var(--cpm-orange);color:#fff;font-size:16px;font-weight:800;padding:12px 16px;box-shadow:0 16px 34px rgba(249,115,22,.45);transform:translate(-50%,-50%) rotate(-3deg) scale(1.06);max-width:340px;text-align:center;}
+
+.cpm-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;}
+.cpm-feedback{font-weight:800;font-size:15px;min-height:22px;}
+.cpm-feedback.cpm-ok{color:var(--cpm-green);} .cpm-feedback.cpm-no{color:var(--cpm-red);}
+.cpm-btns{display:flex;gap:10px;}
+.cpm-btn{border:none;cursor:pointer;font-weight:900;font-size:16px;padding:12px 22px;border-radius:14px;background:var(--cpm-orange);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.3);transition:transform .12s,filter .12s;}
+.cpm-btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.cpm-btn:disabled{background:#f0ddc9;color:#c3ad97;cursor:not-allowed;box-shadow:none;}
+.cpm-btn.cpm-ghostbtn{background:#fff;color:var(--cpm-orange-deep);border:2px solid var(--cpm-orange-soft);box-shadow:none;}
+
+.cpm-done{text-align:center;padding:30px 10px;}
+.cpm-done .cpm-mascot{font-size:72px;}
+.cpm-done h3{font-size:24px;font-weight:900;margin:12px 0 6px;}
+.cpm-done p{color:var(--cpm-ink-soft);font-weight:700;margin:0 0 16px;}
+.cpm-stage-summary{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;}
+.cpm-summary-pill{padding:8px 14px;border-radius:12px;font-weight:800;font-size:14px;background:var(--cpm-green-soft);color:#1f9d45;}
+.cpm-summary-pill.cpm-fail{background:var(--cpm-red-soft);color:#d63a5a;}
+
+@keyframes cpm-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes cpm-slot-pulse{0%,100%{border-color:var(--cpm-orange);box-shadow:0 0 0 0 rgba(255,154,61,.0)}50%{border-color:var(--cpm-orange-deep);box-shadow:0 0 0 5px rgba(255,154,61,.15)}}
+@keyframes cpm-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes cpm-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.cpm-card{animation:cpm-pop .25s ease-out;}

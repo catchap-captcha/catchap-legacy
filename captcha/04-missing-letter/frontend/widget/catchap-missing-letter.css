@@ -1,0 +1,76 @@
+/* ============================================================================
+ *  CatChap · Missing Letter CAPTCHA — 위젯 스타일 (.cml- 프리픽스)
+ * ========================================================================== */
+.cml-root {
+  --cml-orange:#ff9a3d; --cml-orange-deep:#f97316; --cml-orange-soft:#ffe6cc;
+  --cml-cream:#fff7ee; --cml-cream-2:#fff1e2; --cml-ink:#4a3b2f; --cml-ink-soft:#9a8b7d;
+  --cml-green:#34c759; --cml-green-soft:#d7f5df; --cml-red:#ff5a7a; --cml-red-soft:#ffe0e7;
+  --cml-radius:20px; --cml-shadow:0 10px 30px rgba(249,115,22,.12);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color:var(--cml-ink); -webkit-user-select:none; user-select:none; width:100%; box-sizing:border-box;
+}
+.cml-root *,.cml-root *::before,.cml-root *::after{box-sizing:border-box;}
+
+.cml-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.cml-stage-chip{display:inline-flex;align-items:center;gap:6px;background:var(--cml-orange);color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(249,115,22,.3);}
+.cml-progress{flex:1;height:12px;background:var(--cml-orange-soft);border-radius:999px;overflow:hidden;}
+.cml-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#ffc078,var(--cml-orange-deep));border-radius:999px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+.cml-count{font-weight:800;font-size:14px;color:var(--cml-orange-deep);white-space:nowrap;}
+
+.cml-card{background:linear-gradient(180deg,var(--cml-cream),var(--cml-cream-2));border:2px dashed #ffd9b0;border-radius:var(--cml-radius);padding:22px;min-height:320px;}
+.cml-prompt{font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.3px;}
+.cml-hint{font-size:14px;color:var(--cml-ink-soft);margin:0 0 18px;}
+
+.cml-image{font-size:64px;text-align:center;line-height:1;margin-bottom:14px;}
+.cml-cat-tag{display:flex;justify-content:center;margin-bottom:14px;}
+.cml-cat-tag span{display:inline-flex;align-items:center;gap:6px;background:var(--cml-orange);color:#fff;font-weight:900;font-size:16px;padding:8px 16px;border-radius:999px;}
+
+/* 단어 슬롯 */
+.cml-word{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:22px;}
+.cml-slot{width:52px;height:64px;border-radius:14px;display:grid;place-items:center;font-size:30px;font-weight:900;}
+.cml-slot.cml-fixed{background:#fff;border:3px solid var(--cml-orange-soft);color:var(--cml-ink);}
+.cml-slot.cml-blank{background:#fff;border:3px dashed var(--cml-orange);color:var(--cml-orange-deep);cursor:pointer;}
+.cml-slot.cml-blank.cml-active{background:#fff4e6;box-shadow:0 0 0 4px rgba(255,154,61,.25);}
+.cml-slot.cml-blank.cml-filled{border-style:solid;background:#fff4e6;}
+.cml-slot.cml-ok{border-color:var(--cml-green);background:var(--cml-green-soft);}
+.cml-slot.cml-no{border-color:var(--cml-red);background:var(--cml-red-soft);animation:cml-shake .4s;}
+
+/* 보기 알파벳 */
+.cml-options{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.cml-opt{min-width:60px;font-size:26px;font-weight:900;padding:12px 20px;border-radius:14px;background:#fff;border:3px solid var(--cml-orange-soft);color:var(--cml-orange-deep);cursor:pointer;box-shadow:0 4px 10px rgba(249,115,22,.1);transition:transform .12s,box-shadow .12s,opacity .2s;}
+.cml-opt:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(249,115,22,.18);}
+.cml-opt.cml-used{opacity:.35;}
+
+.cml-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;}
+.cml-feedback{font-weight:800;font-size:15px;min-height:22px;}
+.cml-feedback.cml-ok{color:var(--cml-green);} .cml-feedback.cml-no{color:var(--cml-red);}
+.cml-btns{display:flex;gap:10px;}
+.cml-btn{border:none;cursor:pointer;font-weight:900;font-size:16px;padding:12px 22px;border-radius:14px;background:var(--cml-orange);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.3);transition:transform .12s,filter .12s;}
+.cml-btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.cml-btn:disabled{background:#f0ddc9;color:#c3ad97;cursor:not-allowed;box-shadow:none;}
+.cml-btn.cml-ghostbtn{background:#fff;color:var(--cml-orange-deep);border:2px solid var(--cml-orange-soft);box-shadow:none;}
+
+.cml-done{text-align:center;padding:30px 10px;}
+.cml-done .cml-mascot{font-size:72px;}
+.cml-done h3{font-size:24px;font-weight:900;margin:12px 0 6px;}
+.cml-done p{color:var(--cml-ink-soft);font-weight:700;margin:0 0 16px;}
+.cml-stage-summary{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;}
+.cml-summary-pill{padding:8px 14px;border-radius:12px;font-weight:800;font-size:14px;background:var(--cml-green-soft);color:#1f9d45;}
+.cml-summary-pill.cml-fail{background:var(--cml-red-soft);color:#d63a5a;}
+
+@keyframes cml-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes cml-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.cml-card{animation:cml-pop .25s ease-out;}
+
+/* ═══ 교육용 조작 강조 업그레이드 ═══ */
+.cml-options .cml-opt { animation: cml-float 2.6s ease-in-out infinite; position: relative; }
+.cml-options .cml-opt:nth-child(2n) { animation-delay: .4s; }
+.cml-options .cml-opt:nth-child(3n) { animation-delay: .8s; }
+.cml-opt:hover { transform: translateY(-4px) rotate(-1.5deg); box-shadow: 0 12px 24px rgba(249,115,22,.28); animation-play-state: paused; }
+.cml-opt.cml-used { animation: none; }
+.cml-opt::after { content: "✋"; position: absolute; top: -9px; right: -7px; font-size: 13px; opacity: 0; transition: opacity .15s; }
+.cml-options .cml-opt:hover::after { opacity: 1; }
+.cml-slot.cml-blank { animation: cml-slot-pulse 1.8s ease-in-out infinite; }
+.cml-slot.cml-blank.cml-filled, .cml-slot.cml-ok, .cml-slot.cml-no { animation: none; }
+@keyframes cml-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+@keyframes cml-slot-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,154,61,0)} 50%{box-shadow:0 0 0 5px rgba(255,154,61,.15)} }

@@ -1,0 +1,66 @@
+/* ============================================================================
+ *  CatChap · Word Memory Match CAPTCHA — 위젯 스타일 (.cmm- 프리픽스)
+ * ========================================================================== */
+.cmm-root {
+  --cmm-orange:#ff9a3d; --cmm-orange-deep:#f97316; --cmm-orange-soft:#ffe6cc;
+  --cmm-cream:#fff7ee; --cmm-cream-2:#fff1e2; --cmm-ink:#4a3b2f; --cmm-ink-soft:#9a8b7d;
+  --cmm-green:#34c759; --cmm-green-soft:#d7f5df; --cmm-red:#ff5a7a; --cmm-red-soft:#ffe0e7;
+  --cmm-radius:20px; --cmm-shadow:0 10px 30px rgba(249,115,22,.12);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color:var(--cmm-ink); -webkit-user-select:none; user-select:none; width:100%; box-sizing:border-box;
+}
+.cmm-root *,.cmm-root *::before,.cmm-root *::after{box-sizing:border-box;}
+
+.cmm-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.cmm-stage-chip{display:inline-flex;align-items:center;gap:6px;background:var(--cmm-orange);color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(249,115,22,.3);}
+.cmm-progress{flex:1;height:12px;background:var(--cmm-orange-soft);border-radius:999px;overflow:hidden;}
+.cmm-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#ffc078,var(--cmm-orange-deep));border-radius:999px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+.cmm-count{font-weight:800;font-size:14px;color:var(--cmm-orange-deep);white-space:nowrap;}
+
+.cmm-card{background:linear-gradient(180deg,var(--cmm-cream),var(--cmm-cream-2));border:2px dashed #ffd9b0;border-radius:var(--cmm-radius);padding:22px;min-height:320px;}
+.cmm-prompt{font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.3px;}
+.cmm-hint{font-size:14px;color:var(--cmm-ink-soft);margin:0 0 14px;}
+
+/* 상태 바 (짝/시간) */
+.cmm-status{display:flex;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.cmm-pill{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;padding:7px 14px;border-radius:999px;background:#fff;border:2px solid var(--cmm-orange-soft);color:var(--cmm-orange-deep);}
+.cmm-pill.cmm-timer.cmm-danger{background:var(--cmm-red-soft);border-color:var(--cmm-red);color:#d63a5a;}
+
+/* 카드 보드 */
+.cmm-board{display:grid;gap:12px;justify-content:center;margin-bottom:8px;}
+.cmm-tile{position:relative;aspect-ratio:3/4;min-width:74px;cursor:pointer;perspective:600px;}
+.cmm-tile-inner{position:absolute;inset:0;transition:transform .4s;transform-style:preserve-3d;}
+.cmm-tile.cmm-flipped .cmm-tile-inner,.cmm-tile.cmm-matched .cmm-tile-inner{transform:rotateY(180deg);}
+.cmm-face{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:var(--cmm-shadow);}
+.cmm-back{background:radial-gradient(circle at 35% 30%,#ffd9a8,var(--cmm-orange));color:#fff;font-size:30px;border:3px solid #fff;}
+.cmm-front{background:#fff;border:3px solid var(--cmm-orange-soft);transform:rotateY(180deg);}
+.cmm-front .cmm-emoji{font-size:38px;}
+.cmm-front .cmm-word{font-size:20px;font-weight:900;color:var(--cmm-orange-deep);}
+.cmm-tile.cmm-matched .cmm-front{border-color:var(--cmm-green);background:var(--cmm-green-soft);}
+.cmm-tile.cmm-wrong .cmm-front{border-color:var(--cmm-red);background:var(--cmm-red-soft);}
+.cmm-tile.cmm-matched{cursor:default;animation:cmm-bounce .4s;}
+.cmm-tile.cmm-lock{pointer-events:none;}
+
+.cmm-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;}
+.cmm-feedback{font-weight:800;font-size:15px;min-height:22px;}
+.cmm-feedback.cmm-ok{color:var(--cmm-green);} .cmm-feedback.cmm-no{color:var(--cmm-red);}
+.cmm-btn{border:none;cursor:pointer;font-weight:900;font-size:16px;padding:12px 22px;border-radius:14px;background:var(--cmm-orange);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.3);transition:transform .12s,filter .12s;}
+.cmm-btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.cmm-btn:disabled{background:#f0ddc9;color:#c3ad97;cursor:not-allowed;box-shadow:none;}
+.cmm-btn.cmm-ghostbtn{background:#fff;color:var(--cmm-orange-deep);border:2px solid var(--cmm-orange-soft);box-shadow:none;}
+
+.cmm-done{text-align:center;padding:30px 10px;}
+.cmm-done .cmm-mascot{font-size:72px;}
+.cmm-done h3{font-size:24px;font-weight:900;margin:12px 0 6px;}
+.cmm-done p{color:var(--cmm-ink-soft);font-weight:700;margin:0 0 16px;}
+.cmm-stage-summary{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;}
+.cmm-summary-pill{padding:8px 14px;border-radius:12px;font-weight:800;font-size:14px;background:var(--cmm-green-soft);color:#1f9d45;}
+.cmm-summary-pill.cmm-fail{background:var(--cmm-red-soft);color:#d63a5a;}
+
+@keyframes cmm-bounce{0%,100%{transform:scale(1)}40%{transform:scale(1.08)}}
+@keyframes cmm-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.cmm-card{animation:cmm-pop .25s ease-out;}
+
+/* 카드에 가벼운 호버 효과만 (뒤집힌 카드 뒷면 디자인은 원래대로 유지) */
+.cmm-tile { transition: transform .15s; }
+.cmm-tile:not(.cmm-matched):not(.cmm-flipped):hover { transform: translateY(-4px); }

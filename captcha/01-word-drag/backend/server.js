@@ -1,0 +1,49 @@
+/**
+ * CatChap · Word Drag CAPTCHA — Express 서버
+ * ---------------------------------------------------------------
+ *   npm install
+ *   npm start        (또는 npm run dev)
+ *   → http://localhost:4000  에서 데모 페이지가 열립니다.
+ */
+
+const path = require('path');
+const express = require('express');
+const { initSchema } = require('./db/pool');
+const captchaRouter = require('./routes/captcha');
+
+const app = express();
+const PORT = Number(process.env.PORT || 4000);
+
+app.use(express.json({ limit: '256kb' }));
+
+// 데모/위젯 정적 파일 (프론트) 서빙
+app.use('/', express.static(path.join(__dirname, '..', 'frontend')));
+
+// API 라우트
+app.use('/api/word-drag', captchaRouter);
+
+// 간단한 CORS (다른 도메인에서 위젯을 임베드할 경우)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
+(async function boot() {
+  try {
+    await initSchema();
+    console.log('✅ DB 스키마 준비 완료 (catchap_captcha)');
+  } catch (err) {
+    console.warn('⚠️  DB 초기화 실패 — .env 의 DB_PASSWORD 를 확인하세요.');
+    console.warn('    ', err.message);
+    console.warn('    (DB 없이도 프론트 데모는 확인 가능하지만 저장/검증은 실패합니다.)');
+  }
+
+  app.listen(PORT, () => {
+    console.log(`\n🐱 CatChap Word Drag CAPTCHA`);
+    console.log(`   데모:  http://localhost:${PORT}/`);
+    console.log(`   API :  http://localhost:${PORT}/api/word-drag/health\n`);
+  });
+})();

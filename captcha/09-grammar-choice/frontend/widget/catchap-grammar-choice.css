@@ -1,0 +1,73 @@
+/* ============================================================================
+ *  CatChap · Grammar Choice CAPTCHA — 위젯 스타일 (.cgc- 프리픽스)
+ *  교육용 드래그 강조: 보기 카드를 문장 빈칸으로 끌어 넣는 UX
+ * ========================================================================== */
+.cgc-root {
+  --cgc-orange:#ff9a3d; --cgc-orange-deep:#f97316; --cgc-orange-soft:#ffe6cc;
+  --cgc-cream:#fff7ee; --cgc-cream-2:#fff1e2; --cgc-ink:#4a3b2f; --cgc-ink-soft:#9a8b7d;
+  --cgc-green:#34c759; --cgc-green-soft:#d7f5df; --cgc-red:#ff5a7a; --cgc-red-soft:#ffe0e7;
+  --cgc-radius:20px; --cgc-shadow:0 10px 30px rgba(249,115,22,.12);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color:var(--cgc-ink); -webkit-user-select:none; user-select:none; width:100%; box-sizing:border-box;
+}
+.cgc-root *,.cgc-root *::before,.cgc-root *::after{box-sizing:border-box;}
+
+.cgc-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.cgc-stage-chip{display:inline-flex;align-items:center;gap:6px;background:var(--cgc-orange);color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(249,115,22,.3);}
+.cgc-grammar-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--cgc-orange-soft);color:var(--cgc-orange-deep);font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px;white-space:nowrap;}
+.cgc-progress{flex:1;height:12px;background:var(--cgc-orange-soft);border-radius:999px;overflow:hidden;}
+.cgc-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#ffc078,var(--cgc-orange-deep));border-radius:999px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+.cgc-count{font-weight:800;font-size:14px;color:var(--cgc-orange-deep);white-space:nowrap;}
+
+.cgc-card{background:linear-gradient(180deg,var(--cgc-cream),var(--cgc-cream-2));border:2px dashed #ffd9b0;border-radius:var(--cgc-radius);padding:22px;min-height:320px;}
+.cgc-prompt{font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.3px;}
+.cgc-hint{font-size:14px;color:var(--cgc-ink-soft);margin:0 0 14px;}
+.cgc-image{font-size:56px;text-align:center;line-height:1;margin-bottom:12px;}
+
+/* 문장 + 빈칸 */
+.cgc-sentence{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:24px;font-weight:900;margin-bottom:8px;min-height:64px;}
+.cgc-blank{min-width:96px;height:56px;border-radius:14px;background:#fff;border:3px dashed var(--cgc-orange);display:grid;place-items:center;cursor:pointer;font-size:21px;color:var(--cgc-orange-deep);transition:border-color .12s,background .12s,transform .12s;animation:cgc-slot-pulse 1.8s ease-in-out infinite;}
+.cgc-blank.cgc-filled{border-style:solid;animation:none;}
+.cgc-blank.cgc-drop-hot{background:#fff4e6;transform:scale(1.07);box-shadow:0 0 0 6px rgba(255,154,61,.25);animation:none;}
+.cgc-blank.cgc-ok{border-color:var(--cgc-green);background:var(--cgc-green-soft);animation:none;}
+.cgc-blank.cgc-no{border-color:var(--cgc-red);background:var(--cgc-red-soft);animation:cgc-shake .4s;}
+.cgc-drag-guide{text-align:center;font-size:13px;font-weight:800;color:var(--cgc-orange-deep);margin:0 0 14px;}
+
+/* 보기 카드 트레이 */
+.cgc-tray-label{font-weight:800;font-size:13px;color:var(--cgc-ink-soft);margin:0 0 8px;}
+.cgc-tray{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;min-height:72px;background:#fffdfa;border:2px dashed #ffe0bd;border-radius:16px;padding:14px;}
+.cgc-tray.cgc-drop-hot{border-color:var(--cgc-orange);background:#fff4e6;}
+.cgc-tile{position:relative;min-width:92px;height:56px;padding:0 20px;border-radius:14px;background:#fff;border:3px solid var(--cgc-orange-soft);color:var(--cgc-orange-deep);font-size:21px;font-weight:900;display:grid;place-items:center;cursor:grab;touch-action:none;box-shadow:0 6px 14px rgba(249,115,22,.15);transition:transform .12s,box-shadow .12s,opacity .2s;}
+.cgc-tray .cgc-tile{animation:cgc-float 2.6s ease-in-out infinite;}
+.cgc-tray .cgc-tile:nth-child(2n){animation-delay:.45s;}
+.cgc-tray .cgc-tile:nth-child(3n){animation-delay:.9s;}
+.cgc-tile:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 24px rgba(249,115,22,.28);animation-play-state:paused;}
+.cgc-tile:active{cursor:grabbing;}
+.cgc-tile.cgc-dragging{opacity:.3;animation:none;}
+.cgc-tile.cgc-in-blank{cursor:pointer;animation:none;box-shadow:none;}
+.cgc-tile::after{content:"✋";position:absolute;top:-9px;right:-7px;font-size:13px;opacity:0;transition:opacity .15s;}
+.cgc-tray .cgc-tile:hover::after{opacity:1;}
+.cgc-ghost{position:fixed;z-index:99999;pointer-events:none;min-width:92px;height:56px;padding:0 20px;border-radius:14px;background:var(--cgc-orange);color:#fff;font-size:21px;font-weight:900;display:grid;place-items:center;box-shadow:0 16px 34px rgba(249,115,22,.45);transform:translate(-50%,-50%) rotate(-4deg) scale(1.08);}
+
+.cgc-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;}
+.cgc-feedback{font-weight:800;font-size:15px;min-height:22px;}
+.cgc-feedback.cgc-ok{color:var(--cgc-green);} .cgc-feedback.cgc-no{color:var(--cgc-red);}
+.cgc-btns{display:flex;gap:10px;}
+.cgc-btn{border:none;cursor:pointer;font-weight:900;font-size:16px;padding:12px 22px;border-radius:14px;background:var(--cgc-orange);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.3);transition:transform .12s,filter .12s;}
+.cgc-btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.cgc-btn:disabled{background:#f0ddc9;color:#c3ad97;cursor:not-allowed;box-shadow:none;}
+.cgc-btn.cgc-ghostbtn{background:#fff;color:var(--cgc-orange-deep);border:2px solid var(--cgc-orange-soft);box-shadow:none;}
+
+.cgc-done{text-align:center;padding:30px 10px;}
+.cgc-done .cgc-mascot{font-size:72px;}
+.cgc-done h3{font-size:24px;font-weight:900;margin:12px 0 6px;}
+.cgc-done p{color:var(--cgc-ink-soft);font-weight:700;margin:0 0 16px;}
+.cgc-stage-summary{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;}
+.cgc-summary-pill{padding:8px 14px;border-radius:12px;font-weight:800;font-size:14px;background:var(--cgc-green-soft);color:#1f9d45;}
+.cgc-summary-pill.cgc-fail{background:var(--cgc-red-soft);color:#d63a5a;}
+
+@keyframes cgc-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes cgc-slot-pulse{0%,100%{border-color:var(--cgc-orange);box-shadow:0 0 0 0 rgba(255,154,61,.0)}50%{border-color:var(--cgc-orange-deep);box-shadow:0 0 0 5px rgba(255,154,61,.15)}}
+@keyframes cgc-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes cgc-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.cgc-card{animation:cgc-pop .25s ease-out;}

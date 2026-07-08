@@ -1,0 +1,85 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "word-drag-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/01-word-drag/backend/server.js"
+      ],
+      "port": 4000
+    },
+    {
+      "name": "sound-match-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/02-sound-match/backend/server.js"
+      ],
+      "port": 4100
+    },
+    {
+      "name": "alphabet-trace-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/03-alphabet-trace/backend/server.js"
+      ],
+      "port": 4200
+    },
+    {
+      "name": "missing-letter-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/04-missing-letter/backend/server.js"
+      ],
+      "port": 4300
+    },
+    {
+      "name": "word-category-sort-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/05-word-category-sort/backend/server.js"
+      ],
+      "port": 4400
+    },
+    {
+      "name": "word-puzzle-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/06-word-puzzle/backend/server.js"
+      ],
+      "port": 4500
+    },
+    {
+      "name": "word-memory-match-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/07-word-memory-match/backend/server.js"
+      ],
+      "port": 4600
+    },
+    {
+      "name": "sentence-order-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/08-sentence-order/backend/server.js"
+      ],
+      "port": 4700
+    },
+    {
+      "name": "grammar-choice-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/09-grammar-choice/backend/server.js"
+      ],
+      "port": 4800
+    },
+    {
+      "name": "picture-sentence-match-captcha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "captcha/10-picture-sentence-match/backend/server.js"
+      ],
+      "port": 4900
+    }
+  ]
+}

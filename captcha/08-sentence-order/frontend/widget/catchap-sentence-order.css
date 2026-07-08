@@ -1,0 +1,81 @@
+/* ============================================================================
+ *  CatChap · Sentence Order CAPTCHA — 위젯 스타일 (.cso- 프리픽스)
+ *  교육용 드래그 강조 디자인: 둥실거리는 단어 카드 + 맥동하는 드롭 칸
+ * ========================================================================== */
+.cso-root {
+  --cso-orange:#ff9a3d; --cso-orange-deep:#f97316; --cso-orange-soft:#ffe6cc;
+  --cso-cream:#fff7ee; --cso-cream-2:#fff1e2; --cso-ink:#4a3b2f; --cso-ink-soft:#9a8b7d;
+  --cso-green:#34c759; --cso-green-soft:#d7f5df; --cso-red:#ff5a7a; --cso-red-soft:#ffe0e7;
+  --cso-radius:20px; --cso-shadow:0 10px 30px rgba(249,115,22,.12);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color:var(--cso-ink); -webkit-user-select:none; user-select:none; width:100%; box-sizing:border-box;
+}
+.cso-root *,.cso-root *::before,.cso-root *::after{box-sizing:border-box;}
+
+.cso-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.cso-stage-chip{display:inline-flex;align-items:center;gap:6px;background:var(--cso-orange);color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(249,115,22,.3);}
+.cso-progress{flex:1;height:12px;background:var(--cso-orange-soft);border-radius:999px;overflow:hidden;}
+.cso-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#ffc078,var(--cso-orange-deep));border-radius:999px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+.cso-count{font-weight:800;font-size:14px;color:var(--cso-orange-deep);white-space:nowrap;}
+
+.cso-card{background:linear-gradient(180deg,var(--cso-cream),var(--cso-cream-2));border:2px dashed #ffd9b0;border-radius:var(--cso-radius);padding:22px;min-height:320px;}
+.cso-prompt{font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.3px;}
+.cso-hint{font-size:14px;color:var(--cso-ink-soft);margin:0 0 14px;}
+
+.cso-image{font-size:56px;text-align:center;line-height:1;margin-bottom:10px;}
+.cso-meaning{display:flex;justify-content:center;margin-bottom:12px;}
+.cso-meaning span{display:inline-flex;align-items:center;gap:6px;background:var(--cso-orange);color:#fff;font-weight:900;font-size:16px;padding:8px 16px;border-radius:999px;}
+
+/* 문장 슬롯 — 맥동하는 드롭 칸 */
+.cso-slots{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:8px;min-height:64px;}
+.cso-slot{min-width:76px;height:58px;padding:0 8px;border-radius:14px;background:#fff;border:3px dashed var(--cso-orange);display:grid;place-items:center;cursor:pointer;transition:border-color .12s,background .12s,transform .12s;animation:cso-slot-pulse 1.8s ease-in-out infinite;}
+.cso-slot.cso-filled{border-style:solid;animation:none;}
+.cso-slot.cso-drop-hot{background:#fff4e6;transform:scale(1.07);box-shadow:0 0 0 6px rgba(255,154,61,.25);animation:none;}
+.cso-slot.cso-ok{border-color:var(--cso-green);background:var(--cso-green-soft);animation:none;}
+.cso-slot.cso-no{border-color:var(--cso-red);background:var(--cso-red-soft);animation:cso-shake .4s;}
+.cso-period{font-size:28px;font-weight:900;align-self:end;padding-bottom:8px;}
+.cso-drag-guide{text-align:center;font-size:13px;font-weight:800;color:var(--cso-orange-deep);margin:0 0 10px;}
+
+/* 문장 해석(한국어) — 안내선 아래에 조금 크게 */
+.cso-translation{display:flex;justify-content:center;margin:0 0 16px;}
+.cso-translation span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--cso-orange-soft);color:var(--cso-ink);font-weight:900;font-size:19px;line-height:1.3;padding:10px 20px;border-radius:16px;box-shadow:0 6px 14px rgba(249,115,22,.12);}
+
+/* 단어 카드 트레이 — 둥실거리는 카드 */
+.cso-tray-label{font-weight:800;font-size:13px;color:var(--cso-ink-soft);margin:0 0 8px;}
+.cso-tray{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:72px;background:#fffdfa;border:2px dashed #ffe0bd;border-radius:16px;padding:14px;}
+.cso-tray.cso-drop-hot{border-color:var(--cso-orange);background:#fff4e6;}
+.cso-tile{position:relative;min-width:76px;height:54px;padding:0 18px;border-radius:14px;background:#fff;border:3px solid var(--cso-orange-soft);color:var(--cso-orange-deep);font-size:19px;font-weight:900;display:grid;place-items:center;cursor:grab;touch-action:none;box-shadow:0 6px 14px rgba(249,115,22,.15);transition:transform .12s,box-shadow .12s,opacity .2s;}
+.cso-tray .cso-tile{animation:cso-float 2.6s ease-in-out infinite;}
+.cso-tray .cso-tile:nth-child(2n){animation-delay:.4s;}
+.cso-tray .cso-tile:nth-child(3n){animation-delay:.8s;}
+.cso-tray .cso-tile:nth-child(4n){animation-delay:1.2s;}
+.cso-tile:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 24px rgba(249,115,22,.28);animation-play-state:paused;}
+.cso-tile:active{cursor:grabbing;}
+.cso-tile.cso-dragging{opacity:.3;animation:none;}
+.cso-tile.cso-in-slot{cursor:pointer;animation:none;box-shadow:none;}
+.cso-tile::after{content:"✋";position:absolute;top:-9px;right:-7px;font-size:13px;opacity:0;transition:opacity .15s;}
+.cso-tray .cso-tile:hover::after{opacity:1;}
+.cso-ghost{position:fixed;z-index:99999;pointer-events:none;min-width:76px;height:54px;padding:0 18px;border-radius:14px;background:var(--cso-orange);color:#fff;font-size:19px;font-weight:900;display:grid;place-items:center;box-shadow:0 16px 34px rgba(249,115,22,.45);transform:translate(-50%,-50%) rotate(-4deg) scale(1.08);}
+
+.cso-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;}
+.cso-feedback{font-weight:800;font-size:15px;min-height:22px;}
+.cso-feedback.cso-ok{color:var(--cso-green);} .cso-feedback.cso-no{color:var(--cso-red);}
+.cso-btns{display:flex;gap:10px;}
+.cso-btn{border:none;cursor:pointer;font-weight:900;font-size:16px;padding:12px 22px;border-radius:14px;background:var(--cso-orange);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.3);transition:transform .12s,filter .12s;}
+.cso-btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.cso-btn:disabled{background:#f0ddc9;color:#c3ad97;cursor:not-allowed;box-shadow:none;}
+.cso-btn.cso-ghostbtn{background:#fff;color:var(--cso-orange-deep);border:2px solid var(--cso-orange-soft);box-shadow:none;}
+
+.cso-done{text-align:center;padding:30px 10px;}
+.cso-done .cso-mascot{font-size:72px;}
+.cso-done h3{font-size:24px;font-weight:900;margin:12px 0 6px;}
+.cso-done p{color:var(--cso-ink-soft);font-weight:700;margin:0 0 16px;}
+.cso-stage-summary{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;}
+.cso-summary-pill{padding:8px 14px;border-radius:12px;font-weight:800;font-size:14px;background:var(--cso-green-soft);color:#1f9d45;}
+.cso-summary-pill.cso-fail{background:var(--cso-red-soft);color:#d63a5a;}
+
+@keyframes cso-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes cso-slot-pulse{0%,100%{border-color:var(--cso-orange);box-shadow:0 0 0 0 rgba(255,154,61,.0)}50%{border-color:var(--cso-orange-deep);box-shadow:0 0 0 5px rgba(255,154,61,.15)}}
+@keyframes cso-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes cso-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.cso-card{animation:cso-pop .25s ease-out;}

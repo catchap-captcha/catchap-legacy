@@ -1,0 +1,137 @@
+/* ============================================================================
+ *  CatChap · Sound Match CAPTCHA  —  위젯 스타일
+ *  전부 .csm- 프리픽스로 스코프하여 호스트 페이지와 충돌하지 않게 함.
+ * ========================================================================== */
+
+.csm-root {
+  --csm-orange: #ff9a3d;
+  --csm-orange-deep: #f97316;
+  --csm-orange-soft: #ffe6cc;
+  --csm-cream: #fff7ee;
+  --csm-cream-2: #fff1e2;
+  --csm-ink: #4a3b2f;
+  --csm-ink-soft: #9a8b7d;
+  --csm-green: #34c759;
+  --csm-green-soft: #d7f5df;
+  --csm-red: #ff5a7a;
+  --csm-red-soft: #ffe0e7;
+  --csm-blue: #4a90e2;
+  --csm-radius: 20px;
+  --csm-shadow: 0 10px 30px rgba(249, 115, 22, 0.12);
+
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--csm-ink);
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.csm-root *, .csm-root *::before, .csm-root *::after { box-sizing: border-box; }
+
+/* ── 상단 진행 바 ── */
+.csm-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.csm-stage-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--csm-orange); color: #fff; font-weight: 800; font-size: 14px;
+  padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+.csm-progress { flex: 1; height: 12px; background: var(--csm-orange-soft); border-radius: 999px; overflow: hidden; }
+.csm-progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, #ffc078, var(--csm-orange-deep));
+  border-radius: 999px; transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.csm-count { font-weight: 800; font-size: 14px; color: var(--csm-orange-deep); white-space: nowrap; }
+
+/* ── 문제 카드 ── */
+.csm-card {
+  background: linear-gradient(180deg, var(--csm-cream), var(--csm-cream-2));
+  border: 2px dashed #ffd9b0; border-radius: var(--csm-radius);
+  padding: 22px; min-height: 320px;
+}
+.csm-prompt { font-size: 20px; font-weight: 900; margin: 0 0 4px; letter-spacing: -0.3px; }
+.csm-hint { font-size: 14px; color: var(--csm-ink-soft); margin: 0 0 18px; }
+
+/* ── 오디오 재생 영역 ── */
+.csm-audio-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 22px; }
+.csm-play {
+  width: 96px; height: 96px; border-radius: 50%; border: none; cursor: pointer;
+  background: radial-gradient(circle at 35% 30%, #ffd9a8, var(--csm-orange));
+  color: #fff; font-size: 42px; display: grid; place-items: center;
+  box-shadow: 0 10px 26px rgba(249, 115, 22, 0.35);
+  transition: transform 0.12s, filter 0.12s;
+}
+.csm-play:hover { filter: brightness(1.05); transform: translateY(-2px); }
+.csm-play:active { transform: scale(0.94); }
+.csm-play.csm-playing { animation: csm-pulse 0.9s ease-in-out infinite; }
+.csm-play:disabled { background: #f0ddc9; color: #c3ad97; cursor: not-allowed; box-shadow: none; animation: none; }
+.csm-audio-info { font-size: 13px; font-weight: 700; color: var(--csm-ink-soft); min-height: 18px; }
+.csm-seq-dots { display: flex; gap: 8px; }
+.csm-seq-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--csm-orange-soft); }
+.csm-seq-dot.csm-on { background: var(--csm-orange-deep); transform: scale(1.15); }
+
+/* ── 그림 보기 그리드 ── */
+.csm-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.csm-options.csm-cols-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 560px) { .csm-options.csm-cols-4 { grid-template-columns: repeat(2, 1fr); } }
+
+.csm-opt {
+  position: relative; background: #fff; border: 3px solid #ffe0bd; border-radius: 18px;
+  padding: 14px 8px; cursor: pointer; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  box-shadow: var(--csm-shadow); transition: transform 0.12s, border-color 0.12s, background 0.12s;
+}
+.csm-opt:hover { transform: translateY(-3px); border-color: var(--csm-orange); }
+.csm-opt .csm-emoji { font-size: 52px; line-height: 1; }
+.csm-opt .csm-label { font-weight: 800; font-size: 16px; color: var(--csm-orange-deep); }
+.csm-opt.csm-selected { border-color: var(--csm-orange); background: #fff4e6; transform: translateY(-3px); }
+.csm-opt.csm-correct { border-color: var(--csm-green); background: var(--csm-green-soft); }
+.csm-opt.csm-wrong { border-color: var(--csm-red); background: var(--csm-red-soft); animation: csm-shake 0.4s; }
+/* 순서 뱃지 (5단계) */
+.csm-order-badge {
+  position: absolute; top: -10px; right: -10px; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--csm-orange-deep); color: #fff; font-weight: 900; font-size: 15px;
+  display: grid; place-items: center; box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
+  animation: csm-pop 0.2s ease-out;
+}
+
+/* ── 하단 컨트롤 ── */
+.csm-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
+.csm-feedback { font-weight: 800; font-size: 15px; min-height: 22px; }
+.csm-feedback.csm-ok { color: var(--csm-green); }
+.csm-feedback.csm-no { color: var(--csm-red); }
+.csm-btn {
+  border: none; cursor: pointer; font-weight: 900; font-size: 16px;
+  padding: 13px 26px; border-radius: 14px; background: var(--csm-orange); color: #fff;
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.3); transition: transform 0.12s, filter 0.12s;
+}
+.csm-btn:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.csm-btn:disabled { background: #f0ddc9; color: #c3ad97; cursor: not-allowed; box-shadow: none; }
+.csm-btn.csm-ghostbtn { background: #fff; color: var(--csm-orange-deep); border: 2px solid var(--csm-orange-soft); box-shadow: none; }
+.csm-reset { background: none; border: none; color: var(--csm-ink-soft); font-weight: 800; font-size: 14px; cursor: pointer; text-decoration: underline; }
+
+/* ── 완료 화면 ── */
+.csm-done { text-align: center; padding: 30px 10px; }
+.csm-done .csm-mascot { font-size: 72px; }
+.csm-done h3 { font-size: 24px; font-weight: 900; margin: 12px 0 6px; }
+.csm-done p { color: var(--csm-ink-soft); font-weight: 700; margin: 0 0 16px; }
+.csm-stage-summary { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 18px; }
+.csm-summary-pill { padding: 8px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; background: var(--csm-green-soft); color: #1f9d45; }
+.csm-summary-pill.csm-fail { background: var(--csm-red-soft); color: #d63a5a; }
+
+@keyframes csm-shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+@keyframes csm-pop { 0%{transform:scale(0.5);opacity:0} 100%{transform:scale(1);opacity:1} }
+@keyframes csm-pulse { 0%,100%{box-shadow:0 10px 26px rgba(249,115,22,0.35)} 50%{box-shadow:0 10px 40px rgba(249,115,22,0.7)} }
+.csm-card { animation: csm-pop 0.25s ease-out; }
+
+/* ═══ 교육용 조작 강조 업그레이드 ═══ */
+.csm-options .csm-opt { animation: csm-float 2.8s ease-in-out infinite; }
+.csm-options .csm-opt:nth-child(2n) { animation-delay: .45s; }
+.csm-options .csm-opt:nth-child(3n) { animation-delay: .9s; }
+.csm-opt:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 14px 28px rgba(249,115,22,.25); animation-play-state: paused; }
+.csm-opt.csm-selected, .csm-opt.csm-correct, .csm-opt.csm-wrong, .csm-opt.csm-picked { animation: none; }
+.csm-play { animation: csm-breathe 2.2s ease-in-out infinite; }
+.csm-play.csm-playing, .csm-play:disabled { animation: none; }
+@keyframes csm-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+@keyframes csm-breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }

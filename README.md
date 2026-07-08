@@ -12,6 +12,9 @@
 | `01-geography` | 지리 | 4사05·09·10 | 선 긋기(낱말↔뜻) | 5510 | `/api/geography` |
 | `02-history` | 역사(문화유산) | 4사06 | 정답 카드 드래그 | 5520 | `/api/history` |
 | `03-social` | 일반사회 | 4사07·08 | 선 긋기(개념↔뜻) | 5530 | `/api/social` |
+| `04-forest` | 3D 숲속 마을 | — | 동물 찾아 방향 맞추기(Three.js) | 8000(API)·5500(front) | `/api/captcha` |
+
+> `04-forest` 는 Python + FastAPI 백엔드 / 정적 프론트(Three.js) 스택입니다(다른 모듈은 Node). 상세는 `captcha/04-forest/README.md` 참고.
 
 - 각 모듈: **5단계 × 9문제 = 45문제**, 매 세션 단계별 5개씩 무작위 출제(난이도 오름차순), 총 25문제.
 - 마우스·터치 모두 지원, HTTP-only 환경 동작(포인터 이벤트).

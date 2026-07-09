@@ -1,0 +1,148 @@
+/**
+ * 문화유산 사진 맞추기 — 문제 은행 (5단계 × 5문제 = 25문제) · 4학년 심화 · 드래그 중심 · 이모지 없음
+ * ---------------------------------------------------------------
+ *   1단계 유산-이름 연결   문화유산 ↔ 이름 연결              (connect·드래그)
+ *   2단계 설명 연결       문화유산 ↔ 설명 연결              (connect·드래그)
+ *   3단계 유형 분류       유산을 종류별로 분류              (sort·드래그)
+ *   4단계 유형/시대 분류   유형·무형 / 시대로 분류            (sort·드래그)
+ *   5단계 보존과 응용     보존 행동·조건 유산 담기           (pick·드래그)
+ */
+
+const QUESTIONS = [
+  // ───────── 1단계 : 유산-이름 연결 (connect) ─────────
+  { id: 'l1-q1', stage: 1, order: 1, type: 'connect',
+    prompt: '문화유산을 알맞은 이름으로 끌어다 연결하세요.', hint: '대표적인 우리 문화유산이에요.',
+    left: [ { id: 'a', text: '조선의 큰 궁궐' }, { id: 'b', text: '경주 토함산의 절' }, { id: 'c', text: '불국사 앞 돌탑' } ],
+    right: [ { id: 'x', text: '경복궁' }, { id: 'y', text: '불국사' }, { id: 'z', text: '다보탑' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q2', stage: 1, order: 2, type: 'connect',
+    prompt: '문화유산을 알맞은 이름으로 끌어다 연결하세요.', hint: '글자·배·성을 떠올려요.',
+    left: [ { id: 'a', text: '세종대왕이 만든 글자' }, { id: 'b', text: '이순신이 이끈 배' }, { id: 'c', text: '정조가 세운 성' } ],
+    right: [ { id: 'x', text: '훈민정음' }, { id: 'y', text: '거북선' }, { id: 'z', text: '수원 화성' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q3', stage: 1, order: 3, type: 'connect',
+    prompt: '문화유산을 알맞은 이름으로 끌어다 연결하세요.', hint: '석굴·종·목판을 떠올려요.',
+    left: [ { id: 'a', text: '경주의 인공 석굴 사원' }, { id: 'b', text: '통일신라의 큰 종' }, { id: 'c', text: '불경을 새긴 팔만 장의 목판' } ],
+    right: [ { id: 'x', text: '석굴암' }, { id: 'y', text: '성덕대왕 신종' }, { id: 'z', text: '팔만대장경' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q4', stage: 1, order: 4, type: 'connect',
+    prompt: '문화유산을 알맞은 이름으로 끌어다 연결하세요.', hint: '문·정문·석탑을 떠올려요.',
+    left: [ { id: 'a', text: '서울의 남쪽 큰 성문' }, { id: 'b', text: '경복궁의 정문' }, { id: 'c', text: '부여의 백제 석탑' } ],
+    right: [ { id: 'x', text: '숭례문(남대문)' }, { id: 'y', text: '광화문' }, { id: 'z', text: '정림사지 오층석탑' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q5', stage: 1, order: 5, type: 'connect',
+    prompt: '문화유산을 알맞은 이름으로 끌어다 연결하세요.', hint: '기록·도자기·지도를 떠올려요.',
+    left: [ { id: 'a', text: '조선 왕들의 일을 적은 기록' }, { id: 'b', text: '고려의 푸른 도자기' }, { id: 'c', text: '조선 초의 세계지도' } ],
+    right: [ { id: 'x', text: '조선왕조실록' }, { id: 'y', text: '고려청자' }, { id: 'z', text: '혼일강리역대국도지도' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 2단계 : 설명 연결 (connect) ─────────
+  { id: 'l2-q1', stage: 2, order: 1, type: 'connect',
+    prompt: '문화유산을 알맞은 설명으로 끌어다 연결하세요.', hint: '무엇을 하던 곳·물건인지 생각해요.',
+    left: [ { id: 'a', text: '경복궁' }, { id: 'b', text: '불국사' }, { id: 'c', text: '수원 화성' } ],
+    right: [ { id: 'x', text: '임금과 신하가 나라 일을 하던 궁궐' }, { id: 'y', text: '부처를 모시고 수행하던 절' }, { id: 'z', text: '적을 막기 위해 쌓은 성' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q2', stage: 2, order: 2, type: 'connect',
+    prompt: '문화유산을 만든 까닭·쓰임으로 끌어다 연결하세요.', hint: '왜 만들었는지 떠올려요.',
+    left: [ { id: 'a', text: '훈민정음' }, { id: 'b', text: '거북선' }, { id: 'c', text: '팔만대장경' } ],
+    right: [ { id: 'x', text: '백성이 쉽게 글을 읽고 쓰게 하려고' }, { id: 'y', text: '전쟁에서 나라를 지키려고' }, { id: 'z', text: '부처의 힘으로 나라를 지키려고' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q3', stage: 2, order: 3, type: 'connect',
+    prompt: '문화유산을 특징으로 끌어다 연결하세요.', hint: '기술·솜씨를 떠올려요.',
+    left: [ { id: 'a', text: '고려청자' }, { id: 'b', text: '석굴암' }, { id: 'c', text: '금속활자' } ],
+    right: [ { id: 'x', text: '푸른 빛과 상감 무늬가 아름다워요' }, { id: 'y', text: '돌을 쌓아 만든 정교한 석굴이에요' }, { id: 'z', text: '글자를 찍어 책을 인쇄했어요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q4', stage: 2, order: 4, type: 'connect',
+    prompt: '인물과 그가 남긴 문화유산을 끌어다 연결하세요.', hint: '누가 만들었는지 생각해요.',
+    left: [ { id: 'a', text: '세종대왕' }, { id: 'b', text: '이순신' }, { id: 'c', text: '정조' } ],
+    right: [ { id: 'x', text: '훈민정음' }, { id: 'y', text: '거북선' }, { id: 'z', text: '수원 화성' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q5', stage: 2, order: 5, type: 'connect',
+    prompt: '문화유산을 남아 있는 지역으로 끌어다 연결하세요.', hint: '어디에 있는지 떠올려요.',
+    left: [ { id: 'a', text: '불국사·석굴암' }, { id: 'b', text: '수원 화성' }, { id: 'c', text: '경복궁' } ],
+    right: [ { id: 'x', text: '경주' }, { id: 'y', text: '수원' }, { id: 'z', text: '서울' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 3단계 : 유형 분류 (sort) ─────────
+  { id: 'l3-q1', stage: 3, order: 1, type: 'sort',
+    prompt: '문화유산을 종류에 맞게 끌어다 분류하세요.', hint: '탑·절·궁궐로 나눠요.',
+    bins: [ { id: 'tap', label: '탑' }, { id: 'jeol', label: '절' }, { id: 'gung', label: '궁궐' } ],
+    items: [ { id: 'i1', text: '다보탑' }, { id: 'i2', text: '불국사' }, { id: 'i3', text: '경복궁' }, { id: 'i4', text: '석가탑' }, { id: 'i5', text: '창덕궁' } ],
+    answers: { i1: 'tap', i2: 'jeol', i3: 'gung', i4: 'tap', i5: 'gung' } },
+  { id: 'l3-q2', stage: 3, order: 2, type: 'sort',
+    prompt: '문화유산을 종류에 맞게 끌어다 분류하세요.', hint: '성·무덤·성문으로 나눠요.',
+    bins: [ { id: 'seong', label: '성곽' }, { id: 'go', label: '고분(무덤)' }, { id: 'mun', label: '성문' } ],
+    items: [ { id: 'i1', text: '수원 화성' }, { id: 'i2', text: '천마총' }, { id: 'i3', text: '숭례문' }, { id: 'i4', text: '남한산성' }, { id: 'i5', text: '흥인지문' } ],
+    answers: { i1: 'seong', i2: 'go', i3: 'mun', i4: 'seong', i5: 'mun' } },
+  { id: 'l3-q3', stage: 3, order: 3, type: 'sort',
+    prompt: '문화유산을 종류에 맞게 끌어다 분류하세요.', hint: '기록물·도자기·건축물로 나눠요.',
+    bins: [ { id: 'gi', label: '기록물' }, { id: 'do', label: '도자기' }, { id: 'gun', label: '건축물' } ],
+    items: [ { id: 'i1', text: '훈민정음' }, { id: 'i2', text: '고려청자' }, { id: 'i3', text: '경복궁' }, { id: 'i4', text: '조선왕조실록' }, { id: 'i5', text: '분청사기' } ],
+    answers: { i1: 'gi', i2: 'do', i3: 'gun', i4: 'gi', i5: 'do' } },
+  { id: 'l3-q4', stage: 3, order: 4, type: 'sort',
+    prompt: '문화유산을 만든 재료에 맞게 끌어다 분류하세요.', hint: '돌·나무·흙(도자기)으로 나눠요.',
+    bins: [ { id: 'stone', label: '돌' }, { id: 'wood', label: '나무' }, { id: 'clay', label: '흙·도자기' } ],
+    items: [ { id: 'i1', text: '석굴암' }, { id: 'i2', text: '팔만대장경 목판' }, { id: 'i3', text: '고려청자' }, { id: 'i4', text: '다보탑' }, { id: 'i5', text: '분청사기' } ],
+    answers: { i1: 'stone', i2: 'wood', i3: 'clay', i4: 'stone', i5: 'clay' } },
+  { id: 'l3-q5', stage: 3, order: 5, type: 'sort',
+    prompt: '문화유산을 종류에 맞게 끌어다 분류하세요.', hint: '탑·종·절로 나눠요.',
+    bins: [ { id: 'tap', label: '탑' }, { id: 'jong', label: '종' }, { id: 'jeol', label: '절' } ],
+    items: [ { id: 'i1', text: '정림사지 오층석탑' }, { id: 'i2', text: '성덕대왕 신종' }, { id: 'i3', text: '해인사' }, { id: 'i4', text: '다보탑' }, { id: 'i5', text: '통도사' } ],
+    answers: { i1: 'tap', i2: 'jong', i3: 'jeol', i4: 'tap', i5: 'jeol' } },
+
+  // ───────── 4단계 : 유형/시대 분류 (sort) ─────────
+  { id: 'l4-q1', stage: 4, order: 1, type: 'sort',
+    prompt: '문화유산을 유형·무형으로 끌어다 분류하세요.', hint: '눈에 보이는 물건인지, 솜씨·공연인지 생각해요.',
+    bins: [ { id: 'yu', label: '유형(물건·건물)' }, { id: 'mu', label: '무형(솜씨·공연)' } ],
+    items: [ { id: 'i1', text: '석굴암' }, { id: 'i2', text: '판소리' }, { id: 'i3', text: '고려청자' }, { id: 'i4', text: '탈춤' }, { id: 'i5', text: '김치 담그기' } ],
+    answers: { i1: 'yu', i2: 'mu', i3: 'yu', i4: 'mu', i5: 'mu' } },
+  { id: 'l4-q2', stage: 4, order: 2, type: 'sort',
+    prompt: '문화유산을 만든 나라(시대)로 끌어다 분류하세요.', hint: '신라·고려·조선을 떠올려요.',
+    bins: [ { id: 'silla', label: '신라' }, { id: 'goryeo', label: '고려' }, { id: 'joseon', label: '조선' } ],
+    items: [ { id: 'i1', text: '석굴암' }, { id: 'i2', text: '고려청자' }, { id: 'i3', text: '훈민정음' }, { id: 'i4', text: '불국사' }, { id: 'i5', text: '경복궁' } ],
+    answers: { i1: 'silla', i2: 'goryeo', i3: 'joseon', i4: 'silla', i5: 'joseon' } },
+  { id: 'l4-q3', stage: 4, order: 3, type: 'sort',
+    prompt: '문화유산을 성격에 맞게 끌어다 분류하세요.', hint: '나라를 지키려던 것과 백성을 위한 것으로 나눠요.',
+    bins: [ { id: 'defense', label: '나라를 지키려고' }, { id: 'people', label: '백성·생활을 위해' } ],
+    items: [ { id: 'i1', text: '거북선' }, { id: 'i2', text: '훈민정음' }, { id: 'i3', text: '수원 화성' }, { id: 'i4', text: '측우기' } ],
+    answers: { i1: 'defense', i2: 'people', i3: 'defense', i4: 'people' } },
+  { id: 'l4-q4', stage: 4, order: 4, type: 'sort',
+    prompt: '조선 시대 과학 발명품과 다른 유산을 끌어다 분류하세요.', hint: '세종 때 만든 과학 기구를 골라요.',
+    bins: [ { id: 'sci', label: '과학 발명품' }, { id: 'etc', label: '그 밖의 유산' } ],
+    items: [ { id: 'i1', text: '측우기' }, { id: 'i2', text: '앙부일구(해시계)' }, { id: 'i3', text: '고려청자' }, { id: 'i4', text: '자격루(물시계)' }, { id: 'i5', text: '석굴암' } ],
+    answers: { i1: 'sci', i2: 'sci', i3: 'etc', i4: 'sci', i5: 'etc' } },
+  { id: 'l4-q5', stage: 4, order: 5, type: 'sort',
+    prompt: '문화유산을 쓰임에 맞게 끌어다 분류하세요.', hint: '기록·종교·생활로 나눠요.',
+    bins: [ { id: 'record', label: '기록·학문' }, { id: 'religion', label: '종교(불교)' }, { id: 'life', label: '생활·예술' } ],
+    items: [ { id: 'i1', text: '조선왕조실록' }, { id: 'i2', text: '팔만대장경' }, { id: 'i3', text: '고려청자' }, { id: 'i4', text: '훈민정음' }, { id: 'i5', text: '석굴암' } ],
+    answers: { i1: 'record', i2: 'religion', i3: 'life', i4: 'record', i5: 'religion' } },
+
+  // ───────── 5단계 : 보존과 응용 (pick) ─────────
+  { id: 'l5-q1', stage: 5, order: 1, type: 'pick', target: '문화유산을 지키는 바른 행동 담기', boxHint: '바른 행동만 이 상자로 끌어와요',
+    prompt: '문화유산을 보호하는 바른 행동을 모두 골라 담아보세요.', hint: '유산을 아끼는 행동만 담아요.',
+    items: [ { id: 'i1', text: '안내선을 지키며 관람하기' }, { id: 'i2', text: '눈으로만 조심히 보기' }, { id: 'i3', text: '쓰레기 되가져가기' }, { id: 'i4', text: '벽에 이름 새기기' }, { id: 'i5', text: '돌 위에 올라가기' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l5-q2', stage: 5, order: 2, type: 'pick', target: '경주에 있는 문화유산 담기', boxHint: '경주에 있는 것만 이 상자로 끌어와요',
+    prompt: '경주에 있는 문화유산을 모두 골라 담아보세요.', hint: '신라의 도읍이었던 곳이에요.',
+    items: [ { id: 'i1', text: '불국사' }, { id: 'i2', text: '석굴암' }, { id: 'i3', text: '첨성대' }, { id: 'i4', text: '수원 화성' }, { id: 'i5', text: '경복궁' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l5-q3', stage: 5, order: 3, type: 'pick', target: '무형 문화유산 담기', boxHint: '형태가 없는 유산만 이 상자로 끌어와요',
+    prompt: '무형 문화유산(솜씨·공연)을 모두 골라 담아보세요.', hint: '물건이 아니라 사람의 솜씨·공연이에요.',
+    items: [ { id: 'i1', text: '판소리' }, { id: 'i2', text: '탈춤' }, { id: 'i3', text: '김장 문화' }, { id: 'i4', text: '경복궁' }, { id: 'i5', text: '다보탑' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l5-q4', stage: 5, order: 4, type: 'pick', target: '조선 시대 문화유산 담기', boxHint: '조선 시대 것만 이 상자로 끌어와요',
+    prompt: '조선 시대에 만들어진 문화유산을 모두 골라 담아보세요.', hint: '세종·정조 시대를 떠올려요.',
+    items: [ { id: 'i1', text: '훈민정음' }, { id: 'i2', text: '경복궁' }, { id: 'i3', text: '수원 화성' }, { id: 'i4', text: '고려청자' }, { id: 'i5', text: '석굴암' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l5-q5', stage: 5, order: 5, type: 'pick', target: '세종대왕과 관련된 유산 담기', boxHint: '세종대왕과 관련된 것만 끌어와요',
+    prompt: '세종대왕과 관련된 문화유산·발명품을 모두 골라 담아보세요.', hint: '백성을 위한 글자와 과학 기구예요.',
+    items: [ { id: 'i1', text: '훈민정음' }, { id: 'i2', text: '측우기' }, { id: 'i3', text: '앙부일구(해시계)' }, { id: 'i4', text: '거북선' }, { id: 'i5', text: '고려청자' } ],
+    answers: ['i1', 'i2', 'i3'] },
+];
+
+const STAGE_PASS_THRESHOLD = 4;
+const TOTAL_PASS_THRESHOLD = 20;
+const getQuestionsByStage = (stage) => QUESTIONS.filter((q) => q.stage === Number(stage));
+const getQuestionById = (id) => QUESTIONS.find((q) => q.id === id);
+
+module.exports = { QUESTIONS, STAGE_PASS_THRESHOLD, TOTAL_PASS_THRESHOLD, getQuestionsByStage, getQuestionById };

@@ -1,0 +1,354 @@
+/* ============================================================================
+ *  CatChap · 사회(社會) 캡챠 공통 위젯 스타일  —  보라색(Purple) 테마
+ *  전부 .csl- 프리픽스로 스코프하여 호스트 페이지와 충돌하지 않게 함.
+ *  스크린샷의 "역사·사회" 보라색 테마를 그대로 옮김.
+ * ========================================================================== */
+
+.csl-root {
+  --csl-purple: #8b7cf6;
+  --csl-purple-deep: #6c5ce7;
+  --csl-purple-soft: #e9e3fb;
+  --csl-cream: #faf8ff;
+  --csl-cream-2: #f4f0ff;
+  --csl-ink: #37324d;
+  --csl-ink-soft: #9a92b8;
+  --csl-green: #34c759;
+  --csl-green-soft: #d7f5df;
+  --csl-red: #ff5a7a;
+  --csl-red-soft: #ffe0e7;
+  --csl-radius: 20px;
+  --csl-shadow: 0 10px 30px rgba(108, 92, 231, 0.12);
+
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--csl-ink);
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.csl-root *,
+.csl-root *::before,
+.csl-root *::after { box-sizing: border-box; }
+
+/* ── 상단 진행 바 ── */
+.csl-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.csl-stage-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--csl-purple); color: #fff; font-weight: 800; font-size: 14px;
+  padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+.csl-progress { flex: 1; height: 12px; background: var(--csl-purple-soft); border-radius: 999px; overflow: hidden; }
+.csl-progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, #b6a9fb, var(--csl-purple-deep));
+  border-radius: 999px; transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.csl-count { font-weight: 800; font-size: 14px; color: var(--csl-purple-deep); white-space: nowrap; }
+
+/* ── 문제 카드 ── */
+.csl-card {
+  background: linear-gradient(180deg, var(--csl-cream), var(--csl-cream-2));
+  border: 2px dashed #cabffb; border-radius: var(--csl-radius);
+  padding: 22px; min-height: 320px;
+}
+.csl-prompt { font-size: 20px; font-weight: 900; margin: 0 0 6px; letter-spacing: -0.3px; }
+.csl-scenario {
+  background: #fff; border: 2px solid var(--csl-purple-soft); border-radius: 14px;
+  padding: 12px 16px; font-weight: 700; font-size: 15px; margin: 4px 0 12px;
+  box-shadow: var(--csl-shadow);
+}
+.csl-hint { font-size: 14px; color: var(--csl-ink-soft); margin: 0 0 18px; }
+.csl-hint b { color: var(--csl-purple-deep); }
+
+/* ── single : 보기 목록 ── */
+.csl-options { display: flex; flex-direction: column; gap: 12px; }
+.csl-options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.csl-option {
+  display: flex; align-items: center; gap: 14px; text-align: left;
+  background: #fff; border: 3px solid var(--csl-purple-soft); border-radius: 16px;
+  padding: 16px 18px; cursor: pointer; font: inherit; color: inherit; width: 100%;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.08); transition: transform 0.12s, border-color 0.12s, background 0.12s;
+}
+.csl-option:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(108, 92, 231, 0.16); }
+.csl-option.csl-on { border-color: var(--csl-purple); background: #f2eeff; }
+.csl-option-emoji { font-size: 32px; line-height: 1; }
+.csl-option-text { font-size: 18px; font-weight: 800; }
+/* 사진 보기 (문화유산·촌락도시 등) */
+.csl-option-img { flex-direction: column; align-items: stretch; gap: 10px; padding: 12px; }
+.csl-opt-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #f0ecfb; }
+.csl-option-img .csl-option-text { font-size: 15px; text-align: center; }
+
+/* ── order : 순서 슬롯 + 카드 더미 ── */
+.csl-slots { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+.csl-slot {
+  flex: 1; min-width: 120px; min-height: 62px; display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 3px dashed #cabffb; border-radius: 14px; padding: 10px 12px;
+  cursor: pointer; transition: border-color 0.12s, background 0.12s;
+}
+.csl-slot.csl-filled { border-style: solid; border-color: var(--csl-green); background: #f4fff7; }
+.csl-slot-no {
+  width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--csl-purple);
+  color: #fff; font-weight: 900; display: grid; place-items: center; font-size: 14px;
+}
+.csl-slot-body { font-weight: 800; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.csl-order-arrow { text-align: center; color: var(--csl-ink-soft); font-weight: 700; font-size: 13px; margin: 6px 0 12px; }
+.csl-pool { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.csl-card-item {
+  font-size: 17px; font-weight: 800; padding: 14px 20px; border-radius: 14px;
+  background: #fff; border: 3px solid var(--csl-purple-soft); color: var(--csl-purple-deep);
+  cursor: pointer; box-shadow: 0 4px 10px rgba(108, 92, 231, 0.1); transition: transform 0.12s, opacity 0.2s;
+}
+.csl-card-item:hover { transform: translateY(-2px); }
+.csl-card-item.csl-used { opacity: 0.3; pointer-events: none; }
+
+/* order 사진 카드 (CPR·AED 순서) */
+.csl-pool-photo { gap: 14px; }
+.csl-card-photo-item {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  width: 168px; max-width: 42vw; padding: 10px;
+}
+.csl-card-photo { width: 100%; border-radius: 10px; display: block; }
+.csl-card-label { font-size: 14px; font-weight: 800; text-align: center; color: var(--csl-ink); }
+.csl-slot-body .csl-card-photo { width: 46px; height: 46px; object-fit: cover; border-radius: 8px; }
+.csl-slot-body .csl-card-label { font-size: 14px; }
+
+/* ── connect : 두 컬럼을 선으로 연결 ── */
+.csl-connect { position: relative; display: flex; gap: 40px; justify-content: space-between; align-items: flex-start; }
+.csl-col { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+/* 연결선을 그리는 SVG 오버레이(카드 위에 얹되 클릭은 통과시킨다) */
+.csl-line-layer { position: absolute; inset: 0; pointer-events: none; z-index: 4; overflow: visible; }
+.csl-conn-item {
+  position: relative; display: flex; align-items: center; gap: 10px; text-align: left; width: 100%;
+  min-height: 76px; box-sizing: border-box;
+  background: #fff; border: 3px solid var(--csl-purple-soft); border-radius: 14px;
+  padding: 12px 16px; cursor: pointer; font: inherit; color: inherit;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.08); transition: transform 0.12s, border-color 0.12s;
+}
+.csl-conn-item:hover { transform: translateY(-1px); }
+.csl-conn-right { text-align: right; }
+.csl-conn-text { font-size: 15px; font-weight: 800; flex: 1; }
+/* 연결점(왼쪽 카드는 오른쪽 가장자리, 오른쪽 카드는 왼쪽 가장자리) */
+.csl-conn-dot {
+  position: absolute; top: 50%; width: 16px; height: 16px; border-radius: 50%;
+  background: #cfc6ef; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(108,92,231,.35);
+  transform: translateY(-50%); z-index: 5; pointer-events: none;
+}
+.csl-dot-r { right: -9px; }
+.csl-dot-l { left: -9px; }
+/* 왼쪽 카드에 지도 기호 등 이미지를 넣을 때(오른쪽 텍스트 카드와 같은 크기) */
+.csl-conn-left-img { justify-content: flex-start; }
+.csl-conn-symbol {
+  width: 46px; height: 46px; flex: none; object-fit: contain;
+  background: #fff; border-radius: 10px;
+  pointer-events: none; -webkit-user-drag: none; user-select: none;
+}
+
+/* ── pick / sort : 드래그 아이템 칩 ── */
+.csl-chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 4px; }
+.csl-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 800; padding: 12px 18px; border-radius: 14px;
+  background: #fff; border: 3px solid var(--csl-purple-soft); color: var(--csl-purple-deep);
+  cursor: grab; touch-action: none; box-shadow: 0 4px 10px rgba(108, 92, 231, 0.1);
+  transition: transform 0.12s, box-shadow 0.12s, opacity 0.2s;
+}
+.csl-chip:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(108, 92, 231, 0.18); }
+.csl-chip-emoji { font-size: 22px; line-height: 1; }
+.csl-chip.csl-chip-dragging { opacity: 0.35; }
+.csl-chip.csl-chip-used { opacity: 0.3; pointer-events: none; }
+.csl-chip.csl-picked-active { background: var(--csl-purple); color: #fff; border-color: var(--csl-purple-deep); }
+.csl-chip.csl-in-box { cursor: pointer; border-color: var(--csl-green); color: #1f9d45; background: #f4fff7; }
+
+/* pick : 단일 드롭 상자 */
+.csl-dropbox {
+  width: 100%; min-height: 110px; border: 3px dashed #cabffb; border-radius: 18px;
+  background: #fff; padding: 14px; margin-bottom: 18px; box-shadow: var(--csl-shadow);
+}
+.csl-dropbox.csl-drop-hot { border-color: var(--csl-purple); background: #f2eeff; }
+.csl-dropbox-label { font-weight: 900; font-size: 15px; margin-bottom: 8px; color: var(--csl-ink); }
+.csl-dropbox-empty { color: var(--csl-ink-soft); font-size: 14px; font-weight: 700; text-align: center; padding: 14px 0; }
+.csl-dropbox-items { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* sort : 여러 개의 분류 상자 */
+.csl-bins { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.csl-bin {
+  flex: 1; min-width: 150px; min-height: 120px; border: 3px dashed #cabffb; border-radius: 18px;
+  background: #fff; padding: 12px; box-shadow: var(--csl-shadow); transition: border-color 0.12s, background 0.12s;
+}
+.csl-bin.csl-drop-hot { border-color: var(--csl-purple); background: #f2eeff; }
+.csl-bin-label { font-weight: 900; font-size: 16px; text-align: center; margin-bottom: 8px; }
+.csl-bin-items { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+/* ── touch : 화면(지도/스마트폰) 목업 ── */
+.csl-phone {
+  max-width: 360px; margin: 0 auto 8px; background: #fff;
+  border: 6px solid #4a4066; border-radius: 30px; overflow: hidden;
+  box-shadow: 0 14px 34px rgba(108, 92, 231, 0.18);
+}
+.csl-phone-bar { background: #4a4066; color: #fff; font-weight: 800; font-size: 13px; text-align: center; padding: 8px; }
+.csl-phone-screen { display: flex; flex-direction: column; gap: 10px; padding: 16px; background: linear-gradient(180deg, #fff, #f7f4ff); }
+.csl-screen-el {
+  display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; font: inherit; color: inherit;
+  background: #fff; border: 3px solid var(--csl-purple-soft); border-radius: 14px; padding: 12px 14px; cursor: pointer;
+  box-shadow: 0 3px 8px rgba(108, 92, 231, 0.08); transition: transform 0.12s, border-color 0.12s, background 0.12s;
+}
+.csl-screen-el:hover { transform: translateY(-1px); }
+.csl-screen-el.csl-touched { border-color: var(--csl-purple); background: #f2eeff; box-shadow: 0 0 0 3px rgba(139,124,246,.25); }
+.csl-screen-el.csl-touched::after { content: "✔"; margin-left: auto; color: var(--csl-purple-deep); font-weight: 900; }
+.csl-screen-emoji { font-size: 22px; }
+.csl-screen-text { font-size: 15px; font-weight: 800; }
+
+/* ── place / route : 장면(지도) ── */
+.csl-scene {
+  position: relative; width: 100%; aspect-ratio: 16 / 10; min-height: 260px;
+  background: linear-gradient(180deg, #eef0ff 0%, #f7f2ff 100%);
+  border: 3px solid var(--csl-purple-soft); border-radius: 18px; overflow: hidden;
+  margin-bottom: 8px; box-shadow: var(--csl-shadow); touch-action: none;
+}
+.csl-zone {
+  position: absolute; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  text-align: center; border: 2px dashed rgba(55,50,77,.35); background: rgba(255,255,255,.55);
+}
+.csl-zone-label { font-size: 13px; font-weight: 800; color: var(--csl-ink); padding: 2px 6px; pointer-events: none; }
+.csl-zone-danger { border-color: #ff5a7a; background: rgba(255,90,122,.16); }
+.csl-zone-dest { border: 3px solid var(--csl-green); background: rgba(52,199,89,.16); }
+.csl-zone-picked { outline: 4px solid var(--csl-purple); outline-offset: 1px; }
+/* 기준(reference) 건물 강조 : 보라색 테두리로 한눈에 보이게 */
+.csl-zone-ref, .csl-scene-map .csl-zone-ref {
+  border: 3px solid var(--csl-purple-deep); background: #ece7ff;
+  box-shadow: 0 0 0 3px rgba(139,124,246,.35);
+}
+.csl-zone-ref .csl-zone-label { color: var(--csl-purple-deep); font-weight: 900; }
+.csl-zone-reftag {
+  position: absolute; top: 6px; left: 6px; padding: 2px 8px; border-radius: 999px;
+  background: var(--csl-purple-deep); color: #fff; font-size: 11px; font-weight: 900;
+  pointer-events: none;
+}
+.csl-char {
+  position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; z-index: 5;
+  display: grid; place-items: center; font-size: 34px; cursor: grab; touch-action: none;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,.2)); transition: transform 0.1s;
+}
+.csl-char.csl-char-dragging { transform: scale(1.15); cursor: grabbing; }
+
+/* 드래그 중 손가락/마우스를 따라다니는 고스트 */
+.csl-ghost {
+  position: fixed; z-index: 99999; pointer-events: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 800; padding: 12px 18px; border-radius: 14px;
+  background: var(--csl-purple); color: #fff; box-shadow: 0 12px 26px rgba(108, 92, 231, 0.35);
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+.csl-ghost .csl-chip-emoji { font-size: 22px; }
+.csl-ghost .csl-card-photo { width: 90px; }
+.csl-ghost .csl-card-label { color: #fff; }
+
+/* ── 하단 컨트롤 ── */
+.csl-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; }
+.csl-feedback { font-weight: 800; font-size: 15px; min-height: 22px; }
+.csl-feedback.csl-ok { color: var(--csl-green); }
+.csl-feedback.csl-no { color: var(--csl-red); }
+.csl-btn {
+  border: none; cursor: pointer; font-weight: 900; font-size: 16px; padding: 13px 26px;
+  border-radius: 14px; background: var(--csl-purple); color: #fff;
+  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.3); transition: transform 0.12s, filter 0.12s;
+}
+.csl-btn:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.csl-btn:disabled { background: #e2d8f2; color: #b1a6cc; cursor: not-allowed; box-shadow: none; }
+.csl-btn.csl-ghostbtn { background: #fff; color: var(--csl-purple-deep); border: 2px solid var(--csl-purple-soft); box-shadow: none; }
+
+/* ── 안내 문구(응급처치 교육용 등) ── */
+.csl-notice {
+  margin-top: 14px; font-size: 12px; line-height: 1.5; color: var(--csl-ink-soft);
+  background: #fff6ea; border: 1px solid #ffe4bd; border-radius: 12px; padding: 10px 14px; font-weight: 600;
+}
+
+/* ── 완료 화면 ── */
+.csl-done { text-align: center; padding: 30px 10px; }
+.csl-done .csl-mascot { font-size: 72px; }
+.csl-done h3 { font-size: 24px; font-weight: 900; margin: 12px 0 6px; }
+.csl-done p { color: var(--csl-ink-soft); font-weight: 700; margin: 0 0 16px; }
+.csl-stage-summary { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 18px; }
+.csl-summary-pill {
+  padding: 8px 14px; border-radius: 12px; font-weight: 800; font-size: 14px;
+  background: var(--csl-green-soft); color: #1f9d45;
+}
+.csl-summary-pill.csl-fail { background: var(--csl-red-soft); color: #d63a5a; }
+
+/* ── 사진 확대 버튼 + 라이트박스 ── */
+.csl-photo-wrap { position: relative; }
+.csl-zoom-btn {
+  position: absolute; top: 8px; right: 8px; z-index: 3;
+  border: none; cursor: pointer; font: inherit; font-size: 12px; font-weight: 800;
+  padding: 5px 9px; border-radius: 9px; background: rgba(55,50,77,.78); color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25); line-height: 1;
+}
+.csl-zoom-btn:hover { background: rgba(55,50,77,.95); }
+.csl-lightbox {
+  position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center;
+  background: rgba(30,26,45,.86); padding: 24px; cursor: zoom-out; animation: csl-fade .15s ease-out;
+}
+.csl-lightbox img { max-width: 94vw; max-height: 86vh; border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.5); background: #fff; }
+.csl-lightbox-close {
+  position: fixed; top: 20px; right: 24px; border: none; cursor: pointer; font: inherit;
+  font-weight: 900; font-size: 15px; padding: 10px 16px; border-radius: 12px; background: #fff; color: var(--csl-ink);
+}
+@keyframes csl-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── connect 드래그(왼쪽 카드) / 연결됨 표시 ── */
+.csl-conn-left { cursor: grab; touch-action: none; }
+.csl-conn-left.csl-conn-dragging { cursor: grabbing; border-color: var(--csl-purple); }
+.csl-conn-left.csl-picked-active { border-color: var(--csl-purple); background: #f2eeff; box-shadow: 0 0 0 3px rgba(139,124,246,.25); }
+.csl-conn-left.csl-picked-active .csl-conn-dot { background: var(--csl-purple); }
+.csl-conn-item.csl-drop-hot { border-color: var(--csl-purple); background: #f2eeff; }
+.csl-conn-item.csl-conn-paired { border-color: #e0d8fb; background: #fbfaff; }
+
+/* ── 지도 장면(place) : 격자 배경 + 나침반 + 핀 마커 ── */
+.csl-scene-map {
+  background:
+    linear-gradient(180deg, #eef4ff 0%, #f6f2ff 100%),
+    repeating-linear-gradient(0deg, rgba(108,92,231,.08) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(108,92,231,.08) 0 1px, transparent 1px 44px);
+  background-blend-mode: normal;
+}
+.csl-scene-map .csl-zone { background: rgba(255,255,255,.82); border-color: rgba(108,92,231,.4); }
+.csl-scene-map .csl-zone-label { font-size: 13px; }
+.csl-compass {
+  position: absolute; top: 8px; right: 8px; z-index: 4; width: 42px; height: 42px; border-radius: 50%;
+  background: #fff; border: 2px solid var(--csl-purple-soft); display: grid; place-items: center;
+  box-shadow: var(--csl-shadow); pointer-events: none;
+}
+.csl-compass b { font-size: 12px; font-weight: 900; color: var(--csl-purple-deep); }
+.csl-compass i { position: absolute; top: 3px; left: 50%; transform: translateX(-50%);
+  border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid var(--csl-red); }
+.csl-char-pin {
+  width: 30px; height: 30px; background: var(--csl-purple-deep);
+  border: 3px solid #fff; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+  box-shadow: 0 5px 10px rgba(0,0,0,.3); margin: -30px 0 0 -15px;
+}
+.csl-char-pin::after { content: ""; position: absolute; top: 8px; left: 8px; width: 8px; height: 8px; background: #fff; border-radius: 50%; }
+.csl-char-pin.csl-char-dragging { transform: rotate(-45deg) scale(1.15); }
+
+/* ── 분류 문제용 참고 지도 (읽기 전용) ── */
+.csl-refmap {
+  aspect-ratio: auto; min-height: 0; height: 300px; max-height: 44vh;
+  margin-bottom: 6px; cursor: default; touch-action: auto;
+}
+.csl-refmap .csl-zone { border-style: solid; }
+.csl-refmap .csl-zone-base {
+  border: 3px solid var(--csl-purple-deep); background: #e6dffb;
+  box-shadow: 0 0 0 3px rgba(139,124,246,.35);
+}
+.csl-refmap .csl-zone-base .csl-zone-label { color: var(--csl-purple-deep); font-weight: 900; }
+
+@keyframes csl-pop { 0% { transform: scale(0.6); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.csl-card { animation: csl-pop 0.25s ease-out; }
+
+/* 반응형 */
+@media (max-width: 560px) {
+  .csl-connect { gap: 14px; }
+  .csl-option-text, .csl-conn-text { font-size: 15px; }
+  .csl-prompt { font-size: 18px; }
+  .csl-options-grid { grid-template-columns: 1fr; }
+}

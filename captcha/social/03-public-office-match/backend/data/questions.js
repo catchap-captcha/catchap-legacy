@@ -1,0 +1,148 @@
+/**
+ * 공공기관 역할 연결 — 문제 은행 (5단계 × 5문제 = 25문제) · 4학년 심화 · 드래그 중심 · 이모지 없음
+ * ---------------------------------------------------------------
+ *   1단계 기관-역할 연결   기관 ↔ 하는 일 연결               (connect·드래그)
+ *   2단계 대표 업무 연결   기관 ↔ 대표 업무(심화) 연결        (connect·드래그)
+ *   3단계 상황별 분류     상황 카드를 알맞은 기관으로 분류     (sort·드래그)
+ *   4단계 유사 기관 구분   한 기관이 하는 일만 모두 담기       (pick·드래그)
+ *   5단계 종합 상황 해결   여러 상황을 여러 기관으로 분류       (sort·드래그)
+ */
+
+const QUESTIONS = [
+  // ───────── 1단계 : 기관-역할 연결 (connect) ─────────
+  { id: 'l1-q1', stage: 1, order: 1, type: 'connect',
+    prompt: '공공기관을 하는 일로 끌어다 연결하세요.', hint: '기관이 맡은 일을 떠올려요.',
+    left: [ { id: 'a', text: '소방서' }, { id: 'b', text: '도서관' }, { id: 'c', text: '경찰서' } ],
+    right: [ { id: 'x', text: '불을 끄고 사람을 구조해요' }, { id: 'y', text: '책을 빌려주고 읽게 해요' }, { id: 'z', text: '안전을 지키고 범죄를 막아요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q2', stage: 1, order: 2, type: 'connect',
+    prompt: '공공기관을 하는 일로 끌어다 연결하세요.', hint: '민원·건강·우편을 떠올려요.',
+    left: [ { id: 'a', text: '주민센터' }, { id: 'b', text: '보건소' }, { id: 'c', text: '우체국' } ],
+    right: [ { id: 'x', text: '주민등록등본을 떼 줘요' }, { id: 'y', text: '예방접종과 건강검진을 해 줘요' }, { id: 'z', text: '편지와 소포를 배달해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q3', stage: 1, order: 3, type: 'connect',
+    prompt: '공공기관을 하는 일로 끌어다 연결하세요.', hint: '돈·치료·교육을 떠올려요.',
+    left: [ { id: 'a', text: '은행' }, { id: 'b', text: '병원' }, { id: 'c', text: '학교' } ],
+    right: [ { id: 'x', text: '돈을 맡기고 빌려줘요' }, { id: 'y', text: '아픈 사람을 치료해요' }, { id: 'z', text: '학생을 가르쳐요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q4', stage: 1, order: 4, type: 'connect',
+    prompt: '공공기관을 일하는 사람으로 끌어다 연결하세요.', hint: '누가 그 일을 하는지 생각해요.',
+    left: [ { id: 'a', text: '소방서' }, { id: 'b', text: '경찰서' }, { id: 'c', text: '보건소' } ],
+    right: [ { id: 'x', text: '소방관' }, { id: 'y', text: '경찰관' }, { id: 'z', text: '의사·간호사' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l1-q5', stage: 1, order: 5, type: 'connect',
+    prompt: '기관을 관련된 전화번호·표시로 끌어다 연결하세요.', hint: '급할 때 누르는 번호를 떠올려요.',
+    left: [ { id: 'a', text: '화재·구조 신고' }, { id: 'b', text: '범죄 신고' }, { id: 'c', text: '민원 상담' } ],
+    right: [ { id: 'x', text: '119' }, { id: 'y', text: '112' }, { id: 'z', text: '110' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 2단계 : 대표 업무 연결 (connect·심화) ─────────
+  { id: 'l2-q1', stage: 2, order: 1, type: 'connect',
+    prompt: '기관을 대표 업무로 끌어다 연결하세요.', hint: '조금 더 자세한 일이에요.',
+    left: [ { id: 'a', text: '주민센터' }, { id: 'b', text: '보건소' }, { id: 'c', text: '경찰서' } ],
+    right: [ { id: 'x', text: '전입신고와 각종 증명서 발급' }, { id: 'y', text: '감염병 예방과 건강 상담' }, { id: 'z', text: '교통 단속과 실종 신고 접수' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q2', stage: 2, order: 2, type: 'connect',
+    prompt: '기관을 대표 업무로 끌어다 연결하세요.', hint: '재난·우편·금융을 떠올려요.',
+    left: [ { id: 'a', text: '소방서' }, { id: 'b', text: '우체국' }, { id: 'c', text: '은행' } ],
+    right: [ { id: 'x', text: '화재 진압과 응급환자 이송' }, { id: 'y', text: '우편물 배달과 우편 저금' }, { id: 'z', text: '예금·대출과 공과금 납부' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q3', stage: 2, order: 3, type: 'connect',
+    prompt: '기관을 대표 업무로 끌어다 연결하세요.', hint: '교육·문화·복지를 떠올려요.',
+    left: [ { id: 'a', text: '도서관' }, { id: 'b', text: '학교' }, { id: 'c', text: '복지관' } ],
+    right: [ { id: 'x', text: '자료 대출과 독서·문화 프로그램' }, { id: 'y', text: '학생 교육과 급식·상담' }, { id: 'z', text: '어르신·이웃 돌봄 봉사' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q4', stage: 2, order: 4, type: 'connect',
+    prompt: '기관을 우리 생활에 주는 도움으로 끌어다 연결하세요.', hint: '무엇을 편하게 해 주는지 생각해요.',
+    left: [ { id: 'a', text: '보건소' }, { id: 'b', text: '주민센터' }, { id: 'c', text: '소방서' } ],
+    right: [ { id: 'x', text: '병원비 부담 없이 건강을 돌봐줘요' }, { id: 'y', text: '이사·출생 신고를 도와줘요' }, { id: 'z', text: '위급 상황에서 목숨을 지켜줘요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q5', stage: 2, order: 5, type: 'connect',
+    prompt: '비슷해 보이는 기관을 정확한 역할로 끌어다 연결하세요.', hint: '병원·보건소·약국의 차이를 생각해요.',
+    left: [ { id: 'a', text: '병원' }, { id: 'b', text: '보건소' }, { id: 'c', text: '약국' } ],
+    right: [ { id: 'x', text: '진료와 수술을 해요' }, { id: 'y', text: '나라가 운영하며 예방·검진을 해요' }, { id: 'z', text: '처방전을 받아 약을 조제해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 3단계 : 상황별 분류 (sort) ─────────
+  { id: 'l3-q1', stage: 3, order: 1, type: 'sort',
+    prompt: '상황 카드를 도움을 요청할 기관으로 끌어다 분류하세요.', hint: '누가 해결해 줄 수 있는지 생각해요.',
+    bins: [ { id: 'police', label: '경찰서' }, { id: 'fire', label: '소방서' }, { id: 'center', label: '주민센터' } ],
+    items: [ { id: 'i1', text: '지갑을 도둑맞았어요' }, { id: 'i2', text: '건물에 불이 났어요' }, { id: 'i3', text: '전입신고를 해야 해요' }, { id: 'i4', text: '교통사고가 났어요' }, { id: 'i5', text: '등본이 필요해요' } ],
+    answers: { i1: 'police', i2: 'fire', i3: 'center', i4: 'police', i5: 'center' } },
+  { id: 'l3-q2', stage: 3, order: 2, type: 'sort',
+    prompt: '상황 카드를 알맞은 기관으로 끌어다 분류하세요.', hint: '건강·안전·학습을 나눠요.',
+    bins: [ { id: 'health', label: '보건소' }, { id: 'fire', label: '소방서' }, { id: 'library', label: '도서관' } ],
+    items: [ { id: 'i1', text: '예방접종을 맞고 싶어요' }, { id: 'i2', text: '산에 불이 번져요' }, { id: 'i3', text: '책을 빌리고 싶어요' }, { id: 'i4', text: '금연 상담을 받고 싶어요' }, { id: 'i5', text: '응급환자를 옮겨야 해요' } ],
+    answers: { i1: 'health', i2: 'fire', i3: 'library', i4: 'health', i5: 'fire' } },
+  { id: 'l3-q3', stage: 3, order: 3, type: 'sort',
+    prompt: '상황 카드를 알맞은 기관으로 끌어다 분류하세요.', hint: '돈·우편·민원을 나눠요.',
+    bins: [ { id: 'bank', label: '은행' }, { id: 'post', label: '우체국' }, { id: 'center', label: '주민센터' } ],
+    items: [ { id: 'i1', text: '용돈을 저금하고 싶어요' }, { id: 'i2', text: '소포를 보내고 싶어요' }, { id: 'i3', text: '주민등록증을 재발급받아야 해요' }, { id: 'i4', text: '공과금을 내야 해요' }, { id: 'i5', text: '편지를 부치고 싶어요' } ],
+    answers: { i1: 'bank', i2: 'post', i3: 'center', i4: 'bank', i5: 'post' } },
+  { id: 'l3-q4', stage: 3, order: 4, type: 'sort',
+    prompt: '위급한 순간, 알맞은 신고처로 끌어다 분류하세요.', hint: '불·구조는 119, 범죄는 112예요.',
+    bins: [ { id: 'n119', label: '119' }, { id: 'n112', label: '112' } ],
+    items: [ { id: 'i1', text: '집에 불이 났어요' }, { id: 'i2', text: '수상한 사람이 따라와요' }, { id: 'i3', text: '사람이 쓰러졌어요' }, { id: 'i4', text: '물건을 도둑맞았어요' } ],
+    answers: { i1: 'n119', i2: 'n112', i3: 'n119', i4: 'n112' } },
+  { id: 'l3-q5', stage: 3, order: 5, type: 'sort',
+    prompt: '상황 카드를 알맞은 기관으로 끌어다 분류하세요.', hint: '치료가 필요한지, 예방인지, 약인지 생각해요.',
+    bins: [ { id: 'hospital', label: '병원' }, { id: 'health', label: '보건소' }, { id: 'pharm', label: '약국' } ],
+    items: [ { id: 'i1', text: '팔이 부러져 수술이 필요해요' }, { id: 'i2', text: '무료 독감 예방접종을 맞고 싶어요' }, { id: 'i3', text: '처방전을 내고 약을 받아요' }, { id: 'i4', text: '깊게 베여 꿰매야 해요' } ],
+    answers: { i1: 'hospital', i2: 'health', i3: 'pharm', i4: 'hospital' } },
+
+  // ───────── 4단계 : 유사 기관 구분 (pick) ─────────
+  { id: 'l4-q1', stage: 4, order: 1, type: 'pick', target: '보건소에서 할 수 있는 일 담기', boxHint: '보건소가 하는 일만 이 상자로 끌어와요',
+    prompt: '보건소에서 할 수 있는 일을 모두 골라 담아보세요.', hint: '보건소는 나라가 운영하는 건강 기관이에요.',
+    items: [ { id: 'i1', text: '예방접종' }, { id: 'i2', text: '건강검진' }, { id: 'i3', text: '금연 상담' }, { id: 'i4', text: '불 끄기' }, { id: 'i5', text: '책 대출' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l4-q2', stage: 4, order: 2, type: 'pick', target: '주민센터에서 할 수 있는 일 담기', boxHint: '주민센터가 하는 일만 이 상자로 끌어와요',
+    prompt: '주민센터에서 할 수 있는 일을 모두 골라 담아보세요.', hint: '서류·신고·생활 민원을 떠올려요.',
+    items: [ { id: 'i1', text: '전입신고' }, { id: 'i2', text: '등본 발급' }, { id: 'i3', text: '주민등록증 발급' }, { id: 'i4', text: '수술' }, { id: 'i5', text: '우편 배달' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l4-q3', stage: 4, order: 3, type: 'pick', target: '소방서에서 하는 일 담기', boxHint: '소방서가 하는 일만 이 상자로 끌어와요',
+    prompt: '소방서에서 하는 일을 모두 골라 담아보세요.', hint: '불·구조·응급을 떠올려요.',
+    items: [ { id: 'i1', text: '화재 진압' }, { id: 'i2', text: '인명 구조' }, { id: 'i3', text: '응급환자 이송' }, { id: 'i4', text: '예금·대출' }, { id: 'i5', text: '전입신고 접수' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l4-q4', stage: 4, order: 4, type: 'pick', target: '경찰서에서 하는 일 담기', boxHint: '경찰서가 하는 일만 이 상자로 끌어와요',
+    prompt: '경찰서에서 하는 일을 모두 골라 담아보세요.', hint: '안전·질서·수사를 떠올려요.',
+    items: [ { id: 'i1', text: '범죄 수사' }, { id: 'i2', text: '교통 단속' }, { id: 'i3', text: '분실물 신고 접수' }, { id: 'i4', text: '예방접종' }, { id: 'i5', text: '소포 배달' } ],
+    answers: ['i1', 'i2', 'i3'] },
+  { id: 'l4-q5', stage: 4, order: 5, type: 'pick', target: '도서관에서 할 수 있는 일 담기', boxHint: '도서관에서 할 수 있는 일만 이 상자로 끌어와요',
+    prompt: '도서관에서 할 수 있는 일을 모두 골라 담아보세요.', hint: '책과 배움을 떠올려요.',
+    items: [ { id: 'i1', text: '책 빌리기' }, { id: 'i2', text: '자료 찾아보기' }, { id: 'i3', text: '독서 프로그램 참여' }, { id: 'i4', text: '화재 진압' }, { id: 'i5', text: '통장 개설' } ],
+    answers: ['i1', 'i2', 'i3'] },
+
+  // ───────── 5단계 : 종합 상황 해결 (sort) ─────────
+  { id: 'l5-q1', stage: 5, order: 1, type: 'sort',
+    prompt: '여러 상황을 알맞은 기관으로 끌어다 분류하세요.', hint: '기관의 역할을 종합해서 생각해요.',
+    bins: [ { id: 'fire', label: '소방서' }, { id: 'library', label: '도서관' }, { id: 'center', label: '주민센터' }, { id: 'police', label: '경찰서' } ],
+    items: [ { id: 'i1', text: '불이 났어요' }, { id: 'i2', text: '책을 빌리고 싶어요' }, { id: 'i3', text: '등본이 필요해요' }, { id: 'i4', text: '길을 잃었어요' } ],
+    answers: { i1: 'fire', i2: 'library', i3: 'center', i4: 'police' } },
+  { id: 'l5-q2', stage: 5, order: 2, type: 'sort',
+    prompt: '여러 상황을 알맞은 기관으로 끌어다 분류하세요.', hint: '건강·저금·우편·안전을 떠올려요.',
+    bins: [ { id: 'health', label: '보건소' }, { id: 'bank', label: '은행' }, { id: 'post', label: '우체국' }, { id: 'police', label: '경찰서' } ],
+    items: [ { id: 'i1', text: '예방접종을 맞아요' }, { id: 'i2', text: '용돈을 저금해요' }, { id: 'i3', text: '소포를 보내요' }, { id: 'i4', text: '도둑을 신고해요' } ],
+    answers: { i1: 'health', i2: 'bank', i3: 'post', i4: 'police' } },
+  { id: 'l5-q3', stage: 5, order: 3, type: 'sort',
+    prompt: '여러 상황을 알맞은 기관으로 끌어다 분류하세요.', hint: '치료·교육·구조·민원을 떠올려요.',
+    bins: [ { id: 'hospital', label: '병원' }, { id: 'school', label: '학교' }, { id: 'fire', label: '소방서' }, { id: 'center', label: '주민센터' } ],
+    items: [ { id: 'i1', text: '수술을 받아야 해요' }, { id: 'i2', text: '공부를 배워요' }, { id: 'i3', text: '사람이 물에 빠졌어요' }, { id: 'i4', text: '이사 신고를 해요' } ],
+    answers: { i1: 'hospital', i2: 'school', i3: 'fire', i4: 'center' } },
+  { id: 'l5-q4', stage: 5, order: 4, type: 'sort',
+    prompt: '여러 상황을 알맞은 신고처·기관으로 끌어다 분류하세요.', hint: '급한 일과 서류 일을 나눠요.',
+    bins: [ { id: 'n119', label: '119' }, { id: 'n112', label: '112' }, { id: 'center', label: '주민센터' } ],
+    items: [ { id: 'i1', text: '가스 냄새가 나고 연기가 나요' }, { id: 'i2', text: '누가 물건을 훔쳐 갔어요' }, { id: 'i3', text: '전입신고를 해야 해요' }, { id: 'i4', text: '교통사고를 목격했어요' } ],
+    answers: { i1: 'n119', i2: 'n112', i3: 'center', i4: 'n112' } },
+  { id: 'l5-q5', stage: 5, order: 5, type: 'sort',
+    prompt: '비슷한 건강 기관으로 여러 상황을 끌어다 분류하세요.', hint: '치료·예방·약을 정확히 나눠요.',
+    bins: [ { id: 'hospital', label: '병원' }, { id: 'health', label: '보건소' }, { id: 'pharm', label: '약국' } ],
+    items: [ { id: 'i1', text: '골절 수술' }, { id: 'i2', text: '무료 건강검진' }, { id: 'i3', text: '처방약 조제' }, { id: 'i4', text: '독감 예방접종' } ],
+    answers: { i1: 'hospital', i2: 'health', i3: 'pharm', i4: 'health' } },
+];
+
+const STAGE_PASS_THRESHOLD = 4;
+const TOTAL_PASS_THRESHOLD = 20;
+const getQuestionsByStage = (stage) => QUESTIONS.filter((q) => q.stage === Number(stage));
+const getQuestionById = (id) => QUESTIONS.find((q) => q.id === id);
+
+module.exports = { QUESTIONS, STAGE_PASS_THRESHOLD, TOTAL_PASS_THRESHOLD, getQuestionsByStage, getQuestionById };

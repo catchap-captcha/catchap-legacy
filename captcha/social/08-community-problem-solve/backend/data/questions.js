@@ -1,0 +1,148 @@
+/**
+ * 우리 지역 문제 해결 — 문제 은행 (5단계 × 5문제 = 25문제) · 4학년 심화 · 드래그 중심 · 이모지 없음
+ * ---------------------------------------------------------------
+ *   1단계 문제 유형 구분   지역 문제를 종류별로 분류          (sort·드래그)
+ *   2단계 해결 방법 연결   문제 ↔ 알맞은 해결 방법 연결        (connect·드래그)
+ *   3단계 도움 기관 연결   문제 ↔ 도움받을 기관 연결          (connect·드래그)
+ *   4단계 해결 절차 배열   민주적 문제 해결 과정 순서          (order·드래그)
+ *   5단계 주민 참여 연결   주민 참여 방법 ↔ 설명 연결          (connect·드래그)
+ */
+
+const QUESTIONS = [
+  // ───────── 1단계 : 문제 유형 구분 (sort) ─────────
+  { id: 'l1-q1', stage: 1, order: 1, type: 'sort',
+    prompt: '지역 문제를 종류에 맞게 끌어다 분류하세요.', hint: '환경·안전·시설 중 무엇에 관한 문제인지 생각해요.',
+    bins: [ { id: 'env', label: '환경 문제' }, { id: 'safe', label: '안전 문제' }, { id: 'fac', label: '시설 문제' } ],
+    items: [ { id: 'i1', text: '쓰레기 무단 투기' }, { id: 'i2', text: '학교 앞 과속 차량' }, { id: 'i3', text: '가로등 고장' }, { id: 'i4', text: '하천 오염' }, { id: 'i5', text: '놀이터 기구 파손' } ],
+    answers: { i1: 'env', i2: 'safe', i3: 'fac', i4: 'env', i5: 'fac' } },
+  { id: 'l1-q2', stage: 1, order: 2, type: 'sort',
+    prompt: '지역 문제를 종류에 맞게 끌어다 분류하세요.', hint: '어떤 불편인지 생각해요.',
+    bins: [ { id: 'env', label: '환경 문제' }, { id: 'traffic', label: '교통 문제' }, { id: 'fac', label: '시설 문제' } ],
+    items: [ { id: 'i1', text: '미세먼지 증가' }, { id: 'i2', text: '주차 공간 부족' }, { id: 'i3', text: '부서진 벤치' }, { id: 'i4', text: '악취 나는 쓰레기장' }, { id: 'i5', text: '버스 정류장 부족' } ],
+    answers: { i1: 'env', i2: 'traffic', i3: 'fac', i4: 'env', i5: 'traffic' } },
+  { id: 'l1-q3', stage: 1, order: 3, type: 'sort',
+    prompt: '상황을 문제인 것과 문제가 아닌 것으로 끌어다 분류하세요.', hint: '고쳐야 할 불편인지 생각해요.',
+    bins: [ { id: 'prob', label: '지역 문제' }, { id: 'good', label: '문제 아님(좋은 모습)' } ],
+    items: [ { id: 'i1', text: '공원에 쓰레기가 가득함' }, { id: 'i2', text: '깨끗이 정돈된 거리' }, { id: 'i3', text: '밤에 골목이 너무 어두움' }, { id: 'i4', text: '잘 자란 가로수' } ],
+    answers: { i1: 'prob', i2: 'good', i3: 'prob', i4: 'good' } },
+  { id: 'l1-q4', stage: 1, order: 4, type: 'sort',
+    prompt: '지역 문제를 종류에 맞게 끌어다 분류하세요.', hint: '소음·안전·환경으로 나눠요.',
+    bins: [ { id: 'noise', label: '소음 문제' }, { id: 'safe', label: '안전 문제' }, { id: 'env', label: '환경 문제' } ],
+    items: [ { id: 'i1', text: '밤늦은 공사 소음' }, { id: 'i2', text: '어린이 보호구역 사고 위험' }, { id: 'i3', text: '분리배출이 안 됨' }, { id: 'i4', text: '층간·도로 소음' }, { id: 'i5', text: '미끄러운 빙판길' } ],
+    answers: { i1: 'noise', i2: 'safe', i3: 'env', i4: 'noise', i5: 'safe' } },
+  { id: 'l1-q5', stage: 1, order: 5, type: 'sort',
+    prompt: '문제를 누가 주로 겪는지에 따라 끌어다 분류하세요.', hint: '어린이·어르신에게 특히 불편한 문제를 생각해요.',
+    bins: [ { id: 'child', label: '어린이에게 불편' }, { id: 'old', label: '어르신에게 불편' } ],
+    items: [ { id: 'i1', text: '통학로에 인도가 없음' }, { id: 'i2', text: '계단만 있고 승강기가 없음' }, { id: 'i3', text: '놀이터가 부족함' }, { id: 'i4', text: '경로당·쉼터가 부족함' } ],
+    answers: { i1: 'child', i2: 'old', i3: 'child', i4: 'old' } },
+
+  // ───────── 2단계 : 해결 방법 연결 (connect) ─────────
+  { id: 'l2-q1', stage: 2, order: 1, type: 'connect',
+    prompt: '지역 문제를 알맞은 해결 방법으로 끌어다 연결하세요.', hint: '문제를 줄이는 방법을 생각해요.',
+    left: [ { id: 'a', text: '공원에 쓰레기가 많음' }, { id: 'b', text: '학교 앞 차가 빠름' }, { id: 'c', text: '가로등이 고장 남' } ],
+    right: [ { id: 'x', text: '분리수거함을 설치하고 함께 청소해요' }, { id: 'y', text: '과속 방지턱·신호등을 설치해요' }, { id: 'z', text: '구청에 수리를 요청해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q2', stage: 2, order: 2, type: 'connect',
+    prompt: '지역 문제를 알맞은 해결 방법으로 끌어다 연결하세요.', hint: '무엇을 늘리거나 고쳐야 할지 생각해요.',
+    left: [ { id: 'a', text: '주차 공간 부족' }, { id: 'b', text: '버스가 자주 안 옴' }, { id: 'c', text: '놀이터 기구 파손' } ],
+    right: [ { id: 'x', text: '공영 주차장을 만들어요' }, { id: 'y', text: '버스 운행을 늘려 달라고 건의해요' }, { id: 'z', text: '기구를 고치고 점검해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q3', stage: 2, order: 3, type: 'connect',
+    prompt: '지역 문제를 알맞은 해결 방법으로 끌어다 연결하세요.', hint: '환경을 지키는 방법을 생각해요.',
+    left: [ { id: 'a', text: '하천이 오염됨' }, { id: 'b', text: '미세먼지가 심함' }, { id: 'c', text: '분리배출이 안 됨' } ],
+    right: [ { id: 'x', text: '하천을 청소하고 오염원을 막아요' }, { id: 'y', text: '나무를 심고 대중교통을 이용해요' }, { id: 'z', text: '분리배출 방법을 안내하고 지켜요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q4', stage: 2, order: 4, type: 'connect',
+    prompt: '지역 문제를 알맞은 해결 방법으로 끌어다 연결하세요.', hint: '안전을 지키는 방법을 생각해요.',
+    left: [ { id: 'a', text: '밤길이 어두움' }, { id: 'b', text: '통학로에 인도가 없음' }, { id: 'c', text: '빙판길이 미끄러움' } ],
+    right: [ { id: 'x', text: '가로등과 CCTV를 설치해요' }, { id: 'y', text: '보행자 도로를 만들어요' }, { id: 'z', text: '제설 작업과 모래를 뿌려요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l2-q5', stage: 2, order: 5, type: 'connect',
+    prompt: '지역 문제를 알맞은 해결 방법으로 끌어다 연결하세요.', hint: '누구를 배려하는 방법인지 생각해요.',
+    left: [ { id: 'a', text: '승강기가 없는 건물' }, { id: 'b', text: '경로당이 부족함' }, { id: 'c', text: '층간·공사 소음' } ],
+    right: [ { id: 'x', text: '승강기·경사로를 설치해요' }, { id: 'y', text: '어르신 쉼터를 늘려요' }, { id: 'z', text: '소음 규칙을 정하고 지켜요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 3단계 : 도움 기관 연결 (connect) ─────────
+  { id: 'l3-q1', stage: 3, order: 1, type: 'connect',
+    prompt: '지역 문제를 도움받을 기관으로 끌어다 연결하세요.', hint: '누가 해결해 줄 수 있는지 생각해요.',
+    left: [ { id: 'a', text: '가로등·도로가 고장 남' }, { id: 'b', text: '불이 났음' }, { id: 'c', text: '도둑이 들었음' } ],
+    right: [ { id: 'x', text: '시청·구청(주민센터)' }, { id: 'y', text: '소방서' }, { id: 'z', text: '경찰서' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l3-q2', stage: 3, order: 2, type: 'connect',
+    prompt: '지역 문제를 도움받을 기관으로 끌어다 연결하세요.', hint: '문제를 맡은 곳을 떠올려요.',
+    left: [ { id: 'a', text: '전염병이 돌아 방역이 필요함' }, { id: 'b', text: '교통사고가 났음' }, { id: 'c', text: '공원 시설을 고쳐야 함' } ],
+    right: [ { id: 'x', text: '보건소' }, { id: 'y', text: '경찰서' }, { id: 'z', text: '시청·구청' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l3-q3', stage: 3, order: 3, type: 'connect',
+    prompt: '위급한 상황을 알맞은 신고 번호로 끌어다 연결하세요.', hint: '급할 때 누르는 번호를 떠올려요.',
+    left: [ { id: 'a', text: '불이 나거나 사람이 다쳤어요' }, { id: 'b', text: '수상한 사람이 따라와요' }, { id: 'c', text: '길·시설이 불편해 민원을 넣어요' } ],
+    right: [ { id: 'x', text: '119' }, { id: 'y', text: '112' }, { id: 'z', text: '110' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l3-q4', stage: 3, order: 4, type: 'connect',
+    prompt: '지역 문제를 해결에 참여하는 대상으로 끌어다 연결하세요.', hint: '누가 무슨 일을 하는지 생각해요.',
+    left: [ { id: 'a', text: '지역 살림을 이끄는 사람' }, { id: 'b', text: '조례(규칙)를 정하는 곳' }, { id: 'c', text: '문제 해결에 참여하는 사람' } ],
+    right: [ { id: 'x', text: '시장·구청장' }, { id: 'y', text: '지방 의회' }, { id: 'z', text: '지역 주민' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l3-q5', stage: 3, order: 5, type: 'connect',
+    prompt: '문제를 알리는 방법을 알맞은 곳으로 끌어다 연결하세요.', hint: '어디에 어떻게 알리는지 생각해요.',
+    left: [ { id: 'a', text: '도로 파손 신고' }, { id: 'b', text: '민원 상담 전화' }, { id: 'c', text: '주민 의견 게시' } ],
+    right: [ { id: 'x', text: '시청 누리집(홈페이지)에 신고해요' }, { id: 'y', text: '정부 민원 전화 110에 연락해요' }, { id: 'z', text: '주민센터 게시판에 의견을 올려요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+
+  // ───────── 4단계 : 해결 절차 배열 (order) ─────────
+  { id: 'l4-q1', stage: 4, order: 1, type: 'order',
+    prompt: '지역 문제를 민주적으로 해결하는 순서대로 선택하세요.', hint: '확인 → 원인 → 방안 → 결정 → 실천이에요.',
+    cards: [ { id: 'c1', text: '문제 확인하기' }, { id: 'c2', text: '문제의 원인 파악하기' }, { id: 'c3', text: '해결 방안 탐색하기' }, { id: 'c4', text: '해결 방안 결정하기' }, { id: 'c5', text: '실천하기' } ],
+    correctSequence: ['c1', 'c2', 'c3', 'c4', 'c5'] },
+  { id: 'l4-q2', stage: 4, order: 2, type: 'order',
+    prompt: '주민이 힘을 모아 문제를 해결하는 순서대로 선택하세요.', hint: '먼저 무엇을 살펴야 할까요?',
+    cards: [ { id: 'c1', text: '어떤 문제인지 알아보기' }, { id: 'c2', text: '주민 의견 모으기' }, { id: 'c3', text: '공공기관에 건의하기' }, { id: 'c4', text: '함께 실천하고 살펴보기' } ],
+    correctSequence: ['c1', 'c2', 'c3', 'c4'] },
+  { id: 'l4-q3', stage: 4, order: 3, type: 'order',
+    prompt: '주민 회의로 결정하는 순서대로 선택하세요.', hint: '의견을 나누고 다수결로 정해요.',
+    cards: [ { id: 'c1', text: '회의 주제(문제) 정하기' }, { id: 'c2', text: '여러 의견 내기' }, { id: 'c3', text: '의견의 좋은 점·나쁜 점 따지기' }, { id: 'c4', text: '다수결로 결정하기' } ],
+    correctSequence: ['c1', 'c2', 'c3', 'c4'] },
+  { id: 'l4-q4', stage: 4, order: 4, type: 'order',
+    prompt: '쓰레기 문제를 해결하는 순서대로 선택하세요.', hint: '조사 → 원인 → 건의 → 실천이에요.',
+    cards: [ { id: 'c1', text: '쓰레기가 많은 곳 조사하기' }, { id: 'c2', text: '왜 그런지 원인 알아보기' }, { id: 'c3', text: '분리수거함 설치 건의하기' }, { id: 'c4', text: '주민과 함께 청소하기' } ],
+    correctSequence: ['c1', 'c2', 'c3', 'c4'] },
+  { id: 'l4-q5', stage: 4, order: 5, type: 'order',
+    prompt: '학교 앞 안전 문제를 해결하는 순서대로 선택하세요.', hint: '위험을 찾아 알리는 것부터예요.',
+    cards: [ { id: 'c1', text: '위험한 곳 조사하기' }, { id: 'c2', text: '주민·학생 의견 모으기' }, { id: 'c3', text: '구청에 안전시설 건의하기' }, { id: 'c4', text: '설치 후 규칙 지키기' } ],
+    correctSequence: ['c1', 'c2', 'c3', 'c4'] },
+
+  // ───────── 5단계 : 주민 참여 연결 (connect) ─────────
+  { id: 'l5-q1', stage: 5, order: 1, type: 'connect',
+    prompt: '주민 참여 방법을 알맞은 설명으로 끌어다 연결하세요.', hint: '주민이 뜻을 모으는 방법이에요.',
+    left: [ { id: 'a', text: '주민 회의' }, { id: 'b', text: '서명 운동' }, { id: 'c', text: '공청회' } ],
+    right: [ { id: 'x', text: '주민이 모여 의견을 나눠요' }, { id: 'y', text: '많은 사람의 동의를 모아요' }, { id: 'z', text: '전문가·주민이 공개로 의견을 들어요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l5-q2', stage: 5, order: 2, type: 'connect',
+    prompt: '주민 참여 방법을 알맞은 설명으로 끌어다 연결하세요.', hint: '어디에 어떻게 참여하는지 생각해요.',
+    left: [ { id: 'a', text: '민원 제기' }, { id: 'b', text: '주민 투표' }, { id: 'c', text: '캠페인' } ],
+    right: [ { id: 'x', text: '시청·구청에 해결을 요청해요' }, { id: 'y', text: '주민이 직접 투표로 결정해요' }, { id: 'z', text: '알림 활동으로 참여를 이끌어요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l5-q3', stage: 5, order: 3, type: 'connect',
+    prompt: '민주적 결정에서 지켜야 할 것을 설명으로 끌어다 연결하세요.', hint: '많은 사람과 적은 사람의 뜻을 생각해요.',
+    left: [ { id: 'a', text: '다수결' }, { id: 'b', text: '소수 의견 존중' }, { id: 'c', text: '대화와 타협' } ],
+    right: [ { id: 'x', text: '더 많은 사람이 원하는 대로 정해요' }, { id: 'y', text: '적은 편의 의견도 귀 기울여요' }, { id: 'z', text: '서로 양보해 합의를 찾아요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l5-q4', stage: 5, order: 4, type: 'connect',
+    prompt: '바람직한 참여 태도와 그렇지 않은 태도를 설명으로 끌어다 연결하세요.', hint: '민주 시민의 태도를 생각해요.',
+    left: [ { id: 'a', text: '바람직한 태도' }, { id: 'b', text: '바람직하지 않은 태도' }, { id: 'c', text: '함께하는 태도' } ],
+    right: [ { id: 'x', text: '차분히 의견을 말하고 결정을 따라요' }, { id: 'y', text: '내 뜻만 고집하며 화를 내요' }, { id: 'z', text: '이웃과 힘을 모아 실천해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+  { id: 'l5-q5', stage: 5, order: 5, type: 'connect',
+    prompt: '지역 일을 맡은 대상을 하는 일로 끌어다 연결하세요.', hint: '누가 무슨 일을 하는지 생각해요.',
+    left: [ { id: 'a', text: '시·도지사, 시장·구청장' }, { id: 'b', text: '지방 의회' }, { id: 'c', text: '주민' } ],
+    right: [ { id: 'x', text: '지역 살림을 계획하고 이끌어요' }, { id: 'y', text: '지역의 규칙(조례)을 만들어요' }, { id: 'z', text: '의견을 내고 참여해요' } ],
+    answers: { a: 'x', b: 'y', c: 'z' } },
+];
+
+const STAGE_PASS_THRESHOLD = 4;
+const TOTAL_PASS_THRESHOLD = 20;
+const getQuestionsByStage = (stage) => QUESTIONS.filter((q) => q.stage === Number(stage));
+const getQuestionById = (id) => QUESTIONS.find((q) => q.id === id);
+
+module.exports = { QUESTIONS, STAGE_PASS_THRESHOLD, TOTAL_PASS_THRESHOLD, getQuestionsByStage, getQuestionById };

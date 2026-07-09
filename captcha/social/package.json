@@ -1,0 +1,25 @@
+{
+  "name": "catchap-social",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CatChap 사회(社會) 캡챠 10종 — 프론트 + 백엔드(Express) + DB(MySQL)",
+  "scripts": {
+    "gen": "node captcha/_shared/generate.js",
+    "validate": "node captcha/_shared/validate.js",
+    "start:01": "node captcha/01-map-symbol-find/backend/server.js",
+    "start:02": "node captcha/02-direction-compass/backend/server.js",
+    "start:03": "node captcha/03-public-office-match/backend/server.js",
+    "start:04": "node captcha/04-cultural-heritage-match/backend/server.js",
+    "start:05": "node captcha/05-rural-city-sort/backend/server.js",
+    "start:06": "node captcha/06-transport-timeline/backend/server.js",
+    "start:07": "node captcha/07-local-festival-select/backend/server.js",
+    "start:08": "node captcha/08-community-problem-solve/backend/server.js",
+    "start:09": "node captcha/09-digital-citizenship-solve/backend/server.js",
+    "start:10": "node captcha/10-cpr-aed-safety-sequence/backend/server.js",
+    "db:init": "mysql -u root -p < captcha/_shared/db-init-all.sql"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  }
+}

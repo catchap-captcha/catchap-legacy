@@ -4924,5 +4924,1570 @@
       0,
       6
     ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-001",
+    "difficulty": "easy",
+    "level": 1,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "무늬",
+        "hint": "옷감이나 물건에 있는 그림이나 색깔 모양",
+        "choseong": "ㅁㄴ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "무지개",
+        "hint": "비가 온 뒤 하늘에 나타나는 일곱 빛깔 다리",
+        "choseong": "ㅁㅈㄱ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "개나리",
+        "hint": "봄에 노랗게 피는 꽃",
+        "choseong": "ㄱㄴㄹ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "더위",
+        "hint": "여름철에 몸이 뜨겁고 땀이 나는 느낌",
+        "choseong": "ㄷㅇ"
+      }
+    ],
+    "decoys": [
+      "해",
+      "서",
+      "중",
+      "기",
+      "억"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-002",
+    "difficulty": "easy",
+    "level": 1,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "고향",
+        "hint": "태어나서 자란 곳",
+        "choseong": "ㄱㅎ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "고양이",
+        "hint": "야옹 하고 우는, 사람과 함께 사는 동물",
+        "choseong": "ㄱㅇㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기러기",
+        "hint": "가을에 무리 지어 날아가는 큰 새",
+        "choseong": "ㄱㄹㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기분",
+        "hint": "마음이 편하거나 불편한 상태",
+        "choseong": "ㄱㅂ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "지",
+      "나",
+      "코"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-003",
+    "difficulty": "easy",
+    "level": 1,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "무게",
+        "hint": "물건이 얼마나 무거운지를 나타내는 정도",
+        "choseong": "ㅁㄱ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "무궁화",
+        "hint": "우리나라를 상징하는 나라꽃",
+        "choseong": "ㅁㄱㅎ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "화요일",
+        "hint": "월요일 다음 날",
+        "choseong": "ㅎㅇㅇ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "일기장",
+        "hint": "하루 동안 있었던 일을 적는 공책",
+        "choseong": "ㅇㄱㅈ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "장미",
+        "hint": "가시가 있고 향기로운 빨간 꽃",
+        "choseong": "ㅈㅁ"
+      }
+    ],
+    "decoys": [
+      "해",
+      "서",
+      "중",
+      "억",
+      "고"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-004",
+    "difficulty": "easy",
+    "level": 1,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "너희",
+        "hint": "듣는 사람이 여러 명일 때 부르는 말",
+        "choseong": "ㄴㅎ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "너구리",
+        "hint": "얼굴에 검은 무늬가 있고 밤에 다니는 동물",
+        "choseong": "ㄴㄱㄹ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "더하기",
+        "hint": "수를 서로 합치는 셈",
+        "choseong": "ㄷㅎㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기차",
+        "hint": "철길 위를 달리는 큰 탈것",
+        "choseong": "ㄱㅊ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "지",
+      "나",
+      "개"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-005",
+    "difficulty": "easy",
+    "level": 1,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "바다",
+        "hint": "넓고 짠물이 있는 곳",
+        "choseong": "ㅂㄷ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "바나나",
+        "hint": "길고 노란 껍질을 벗겨 먹는 과일",
+        "choseong": "ㅂㄴㄴ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "나들이",
+        "hint": "가까운 곳에 잠깐 다녀오는 일",
+        "choseong": "ㄴㄷㅇ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기와",
+        "hint": "지붕을 덮는 얇고 넓은 흙 조각",
+        "choseong": "ㄱㅇ"
+      }
+    ],
+    "decoys": [
+      "해",
+      "서",
+      "중",
+      "억",
+      "코"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-006",
+    "difficulty": "easy",
+    "level": 2,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "자석",
+        "hint": "철을 끌어당기는 물건",
+        "choseong": "ㅈㅅ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "자전거",
+        "hint": "두 바퀴로 페달을 밟아 타는 탈것",
+        "choseong": "ㅈㅈㄱ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "거미줄",
+        "hint": "거미가 만들어 놓은 줄",
+        "choseong": "ㄱㅁㅈ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "줄넘기",
+        "hint": "줄을 넘으면서 하는 운동",
+        "choseong": "ㅈㄴㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기린",
+        "hint": "목이 아주 긴 동물",
+        "choseong": "ㄱㄹ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "코",
+      "더"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-007",
+    "difficulty": "easy",
+    "level": 2,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "달력",
+        "hint": "날짜와 요일을 볼 수 있게 만든 것",
+        "choseong": "ㄷㄹ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "달팽이",
+        "hint": "느릿느릿 기어 다니는, 껍데기가 있는 동물",
+        "choseong": "ㄷㅍㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이슬비",
+        "hint": "가늘고 약하게 내리는 비",
+        "choseong": "ㅇㅅㅂ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "비둘기",
+        "hint": "도시에서 흔히 볼 수 있는 회색 새",
+        "choseong": "ㅂㄷㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기타",
+        "hint": "줄을 퉁겨서 소리를 내는 악기",
+        "choseong": "ㄱㅌ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "코",
+      "서"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-008",
+    "difficulty": "easy",
+    "level": 2,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "개미",
+        "hint": "줄지어 다니며 열심히 일하는 작은 곤충",
+        "choseong": "ㄱㅁ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "개구리",
+        "hint": "올챙이가 자라서 되는, 폴짝폴짝 뛰는 동물",
+        "choseong": "ㄱㄱㄹ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "더듬이",
+        "hint": "곤충의 머리에 있는 길고 얇은 감각 기관",
+        "choseong": "ㄷㄷㅇ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "이불",
+        "hint": "잠잘 때 몸을 덮는 물건",
+        "choseong": "ㅇㅂ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "해",
+      "중"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-009",
+    "difficulty": "medium",
+    "level": 2,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "원래",
+        "hint": "처음부터, 본디부터",
+        "choseong": "ㅇㄹ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "원숭이",
+        "hint": "나무를 잘 타고 사람과 닮은 동물",
+        "choseong": "ㅇㅅㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기지개",
+        "hint": "몸을 쭉 펴는 동작",
+        "choseong": "ㄱㅈㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "개천",
+        "hint": "물이 흐르는 작은 물줄기",
+        "choseong": "ㄱㅊ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "코",
+      "더"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-010",
+    "difficulty": "medium",
+    "level": 2,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "송편",
+        "hint": "추석에 빚어 먹는 반달 모양 떡",
+        "choseong": "ㅅㅍ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "송아지",
+        "hint": "소의 새끼",
+        "choseong": "ㅅㅇㅈ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "지렁이",
+        "hint": "땅속에 살며 꿈틀꿈틀 움직이는 동물",
+        "choseong": "ㅈㄹㅇ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기억",
+        "hint": "지나간 일을 잊지 않고 마음에 담아 두는 것",
+        "choseong": "ㄱㅇ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "코",
+      "더"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-011",
+    "difficulty": "medium",
+    "level": 3,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "병원",
+        "hint": "아프거나 다쳤을 때 치료를 받으러 가는 곳",
+        "choseong": "ㅂㅇ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "병아리",
+        "hint": "닭의 새끼",
+        "choseong": "ㅂㅇㄹ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "더하기",
+        "hint": "수를 서로 합치는 셈",
+        "choseong": "ㄷㅎㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "기쁨",
+        "hint": "즐겁고 좋은 마음",
+        "choseong": "ㄱㅃ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "해",
+      "서"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-012",
+    "difficulty": "medium",
+    "level": 3,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "코피",
+        "hint": "코에서 나는 피",
+        "choseong": "ㅋㅍ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "코끼리",
+        "hint": "긴 코와 큰 귀를 가진 동물",
+        "choseong": "ㅋㄲㄹ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "리어카",
+        "hint": "사람이 끌고 다니는 손수레",
+        "choseong": "ㄹㅇㅋ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "카메라",
+        "hint": "사진이나 영상을 찍는 기계",
+        "choseong": "ㅋㅁㄹ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "라면",
+        "hint": "물에 끓여 먹는 꼬불꼬불한 면 음식",
+        "choseong": "ㄹㅁ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "해",
+      "서"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-013",
+    "difficulty": "medium",
+    "level": 3,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "다리",
+        "hint": "몸을 지탱하고 걷는 데 쓰는 부분, 또는 강을 건너는 시설",
+        "choseong": "ㄷㄹ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "다람쥐",
+        "hint": "나무를 잘 타고 도토리를 좋아하는 작은 동물",
+        "choseong": "ㄷㄹㅈ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "쥐꼬리",
+        "hint": "아주 적거나 짧은 것을 빗대어 이르는 말",
+        "choseong": "ㅈㄲㄹ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "더위",
+        "hint": "여름철에 몸이 뜨겁고 땀이 나는 느낌",
+        "choseong": "ㄷㅇ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "해",
+      "서"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-014",
+    "difficulty": "medium",
+    "level": 3,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "거울",
+        "hint": "얼굴이나 모습을 비추어 보는 물건",
+        "choseong": "ㄱㅇ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "거북이",
+        "hint": "등에 딱딱한 껍데기가 있고 느리게 움직이는 동물",
+        "choseong": "ㄱㅂㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기와집",
+        "hint": "기와로 지붕을 덮은 옛날식 집",
+        "choseong": "ㄱㅇㅈ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "집중",
+        "hint": "한 가지 일에 정신을 모으는 것",
+        "choseong": "ㅈㅈ"
+      }
+    ],
+    "decoys": [
+      "무",
+      "늬",
+      "나",
+      "해",
+      "코"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-015",
+    "difficulty": "medium",
+    "level": 3,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "장화",
+        "hint": "비 오는 날 신는, 무릎까지 오는 신발",
+        "choseong": "ㅈㅎ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "장난감",
+        "hint": "아이들이 가지고 노는 물건",
+        "choseong": "ㅈㄴㄱ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "감나무",
+        "hint": "가을에 감이 열리는 나무",
+        "choseong": "ㄱㄴㅁ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "무지개",
+        "hint": "비가 온 뒤 하늘에 나타나는 일곱 빛깔 다리",
+        "choseong": "ㅁㅈㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "개미",
+        "hint": "줄지어 다니며 열심히 일하는 작은 곤충",
+        "choseong": "ㄱㅁ"
+      }
+    ],
+    "decoys": [
+      "해",
+      "서",
+      "억",
+      "코",
+      "더"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-016",
+    "difficulty": "medium",
+    "level": 4,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "부모",
+        "hint": "나를 낳고 길러 주신 아버지와 어머니",
+        "choseong": "ㅂㅁ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "부엉이",
+        "hint": "밤에 활동하며 둥근 눈이 큰 새",
+        "choseong": "ㅂㅇㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기차역",
+        "hint": "기차를 타고 내리는 곳",
+        "choseong": "ㄱㅊㅇ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "역할",
+        "hint": "맡아서 하는 일이나 구실",
+        "choseong": "ㅇㅎ"
+      }
+    ],
+    "decoys": [
+      "아",
+      "엄",
+      "가",
+      "올",
+      "매",
+      "동",
+      "책",
+      "임"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-017",
+    "difficulty": "medium",
+    "level": 4,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "토끼",
+        "hint": "긴 귀와 짧은 꼬리를 가진, 잘 뛰는 동물",
+        "choseong": "ㅌㄲ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "토마토",
+        "hint": "빨갛고 동그란 채소이자 과일",
+        "choseong": "ㅌㅁㅌ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "토요일",
+        "hint": "금요일과 일요일 사이의 요일",
+        "choseong": "ㅌㅇㅇ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "일기장",
+        "hint": "하루 동안 있었던 일을 적는 공책",
+        "choseong": "ㅇㄱㅈ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "장난",
+        "hint": "짓궂게 하는 재미있는 행동",
+        "choseong": "ㅈㄴ"
+      }
+    ],
+    "decoys": [
+      "여",
+      "사",
+      "채",
+      "과",
+      "금",
+      "주",
+      "공",
+      "감"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-018",
+    "difficulty": "hard",
+    "level": 4,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "선물",
+        "hint": "축하하거나 고마운 마음으로 주는 물건",
+        "choseong": "ㅅㅁ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "선인장",
+        "hint": "가시가 많고 물을 적게 줘도 자라는 식물",
+        "choseong": "ㅅㅇㅈ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "장난감",
+        "hint": "아이들이 가지고 노는 물건",
+        "choseong": "ㅈㄴㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "감나무",
+        "hint": "가을에 감이 열리는 나무",
+        "choseong": "ㄱㄴㅁ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "무늬",
+        "hint": "옷감이나 물건에 있는 그림이나 색깔 모양",
+        "choseong": "ㅁㄴ"
+      }
+    ],
+    "decoys": [
+      "답",
+      "축",
+      "식",
+      "가",
+      "블",
+      "사",
+      "목",
+      "색"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-019",
+    "difficulty": "hard",
+    "level": 4,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "솔잎",
+        "hint": "소나무의 뾰족한 잎",
+        "choseong": "ㅅㅇ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "솔방울",
+        "hint": "소나무에 열리는 둥근 열매",
+        "choseong": "ㅅㅂㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "울타리",
+        "hint": "집이나 마당의 경계를 표시하는 담",
+        "choseong": "ㅇㅌㄹ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "더위",
+        "hint": "여름철에 몸이 뜨겁고 땀이 나는 느낌",
+        "choseong": "ㄷㅇ"
+      }
+    ],
+    "decoys": [
+      "나",
+      "도",
+      "열",
+      "담",
+      "대",
+      "피",
+      "추",
+      "땀"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-020",
+    "difficulty": "hard",
+    "level": 4,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "옥상",
+        "hint": "건물의 맨 꼭대기 평평한 지붕 위",
+        "choseong": "ㅇㅅ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "옥수수",
+        "hint": "노란 알이 촘촘히 박힌, 여름에 먹는 곡식",
+        "choseong": "ㅇㅅㅅ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "수영장",
+        "hint": "물속에서 헤엄치며 노는 곳",
+        "choseong": "ㅅㅇㅈ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "장난감",
+        "hint": "아이들이 가지고 노는 물건",
+        "choseong": "ㅈㄴㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "감기",
+        "hint": "콧물이 나고 열이 나는 흔한 병",
+        "choseong": "ㄱㄱ"
+      }
+    ],
+    "decoys": [
+      "지",
+      "베",
+      "고",
+      "바",
+      "워",
+      "인",
+      "블",
+      "침"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-021",
+    "difficulty": "hard",
+    "level": 5,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "지도",
+        "hint": "땅의 모습을 줄여서 그린 그림",
+        "choseong": "ㅈㄷ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "지우개",
+        "hint": "글씨나 그림을 지울 때 쓰는 물건",
+        "choseong": "ㅈㅇㄱ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "개나리",
+        "hint": "봄에 노랗게 피는 꽃",
+        "choseong": "ㄱㄴㄹ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "리코더",
+        "hint": "음악 시간에 부는 관악기",
+        "choseong": "ㄹㅋㄷ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "더위",
+        "hint": "여름철에 몸이 뜨겁고 땀이 나는 느낌",
+        "choseong": "ㄷㅇ"
+      }
+    ],
+    "decoys": [
+      "구",
+      "반",
+      "연",
+      "볼",
+      "진",
+      "벚",
+      "피",
+      "단",
+      "추",
+      "장"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-022",
+    "difficulty": "hard",
+    "level": 5,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "색깔",
+        "hint": "빨강, 노랑, 파랑처럼 눈에 보이는 빛깔",
+        "choseong": "ㅅㄲ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "색연필",
+        "hint": "여러 색깔로 그림을 그리는 연필",
+        "choseong": "ㅅㅇㅍ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "필기구",
+        "hint": "글씨를 쓰는 데 필요한 물건들",
+        "choseong": "ㅍㄱㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "구급차",
+        "hint": "다치거나 아픈 사람을 빠르게 병원으로 옮기는 차",
+        "choseong": "ㄱㄱㅊ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "차례",
+        "hint": "순서대로 돌아가면서 하는 것",
+        "choseong": "ㅊㄹ"
+      }
+    ],
+    "decoys": [
+      "빛",
+      "물",
+      "크",
+      "사",
+      "지",
+      "볼",
+      "소",
+      "경",
+      "순",
+      "번"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-023",
+    "difficulty": "hard",
+    "level": 5,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "우산",
+        "hint": "비가 올 때 펴서 쓰는 물건",
+        "choseong": "ㅇㅅ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "우체통",
+        "hint": "편지를 넣는 통",
+        "choseong": "ㅇㅊㅌ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "통나무",
+        "hint": "베어 낸 통째로의 나무",
+        "choseong": "ㅌㄴㅁ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "무지개",
+        "hint": "비가 온 뒤 하늘에 나타나는 일곱 빛깔 다리",
+        "choseong": "ㅁㅈㄱ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "개미",
+        "hint": "줄지어 다니며 열심히 일하는 작은 곤충",
+        "choseong": "ㄱㅁ"
+      }
+    ],
+    "decoys": [
+      "비",
+      "장",
+      "편",
+      "택",
+      "가",
+      "작",
+      "하",
+      "빛",
+      "벌",
+      "거"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-024",
+    "difficulty": "hard",
+    "level": 5,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "떡국",
+        "hint": "설날에 먹는, 가래떡을 썰어 넣은 국",
+        "choseong": "ㄸㄱ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "떡볶이",
+        "hint": "떡을 고추장 양념에 볶은 매콤한 간식",
+        "choseong": "ㄸㅂㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기와집",
+        "hint": "기와로 지붕을 덮은 옛날식 집",
+        "choseong": "ㄱㅇㅈ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "집안",
+        "hint": "가족이 사는 공간, 또는 가족 전체",
+        "choseong": "ㅈㅇ"
+      }
+    ],
+    "decoys": [
+      "만",
+      "설",
+      "라",
+      "순",
+      "동",
+      "전",
+      "한",
+      "초",
+      "가",
+      "식"
+    ]
+  },
+  {
+    "type": "crossword",
+    "id": "KOR4-CROSS-025",
+    "difficulty": "hard",
+    "level": 5,
+    "size": 5,
+    "words": [
+      {
+        "number": 1,
+        "direction": "across",
+        "row": 0,
+        "col": 0,
+        "answer": "눈물",
+        "hint": "슬프거나 아플 때 눈에서 나오는 물",
+        "choseong": "ㄴㅁ"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "row": 0,
+        "col": 0,
+        "answer": "눈덩이",
+        "hint": "눈을 뭉쳐서 만든 덩어리",
+        "choseong": "ㄴㄷㅇ"
+      },
+      {
+        "number": 2,
+        "direction": "across",
+        "row": 2,
+        "col": 0,
+        "answer": "이야기",
+        "hint": "누군가에게 들려주는 말이나 사연",
+        "choseong": "ㅇㅇㄱ"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "row": 2,
+        "col": 2,
+        "answer": "기차역",
+        "hint": "기차를 타고 내리는 곳",
+        "choseong": "ㄱㅊㅇ"
+      },
+      {
+        "number": 4,
+        "direction": "across",
+        "row": 4,
+        "col": 2,
+        "answer": "역할",
+        "hint": "맡아서 하는 일이나 구실",
+        "choseong": "ㅇㅎ"
+      }
+    ],
+    "decoys": [
+      "슬",
+      "울",
+      "사",
+      "얼",
+      "동",
+      "소",
+      "버",
+      "공",
+      "임",
+      "연"
+    ]
   }
 ]

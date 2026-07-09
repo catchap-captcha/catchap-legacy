@@ -17,6 +17,7 @@ import ExpressionCaptcha from "../components/captcha/ExpressionCaptcha";
 import SentenceStructureCaptcha from "../components/captcha/SentenceStructureCaptcha";
 import MainIdeaCaptcha from "../components/captcha/MainIdeaCaptcha";
 import PunctuationCaptcha from "../components/captcha/PunctuationCaptcha";
+import CrosswordCaptcha from "../components/captcha/CrosswordCaptcha";
 import type { CaptchaHandlers, CaptchaProblem } from "../components/captcha/types";
 
 type AnyCaptchaComponent = ComponentType<{ problem: CaptchaProblem } & CaptchaHandlers>;
@@ -34,6 +35,7 @@ export const CAPTCHA_COMPONENTS: Record<CaptchaProblem["type"], AnyCaptchaCompon
   sentence_structure: SentenceStructureCaptcha,
   main_idea: MainIdeaCaptcha,
   punctuation: PunctuationCaptcha,
+  crossword: CrosswordCaptcha,
 } as unknown as Record<CaptchaProblem["type"], AnyCaptchaComponent>;
 
 export const CAPTCHA_TYPE_LABELS: Record<CaptchaProblem["type"], string> = {
@@ -49,4 +51,5 @@ export const CAPTCHA_TYPE_LABELS: Record<CaptchaProblem["type"], string> = {
   sentence_structure: "문장의 짜임",
   main_idea: "중심 생각·요약",
   punctuation: "문장 부호 바로 쓰기",
+  crossword: "십자말풀이",
 };

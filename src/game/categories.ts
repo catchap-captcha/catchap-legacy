@@ -12,6 +12,7 @@ import {
   SentenceStructureCaptcha,
   MainIdeaCaptcha,
   PunctuationCaptcha,
+  CrosswordCaptcha,
 } from "../components/captcha";
 import type {
   CaptchaHandlers,
@@ -28,6 +29,7 @@ import type {
   SentenceStructureProblem,
   MainIdeaProblem,
   PunctuationProblem,
+  CrosswordProblem,
 } from "../components/captcha/types";
 import {
   sentenceOrderPool,
@@ -42,6 +44,7 @@ import {
   sentenceStructurePool,
   mainIdeaPool,
   punctuationPool,
+  crosswordPool,
 } from "../data/problemPools";
 
 export interface CategoryConfig<P extends CaptchaProblem = CaptchaProblem> {
@@ -208,5 +211,16 @@ export const categories: CategoryConfig[] = [
     subtitle: "부호가 들어갈 자리를 모두 찾아 탭해요",
     pool: punctuationPool,
     Component: PunctuationCaptcha,
+  }),
+  defineCategory<CrosswordProblem>({
+    key: "crossword",
+    path: "/crossword",
+    tagLabel: "십자말풀이",
+    emoji: "🔠",
+    title: "4학년 · 십자말풀이",
+    shortTitle: "십자말풀이",
+    subtitle: "빈칸을 눌러 낱말을 채워요",
+    pool: crosswordPool,
+    Component: CrosswordCaptcha,
   }),
 ];

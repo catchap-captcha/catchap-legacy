@@ -29,6 +29,7 @@ const POOL_TO_FILE = {
   sentenceStructurePool: "sentence_structure",
   mainIdeaPool: "main_idea",
   punctuationPool: "punctuation",
+  crosswordPool: "crossword",
 };
 
 await mkdir(OUT_DIR, { recursive: true });

@@ -11,4 +11,5 @@ export { default as ExpressionCaptcha } from "./ExpressionCaptcha";
 export { default as SentenceStructureCaptcha } from "./SentenceStructureCaptcha";
 export { default as MainIdeaCaptcha } from "./MainIdeaCaptcha";
 export { default as PunctuationCaptcha } from "./PunctuationCaptcha";
+export { default as CrosswordCaptcha } from "./CrosswordCaptcha";
 export type * from "./types";

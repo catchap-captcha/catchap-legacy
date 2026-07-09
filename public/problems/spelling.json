@@ -1,0 +1,377 @@
+[
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-001",
+    "difficulty": "easy",
+    "before": "우리 가족은 여행을 떠나기까지 ",
+    "after": "이 남아서 손가락으로 꼽아 보았다.",
+    "tiles": [
+      "며칠"
+    ],
+    "decoys": [
+      "몇일",
+      "몇 일",
+      "몇칠"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-002",
+    "difficulty": "easy",
+    "before": "나도 이유를 모르겠지만, 오늘은 ",
+    "after": " 기분이 좋다.",
+    "tiles": [
+      "왠지"
+    ],
+    "decoys": [
+      "웬지",
+      "웬찌",
+      "왠찌"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-003",
+    "difficulty": "easy",
+    "before": "야, 이게 ",
+    "after": "이니? 정말 오랜만이다!",
+    "tiles": [
+      "웬일"
+    ],
+    "decoys": [
+      "왠일",
+      "왠닐",
+      "웬닐"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-004",
+    "difficulty": "easy",
+    "before": "이제 준비가 다 ",
+    "after": ".",
+    "tiles": [
+      "됐다"
+    ],
+    "decoys": [
+      "됬다",
+      "됫다",
+      "됐따"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-005",
+    "difficulty": "easy",
+    "before": "선생님, 내일 학교에서 ",
+    "after": ".",
+    "tiles": [
+      "봬요"
+    ],
+    "decoys": [
+      "뵈요",
+      "뵈여요",
+      "봬여요"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-006",
+    "difficulty": "easy",
+    "before": "이건 제 우산이 아니라 동생 ",
+    "after": ".",
+    "tiles": [
+      "거예요"
+    ],
+    "decoys": [
+      "거에요",
+      "게예요",
+      "그예요"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-007",
+    "difficulty": "easy",
+    "before": "그 말을 듣고 나는 정말 ",
+    "after": ".",
+    "tiles": [
+      "어이없었다"
+    ],
+    "decoys": [
+      "어의없었다",
+      "어이 없었다",
+      "어리없었다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-008",
+    "difficulty": "easy",
+    "before": "자세한 이야기는 나중에 하고, ",
+    "after": " 우리는 무사히 도착했다.",
+    "tiles": [
+      "아무튼"
+    ],
+    "decoys": [
+      "아뭏튼",
+      "아무턴",
+      "아뭇튼"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-009",
+    "difficulty": "medium",
+    "before": "나는 하기 싫어서 숙제를 아예 ",
+    "after": ".",
+    "tiles": [
+      "안 했다"
+    ],
+    "decoys": [
+      "않았다",
+      "못했다",
+      "덜했다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-010",
+    "difficulty": "medium",
+    "before": "선생님께서 확인해 보니 그 이야기는 사실과 ",
+    "after": ".",
+    "tiles": [
+      "다르지 않았다"
+    ],
+    "decoys": [
+      "다르지 안았다",
+      "다르지 못했다",
+      "다르지 덜했다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-011",
+    "difficulty": "medium",
+    "before": "너 지금 바쁘면 ",
+    "after": " 다시 전화할게.",
+    "tiles": [
+      "이따가"
+    ],
+    "decoys": [
+      "있다가",
+      "잇다가",
+      "이따 가"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-012",
+    "difficulty": "medium",
+    "before": "약을 먹고 감기가 다 ",
+    "after": ".",
+    "tiles": [
+      "나았다"
+    ],
+    "decoys": [
+      "낫았다",
+      "낳았다",
+      "났다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-013",
+    "difficulty": "medium",
+    "before": "시험 공부를 하느라 밤을 ",
+    "after": ".",
+    "tiles": [
+      "새웠다"
+    ],
+    "decoys": [
+      "세웠다",
+      "새았다",
+      "새왔다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-014",
+    "difficulty": "medium",
+    "before": "쌍둥이인데도 성격이 서로 ",
+    "after": ".",
+    "tiles": [
+      "다르다"
+    ],
+    "decoys": [
+      "틀리다",
+      "틀르다",
+      "달르다"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-015",
+    "difficulty": "medium",
+    "before": "시험을 망쳤어. 나 이제 ",
+    "after": "?",
+    "tiles": [
+      "어떡해"
+    ],
+    "decoys": [
+      "어떻게",
+      "어떻해",
+      "어쩌케"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-016",
+    "difficulty": "medium",
+    "before": "제가 내일까지 숙제를 다 끝내 놓",
+    "after": ".",
+    "tiles": [
+      "을게요"
+    ],
+    "decoys": [
+      "을께요",
+      "을게여",
+      "을께여"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-017",
+    "difficulty": "medium",
+    "before": "",
+    "after": " 오늘 안에 이 일을 끝내자.",
+    "tiles": [
+      "웬만하면"
+    ],
+    "decoys": [
+      "왠만하면",
+      "웬만하믄",
+      "왠만하믄"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-018",
+    "difficulty": "hard",
+    "before": "이건 제 책이",
+    "after": ", 저건 동생 책이에요.",
+    "tiles": [
+      "고요"
+    ],
+    "decoys": [
+      "구요",
+      "고여",
+      "구여"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-019",
+    "difficulty": "hard",
+    "before": "이번 시험은 우리 반을 ",
+    "after": " 나만 백 점을 받았다.",
+    "tiles": [
+      "통틀어"
+    ],
+    "decoys": [
+      "통털어",
+      "통틀려",
+      "통털려"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-020",
+    "difficulty": "hard",
+    "before": "옷을 ",
+    "after": " 그대로 물에 들어갔다.",
+    "tiles": [
+      "입은 채"
+    ],
+    "decoys": [
+      "입은 체",
+      "입은 듯",
+      "입은 것"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-021",
+    "difficulty": "hard",
+    "before": "나는 시간이 많이 남아서 그 문제를 ",
+    "after": " 생각해 보았다.",
+    "tiles": [
+      "곰곰이"
+    ],
+    "decoys": [
+      "곰곰히",
+      "곱곰이",
+      "곰곱이"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-022",
+    "difficulty": "hard",
+    "before": "먼지가 하나도 없도록 방을 ",
+    "after": " 청소했다.",
+    "tiles": [
+      "깨끗이"
+    ],
+    "decoys": [
+      "깨끗히",
+      "깨끋이",
+      "깨긋이"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-023",
+    "difficulty": "hard",
+    "before": "그는 느긋하게 준비했지만 워낙 ",
+    "after": " 학교에 도착해서 아무도 없었다.",
+    "tiles": [
+      "일찍이"
+    ],
+    "decoys": [
+      "일찌기",
+      "일찍히",
+      "일찍기"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-024",
+    "difficulty": "hard",
+    "before": "우리는 나이가 많으신 ",
+    "after": "을 언제나 공경해야 한다.",
+    "tiles": [
+      "웃어른"
+    ],
+    "decoys": [
+      "윗어른",
+      "웃 어른",
+      "위어른"
+    ]
+  },
+  {
+    "type": "spelling",
+    "id": "KOR4-SPELL-025",
+    "difficulty": "hard",
+    "before": "시험 결과를 기다리며 나는 방 안을 왔다 갔다 하면서 ",
+    "after": ".",
+    "tiles": [
+      "안절부절못했다"
+    ],
+    "decoys": [
+      "안절부절했다",
+      "안절부절 못했다",
+      "안절부절 하였다"
+    ]
+  }
+]

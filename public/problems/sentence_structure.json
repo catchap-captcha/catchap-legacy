@@ -1,0 +1,337 @@
+[
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-001",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "강아지가",
+      "공을",
+      "물고",
+      "왔다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 0
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-002",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "동생이",
+      "그림을",
+      "그렸다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 0
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-003",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "아침에",
+      "나는",
+      "일찍",
+      "일어났다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 1
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-004",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "오늘",
+      "할머니께서",
+      "맛있는",
+      "떡을",
+      "만드셨다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 1
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-005",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "하루",
+      "종일",
+      "비가",
+      "내렸다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-006",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "쉬는",
+      "시간에",
+      "친구들이",
+      "축구를",
+      "했다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-007",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "새들이",
+      "나무",
+      "위에서",
+      "노래한다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 0
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-008",
+    "difficulty": "easy",
+    "mode": "find",
+    "tokens": [
+      "저녁마다",
+      "아빠가",
+      "신문을",
+      "읽는다"
+    ],
+    "targetLabel": "주어",
+    "answerIndex": 1
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-009",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "토끼가",
+      "빠르게",
+      "달린다"
+    ],
+    "targetLabel": "서술어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-010",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "하늘이",
+      "오늘",
+      "유난히",
+      "맑다"
+    ],
+    "targetLabel": "서술어",
+    "answerIndex": 3
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-011",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "나는",
+      "친구에게",
+      "편지를",
+      "썼다"
+    ],
+    "targetLabel": "서술어",
+    "answerIndex": 3
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-012",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "동생은",
+      "오늘",
+      "기분이",
+      "좋다"
+    ],
+    "targetLabel": "서술어",
+    "answerIndex": 3
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-013",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "우리",
+      "반",
+      "친구들은",
+      "모두",
+      "친절하다"
+    ],
+    "targetLabel": "서술어",
+    "answerIndex": 4
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-014",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "나는",
+      "맛있는",
+      "빵을",
+      "먹었다"
+    ],
+    "targetLabel": "목적어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-015",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "동생이",
+      "내",
+      "장난감을",
+      "망가뜨렸다"
+    ],
+    "targetLabel": "목적어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-016",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "학생들이",
+      "교실을",
+      "깨끗하게",
+      "청소했다"
+    ],
+    "targetLabel": "목적어",
+    "answerIndex": 1
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-017",
+    "difficulty": "medium",
+    "mode": "find",
+    "tokens": [
+      "아버지께서",
+      "나에게",
+      "자전거를",
+      "사주셨다"
+    ],
+    "targetLabel": "목적어",
+    "answerIndex": 2
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-018",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "나는 아침에 우유를 마셨다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "홑문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-019",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "나는 밥을 먹고 학교에 갔다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "겹문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-020",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "강아지가 마당에서 신나게 뛰어놀았다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "홑문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-021",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "비가 와서 소풍이 취소되었다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "겹문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-022",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "동생은 어제 새 신발을 샀다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "홑문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-023",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "형은 도서관에서 책을 읽고 나는 집에서 그림을 그렸다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "겹문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-024",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "우리 가족은 주말에 놀이공원에 갔다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "홑문장"
+  },
+  {
+    "type": "sentence_structure",
+    "id": "KOR4-STRUCT-025",
+    "difficulty": "hard",
+    "mode": "classify",
+    "sentence": "동생은 키가 작지만 힘이 세다.",
+    "options": [
+      "홑문장",
+      "겹문장"
+    ],
+    "answer": "겹문장"
+  }
+]

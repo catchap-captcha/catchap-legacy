@@ -1,0 +1,352 @@
+[
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-001",
+    "difficulty": "easy",
+    "before": "비가 내려서 나는 ",
+    "after": "을 손에 들고 학교에 갔다.",
+    "answer": "우산",
+    "options": [
+      "우산",
+      "장화",
+      "우비",
+      "연필"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-002",
+    "difficulty": "easy",
+    "before": "화분의 흙이 바싹 말라 있어서 나는 화분에 ",
+    "after": "을 듬뿍 주었다.",
+    "answer": "물",
+    "options": [
+      "거름",
+      "물",
+      "모래",
+      "돌"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-003",
+    "difficulty": "easy",
+    "before": "친구의 생일이라서 나는 예쁘게 포장한 ",
+    "after": "을 준비했다.",
+    "answer": "선물",
+    "options": [
+      "편지",
+      "카드",
+      "선물",
+      "안경"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-004",
+    "difficulty": "easy",
+    "before": "밤이 되어 방이 어두워지자 나는 책을 읽으려고 스위치를 눌러 ",
+    "after": "을 켰다.",
+    "answer": "불",
+    "options": [
+      "불",
+      "라디오",
+      "양초",
+      "선풍기"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-005",
+    "difficulty": "easy",
+    "before": "배가 고파서 나는 물을 끓여 ",
+    "after": "을 만들어 먹었다.",
+    "answer": "라면",
+    "options": [
+      "라면",
+      "김밥",
+      "볶음밥",
+      "샌드위치"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-006",
+    "difficulty": "easy",
+    "before": "눈이 많이 와서 우리는 눈을 굴려서 둥글게 쌓아 ",
+    "after": "을 만들었다.",
+    "answer": "눈사람",
+    "options": [
+      "모래성",
+      "눈사람",
+      "이글루",
+      "케이크"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-007",
+    "difficulty": "easy",
+    "before": "책을 읽다가 모르는 낱말이 나와서 나는 두꺼운 ",
+    "after": "을 펼쳐서 찾아보았다.",
+    "answer": "사전",
+    "options": [
+      "안경",
+      "교과서",
+      "사전",
+      "인터넷"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-008",
+    "difficulty": "easy",
+    "before": "감기에 걸려서 열이 심하게 나자 나는 ",
+    "after": "에 가서 진찰을 받았다.",
+    "answer": "병원",
+    "options": [
+      "학교",
+      "보건실",
+      "약국",
+      "병원"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-009",
+    "difficulty": "medium",
+    "before": "동생이 그림을 그리다가 크레파스가 부러져서 ",
+    "after": "을 하나 더 꺼내 왔다.",
+    "answer": "크레파스",
+    "options": [
+      "지우개",
+      "크레파스",
+      "가위",
+      "풀"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-010",
+    "difficulty": "medium",
+    "before": "도서관은 조용히 책을 읽는 곳이기 때문에 우리는 ",
+    "after": " 이야기하지 않았다.",
+    "answer": "큰 소리로",
+    "options": [
+      "작은 소리로",
+      "즐겁게",
+      "큰 소리로",
+      "빠르게"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-011",
+    "difficulty": "medium",
+    "before": "형은 숙제를 미리 다 끝내 놓아서 시험 전날에도 ",
+    "after": " 잘 수 있었다.",
+    "answer": "편하게",
+    "options": [
+      "급하게",
+      "억울하게",
+      "슬프게",
+      "편하게"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-012",
+    "difficulty": "medium",
+    "before": "물통에 물이 조금밖에 남지 않아서 우리는 물을 ",
+    "after": " 마시기로 했다.",
+    "answer": "아껴서",
+    "options": [
+      "아껴서",
+      "마음껏",
+      "시원하게",
+      "달게"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-013",
+    "difficulty": "medium",
+    "before": "선생님께서 발표 순서를 칠판에 적어 주셔서 우리는 ",
+    "after": " 발표를 준비할 수 있었다.",
+    "answer": "미리",
+    "options": [
+      "갑자기",
+      "미리",
+      "억지로",
+      "몰래"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-014",
+    "difficulty": "medium",
+    "before": "그 강아지는 낯선 사람을 보면 짖지만, 주인을 보면 ",
+    "after": " 꼬리를 흔든다.",
+    "answer": "반갑게",
+    "options": [
+      "무섭게",
+      "슬프게",
+      "반갑게",
+      "화나게"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-015",
+    "difficulty": "medium",
+    "before": "지호는 달리기 연습을 꾸준히 했지만 대회 날 갑자기 배가 아파서 ",
+    "after": " 결승선까지 뛰었다.",
+    "answer": "힘들게",
+    "options": [
+      "가볍게",
+      "신나게",
+      "여유롭게",
+      "힘들게"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-016",
+    "difficulty": "medium",
+    "before": "엄마는 음식이 상하지 않도록 남은 반찬을 ",
+    "after": " 넣어 두셨다.",
+    "answer": "냉동실에",
+    "options": [
+      "냉동실에",
+      "서랍에",
+      "가방에",
+      "신발장에"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-017",
+    "difficulty": "medium",
+    "before": "그 이야기책은 결말이 슬퍼서 나는 마지막 장을 읽고 ",
+    "after": " 눈물을 흘렸다.",
+    "answer": "저절로",
+    "options": [
+      "억지로",
+      "저절로",
+      "일부러",
+      "가까스로"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-018",
+    "difficulty": "hard",
+    "before": "우리 반은 체육 대회에서 계속 지고 있었지만 마지막 순간까지 ",
+    "after": " 최선을 다했다.",
+    "answer": "포기하지 않고",
+    "options": [
+      "자신 있게",
+      "조심스럽게",
+      "포기하지 않고",
+      "억울해하며"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-019",
+    "difficulty": "hard",
+    "before": "할머니께서는 옛날이야기를 하실 때마다 마치 ",
+    "after": " 눈앞에서 벌어지는 것처럼 생생하게 설명하셨다.",
+    "answer": "그 일이",
+    "options": [
+      "그 사람이",
+      "그 장소가",
+      "그 시간이",
+      "그 일이"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-020",
+    "difficulty": "hard",
+    "before": "동생은 자신의 실수를 인정하기 ",
+    "after": " 오히려 다른 사람 탓을 했다.",
+    "answer": "싫어서",
+    "options": [
+      "싫어서",
+      "좋아서",
+      "편해서",
+      "쉬워서"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-021",
+    "difficulty": "hard",
+    "before": "그 선수는 부상을 당했는데도 ",
+    "after": " 경기를 끝까지 마쳤다.",
+    "answer": "이를 악물고",
+    "options": [
+      "눈을 감고",
+      "이를 악물고",
+      "숨을 쉬며",
+      "고개를 들고"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-022",
+    "difficulty": "hard",
+    "before": "우리 마을 어른들은 다음 세대에게 전통을 물려주기 위해 옛 풍습을 ",
+    "after": " 지켜 오셨다.",
+    "answer": "오랫동안",
+    "options": [
+      "갑자기",
+      "조용히",
+      "오랫동안",
+      "억지로"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-023",
+    "difficulty": "hard",
+    "before": "그 문제는 여러 번 읽어도 이해가 되지 않아서 나는 결국 선생님께 ",
+    "after": " 여쭈어보았다.",
+    "answer": "직접",
+    "options": [
+      "몰래",
+      "대신",
+      "가끔",
+      "직접"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-024",
+    "difficulty": "hard",
+    "before": "그 상품은 광고에서 본 것과 달리 실제로는 ",
+    "after": " 실망스러웠다.",
+    "answer": "생각보다",
+    "options": [
+      "생각보다",
+      "노력한 만큼",
+      "예상대로",
+      "계획대로"
+    ]
+  },
+  {
+    "type": "context_blank",
+    "id": "KOR4-BLANK-025",
+    "difficulty": "hard",
+    "before": "발표를 앞두고 나는 실수할까 봐 걱정했지만, 끝나고 나니 ",
+    "after": " 별일 아니었다는 생각이 들었다.",
+    "answer": "의외로",
+    "options": [
+      "당연히",
+      "의외로",
+      "확실히",
+      "분명히"
+    ]
+  }
+]

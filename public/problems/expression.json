@@ -1,0 +1,227 @@
+[
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-001",
+    "difficulty": "easy",
+    "before": "할머니께서 진지를 맛있게 ",
+    "highlight": "먹는다",
+    "after": ".",
+    "answer": "드신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-002",
+    "difficulty": "easy",
+    "before": "선생님께서 교실에 ",
+    "highlight": "있다",
+    "after": ".",
+    "answer": "계신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-003",
+    "difficulty": "easy",
+    "before": "아버지께서 회사에서 ",
+    "highlight": "일한다",
+    "after": ".",
+    "answer": "일하신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-004",
+    "difficulty": "easy",
+    "before": "할아버지께서 낮잠을 ",
+    "highlight": "잔다",
+    "after": ".",
+    "answer": "주무신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-005",
+    "difficulty": "easy",
+    "before": "어머니께서 감기로 며칠째 ",
+    "highlight": "아프다",
+    "after": ".",
+    "answer": "편찮으시다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-006",
+    "difficulty": "easy",
+    "before": "모르는 것이 있으면 선생님께 ",
+    "highlight": "물어본다",
+    "after": ".",
+    "answer": "여쭈어본다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-007",
+    "difficulty": "easy",
+    "before": "생일 선물은 할머니께 직접 ",
+    "highlight": "준다",
+    "after": ".",
+    "answer": "드린다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-008",
+    "difficulty": "easy",
+    "before": "방학 때 할머니를 ",
+    "highlight": "보았다",
+    "after": ".",
+    "answer": "뵈었다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-009",
+    "difficulty": "medium",
+    "before": "선생님께서 중요한 내용을 ",
+    "highlight": "말한다",
+    "after": ".",
+    "answer": "말씀하신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-010",
+    "difficulty": "medium",
+    "before": "할머니의 ",
+    "highlight": "나이",
+    "after": "가 일흔이 넘으셨다.",
+    "answer": "연세"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-011",
+    "difficulty": "medium",
+    "before": "다음 주 화요일은 할아버지의 ",
+    "highlight": "생일",
+    "after": "이다.",
+    "answer": "생신"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-012",
+    "difficulty": "medium",
+    "before": "우리는 주말에 선생님 ",
+    "highlight": "집",
+    "after": "에 놀러 갔다.",
+    "answer": "댁"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-013",
+    "difficulty": "medium",
+    "before": "나는 할머니의 ",
+    "highlight": "말",
+    "after": "을 귀 기울여 들었다.",
+    "answer": "말씀"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-014",
+    "difficulty": "medium",
+    "before": "할아버지, ",
+    "highlight": "밥",
+    "after": " 다 차렸어요. 드세요.",
+    "answer": "진지"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-015",
+    "difficulty": "medium",
+    "before": "선생님께서 좋은 생각이 ",
+    "highlight": "있다",
+    "after": ".",
+    "answer": "있으시다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-016",
+    "difficulty": "medium",
+    "before": "이 서류에 할아버지의 ",
+    "highlight": "이름",
+    "after": "을 적어 주세요.",
+    "answer": "성함"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-017",
+    "difficulty": "medium",
+    "before": "나는 할아버지를 병원에 ",
+    "highlight": "데리고 갔다",
+    "after": ".",
+    "answer": "모시고 갔다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-018",
+    "difficulty": "hard",
+    "before": "우리 증조할머니께서는 아흔이 넘어 ",
+    "highlight": "죽었다",
+    "after": ".",
+    "answer": "돌아가셨다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-019",
+    "difficulty": "hard",
+    "before": "할아버지께서 오랫동안 큰 ",
+    "highlight": "병",
+    "after": "을 앓고 계신다.",
+    "answer": "병환"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-020",
+    "difficulty": "hard",
+    "before": "할머니께서 텃밭에서 채소를 ",
+    "highlight": "기른다",
+    "after": ".",
+    "answer": "기르신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-021",
+    "difficulty": "hard",
+    "before": "할머니께서 오래 걸으셔서 ",
+    "highlight": "배고프다",
+    "after": ".",
+    "answer": "배고프시다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-022",
+    "difficulty": "hard",
+    "before": "나는 내일 할머니를 ",
+    "highlight": "만난다",
+    "after": ".",
+    "answer": "뵌다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-023",
+    "difficulty": "hard",
+    "before": "할머니께서 맛있는 밥을 ",
+    "highlight": "짓는다",
+    "after": ".",
+    "answer": "지으신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-024",
+    "difficulty": "hard",
+    "before": "할아버지께서 라디오 뉴스를 ",
+    "highlight": "듣는다",
+    "after": ".",
+    "answer": "들으신다"
+  },
+  {
+    "type": "expression",
+    "id": "KOR4-EXPR-025",
+    "difficulty": "hard",
+    "before": "할머니께서 겨울에 ",
+    "highlight": "춥다",
+    "after": ".",
+    "answer": "추우시다"
+  }
+]

@@ -25,8 +25,10 @@ const COLORS = {
 const SWIPE_THRESHOLD = 90;
 
 export default function FactOpinionCaptcha({ problem, onSuccess, onRetry }: Props) {
-  const total = problem.statements.length;
-  const [queue, setQueue] = useState<number[]>(() => shuffle(problem.statements.map((_, i) => i)));
+  const total = 1;
+  const [queue, setQueue] = useState<number[]>(() =>
+    shuffle(problem.statements.map((_, i) => i)).slice(0, total)
+  );
   const [dragX, setDragX] = useState(0);
   const [dragging, setDragging] = useState(false);
   const [exiting, setExiting] = useState<"사실" | "의견" | null>(null);

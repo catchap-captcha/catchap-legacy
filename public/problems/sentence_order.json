@@ -1,0 +1,288 @@
+[
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-001",
+    "difficulty": "easy",
+    "correctOrder": [
+      "내가",
+      "그린",
+      "그림이",
+      "예쁘다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-002",
+    "difficulty": "easy",
+    "correctOrder": [
+      "동생이",
+      "만든",
+      "음식이",
+      "맛있다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-003",
+    "difficulty": "easy",
+    "correctOrder": [
+      "비가",
+      "와서",
+      "우산을",
+      "썼다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-004",
+    "difficulty": "easy",
+    "correctOrder": [
+      "친구가",
+      "넘어져서",
+      "나는",
+      "걱정했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-005",
+    "difficulty": "easy",
+    "correctOrder": [
+      "숙제를 다 하고",
+      "텔레비전을",
+      "보았다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-006",
+    "difficulty": "easy",
+    "correctOrder": [
+      "나는",
+      "손을 씻고",
+      "밥을",
+      "먹었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-007",
+    "difficulty": "easy",
+    "correctOrder": [
+      "나는",
+      "이를 닦고",
+      "잠을",
+      "잤다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-008",
+    "difficulty": "easy",
+    "correctOrder": [
+      "동생이",
+      "손을 들고",
+      "질문을",
+      "했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-009",
+    "difficulty": "medium",
+    "correctOrder": [
+      "비가",
+      "갑자기 내려서",
+      "우산을",
+      "챙겼다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-010",
+    "difficulty": "medium",
+    "correctOrder": [
+      "지수는",
+      "늦잠을",
+      "자서",
+      "학교에",
+      "늦었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-011",
+    "difficulty": "medium",
+    "correctOrder": [
+      "형은",
+      "시험이",
+      "끝나자마자",
+      "컴퓨터 게임을",
+      "시작했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-012",
+    "difficulty": "medium",
+    "correctOrder": [
+      "나는",
+      "친구에게 빌린",
+      "책을",
+      "돌려주었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-013",
+    "difficulty": "medium",
+    "correctOrder": [
+      "엄마께서는",
+      "내가",
+      "좋아하는",
+      "반찬을",
+      "만들어 주셨다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-014",
+    "difficulty": "medium",
+    "correctOrder": [
+      "우리 반은",
+      "다음 주에 현장 학습을",
+      "가기로",
+      "했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-015",
+    "difficulty": "medium",
+    "correctOrder": [
+      "태풍 때문에",
+      "학교 운동회가 다음 달로",
+      "연기되었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-016",
+    "difficulty": "medium",
+    "correctOrder": [
+      "나는",
+      "어제 빌린",
+      "우산을",
+      "친구에게 돌려주었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-017",
+    "difficulty": "medium",
+    "correctOrder": [
+      "도서관에서",
+      "빌린",
+      "책이",
+      "재미있어서",
+      "하루 만에",
+      "다 읽었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-018",
+    "difficulty": "hard",
+    "correctOrder": [
+      "선생님께서는",
+      "정직하게",
+      "살아야 한다고",
+      "우리에게 말씀하셨다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-019",
+    "difficulty": "hard",
+    "correctOrder": [
+      "동생은",
+      "자기가",
+      "그린",
+      "그림이",
+      "최고라고",
+      "자랑했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-020",
+    "difficulty": "hard",
+    "correctOrder": [
+      "나는",
+      "어제 읽은",
+      "책의",
+      "내용을",
+      "친구에게 설명해 주었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-021",
+    "difficulty": "hard",
+    "correctOrder": [
+      "우리는",
+      "최선을 다해 준비한",
+      "발표를",
+      "무사히 마쳤다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-022",
+    "difficulty": "hard",
+    "correctOrder": [
+      "할아버지께서는",
+      "어릴 때 겪으신",
+      "일들을",
+      "우리에게 들려주셨다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-023",
+    "difficulty": "hard",
+    "correctOrder": [
+      "나는",
+      "그 문제가",
+      "생각보다",
+      "어렵다는",
+      "것을",
+      "알게 되었다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-024",
+    "difficulty": "hard",
+    "correctOrder": [
+      "친구들은",
+      "내가",
+      "지각한",
+      "이유를",
+      "궁금해했다"
+    ]
+  },
+  {
+    "type": "sentence_order",
+    "id": "KOR4-ORDER-025",
+    "difficulty": "hard",
+    "correctOrder": [
+      "선생님께서는",
+      "숙제를",
+      "잊지 말고",
+      "반드시",
+      "제출하라고",
+      "강조하셨다"
+    ]
+  }
+]

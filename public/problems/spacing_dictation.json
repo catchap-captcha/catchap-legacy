@@ -1,0 +1,177 @@
+[
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-001",
+    "difficulty": "easy",
+    "sentence": "나는 사과 세 개를 먹었다.",
+    "hint": "숫자 뒤에 오는 '개, 명, 살' 같은 단위는 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-002",
+    "difficulty": "easy",
+    "sentence": "우리는 한 시간 동안 놀았다.",
+    "hint": "숫자 뒤에 오는 단위는 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-003",
+    "difficulty": "easy",
+    "sentence": "이것은 내 것이다.",
+    "hint": "'것'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-004",
+    "difficulty": "easy",
+    "sentence": "너도 할 수 있다.",
+    "hint": "'수'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-005",
+    "difficulty": "easy",
+    "sentence": "친구가 두 명 왔다.",
+    "hint": "숫자 뒤에 오는 단위는 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-006",
+    "difficulty": "easy",
+    "sentence": "나는 그것을 본 적이 없다.",
+    "hint": "'적'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-007",
+    "difficulty": "easy",
+    "sentence": "우리 집 강아지는 두 살이다.",
+    "hint": "숫자 뒤에 오는 단위는 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-008",
+    "difficulty": "easy",
+    "sentence": "아는 것이 힘이다.",
+    "hint": "'것'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-009",
+    "difficulty": "medium",
+    "sentence": "나는 그 사실을 알 리가 없었다.",
+    "hint": "'리'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-010",
+    "difficulty": "medium",
+    "sentence": "나는 책을 반납할 겸 도서관에 들렀다.",
+    "hint": "'겸'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-011",
+    "difficulty": "medium",
+    "sentence": "나는 그냥 웃을 뿐이었다.",
+    "hint": "'뿐'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-012",
+    "difficulty": "medium",
+    "sentence": "동생은 모르는 체 딴청을 피웠다.",
+    "hint": "'체'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-013",
+    "difficulty": "medium",
+    "sentence": "김민수 선생님께서 오셨다.",
+    "hint": "이름은 붙여 쓰고, '선생님'처럼 부르는 말은 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-014",
+    "difficulty": "medium",
+    "sentence": "우리는 세 시간 만에 도착했다.",
+    "hint": "'만'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-015",
+    "difficulty": "medium",
+    "sentence": "나는 노력한 만큼 결과를 얻었다.",
+    "hint": "'만큼'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-016",
+    "difficulty": "medium",
+    "sentence": "그는 열 살짜리 아이처럼 웃었다.",
+    "hint": "'짜리'는 앞말에 붙여 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-017",
+    "difficulty": "medium",
+    "sentence": "형이 밥을 먹은 지 한 시간이 지났다.",
+    "hint": "시간이 지남을 나타내는 '지'는 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-018",
+    "difficulty": "hard",
+    "sentence": "우리는 첫째 날 도착해서 이틀 만에 돌아왔다.",
+    "hint": "차례를 나타내는 '첫째'는 붙여 쓰고, '만'은 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-019",
+    "difficulty": "hard",
+    "sentence": "그 일은 나도 할 수 있을 것 같다.",
+    "hint": "'수'와 '것'처럼 혼자 쓰이지 못하는 말은 둘 다 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-020",
+    "difficulty": "hard",
+    "sentence": "내가 아는 대로 모두 말했다.",
+    "hint": "'아는 대로'처럼 꾸며 주는 말 뒤에 오는 '대로'는 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-021",
+    "difficulty": "hard",
+    "sentence": "선생님 말씀대로 하는 것이 좋다.",
+    "hint": "'말씀대로'처럼 이름을 나타내는 말 뒤에 오는 '대로'는 붙여 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-022",
+    "difficulty": "hard",
+    "sentence": "그가 떠난 지도 벌써 삼 년이 되었다.",
+    "hint": "'지'는 띄어 쓰고, 뒤에 붙는 조사 '도'는 붙여 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-023",
+    "difficulty": "hard",
+    "sentence": "우리는 도착한 지 얼마 되지 않아 출발했다.",
+    "hint": "시간이 지남을 나타내는 '지'는 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-024",
+    "difficulty": "hard",
+    "sentence": "나는 네가 올 줄 몰랐다.",
+    "hint": "'줄'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  },
+  {
+    "type": "spacing_dictation",
+    "id": "KOR4-DICT-025",
+    "difficulty": "hard",
+    "sentence": "나는 힘든 만큼 더 열심히 노력했다.",
+    "hint": "'만큼'처럼 혼자 쓰이지 못하는 말은 앞말과 띄어 써요."
+  }
+]

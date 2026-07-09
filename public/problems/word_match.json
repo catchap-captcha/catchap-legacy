@@ -1,0 +1,602 @@
+[
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-001",
+    "difficulty": "easy",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "기쁘다",
+        "partner": "즐겁다"
+      },
+      {
+        "word": "예쁘다",
+        "partner": "아름답다"
+      },
+      {
+        "word": "빠르다",
+        "partner": "재빠르다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-002",
+    "difficulty": "easy",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "무섭다",
+        "partner": "두렵다"
+      },
+      {
+        "word": "슬프다",
+        "partner": "서럽다"
+      },
+      {
+        "word": "힘들다",
+        "partner": "고되다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-003",
+    "difficulty": "easy",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "착하다",
+        "partner": "선하다"
+      },
+      {
+        "word": "똑똑하다",
+        "partner": "영리하다"
+      },
+      {
+        "word": "귀엽다",
+        "partner": "사랑스럽다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-004",
+    "difficulty": "easy",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "조용하다",
+        "partner": "잠잠하다"
+      },
+      {
+        "word": "더럽다",
+        "partner": "지저분하다"
+      },
+      {
+        "word": "재미있다",
+        "partner": "흥미롭다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-005",
+    "difficulty": "easy",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "크다",
+        "partner": "작다"
+      },
+      {
+        "word": "덥다",
+        "partner": "춥다"
+      },
+      {
+        "word": "밝다",
+        "partner": "어둡다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-006",
+    "difficulty": "easy",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "높다",
+        "partner": "낮다"
+      },
+      {
+        "word": "많다",
+        "partner": "적다"
+      },
+      {
+        "word": "길다",
+        "partner": "짧다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-007",
+    "difficulty": "easy",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "두껍다",
+        "partner": "얇다"
+      },
+      {
+        "word": "늦다",
+        "partner": "이르다"
+      },
+      {
+        "word": "가깝다",
+        "partner": "멀다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-008",
+    "difficulty": "easy",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "뜨겁다",
+        "partner": "차갑다"
+      },
+      {
+        "word": "새롭다",
+        "partner": "낡다"
+      },
+      {
+        "word": "마르다",
+        "partner": "젖다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-009",
+    "difficulty": "medium",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "기억하다",
+        "partner": "떠올리다"
+      },
+      {
+        "word": "준비하다",
+        "partner": "마련하다"
+      },
+      {
+        "word": "놀라다",
+        "partner": "기겁하다"
+      },
+      {
+        "word": "조심하다",
+        "partner": "주의하다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-010",
+    "difficulty": "medium",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "결심하다",
+        "partner": "다짐하다"
+      },
+      {
+        "word": "부탁하다",
+        "partner": "청하다"
+      },
+      {
+        "word": "감추다",
+        "partner": "숨기다"
+      },
+      {
+        "word": "견디다",
+        "partner": "참다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-011",
+    "difficulty": "medium",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "고치다",
+        "partner": "수리하다"
+      },
+      {
+        "word": "부수다",
+        "partner": "깨뜨리다"
+      },
+      {
+        "word": "알리다",
+        "partner": "전하다"
+      },
+      {
+        "word": "돕다",
+        "partner": "거들다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-012",
+    "difficulty": "medium",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "자라다",
+        "partner": "성장하다"
+      },
+      {
+        "word": "만지다",
+        "partner": "손대다"
+      },
+      {
+        "word": "바라다",
+        "partner": "원하다"
+      },
+      {
+        "word": "모으다",
+        "partner": "수집하다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-013",
+    "difficulty": "medium",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "늘어나다",
+        "partner": "줄어들다"
+      },
+      {
+        "word": "시작하다",
+        "partner": "끝나다"
+      },
+      {
+        "word": "가볍다",
+        "partner": "무겁다"
+      },
+      {
+        "word": "부지런하다",
+        "partner": "게으르다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-014",
+    "difficulty": "medium",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "넓다",
+        "partner": "좁다"
+      },
+      {
+        "word": "익숙하다",
+        "partner": "낯설다"
+      },
+      {
+        "word": "열다",
+        "partner": "닫다"
+      },
+      {
+        "word": "모이다",
+        "partner": "흩어지다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-015",
+    "difficulty": "medium",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "가늘다",
+        "partner": "굵다"
+      },
+      {
+        "word": "쉽다",
+        "partner": "어렵다"
+      },
+      {
+        "word": "뜨다",
+        "partner": "지다"
+      },
+      {
+        "word": "얻다",
+        "partner": "잃다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-016",
+    "difficulty": "medium",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "켜다",
+        "partner": "끄다"
+      },
+      {
+        "word": "뭉치다",
+        "partner": "나뉘다"
+      },
+      {
+        "word": "당기다",
+        "partner": "밀다"
+      },
+      {
+        "word": "채우다",
+        "partner": "비우다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-017",
+    "difficulty": "medium",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "앞서다",
+        "partner": "뒤처지다"
+      },
+      {
+        "word": "일어나다",
+        "partner": "눕다"
+      },
+      {
+        "word": "데우다",
+        "partner": "식히다"
+      },
+      {
+        "word": "구부리다",
+        "partner": "펴다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-018",
+    "difficulty": "hard",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "소중하다",
+        "partner": "귀중하다"
+      },
+      {
+        "word": "활발하다",
+        "partner": "명랑하다"
+      },
+      {
+        "word": "걱정하다",
+        "partner": "염려하다"
+      },
+      {
+        "word": "순식간",
+        "partner": "눈 깜짝할 사이"
+      },
+      {
+        "word": "애쓰다",
+        "partner": "노력하다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-019",
+    "difficulty": "hard",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "뿌듯하다",
+        "partner": "자랑스럽다"
+      },
+      {
+        "word": "한적하다",
+        "partner": "고요하다"
+      },
+      {
+        "word": "대단하다",
+        "partner": "훌륭하다"
+      },
+      {
+        "word": "배려하다",
+        "partner": "돌보다"
+      },
+      {
+        "word": "존경하다",
+        "partner": "우러르다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-020",
+    "difficulty": "hard",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "격려하다",
+        "partner": "응원하다"
+      },
+      {
+        "word": "안심되다",
+        "partner": "마음이 놓이다"
+      },
+      {
+        "word": "간절하다",
+        "partner": "절실하다"
+      },
+      {
+        "word": "유익하다",
+        "partner": "이롭다"
+      },
+      {
+        "word": "신속하다",
+        "partner": "날쌔다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-021",
+    "difficulty": "hard",
+    "relation": "synonym",
+    "pairs": [
+      {
+        "word": "엄숙하다",
+        "partner": "근엄하다"
+      },
+      {
+        "word": "풍요롭다",
+        "partner": "넉넉하다"
+      },
+      {
+        "word": "초라하다",
+        "partner": "볼품없다"
+      },
+      {
+        "word": "명확하다",
+        "partner": "분명하다"
+      },
+      {
+        "word": "웅장하다",
+        "partner": "거대하다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-022",
+    "difficulty": "hard",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "겸손하다",
+        "partner": "거만하다"
+      },
+      {
+        "word": "관대하다",
+        "partner": "옹졸하다"
+      },
+      {
+        "word": "풍부하다",
+        "partner": "부족하다"
+      },
+      {
+        "word": "신중하다",
+        "partner": "경솔하다"
+      },
+      {
+        "word": "소극적이다",
+        "partner": "적극적이다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-023",
+    "difficulty": "hard",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "평탄하다",
+        "partner": "험하다"
+      },
+      {
+        "word": "풍성하다",
+        "partner": "빈약하다"
+      },
+      {
+        "word": "능숙하다",
+        "partner": "서투르다"
+      },
+      {
+        "word": "유창하다",
+        "partner": "어눌하다"
+      },
+      {
+        "word": "원만하다",
+        "partner": "모나다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-024",
+    "difficulty": "hard",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "냉정하다",
+        "partner": "온화하다"
+      },
+      {
+        "word": "인색하다",
+        "partner": "후하다"
+      },
+      {
+        "word": "완고하다",
+        "partner": "유연하다"
+      },
+      {
+        "word": "무디다",
+        "partner": "예리하다"
+      },
+      {
+        "word": "엉성하다",
+        "partner": "정교하다"
+      }
+    ]
+  },
+  {
+    "type": "word_match",
+    "id": "KOR4-MATCH-025",
+    "difficulty": "hard",
+    "relation": "antonym",
+    "pairs": [
+      {
+        "word": "소란하다",
+        "partner": "평온하다"
+      },
+      {
+        "word": "인위적이다",
+        "partner": "자연적이다"
+      },
+      {
+        "word": "온순하다",
+        "partner": "사납다"
+      },
+      {
+        "word": "여유롭다",
+        "partner": "다급하다"
+      },
+      {
+        "word": "담대하다",
+        "partner": "소심하다"
+      }
+    ]
+  }
+]

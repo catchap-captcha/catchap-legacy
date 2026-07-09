@@ -2,6 +2,7 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ChapterPage from "./pages/ChapterPage";
+import ApiCaptchaPage from "./pages/ApiCaptchaPage";
 import PlayPage from "./game/PlayPage";
 import { categories } from "./game/categories";
 
@@ -10,6 +11,7 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/api-captcha" element={<ApiCaptchaPage />} />
         {categories.map((category) => (
           <Route
             key={category.key}

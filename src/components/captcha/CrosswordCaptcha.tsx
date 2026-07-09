@@ -240,11 +240,16 @@ export default function CrosswordCaptcha({ problem, onSuccess, onRetry }: Props)
 
           const isActive = activeWord !== null && owners.includes(activeWord);
           const isDone = owners.some((i) => completed.has(i));
+          // Level 5 keeps the completion logic (locking the cell, advancing
+          // words) but skips the green confirmation color — the point of the
+          // hardest tier is that the player never gets that visual "yes,
+          // correct" signal.
+          const showDone = isDone && level !== 5;
           const isLocked = locked.has(key) && !isDone;
           const isNextTarget = isActive && key === nextTargetKey;
           const number = startCellNumber.get(key);
 
-          const borderColor = isDone ? COLORS.done : isLocked ? COLORS.locked : isActive ? COLORS.active : COLORS.border;
+          const borderColor = showDone ? COLORS.done : isLocked ? COLORS.locked : isActive ? COLORS.active : COLORS.border;
 
           return (
             <button
@@ -259,8 +264,8 @@ export default function CrosswordCaptcha({ problem, onSuccess, onRetry }: Props)
                 fontWeight: 800,
                 borderRadius: 8,
                 border: `${isNextTarget ? 3 : 2}px solid ${borderColor}`,
-                background: isDone ? COLORS.doneLight : isLocked ? COLORS.lockedLight : isActive ? COLORS.activeLight : "#fff",
-                color: isDone ? COLORS.done : isLocked ? COLORS.locked : isActive ? COLORS.active : COLORS.text,
+                background: showDone ? COLORS.doneLight : isLocked ? COLORS.lockedLight : isActive ? COLORS.activeLight : "#fff",
+                color: showDone ? COLORS.done : isLocked ? COLORS.locked : isActive ? COLORS.active : COLORS.text,
                 cursor: isDone ? "default" : "pointer",
               }}
             >

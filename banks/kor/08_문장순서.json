@@ -1,0 +1,936 @@
+{
+ "subject": "국어",
+ "topic": "문장 순서",
+ "questions": [
+  {
+   "_order": 175,
+   "id": "KOR4-ORDER-001",
+   "topic": "문장 순서",
+   "stage": 1,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "그린"
+    },
+    {
+     "id": "c2",
+     "text": "그림이"
+    },
+    {
+     "id": "c3",
+     "text": "예쁘다"
+    },
+    {
+     "id": "c4",
+     "text": "내가"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 176,
+   "id": "KOR4-ORDER-002",
+   "topic": "문장 순서",
+   "stage": 1,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "맛있다"
+    },
+    {
+     "id": "c2",
+     "text": "음식이"
+    },
+    {
+     "id": "c3",
+     "text": "동생이"
+    },
+    {
+     "id": "c4",
+     "text": "만든"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c4",
+    "c2",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 177,
+   "id": "KOR4-ORDER-003",
+   "topic": "문장 순서",
+   "stage": 1,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "썼다"
+    },
+    {
+     "id": "c2",
+     "text": "비가"
+    },
+    {
+     "id": "c3",
+     "text": "와서"
+    },
+    {
+     "id": "c4",
+     "text": "우산을"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c4",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 178,
+   "id": "KOR4-ORDER-004",
+   "topic": "문장 순서",
+   "stage": 1,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "걱정했다"
+    },
+    {
+     "id": "c2",
+     "text": "넘어져서"
+    },
+    {
+     "id": "c3",
+     "text": "친구가"
+    },
+    {
+     "id": "c4",
+     "text": "나는"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c4",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 179,
+   "id": "KOR4-ORDER-005",
+   "topic": "문장 순서",
+   "stage": 1,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "숙제를 다 하고"
+    },
+    {
+     "id": "c2",
+     "text": "보았다"
+    },
+    {
+     "id": "c3",
+     "text": "텔레비전을"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 180,
+   "id": "KOR4-ORDER-006",
+   "topic": "문장 순서",
+   "stage": 2,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "먹었다"
+    },
+    {
+     "id": "c2",
+     "text": "손을 씻고"
+    },
+    {
+     "id": "c3",
+     "text": "나는"
+    },
+    {
+     "id": "c4",
+     "text": "밥을"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c4",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 181,
+   "id": "KOR4-ORDER-007",
+   "topic": "문장 순서",
+   "stage": 2,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "나는"
+    },
+    {
+     "id": "c2",
+     "text": "잠을"
+    },
+    {
+     "id": "c3",
+     "text": "잤다"
+    },
+    {
+     "id": "c4",
+     "text": "이를 닦고"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 182,
+   "id": "KOR4-ORDER-008",
+   "topic": "문장 순서",
+   "stage": 2,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "손을 들고"
+    },
+    {
+     "id": "c2",
+     "text": "질문을"
+    },
+    {
+     "id": "c3",
+     "text": "했다"
+    },
+    {
+     "id": "c4",
+     "text": "동생이"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 183,
+   "id": "KOR4-ORDER-009",
+   "topic": "문장 순서",
+   "stage": 2,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "비가"
+    },
+    {
+     "id": "c2",
+     "text": "우산을"
+    },
+    {
+     "id": "c3",
+     "text": "챙겼다"
+    },
+    {
+     "id": "c4",
+     "text": "갑자기 내려서"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 184,
+   "id": "KOR4-ORDER-010",
+   "topic": "문장 순서",
+   "stage": 2,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "자서"
+    },
+    {
+     "id": "c2",
+     "text": "학교에"
+    },
+    {
+     "id": "c3",
+     "text": "늦잠을"
+    },
+    {
+     "id": "c4",
+     "text": "늦었다"
+    },
+    {
+     "id": "c5",
+     "text": "지수는"
+    }
+   ],
+   "answer": [
+    "c5",
+    "c3",
+    "c1",
+    "c2",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 185,
+   "id": "KOR4-ORDER-011",
+   "topic": "문장 순서",
+   "stage": 3,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "시험이"
+    },
+    {
+     "id": "c2",
+     "text": "시작했다"
+    },
+    {
+     "id": "c3",
+     "text": "형은"
+    },
+    {
+     "id": "c4",
+     "text": "끝나자마자"
+    },
+    {
+     "id": "c5",
+     "text": "컴퓨터 게임을"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c4",
+    "c5",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 186,
+   "id": "KOR4-ORDER-012",
+   "topic": "문장 순서",
+   "stage": 3,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "책을"
+    },
+    {
+     "id": "c2",
+     "text": "나는"
+    },
+    {
+     "id": "c3",
+     "text": "돌려주었다"
+    },
+    {
+     "id": "c4",
+     "text": "친구에게 빌린"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 187,
+   "id": "KOR4-ORDER-013",
+   "topic": "문장 순서",
+   "stage": 3,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "엄마께서는"
+    },
+    {
+     "id": "c2",
+     "text": "내가"
+    },
+    {
+     "id": "c3",
+     "text": "반찬을"
+    },
+    {
+     "id": "c4",
+     "text": "좋아하는"
+    },
+    {
+     "id": "c5",
+     "text": "만들어 주셨다"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c2",
+    "c4",
+    "c3",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 188,
+   "id": "KOR4-ORDER-014",
+   "topic": "문장 순서",
+   "stage": 3,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "다음 주에 현장 학습을"
+    },
+    {
+     "id": "c2",
+     "text": "가기로"
+    },
+    {
+     "id": "c3",
+     "text": "했다"
+    },
+    {
+     "id": "c4",
+     "text": "우리 반은"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 189,
+   "id": "KOR4-ORDER-015",
+   "topic": "문장 순서",
+   "stage": 3,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "태풍 때문에"
+    },
+    {
+     "id": "c2",
+     "text": "연기되었다"
+    },
+    {
+     "id": "c3",
+     "text": "학교 운동회가 다음 달로"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 190,
+   "id": "KOR4-ORDER-016",
+   "topic": "문장 순서",
+   "stage": 4,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "우산을"
+    },
+    {
+     "id": "c2",
+     "text": "어제 빌린"
+    },
+    {
+     "id": "c3",
+     "text": "친구에게 돌려주었다"
+    },
+    {
+     "id": "c4",
+     "text": "나는"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 191,
+   "id": "KOR4-ORDER-017",
+   "topic": "문장 순서",
+   "stage": 4,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "하루 만에"
+    },
+    {
+     "id": "c2",
+     "text": "재미있어서"
+    },
+    {
+     "id": "c3",
+     "text": "도서관에서"
+    },
+    {
+     "id": "c4",
+     "text": "빌린"
+    },
+    {
+     "id": "c5",
+     "text": "다 읽었다"
+    },
+    {
+     "id": "c6",
+     "text": "책이"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c4",
+    "c6",
+    "c2",
+    "c1",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 192,
+   "id": "KOR4-ORDER-018",
+   "topic": "문장 순서",
+   "stage": 4,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "정직하게"
+    },
+    {
+     "id": "c2",
+     "text": "우리에게 말씀하셨다"
+    },
+    {
+     "id": "c3",
+     "text": "선생님께서는"
+    },
+    {
+     "id": "c4",
+     "text": "살아야 한다고"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c4",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 193,
+   "id": "KOR4-ORDER-019",
+   "topic": "문장 순서",
+   "stage": 4,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "그림이"
+    },
+    {
+     "id": "c2",
+     "text": "최고라고"
+    },
+    {
+     "id": "c3",
+     "text": "자랑했다"
+    },
+    {
+     "id": "c4",
+     "text": "동생은"
+    },
+    {
+     "id": "c5",
+     "text": "그린"
+    },
+    {
+     "id": "c6",
+     "text": "자기가"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c6",
+    "c5",
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 194,
+   "id": "KOR4-ORDER-020",
+   "topic": "문장 순서",
+   "stage": 4,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "친구에게 설명해 주었다"
+    },
+    {
+     "id": "c2",
+     "text": "나는"
+    },
+    {
+     "id": "c3",
+     "text": "책의"
+    },
+    {
+     "id": "c4",
+     "text": "내용을"
+    },
+    {
+     "id": "c5",
+     "text": "어제 읽은"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c5",
+    "c3",
+    "c4",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 195,
+   "id": "KOR4-ORDER-021",
+   "topic": "문장 순서",
+   "stage": 5,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "발표를"
+    },
+    {
+     "id": "c2",
+     "text": "최선을 다해 준비한"
+    },
+    {
+     "id": "c3",
+     "text": "우리는"
+    },
+    {
+     "id": "c4",
+     "text": "무사히 마쳤다"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 196,
+   "id": "KOR4-ORDER-022",
+   "topic": "문장 순서",
+   "stage": 5,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "우리에게 들려주셨다"
+    },
+    {
+     "id": "c2",
+     "text": "어릴 때 겪으신"
+    },
+    {
+     "id": "c3",
+     "text": "할아버지께서는"
+    },
+    {
+     "id": "c4",
+     "text": "일들을"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c4",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 197,
+   "id": "KOR4-ORDER-023",
+   "topic": "문장 순서",
+   "stage": 5,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "나는"
+    },
+    {
+     "id": "c2",
+     "text": "알게 되었다"
+    },
+    {
+     "id": "c3",
+     "text": "어렵다는"
+    },
+    {
+     "id": "c4",
+     "text": "생각보다"
+    },
+    {
+     "id": "c5",
+     "text": "것을"
+    },
+    {
+     "id": "c6",
+     "text": "그 문제가"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c6",
+    "c4",
+    "c3",
+    "c5",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 198,
+   "id": "KOR4-ORDER-024",
+   "topic": "문장 순서",
+   "stage": 5,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "내가"
+    },
+    {
+     "id": "c2",
+     "text": "친구들은"
+    },
+    {
+     "id": "c3",
+     "text": "이유를"
+    },
+    {
+     "id": "c4",
+     "text": "궁금해했다"
+    },
+    {
+     "id": "c5",
+     "text": "지각한"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c5",
+    "c3",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  },
+  {
+   "_order": 199,
+   "id": "KOR4-ORDER-025",
+   "topic": "문장 순서",
+   "stage": 5,
+   "type": "order",
+   "prompt": "어절을 순서대로 놓아 문장을 완성하세요.",
+   "hint": "누가/무엇이 먼저 오는지 생각해요.",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "반드시"
+    },
+    {
+     "id": "c2",
+     "text": "숙제를"
+    },
+    {
+     "id": "c3",
+     "text": "제출하라고"
+    },
+    {
+     "id": "c4",
+     "text": "선생님께서는"
+    },
+    {
+     "id": "c5",
+     "text": "잊지 말고"
+    },
+    {
+     "id": "c6",
+     "text": "강조하셨다"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c2",
+    "c5",
+    "c1",
+    "c3",
+    "c6"
+   ],
+   "playable": true,
+   "explain": "문장 순서 배열"
+  }
+ ]
+}

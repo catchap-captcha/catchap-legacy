@@ -1,0 +1,710 @@
+{
+ "subject": "수학",
+ "topic": "생활 수학",
+ "questions": [
+  {
+   "_order": 50,
+   "id": "math-ch3_01_lv1_from_l4_1",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "한 상자에 35개씩 든 귤이 34상자 있어요. 귤은 모두 몇 개일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "35 × 34 = 1190개!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "1225"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "1190"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "1290"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "1156"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 51,
+   "id": "math-ch3_02_lv1_from_l4_2",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "하루에 750원씩 19일 동안 저금하면 모두 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "750 × 19 = 14250원!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "14250"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "14251"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "13500"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "15000"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 52,
+   "id": "math-ch3_03_lv1_from_l4_4",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "한 상자에 37개씩 든 귤이 26상자 있어요. 귤은 모두 몇 개일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "37 × 26 = 962개!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "999"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "936"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "1062"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "962"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 53,
+   "id": "math-ch3_04_photo_l6_09_weight_difference",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "형근, 건우, 정민 세 사람의 몸무게 합은 102.18kg입니다. 형근이는 32.02kg이고, 정민이는 형근이보다 1.13kg 더 무겁습니다. 건우와 정민이의 몸무게 차는 몇 kg일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "정민이는 32.02+1.13=33.15kg, 건우는 102.18-32.02-33.15=37.01kg이에요. 차이는 37.01-33.15=3.86kg!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "1.13 kg"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "4.99 kg"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "3.86 kg"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "5.12 kg"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 54,
+   "id": "math-ch3_05_photo_l6_10_animal_weight",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "토끼의 무게는 9.7kg이고, 너구리의 무게는 토끼보다 0.1kg 더 무겁습니다. 토끼와 너구리의 무게의 합은 몇 kg일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "너구리는 9.7+0.1=9.8kg이고, 둘의 합은 9.7+9.8=19.5kg이에요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "9.8 kg"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "19.4 kg"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "18.5 kg"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "19.5 kg"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 55,
+   "id": "math-ch3_06_photo_l11_06_pencils_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "연필 45타를 30명에게 똑같이 나누어 주면 한 사람은 몇 자루씩 갖게 될까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "1타는 12자루이므로 45타는 540자루예요. 540÷30=18자루입니다.",
+   "figure": "<svg viewBox=\"0 0 480 160\" width=\"480\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"480\" height=\"160\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"40\" y=\"34\" font-size=\"16\" font-weight=\"900\">1타 = 12자루</text>\n        <text x=\"40\" y=\"68\" font-size=\"16\" font-weight=\"900\">45타를 30명에게 똑같이 나누기</text>\n        <line x1=\"214\" y1=\"42\" x2=\"214\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"225\" y1=\"42\" x2=\"225\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"236\" y1=\"42\" x2=\"236\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"247\" y1=\"42\" x2=\"247\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"258\" y1=\"42\" x2=\"258\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"269\" y1=\"42\" x2=\"269\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"280\" y1=\"42\" x2=\"280\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"291\" y1=\"42\" x2=\"291\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"302\" y1=\"42\" x2=\"302\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"313\" y1=\"42\" x2=\"313\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"324\" y1=\"42\" x2=\"324\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"335\" y1=\"42\" x2=\"335\" y2=\"108\" stroke=\"#d07b13\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n        <rect x=\"204\" y=\"35\" width=\"148\" height=\"82\" rx=\"12\" fill=\"none\" stroke=\"#d9c9b4\" stroke-width=\"3\"/>\n        <text x=\"278\" y=\"142\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">연필 한 타</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "16",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "22",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "18",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "20",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 56,
+   "id": "math-ch3_07_photo_l11_15_last_day_pages_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "430쪽짜리 책을 하루에 22쪽씩 읽다가 마지막 날 남은 쪽수를 모두 읽으려면 마지막 날에는 몇 쪽을 읽어야 할까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "22쪽씩 19일 읽으면 418쪽이고, 430-418=12쪽이 남습니다.",
+   "figure": "<svg viewBox=\"0 0 500 155\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"500\" height=\"155\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"42\" y=\"52\" width=\"360\" height=\"36\" rx=\"18\" fill=\"#f0ebe4\" stroke=\"#d9c9b4\" stroke-width=\"3\"/>\n        <rect x=\"42\" y=\"52\" width=\"350\" height=\"36\" rx=\"18\" fill=\"#d9b2d5\" opacity=\".75\"/>\n        <text x=\"42\" y=\"36\" font-size=\"16\" font-weight=\"900\">430쪽 중 하루 22쪽씩 읽기</text>\n        <text x=\"42\" y=\"116\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\">22쪽 × 19일 = 418쪽</text>\n        <text x=\"407\" y=\"78\" font-size=\"16\" font-weight=\"900\" fill=\"#d07b13\">남은 쪽?</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "13",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "11",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "12",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "14",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 57,
+   "id": "math-ch3_gen_01_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "어른 표 2장은 각각 9,000원, 어린이 표 3장은 각각 6,000원입니다. 5,000원 할인권을 쓰면 모두 얼마를 내야 할까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "9,000×2+6,000×3-5,000=31,000원입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "37200",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "27900",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "34100",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "31000",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 58,
+   "id": "math-ch3_gen_02_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "귤 156개를 한 봉지에 12개씩 담으면 몇 봉지가 필요할까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "156÷12=13봉지입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "12",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "14",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "13",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "15",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 59,
+   "id": "math-ch3_gen_03_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "13명씩 앉는 긴 의자 8개에 97명이 모두 앉았습니다. 빈 자리는 몇 개일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "13×8=104자리, 104-97=7자리입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "7",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "9",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "8",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "6",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 60,
+   "id": "math-ch3_gen_04_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "간식비 36,000원 중 1,200원이 남았습니다. 8명이 똑같이 냈다면 한 사람은 얼마씩 낸 것일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "실제로 쓴 돈은 34,800원이고, 34,800÷8=4,350원입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "4785",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "3915",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "4350",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "5220",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 61,
+   "id": "math-ch3_gen_05_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "우유가 24개씩 든 상자 7개가 있습니다. 6개 반에 똑같이 나누면 한 반은 몇 개씩 받나요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "24×7=168개, 168÷6=28개입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "31",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "25",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "28",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "34",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 62,
+   "id": "math-ch3_gen_06_drag",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "스티커 18장씩 든 묶음 9개를 5명에게 똑같이 나누면 남는 스티커는 몇 장일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "18×9=162장, 162÷5는 몫 32, 나머지 2입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "3",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 63,
+   "id": "math-ch3_gen_07_select",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "노트 48권을 5권씩 한 세트로 포장하려고 합니다. 세트를 남김없이 만들려면 노트가 몇 권 더 필요할까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "50권이면 5권씩 딱 나누어지므로 2권이 더 필요합니다.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "1"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "3"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "4"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "2"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 64,
+   "id": "math-ch3_gen_08_select",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "45명이 타는 버스 6대에 238명이 탔습니다. 빈 좌석은 모두 몇 자리일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "45×6=270자리, 270-238=32자리입니다.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "32"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "38"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "35"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "29"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 65,
+   "id": "math-ch3_gen_10_select",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "처음에 8,700원을 가지고 있었고 28일 동안 매일 1,500원씩 모았습니다. 모두 얼마가 되었을까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "1,500×28=42,000원, 42,000+8,700=50,700원입니다.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "55770"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "50700"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "60840"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "45630"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 66,
+   "id": "math-ch3_gen_11",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "피자 5판을 각각 8조각으로 자른 뒤 6명이 똑같이 나누어 먹었습니다. 남는 조각은 몇 조각일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "5×8=40조각이고, 40÷6은 나머지 4입니다.",
+   "type": "input",
+   "answers": [
+    "4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 67,
+   "id": "math-ch3_gen_12",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "한 반 학생 27명에게 공책을 3권씩 주고 여분으로 12권을 더 준비하려고 합니다. 공책은 모두 몇 권 필요할까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "27×3+12=93권입니다.",
+   "type": "input",
+   "answers": [
+    "93"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 68,
+   "id": "math-ch3_gen_13",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "길이 3m 40cm인 리본을 45cm씩 잘라 선물 포장을 합니다. 45cm짜리 리본은 최대 몇 개 만들 수 있을까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3m40cm=340cm이고, 340÷45는 몫 7입니다.",
+   "type": "input",
+   "answers": [
+    "7"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 69,
+   "id": "math-ch3_gen_14",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "케이크가 한 상자에 16개씩 3상자 있습니다. 28개를 팔았다면 남은 케이크는 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "16×3=48개, 48-28=20개입니다.",
+   "type": "input",
+   "answers": [
+    "20"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 70,
+   "id": "math-ch3_gen_15",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "하루에 18쪽씩 15일 동안 읽고도 96쪽이 남았습니다. 이 책은 모두 몇 쪽일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "18×15=270쪽을 읽었고, 270+96=366쪽입니다.",
+   "type": "input",
+   "answers": [
+    "366"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 71,
+   "id": "math-ch3_gen_16",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "500원짜리 동전 7개와 100원짜리 동전 18개의 금액은 모두 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "500×7+100×18=3,500+1,800=5,300원입니다.",
+   "type": "input",
+   "answers": [
+    "5300"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 72,
+   "id": "math-ch3_gen_17",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "이름표를 9장씩 14묶음 만들었습니다. 150명이 쓰려면 이름표가 몇 장 더 필요할까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "9×14=126장이므로 150-126=24장이 더 필요합니다.",
+   "type": "input",
+   "answers": [
+    "24"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 73,
+   "id": "math-ch3_gen_18",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "급식비가 한 명에 4,200원입니다. 23명의 급식비는 모두 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "4,200×23=96,600원입니다.",
+   "type": "input",
+   "answers": [
+    "96600"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 74,
+   "id": "math-ch3_gen_19",
+   "topic": "생활 수학",
+   "stage": 3,
+   "prompt": "책갈피를 11개씩 9묶음 만들었습니다. 84개를 나누어 주었다면 남은 책갈피는 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "11×9=99개이고, 99-84=15개입니다.",
+   "type": "input",
+   "answers": [
+    "15"
+   ],
+   "playable": true
+  }
+ ]
+}

@@ -1,0 +1,881 @@
+{
+ "subject": "국어",
+ "topic": "맞춤법",
+ "questions": [
+  {
+   "_order": 5,
+   "id": "KOR4-SPELL-001",
+   "topic": "맞춤법",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "몇 일"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "몇칠"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "며칠"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "몇일"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "'며칠'이 올바른 표기예요.",
+   "sentence": "우리 가족은 여행을 떠나기까지 ___이 남아서 손가락으로 꼽아 보았다."
+  },
+  {
+   "_order": 12,
+   "id": "KOR4-SPELL-002",
+   "topic": "맞춤법",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "왠지"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "웬찌"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "웬지"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "왠찌"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'왠지'가 올바른 표기예요.",
+   "sentence": "나도 이유를 모르겠지만, 오늘은 ___ 기분이 좋다."
+  },
+  {
+   "_order": 19,
+   "id": "KOR4-SPELL-003",
+   "topic": "맞춤법",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "웬닐"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "웬일"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "왠일"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "왠닐"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'웬일'이 올바른 표기예요.",
+   "sentence": "야, 이게 ___이니? 정말 오랜만이다!"
+  },
+  {
+   "_order": 26,
+   "id": "KOR4-SPELL-004",
+   "topic": "맞춤법",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "됬다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "됫다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "됐다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "됐따"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "'됐다'가 올바른 표기예요.",
+   "sentence": "이제 준비가 다 ___."
+  },
+  {
+   "_order": 33,
+   "id": "KOR4-SPELL-005",
+   "topic": "맞춤법",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "봬요"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "뵈요"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "봬여요"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "뵈여요"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'봬요'가 올바른 표기예요.",
+   "sentence": "선생님, 내일 학교에서 ___."
+  },
+  {
+   "_order": 40,
+   "id": "KOR4-SPELL-006",
+   "topic": "맞춤법",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "거예요"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "거에요"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "그예요"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "게예요"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'거예요'가 올바른 표기예요.",
+   "sentence": "이건 제 우산이 아니라 동생 ___."
+  },
+  {
+   "_order": 47,
+   "id": "KOR4-SPELL-007",
+   "topic": "맞춤법",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "어리없었다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "어이없었다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "어이 없었다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "어의없었다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'어이없었다'가 올바른 표기예요.",
+   "sentence": "그 말을 듣고 나는 정말 ___."
+  },
+  {
+   "_order": 54,
+   "id": "KOR4-SPELL-008",
+   "topic": "맞춤법",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "아뭇튼"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "아무튼"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "아무턴"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "아뭏튼"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'아무튼'이 올바른 표기예요.",
+   "sentence": "자세한 이야기는 나중에 하고, ___ 우리는 무사히 도착했다."
+  },
+  {
+   "_order": 61,
+   "id": "KOR4-SPELL-009",
+   "topic": "맞춤법",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "덜했다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "안 했다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "못했다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "않았다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'안 했다'가 올바른 표기예요.",
+   "sentence": "나는 하기 싫어서 숙제를 아예 ___."
+  },
+  {
+   "_order": 68,
+   "id": "KOR4-SPELL-010",
+   "topic": "맞춤법",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "다르지 않았다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "다르지 덜했다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "다르지 안았다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "다르지 못했다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'다르지 않았다'가 올바른 표기예요.",
+   "sentence": "선생님께서 확인해 보니 그 이야기는 사실과 ___."
+  },
+  {
+   "_order": 75,
+   "id": "KOR4-SPELL-011",
+   "topic": "맞춤법",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "이따가"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "있다가"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "이따 가"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "잇다가"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'이따가'가 올바른 표기예요.",
+   "sentence": "너 지금 바쁘면 ___ 다시 전화할게."
+  },
+  {
+   "_order": 82,
+   "id": "KOR4-SPELL-012",
+   "topic": "맞춤법",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "났다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "낫았다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "낳았다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "나았다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "'나았다'가 올바른 표기예요.",
+   "sentence": "약을 먹고 감기가 다 ___."
+  },
+  {
+   "_order": 89,
+   "id": "KOR4-SPELL-013",
+   "topic": "맞춤법",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "새웠다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "새왔다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "새았다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "세웠다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'새웠다'가 올바른 표기예요.",
+   "sentence": "시험 공부를 하느라 밤을 ___."
+  },
+  {
+   "_order": 96,
+   "id": "KOR4-SPELL-014",
+   "topic": "맞춤법",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "달르다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "다르다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "틀르다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "틀리다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'다르다'가 올바른 표기예요.",
+   "sentence": "쌍둥이인데도 성격이 서로 ___."
+  },
+  {
+   "_order": 103,
+   "id": "KOR4-SPELL-015",
+   "topic": "맞춤법",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "어떻해"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "어쩌케"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "어떻게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "어떡해"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "'어떡해'가 올바른 표기예요.",
+   "sentence": "시험을 망쳤어. 나 이제 ___?"
+  },
+  {
+   "_order": 110,
+   "id": "KOR4-SPELL-016",
+   "topic": "맞춤법",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "을게요"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "을게여"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "을께요"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "을께여"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'을게요'가 올바른 표기예요.",
+   "sentence": "제가 내일까지 숙제를 다 끝내 놓___."
+  },
+  {
+   "_order": 117,
+   "id": "KOR4-SPELL-017",
+   "topic": "맞춤법",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "웬만하면"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "왠만하믄"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "웬만하믄"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "왠만하면"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'웬만하면'이 올바른 표기예요.",
+   "sentence": "___ 오늘 안에 이 일을 끝내자."
+  },
+  {
+   "_order": 124,
+   "id": "KOR4-SPELL-018",
+   "topic": "맞춤법",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "구여"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "고요"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "구요"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "고여"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'고요'가 올바른 표기예요.",
+   "sentence": "이건 제 책이___, 저건 동생 책이에요."
+  },
+  {
+   "_order": 131,
+   "id": "KOR4-SPELL-019",
+   "topic": "맞춤법",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "통털려"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "통틀려"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "통틀어"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "통털어"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "'통틀어'가 올바른 표기예요.",
+   "sentence": "이번 시험은 우리 반을 ___ 나만 백 점을 받았다."
+  },
+  {
+   "_order": 138,
+   "id": "KOR4-SPELL-020",
+   "topic": "맞춤법",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "입은 채"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "입은 체"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "입은 듯"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "입은 것"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'입은 채'가 올바른 표기예요.",
+   "sentence": "옷을 ___ 그대로 물에 들어갔다."
+  },
+  {
+   "_order": 145,
+   "id": "KOR4-SPELL-021",
+   "topic": "맞춤법",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "곱곰이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "곰곰히"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "곰곰이"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "곰곱이"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "'곰곰이'가 올바른 표기예요.",
+   "sentence": "나는 시간이 많이 남아서 그 문제를 ___ 생각해 보았다."
+  },
+  {
+   "_order": 152,
+   "id": "KOR4-SPELL-022",
+   "topic": "맞춤법",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "깨끗히"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "깨긋이"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "깨끗이"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "깨끋이"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "'깨끗이'가 올바른 표기예요.",
+   "sentence": "먼지가 하나도 없도록 방을 ___ 청소했다."
+  },
+  {
+   "_order": 159,
+   "id": "KOR4-SPELL-023",
+   "topic": "맞춤법",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "일찍히"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "일찌기"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "일찍기"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "일찍이"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "'일찍이'가 올바른 표기예요.",
+   "sentence": "그는 느긋하게 준비했지만 워낙 ___ 학교에 도착해서 아무도 없었다."
+  },
+  {
+   "_order": 166,
+   "id": "KOR4-SPELL-024",
+   "topic": "맞춤법",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "웃어른"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "윗어른"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "웃 어른"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "위어른"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "'웃어른'이 올바른 표기예요.",
+   "sentence": "우리는 나이가 많으신 ___을 언제나 공경해야 한다."
+  },
+  {
+   "_order": 173,
+   "id": "KOR4-SPELL-025",
+   "topic": "맞춤법",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 들어갈 올바른 맞춤법을 골라 넣어보세요.",
+   "hint": "빈칸에 들어갈 올바른 맞춤법을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "안절부절 못했다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "안절부절못했다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "안절부절 하였다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "안절부절했다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "'안절부절못했다'가 올바른 표기예요.",
+   "sentence": "시험 결과를 기다리며 나는 방 안을 왔다 갔다 하면서 ___."
+  }
+ ]
+}

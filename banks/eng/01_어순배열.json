@@ -1,0 +1,916 @@
+{
+ "subject": "영어",
+ "topic": "어순 배열",
+ "questions": [
+  {
+   "_order": 0,
+   "id": "eng-08-o1-q1",
+   "image": "🍎",
+   "topic": "어순 배열",
+   "stage": 1,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "나는 사과를 좋아해요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "I"
+    },
+    {
+     "id": "c3",
+     "text": "apples"
+    },
+    {
+     "id": "c1",
+     "text": "like"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 1,
+   "id": "eng-08-o1-q2",
+   "image": "😊",
+   "topic": "어순 배열",
+   "stage": 1,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "나는 행복해요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "am"
+    },
+    {
+     "id": "c3",
+     "text": "I"
+    },
+    {
+     "id": "c2",
+     "text": "happy"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 2,
+   "id": "eng-08-o1-q3",
+   "image": "🐶",
+   "topic": "어순 배열",
+   "stage": 1,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "강아지는 달릴 수 있어요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "Dogs"
+    },
+    {
+     "id": "c1",
+     "text": "run"
+    },
+    {
+     "id": "c3",
+     "text": "can"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 3,
+   "id": "eng-08-o1-q4",
+   "image": "🐦",
+   "topic": "어순 배열",
+   "stage": 1,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "새는 날 수 있어요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "fly"
+    },
+    {
+     "id": "c3",
+     "text": "Birds"
+    },
+    {
+     "id": "c1",
+     "text": "can"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 4,
+   "id": "eng-08-o1-q5",
+   "image": "🥛",
+   "topic": "어순 배열",
+   "stage": 1,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "나는 우유를 좋아해요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "like"
+    },
+    {
+     "id": "c3",
+     "text": "I"
+    },
+    {
+     "id": "c1",
+     "text": "milk"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 5,
+   "id": "eng-08-o2-q1",
+   "image": "🐱",
+   "topic": "어순 배열",
+   "stage": 2,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "그녀는 고양이가 있어요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "has"
+    },
+    {
+     "id": "c3",
+     "text": "cat"
+    },
+    {
+     "id": "c2",
+     "text": "She"
+    },
+    {
+     "id": "c1",
+     "text": "a"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 6,
+   "id": "eng-08-o2-q2",
+   "image": "🎒",
+   "topic": "어순 배열",
+   "stage": 2,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "이것은 내 가방이에요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "bag"
+    },
+    {
+     "id": "c1",
+     "text": "my"
+    },
+    {
+     "id": "c4",
+     "text": "is"
+    },
+    {
+     "id": "c2",
+     "text": "This"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 7,
+   "id": "eng-08-o2-q3",
+   "image": "🧑",
+   "topic": "어순 배열",
+   "stage": 2,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "그는 내 친구예요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "my"
+    },
+    {
+     "id": "c1",
+     "text": "is"
+    },
+    {
+     "id": "c3",
+     "text": "He"
+    },
+    {
+     "id": "c2",
+     "text": "friend"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c4",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 8,
+   "id": "eng-08-o2-q4",
+   "image": "🐶",
+   "topic": "어순 배열",
+   "stage": 2,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "나는 강아지 두 마리가 있어요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "dogs"
+    },
+    {
+     "id": "c4",
+     "text": "I"
+    },
+    {
+     "id": "c1",
+     "text": "two"
+    },
+    {
+     "id": "c2",
+     "text": "have"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 9,
+   "id": "eng-08-o2-q5",
+   "image": "🔴",
+   "topic": "어순 배열",
+   "stage": 2,
+   "prompt": "단어를 순서대로 놓아 문장을 만들어보세요.",
+   "hint": "공은 빨간색이에요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "is"
+    },
+    {
+     "id": "c4",
+     "text": "ball"
+    },
+    {
+     "id": "c2",
+     "text": "The"
+    },
+    {
+     "id": "c3",
+     "text": "red"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 10,
+   "id": "eng-08-o3-q1",
+   "image": "🐱",
+   "topic": "어순 배열",
+   "stage": 3,
+   "prompt": "조금 긴 문장도 순서대로 만들어보세요.",
+   "hint": "고양이가 지금 자고 있어요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "sleeping"
+    },
+    {
+     "id": "c2",
+     "text": "The"
+    },
+    {
+     "id": "c4",
+     "text": "cat"
+    },
+    {
+     "id": "c5",
+     "text": "is"
+    },
+    {
+     "id": "c3",
+     "text": "now"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c5",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 11,
+   "id": "eng-08-o3-q2",
+   "image": "📘",
+   "topic": "어순 배열",
+   "stage": 3,
+   "prompt": "조금 긴 문장도 순서대로 만들어보세요.",
+   "hint": "책이 위에 있어요. (The book is on the)",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "The"
+    },
+    {
+     "id": "c3",
+     "text": "on"
+    },
+    {
+     "id": "c5",
+     "text": "the"
+    },
+    {
+     "id": "c4",
+     "text": "is"
+    },
+    {
+     "id": "c1",
+     "text": "book"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c4",
+    "c3",
+    "c5"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 12,
+   "id": "eng-08-o3-q3",
+   "image": "🏫",
+   "topic": "어순 배열",
+   "stage": 3,
+   "prompt": "조금 긴 문장도 순서대로 만들어보세요.",
+   "hint": "나는 오늘 학교에 가요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "to"
+    },
+    {
+     "id": "c3",
+     "text": "today"
+    },
+    {
+     "id": "c5",
+     "text": "school"
+    },
+    {
+     "id": "c4",
+     "text": "go"
+    },
+    {
+     "id": "c2",
+     "text": "I"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c5",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 13,
+   "id": "eng-08-o3-q4",
+   "image": "⚽",
+   "topic": "어순 배열",
+   "stage": 3,
+   "prompt": "조금 긴 문장도 순서대로 만들어보세요.",
+   "hint": "우리는 방과 후에 축구를 해요.",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "We"
+    },
+    {
+     "id": "c1",
+     "text": "after"
+    },
+    {
+     "id": "c4",
+     "text": "school"
+    },
+    {
+     "id": "c2",
+     "text": "play"
+    },
+    {
+     "id": "c5",
+     "text": "soccer"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c5",
+    "c1",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 14,
+   "id": "eng-08-o3-q5",
+   "image": "📖",
+   "topic": "어순 배열",
+   "stage": 3,
+   "prompt": "조금 긴 문장도 순서대로 만들어보세요.",
+   "hint": "그녀는 책을 읽어요. (She reads a book every)",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "She"
+    },
+    {
+     "id": "c4",
+     "text": "a"
+    },
+    {
+     "id": "c3",
+     "text": "book"
+    },
+    {
+     "id": "c1",
+     "text": "reads"
+    },
+    {
+     "id": "c5",
+     "text": "every"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c4",
+    "c3",
+    "c5"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 15,
+   "id": "eng-08-o4-q1",
+   "image": "🍎",
+   "meaning": "나는 사과를 좋아해요.",
+   "topic": "어순 배열",
+   "stage": 4,
+   "prompt": "필요한 단어만 골라 문장을 만들어보세요.",
+   "hint": "필요 없는 단어는 남겨요!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "dog"
+    },
+    {
+     "id": "c1",
+     "text": "like"
+    },
+    {
+     "id": "c2",
+     "text": "I"
+    },
+    {
+     "id": "c3",
+     "text": "apples"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 16,
+   "id": "eng-08-o4-q2",
+   "image": "🐱",
+   "meaning": "그녀는 고양이가 있어요.",
+   "topic": "어순 배열",
+   "stage": 4,
+   "prompt": "필요한 단어만 골라 문장을 만들어보세요.",
+   "hint": "필요 없는 단어는 남겨요!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c5",
+     "text": "run"
+    },
+    {
+     "id": "c4",
+     "text": "has"
+    },
+    {
+     "id": "c3",
+     "text": "cat"
+    },
+    {
+     "id": "c2",
+     "text": "She"
+    },
+    {
+     "id": "c1",
+     "text": "a"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 17,
+   "id": "eng-08-o4-q3",
+   "image": "🔴",
+   "meaning": "공은 빨간색이에요.",
+   "topic": "어순 배열",
+   "stage": 4,
+   "prompt": "필요한 단어만 골라 문장을 만들어보세요.",
+   "hint": "필요 없는 단어는 남겨요!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "red"
+    },
+    {
+     "id": "c1",
+     "text": "is"
+    },
+    {
+     "id": "c2",
+     "text": "The"
+    },
+    {
+     "id": "c4",
+     "text": "ball"
+    },
+    {
+     "id": "c5",
+     "text": "blue"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 18,
+   "id": "eng-08-o4-q4",
+   "image": "😊",
+   "meaning": "나는 행복해요.",
+   "topic": "어순 배열",
+   "stage": 4,
+   "prompt": "필요한 단어만 골라 문장을 만들어보세요.",
+   "hint": "필요 없는 단어는 남겨요!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "happy"
+    },
+    {
+     "id": "c1",
+     "text": "am"
+    },
+    {
+     "id": "c3",
+     "text": "I"
+    },
+    {
+     "id": "c4",
+     "text": "sad"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 19,
+   "id": "eng-08-o4-q5",
+   "image": "🐦",
+   "meaning": "새는 날 수 있어요.",
+   "topic": "어순 배열",
+   "stage": 4,
+   "prompt": "필요한 단어만 골라 문장을 만들어보세요.",
+   "hint": "필요 없는 단어는 남겨요!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "can"
+    },
+    {
+     "id": "c3",
+     "text": "Birds"
+    },
+    {
+     "id": "c2",
+     "text": "fly"
+    },
+    {
+     "id": "c4",
+     "text": "swim"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 20,
+   "id": "eng-08-o5-q1",
+   "meaning": "나는 사과를 좋아해요.",
+   "topic": "어순 배열",
+   "stage": 5,
+   "prompt": "뜻을 보고 영어 문장을 만들어보세요.",
+   "hint": "그림 없이 도전!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "like"
+    },
+    {
+     "id": "c2",
+     "text": "I"
+    },
+    {
+     "id": "c1",
+     "text": "apples"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 21,
+   "id": "eng-08-o5-q2",
+   "meaning": "그는 내 친구예요.",
+   "topic": "어순 배열",
+   "stage": 5,
+   "prompt": "뜻을 보고 영어 문장을 만들어보세요.",
+   "hint": "그림 없이 도전!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "my"
+    },
+    {
+     "id": "c4",
+     "text": "is"
+    },
+    {
+     "id": "c2",
+     "text": "He"
+    },
+    {
+     "id": "c3",
+     "text": "friend"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 22,
+   "id": "eng-08-o5-q3",
+   "meaning": "이것은 내 가방이에요.",
+   "topic": "어순 배열",
+   "stage": 5,
+   "prompt": "뜻을 보고 영어 문장을 만들어보세요.",
+   "hint": "그림 없이 도전!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "bag"
+    },
+    {
+     "id": "c2",
+     "text": "This"
+    },
+    {
+     "id": "c4",
+     "text": "is"
+    },
+    {
+     "id": "c3",
+     "text": "my"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 23,
+   "id": "eng-08-o5-q4",
+   "meaning": "나는 강아지 두 마리가 있어요.",
+   "topic": "어순 배열",
+   "stage": 5,
+   "prompt": "뜻을 보고 영어 문장을 만들어보세요.",
+   "hint": "그림 없이 도전!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "have"
+    },
+    {
+     "id": "c3",
+     "text": "two"
+    },
+    {
+     "id": "c2",
+     "text": "I"
+    },
+    {
+     "id": "c1",
+     "text": "dogs"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 24,
+   "id": "eng-08-o5-q5",
+   "meaning": "나는 오늘 학교에 가요.",
+   "topic": "어순 배열",
+   "stage": 5,
+   "prompt": "뜻을 보고 영어 문장을 만들어보세요.",
+   "hint": "그림 없이 도전!",
+   "explain": "어순 배열",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "I"
+    },
+    {
+     "id": "c1",
+     "text": "school"
+    },
+    {
+     "id": "c5",
+     "text": "to"
+    },
+    {
+     "id": "c4",
+     "text": "go"
+    },
+    {
+     "id": "c3",
+     "text": "today"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c5",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  }
+ ]
+}

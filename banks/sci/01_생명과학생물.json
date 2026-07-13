@@ -1,0 +1,1141 @@
+{
+ "subject": "과학",
+ "topic": "생명과학/생물",
+ "questions": [
+  {
+   "_order": 0,
+   "id": "sci-animals",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "동물을 모두 골라주세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "강아지·고양이·참새는 스스로 움직이는 동물이에요. 나무와 꽃은 식물이랍니다!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐦",
+     "text": "참새"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐶",
+     "text": "강아지"
+    },
+    {
+     "id": "o3",
+     "emoji": "🪨",
+     "text": "돌"
+    },
+    {
+     "id": "o4",
+     "emoji": "🌳",
+     "text": "나무"
+    },
+    {
+     "id": "o5",
+     "emoji": "🍎",
+     "text": "사과"
+    },
+    {
+     "id": "o6",
+     "emoji": "🚗",
+     "text": "자동차"
+    },
+    {
+     "id": "o7",
+     "emoji": "🌸",
+     "text": "꽃"
+    },
+    {
+     "id": "o8",
+     "emoji": "🐱",
+     "text": "고양이"
+    },
+    {
+     "id": "o9",
+     "emoji": "🍄",
+     "text": "버섯"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o8"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o8"
+   ]
+  },
+  {
+   "_order": 3,
+   "id": "sci-seed",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "drag",
+   "prompt": "씨앗을 흙 속에 넣어주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "씨앗은 흙 속에서 물과 햇빛을 만나 싹을 틔워요! 🌱",
+   "target": {
+    "e": "🪴",
+    "label": "화분 속 흙에 쏙!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🌰",
+     "label": "씨앗"
+    },
+    {
+     "id": "d2",
+     "e": "🪨",
+     "label": "돌"
+    },
+    {
+     "id": "d3",
+     "e": "🍬",
+     "label": "사탕"
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 4,
+   "id": "sci-fish",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "drag",
+   "prompt": "물고기를 물속으로 옮겨주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "물고기는 물속에서 아가미로 숨 쉬며 살아요!",
+   "target": {
+    "e": "🌊",
+    "label": "물속으로 풍덩!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🐰",
+     "label": "토끼"
+    },
+    {
+     "id": "d2",
+     "e": "🐦",
+     "label": "새"
+    },
+    {
+     "id": "d3",
+     "e": "🐟",
+     "label": "물고기"
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 8,
+   "id": "sci-nest",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "drag",
+   "prompt": "아기 새를 둥지로 보내주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "새는 나무 위 둥지에서 살아요. 물고기는 물속, 강아지는 개집에서 살지요!",
+   "target": {
+    "e": "🪺",
+    "label": "포근한 둥지로!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🐤",
+     "label": "아기 새"
+    },
+    {
+     "id": "d2",
+     "e": "🐟",
+     "label": "물고기"
+    },
+    {
+     "id": "d3",
+     "e": "🐶",
+     "label": "강아지"
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 9,
+   "id": "sci-sealand",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "sort",
+   "prompt": "바다에 사는 동물과 땅에 사는 동물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "물고기와 문어는 바닷속에서, 강아지와 토끼는 땅 위에서 살아요!",
+   "bins": [
+    {
+     "id": "sea",
+     "label": "🌊 바다"
+    },
+    {
+     "id": "land",
+     "label": "⛰️ 땅"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "강아지"
+    },
+    {
+     "id": "i2",
+     "text": "토끼"
+    },
+    {
+     "id": "i3",
+     "text": "문어"
+    },
+    {
+     "id": "i4",
+     "text": "물고기"
+    }
+   ],
+   "answer": {
+    "i1": "land",
+    "i2": "land",
+    "i3": "sea",
+    "i4": "sea"
+   },
+   "playable": true
+  },
+  {
+   "_order": 10,
+   "id": "sci-plants",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "식물을 모두 골라주세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "나무·해바라기·선인장은 땅에 뿌리를 내리고 사는 식물이에요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🌻",
+     "text": "해바라기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🌵",
+     "text": "선인장"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐟",
+     "text": "물고기"
+    },
+    {
+     "id": "o4",
+     "emoji": "🪨",
+     "text": "돌"
+    },
+    {
+     "id": "o5",
+     "emoji": "🌳",
+     "text": "나무"
+    },
+    {
+     "id": "o6",
+     "emoji": "🐶",
+     "text": "강아지"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o5"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o5"
+   ]
+  },
+  {
+   "_order": 12,
+   "id": "sci-ear",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "position",
+   "prompt": "소리를 듣는 곳을 눌러주세요",
+   "hint": "그림에서 알맞은 곳을 찾아 눌러요!",
+   "explain": "귀는 소리를 듣는 감각기관이에요!",
+   "scene_svg": "\n    <svg viewBox=\"0 0 360 300\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\" id=\"faceScene\">\n      <rect x=\"0\" y=\"0\" width=\"360\" height=\"300\" rx=\"22\" fill=\"#eaf3ff\"/>\n      <circle cx=\"180\" cy=\"158\" r=\"96\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n      <path d=\"M84 140 C90 70 270 70 276 140 C276 105 250 62 180 62 C110 62 84 105 84 140 Z\" fill=\"#6d4c41\"/>\n      <g data-region=\"ear\">\n        <ellipse cx=\"82\" cy=\"160\" rx=\"17\" ry=\"27\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n        <path d=\"M78 150 q8 10 0 20\" stroke=\"#e5a877\" stroke-width=\"3\" fill=\"none\"/>\n        <ellipse cx=\"278\" cy=\"160\" rx=\"17\" ry=\"27\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n        <path d=\"M282 150 q-8 10 0 20\" stroke=\"#e5a877\" stroke-width=\"3\" fill=\"none\"/>\n        <circle cx=\"80\" cy=\"160\" r=\"30\" fill=\"transparent\"/>\n        <circle cx=\"280\" cy=\"160\" r=\"30\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"eye\">\n        <ellipse cx=\"146\" cy=\"146\" rx=\"15\" ry=\"11\" fill=\"#fff\" stroke=\"#caa27a\" stroke-width=\"2\"/>\n        <circle cx=\"146\" cy=\"147\" r=\"6\" fill=\"#4e342e\"/>\n        <ellipse cx=\"214\" cy=\"146\" rx=\"15\" ry=\"11\" fill=\"#fff\" stroke=\"#caa27a\" stroke-width=\"2\"/>\n        <circle cx=\"214\" cy=\"147\" r=\"6\" fill=\"#4e342e\"/>\n        <rect x=\"124\" y=\"128\" width=\"112\" height=\"36\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"nose\">\n        <path d=\"M180 158 L172 188 q8 7 16 0 Z\" fill=\"#f4b98a\"/>\n        <circle cx=\"180\" cy=\"178\" r=\"22\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"mouth\">\n        <path d=\"M152 216 q28 22 56 0\" stroke=\"#d1495b\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\"/>\n        <rect x=\"144\" y=\"204\" width=\"72\" height=\"30\" fill=\"transparent\"/>\n      </g>\n    </svg>",
+   "regions": [
+    {
+     "id": "ear",
+     "name": "귀"
+    },
+    {
+     "id": "eye",
+     "name": "눈"
+    },
+    {
+     "id": "nose",
+     "name": "코"
+    },
+    {
+     "id": "mouth",
+     "name": "입"
+    }
+   ],
+   "answer": "ear",
+   "playable": true
+  },
+  {
+   "_order": 16,
+   "id": "sci-flywalk",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "sort",
+   "prompt": "하늘을 나는 동물과 땅을 걷는 동물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "참새와 나비는 날개로 하늘을 날고, 강아지와 거북이는 땅 위를 걸어다녀요!",
+   "bins": [
+    {
+     "id": "fly",
+     "label": "🌤️ 하늘을 날아요"
+    },
+    {
+     "id": "walk",
+     "label": "🌱 땅을 걸어요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "거북이"
+    },
+    {
+     "id": "i2",
+     "text": "참새"
+    },
+    {
+     "id": "i3",
+     "text": "강아지"
+    },
+    {
+     "id": "i4",
+     "text": "나비"
+    }
+   ],
+   "answer": {
+    "i1": "walk",
+    "i2": "fly",
+    "i3": "walk",
+    "i4": "fly"
+   },
+   "playable": true
+  },
+  {
+   "_order": 18,
+   "id": "sci-root",
+   "topic": "생명과학/생물",
+   "stage": 1,
+   "type": "position",
+   "prompt": "식물의 뿌리를 눌러주세요",
+   "hint": "그림에서 알맞은 곳을 찾아 눌러요!",
+   "explain": "뿌리는 땅속에서 물과 양분을 빨아들여요!",
+   "scene_svg": "\n    <svg viewBox=\"0 0 360 300\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\" id=\"plantScene\">\n      <rect x=\"0\" y=\"0\" width=\"360\" height=\"200\" fill=\"#dff0ff\"/>\n      <circle cx=\"315\" cy=\"42\" r=\"26\" fill=\"#ffd66e\"/>\n      <rect x=\"0\" y=\"200\" width=\"360\" height=\"100\" fill=\"#c8a06b\"/>\n      <rect x=\"0\" y=\"196\" width=\"360\" height=\"8\" fill=\"#8fbf6a\"/>\n      <g data-region=\"root\">\n        <path d=\"M180 205 L150 245 M180 205 L180 258 M180 205 L212 240 M165 228 L148 252 M195 226 L214 254\"\n              stroke=\"#e8d9be\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"/>\n        <path d=\"M180 205 L150 245 M180 205 L180 258 M180 205 L212 240\"\n              stroke=\"transparent\" stroke-width=\"26\" fill=\"none\"/>\n      </g>\n      <g data-region=\"stem\">\n        <rect x=\"174\" y=\"96\" width=\"12\" height=\"106\" rx=\"6\" fill=\"#3f9d4e\"/>\n        <rect x=\"162\" y=\"90\" width=\"36\" height=\"118\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"leaf\">\n        <path d=\"M174 160 C140 150 128 128 132 118 C156 118 176 136 178 152 Z\" fill=\"#57b45f\"/>\n        <path d=\"M186 138 C220 128 232 106 228 96 C204 96 184 114 182 130 Z\" fill=\"#57b45f\"/>\n      </g>\n      <g data-region=\"flower\">\n        <circle cx=\"180\" cy=\"72\" r=\"17\" fill=\"#ffd23e\"/>\n        <g fill=\"#ff8fb0\">\n          <circle cx=\"180\" cy=\"44\" r=\"15\"/><circle cx=\"207\" cy=\"61\" r=\"15\"/>\n          <circle cx=\"200\" cy=\"92\" r=\"15\"/><circle cx=\"160\" cy=\"92\" r=\"15\"/>\n          <circle cx=\"153\" cy=\"61\" r=\"15\"/>\n        </g>\n        <circle cx=\"180\" cy=\"72\" r=\"16\" fill=\"#ffd23e\"/>\n      </g>\n    </svg>",
+   "regions": [
+    {
+     "id": "flower",
+     "name": "꽃"
+    },
+    {
+     "id": "leaf",
+     "name": "잎"
+    },
+    {
+     "id": "stem",
+     "name": "줄기"
+    },
+    {
+     "id": "root",
+     "name": "뿌리"
+    }
+   ],
+   "answer": "root",
+   "playable": true
+  },
+  {
+   "_order": 20,
+   "id": "sci-habitat",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "더운 곳과 추운 곳에 사는 동물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "낙타와 도마뱀은 더운 사막에, 펭귄과 북극곰은 추운 극지방에 살아요!",
+   "bins": [
+    {
+     "id": "hot",
+     "label": "🏜️ 더운 사막"
+    },
+    {
+     "id": "cold",
+     "label": "❄️ 추운 극지방"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "도마뱀"
+    },
+    {
+     "id": "i2",
+     "text": "낙타"
+    },
+    {
+     "id": "i3",
+     "text": "펭귄"
+    },
+    {
+     "id": "i4",
+     "text": "북극곰"
+    }
+   ],
+   "answer": {
+    "i1": "hot",
+    "i2": "hot",
+    "i3": "cold",
+    "i4": "cold"
+   },
+   "playable": true
+  },
+  {
+   "_order": 21,
+   "id": "sci-herbivore",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "풀을 먹는 동물과 고기를 먹는 동물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "토끼·소·사슴은 풀을 먹는 초식동물, 사자·늑대는 고기를 먹는 육식동물이에요!",
+   "bins": [
+    {
+     "id": "herb",
+     "label": "🌿 풀을 먹어요"
+    },
+    {
+     "id": "carn",
+     "label": "🍖 고기를 먹어요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "사자"
+    },
+    {
+     "id": "i2",
+     "text": "늑대"
+    },
+    {
+     "id": "i3",
+     "text": "토끼"
+    },
+    {
+     "id": "i4",
+     "text": "사슴"
+    },
+    {
+     "id": "i5",
+     "text": "소"
+    }
+   ],
+   "answer": {
+    "i1": "carn",
+    "i2": "carn",
+    "i3": "herb",
+    "i4": "herb",
+    "i5": "herb"
+   },
+   "playable": true
+  },
+  {
+   "_order": 22,
+   "id": "sci-waterplant",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "물에 사는 식물과 땅에 사는 식물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "연꽃과 벼는 물에서, 선인장과 해바라기는 땅에서 자라요!",
+   "bins": [
+    {
+     "id": "water",
+     "label": "💧 물에 사는 식물"
+    },
+    {
+     "id": "land",
+     "label": "🌱 땅에 사는 식물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "연꽃"
+    },
+    {
+     "id": "i2",
+     "text": "선인장"
+    },
+    {
+     "id": "i3",
+     "text": "벼"
+    },
+    {
+     "id": "i4",
+     "text": "해바라기"
+    }
+   ],
+   "answer": {
+    "i1": "water",
+    "i2": "land",
+    "i3": "water",
+    "i4": "land"
+   },
+   "playable": true
+  },
+  {
+   "_order": 27,
+   "id": "sci-plantgrow",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "order",
+   "prompt": "식물이 자라는 순서대로 놓아주세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "씨앗에서 새싹이 나고, 잎과 줄기가 자란 뒤 꽃이 핀답니다!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "꽃"
+    },
+    {
+     "id": "c2",
+     "text": "씨앗"
+    },
+    {
+     "id": "c3",
+     "text": "잎과 줄기"
+    },
+    {
+     "id": "c4",
+     "text": "새싹"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 30,
+   "id": "sci-insect",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "multi",
+   "prompt": "곤충을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "나비·개미·벌은 다리가 6개인 곤충이에요. 거미는 8개, 지렁이는 다리가 없어서 곤충이 아니랍니다!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🦋",
+     "text": "나비"
+    },
+    {
+     "id": "o2",
+     "emoji": "🕷️",
+     "text": "거미"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐝",
+     "text": "벌"
+    },
+    {
+     "id": "o4",
+     "emoji": "🐜",
+     "text": "개미"
+    },
+    {
+     "id": "o5",
+     "emoji": "🐌",
+     "text": "달팽이"
+    },
+    {
+     "id": "o6",
+     "emoji": "🪱",
+     "text": "지렁이"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o3",
+    "o4"
+   ],
+   "playable": [
+    "o1",
+    "o3",
+    "o4"
+   ]
+  },
+  {
+   "_order": 34,
+   "id": "sci-butterfly",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "order",
+   "prompt": "나비의 한살이 순서를 맞추세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "알에서 애벌레가 나오고, 번데기를 거쳐 나비가 돼요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "알"
+    },
+    {
+     "id": "c2",
+     "text": "나비"
+    },
+    {
+     "id": "c3",
+     "text": "애벌레"
+    },
+    {
+     "id": "c4",
+     "text": "번데기"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c4",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 35,
+   "id": "sci-nose",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "position",
+   "prompt": "냄새를 맡는 감각기관을 눌러주세요",
+   "hint": "그림에서 알맞은 곳을 찾아 눌러요!",
+   "explain": "코는 냄새를 맡는 감각기관이에요. 눈은 보고, 귀는 듣고, 입(혀)은 맛을 봐요!",
+   "scene_svg": "\n    <svg viewBox=\"0 0 360 300\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\" id=\"faceScene\">\n      <rect x=\"0\" y=\"0\" width=\"360\" height=\"300\" rx=\"22\" fill=\"#eaf3ff\"/>\n      <circle cx=\"180\" cy=\"158\" r=\"96\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n      <path d=\"M84 140 C90 70 270 70 276 140 C276 105 250 62 180 62 C110 62 84 105 84 140 Z\" fill=\"#6d4c41\"/>\n      <g data-region=\"ear\">\n        <ellipse cx=\"82\" cy=\"160\" rx=\"17\" ry=\"27\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n        <path d=\"M78 150 q8 10 0 20\" stroke=\"#e5a877\" stroke-width=\"3\" fill=\"none\"/>\n        <ellipse cx=\"278\" cy=\"160\" rx=\"17\" ry=\"27\" fill=\"#ffd9b3\" stroke=\"#eebd90\" stroke-width=\"3\"/>\n        <path d=\"M282 150 q-8 10 0 20\" stroke=\"#e5a877\" stroke-width=\"3\" fill=\"none\"/>\n        <circle cx=\"80\" cy=\"160\" r=\"30\" fill=\"transparent\"/>\n        <circle cx=\"280\" cy=\"160\" r=\"30\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"eye\">\n        <ellipse cx=\"146\" cy=\"146\" rx=\"15\" ry=\"11\" fill=\"#fff\" stroke=\"#caa27a\" stroke-width=\"2\"/>\n        <circle cx=\"146\" cy=\"147\" r=\"6\" fill=\"#4e342e\"/>\n        <ellipse cx=\"214\" cy=\"146\" rx=\"15\" ry=\"11\" fill=\"#fff\" stroke=\"#caa27a\" stroke-width=\"2\"/>\n        <circle cx=\"214\" cy=\"147\" r=\"6\" fill=\"#4e342e\"/>\n        <rect x=\"124\" y=\"128\" width=\"112\" height=\"36\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"nose\">\n        <path d=\"M180 158 L172 188 q8 7 16 0 Z\" fill=\"#f4b98a\"/>\n        <circle cx=\"180\" cy=\"178\" r=\"22\" fill=\"transparent\"/>\n      </g>\n      <g data-region=\"mouth\">\n        <path d=\"M152 216 q28 22 56 0\" stroke=\"#d1495b\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\"/>\n        <rect x=\"144\" y=\"204\" width=\"72\" height=\"30\" fill=\"transparent\"/>\n      </g>\n    </svg>",
+   "regions": [
+    {
+     "id": "ear",
+     "name": "귀"
+    },
+    {
+     "id": "eye",
+     "name": "눈"
+    },
+    {
+     "id": "nose",
+     "name": "코"
+    },
+    {
+     "id": "mouth",
+     "name": "입"
+    }
+   ],
+   "answer": "nose",
+   "playable": true
+  },
+  {
+   "_order": 36,
+   "id": "sci-froglife",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "order",
+   "prompt": "개구리의 한살이 순서를 맞추세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "알에서 올챙이가 나오고, 다리가 생기고 꼬리가 없어지면서 개구리가 돼요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "개구리"
+    },
+    {
+     "id": "c2",
+     "text": "알"
+    },
+    {
+     "id": "c3",
+     "text": "올챙이"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c1"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 41,
+   "id": "sci-hibernate",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "multi",
+   "prompt": "겨울잠을 자는 동물을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "곰·개구리·뱀은 먹이가 부족한 추운 겨울 동안 겨울잠을 자요. 참새와 소는 겨울에도 활동해요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐻",
+     "text": "곰"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐄",
+     "text": "소"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐦",
+     "text": "참새"
+    },
+    {
+     "id": "o4",
+     "emoji": "🐶",
+     "text": "강아지"
+    },
+    {
+     "id": "o5",
+     "emoji": "🐸",
+     "text": "개구리"
+    },
+    {
+     "id": "o6",
+     "emoji": "🐍",
+     "text": "뱀"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o5",
+    "o6"
+   ],
+   "playable": [
+    "o1",
+    "o5",
+    "o6"
+   ]
+  },
+  {
+   "_order": 42,
+   "id": "sci-nocturnal",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "낮에 활동하는 동물과 밤에 활동하는 동물을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "나비와 참새는 낮에, 부엉이와 박쥐는 깜깜한 밤에 활동해요!",
+   "bins": [
+    {
+     "id": "day",
+     "label": "☀️ 낮에 활동"
+    },
+    {
+     "id": "night",
+     "label": "🌙 밤에 활동"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "참새"
+    },
+    {
+     "id": "i2",
+     "text": "박쥐"
+    },
+    {
+     "id": "i3",
+     "text": "부엉이"
+    },
+    {
+     "id": "i4",
+     "text": "나비"
+    }
+   ],
+   "answer": {
+    "i1": "day",
+    "i2": "night",
+    "i3": "night",
+    "i4": "day"
+   },
+   "playable": true
+  },
+  {
+   "_order": 45,
+   "id": "sci-sproutneeds",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "multi",
+   "prompt": "씨앗이 싹 트는 데 필요한 것을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "씨앗은 물과 햇빛이 있어야 싹을 틔울 수 있어요. 사탕과 장난감은 필요 없지요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🧸",
+     "text": "장난감"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍬",
+     "text": "사탕"
+    },
+    {
+     "id": "o3",
+     "emoji": "💧",
+     "text": "물"
+    },
+    {
+     "id": "o4",
+     "emoji": "☀️",
+     "text": "햇빛"
+    },
+    {
+     "id": "o5",
+     "emoji": "📺",
+     "text": "텔레비전"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o4"
+   ],
+   "playable": [
+    "o3",
+    "o4"
+   ]
+  },
+  {
+   "_order": 46,
+   "id": "sci-watersprout",
+   "topic": "생명과학/생물",
+   "stage": 3,
+   "type": "drag",
+   "prompt": "새싹에게 필요한 것을 주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "식물은 물을 마시고 자라요. 뿌리가 물을 빨아들인답니다!",
+   "target": {
+    "e": "🌱",
+    "label": "새싹에게 주세요!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🍭",
+     "label": "막대사탕"
+    },
+    {
+     "id": "d2",
+     "e": "⚽",
+     "label": "축구공"
+    },
+    {
+     "id": "d3",
+     "e": "💧",
+     "label": "물"
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 58,
+   "id": "sci-digestorder",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "order",
+   "prompt": "음식물이 소화되며 지나가는 순서를 놓으세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "음식물은 입 → 식도 → 위 → 작은창자 → 큰창자를 지나며 소화돼요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "작은창자"
+    },
+    {
+     "id": "c2",
+     "text": "위"
+    },
+    {
+     "id": "c3",
+     "text": "식도"
+    },
+    {
+     "id": "c4",
+     "text": "큰창자"
+    },
+    {
+     "id": "c5",
+     "text": "입"
+    }
+   ],
+   "answer": [
+    "c5",
+    "c3",
+    "c2",
+    "c1",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 59,
+   "id": "sci-saliva",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "single",
+   "prompt": "침이 하는 일로 알맞은 것을 고르세요",
+   "hint": "그림을 잘 보고 하나만 골라요!",
+   "explain": "입에서 나오는 침은 음식물을 부드럽게 만들고, 잘게 부수어 소화가 잘 되도록 도와줘요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "💧",
+     "text": "음식을 부드럽게 해 소화를 도와요"
+    },
+    {
+     "id": "o2",
+     "emoji": "👀",
+     "text": "물체를 보게 해줘요"
+    },
+    {
+     "id": "o3",
+     "emoji": "🫁",
+     "text": "숨을 쉬게 해줘요"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 65,
+   "id": "sci-producer",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "생산자와 소비자를 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "스스로 양분을 만드는 벼와 나무는 생산자, 다른 생물을 먹고 사는 토끼·매·메뚜기는 소비자예요!",
+   "bins": [
+    {
+     "id": "prod",
+     "label": "🌱 생산자"
+    },
+    {
+     "id": "cons",
+     "label": "🍽️ 소비자"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "나무"
+    },
+    {
+     "id": "i2",
+     "text": "메뚜기"
+    },
+    {
+     "id": "i3",
+     "text": "토끼"
+    },
+    {
+     "id": "i4",
+     "text": "벼"
+    },
+    {
+     "id": "i5",
+     "text": "매"
+    }
+   ],
+   "answer": {
+    "i1": "prod",
+    "i2": "cons",
+    "i3": "cons",
+    "i4": "prod",
+    "i5": "cons"
+   },
+   "playable": true
+  },
+  {
+   "_order": 70,
+   "id": "sci-chainfill",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "drag",
+   "prompt": "먹이 사슬의 빈칸에 알맞은 동물을 넣어주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "벼를 먹는 메뚜기가 빈칸에 들어가요. 메뚜기는 다시 개구리에게 먹힌답니다!",
+   "target": {
+    "e": "🌾 ➡️ ❓ ➡️ 🐸",
+    "label": "빈칸에 들어갈 동물을 넣어요!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🐍",
+     "label": "뱀"
+    },
+    {
+     "id": "d2",
+     "e": "🦗",
+     "label": "메뚜기"
+    },
+    {
+     "id": "d3",
+     "e": "🦅",
+     "label": "매"
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 75,
+   "id": "sci-photosyn",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "order",
+   "prompt": "식물이 열매를 맺는 과정을 순서대로 놓으세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "식물은 햇빛을 받아 잎에서 양분을 만들고, 그 양분으로 열매를 맺어요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "잎에서 양분 만들기"
+    },
+    {
+     "id": "c2",
+     "text": "햇빛 받기"
+    },
+    {
+     "id": "c3",
+     "text": "열매 맺기"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 77,
+   "id": "sci-mammalbird",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "포유류와 조류를 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "새끼를 낳아 젖을 먹이는 사자·고래·박쥐는 포유류! 알을 낳고 깃털이 있는 독수리·펭귄은 조류예요. 고래와 박쥐, 헷갈리기 쉽죠?",
+   "bins": [
+    {
+     "id": "mammal",
+     "label": "🦁 포유류"
+    },
+    {
+     "id": "bird",
+     "label": "🦅 조류"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "박쥐"
+    },
+    {
+     "id": "i2",
+     "text": "고래"
+    },
+    {
+     "id": "i3",
+     "text": "독수리"
+    },
+    {
+     "id": "i4",
+     "text": "사자"
+    },
+    {
+     "id": "i5",
+     "text": "펭귄"
+    }
+   ],
+   "answer": {
+    "i1": "mammal",
+    "i2": "mammal",
+    "i3": "bird",
+    "i4": "mammal",
+    "i5": "bird"
+   },
+   "playable": true
+  },
+  {
+   "_order": 86,
+   "id": "sci-foodchain",
+   "topic": "생명과학/생물",
+   "stage": 5,
+   "type": "order",
+   "prompt": "먹이 사슬 순서대로 놓아주세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "벼(풀)를 메뚜기가 먹고, 메뚜기를 개구리가, 개구리를 뱀이 먹어요. 에너지가 차례로 이동해요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "벼(풀)"
+    },
+    {
+     "id": "c2",
+     "text": "개구리"
+    },
+    {
+     "id": "c3",
+     "text": "뱀"
+    },
+    {
+     "id": "c4",
+     "text": "메뚜기"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c2",
+    "c3"
+   ],
+   "playable": true
+  }
+ ]
+}

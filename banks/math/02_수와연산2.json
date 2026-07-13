@@ -1,0 +1,734 @@
+{
+ "subject": "수학",
+ "topic": "수와 연산(2)",
+ "questions": [
+  {
+   "_order": 25,
+   "id": "math-ch2_01_lv6_from_l8_2_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "4.98 와 4.88 중 더 큰 수를 고르세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "높은 자리부터 차례로 비교하면 4.98가 더 커요!",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "5.1",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "4.9",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "4.98",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "5.2",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 26,
+   "id": "math-ch2_02_photo_l6_01_decimal_subtract_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "2.18 - □ = 0.23 입니다. □ 안에 알맞은 수는 무엇일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "□ = 2.18 - 0.23 = 1.95예요.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "2.1",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "1.8",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "1.95",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 27,
+   "id": "math-ch2_03_photo_l6_02_decimal_numberline",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "0.46과 0.47 사이의 수직선에서 두 빈칸에 들어갈 소수를 차례대로 고르세요.",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "0.46과 0.47 사이를 0.001씩 나누면 두 위치는 0.462와 0.468이에요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "0.463, 0.467"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "0.462, 0.468"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "0.462, 0.467"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "0.461, 0.469"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 28,
+   "id": "math-ch2_04_photo_l6_03_decimal_result",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "다음 중 계산 결과가 1.8인 것은 어느 것일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "3.3 - 1.5 = 1.8이에요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "③ 8.2 - 3.1"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "④ 11.0 - 3.9"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "① 6.3 - 2.7"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "② 3.3 - 1.5"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 29,
+   "id": "math-ch2_05_photo_l6_04_big_small_sum",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "8.28, 5.93, 6.49 중 가장 큰 수와 가장 작은 수의 합은 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "가장 큰 수는 8.28, 가장 작은 수는 5.93이므로 8.28+5.93=14.21이에요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "14.77"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "12.42"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "14.21"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "11.86"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 30,
+   "id": "math-ch2_06_photo_l6_05_digit_decimal",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "수 카드 7, 0, 9, 6을 한 번씩 모두 사용합니다. 소수 셋째 자리 수가 6인 가장 작은 소수 세 자리 수는 무엇일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "소수 셋째 자리는 6으로 고정하고 가장 작게 만들려면 0.796이에요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "0.796"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "9.076"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "0.976"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "7.096"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 31,
+   "id": "math-ch2_07_photo_l6_06_over_one",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "계산 결과가 1보다 큰 것을 모두 고르세요.",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "0.8+0.5=1.3, 0.9+0.9=1.8이므로 ①과 ⑤예요.",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "⑤ 0.9 + 0.9"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "① 0.8 + 0.5"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "④ 0.6 + 0.3"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "② 0.1 + 0.2"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "③ 0.2 + 0.3"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 32,
+   "id": "math-ch2_08_photo_l6_08_decimal_order",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "□ 안에는 0부터 9까지의 수가 들어갈 수 있습니다. ㉠ 9□.286, ㉡ 90.0□3, ㉢ 99.45□ 를 작은 수부터 차례대로 놓으면?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "㉡은 90.003~90.093, ㉠은 90.286~99.286, ㉢은 99.450~99.459이므로 ㉡, ㉠, ㉢ 순서예요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "㉠ → ㉡ → ㉢"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "㉢ → ㉠ → ㉡"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "㉡ → ㉢ → ㉠"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "㉡ → ㉠ → ㉢"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 33,
+   "id": "math-ch2_09_photo_l11_01_big_number_digits_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "숫자 카드 0, 3, 4, 6, 7, 8을 2번씩 사용해 12자리의 가장 큰 수를 만들 때, 십억의 자리 숫자와 만의 자리 숫자의 합은 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "가장 큰 수는 887766443300이에요. 십억의 자리 숫자는 7, 만의 자리 숫자는 4라서 7+4=11입니다.",
+   "figure": "<svg viewBox=\"0 0 510 130\" width=\"510\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"510\" height=\"130\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"28\" y=\"28\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">각 숫자 카드를 2장씩 사용</text>\n        <g transform=\"translate(30 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">0</text>\n      </g><g transform=\"translate(100 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">3</text>\n      </g><g transform=\"translate(170 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">4</text>\n      </g><g transform=\"translate(240 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">6</text>\n      </g><g transform=\"translate(310 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">7</text>\n      </g><g transform=\"translate(380 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">8</text>\n      </g>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "10",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "11",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "13",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "12",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 34,
+   "id": "math-ch2_10_photo_l11_02_digit_count_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "수 카드 0, 1, 2, 5, 7, 8 중 한 장을 □에 넣어 841140 > 8□8410 이 되게 하려고 해요. □에 들어갈 수 있는 카드는 몇 장일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "두 번째 자리를 비교하면 4보다 작은 숫자가 들어가야 해요. 카드 중에서는 0, 1, 2가 가능하므로 3장입니다.",
+   "figure": "<svg viewBox=\"0 0 520 120\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"120\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"66\" y=\"34\" width=\"388\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#d98acc\" stroke-width=\"2\"/>\n        <text x=\"260\" y=\"69\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">841140 > 8□8410</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "3",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "4",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 35,
+   "id": "math-ch2_11_photo_l11_05_division_sum_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "58로 958을 나누었을 때, 몫과 나머지의 합은 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "958÷58은 몫이 16, 나머지가 30이에요. 16+30=46입니다.",
+   "figure": "<svg viewBox=\"0 0 430 150\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"150\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"66\" y=\"75\" font-size=\"32\" font-weight=\"900\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">58 ) 958</text>\n        <path d=\"M123 44 h150\" fill=\"none\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"300\" y=\"75\" font-size=\"18\" font-weight=\"900\" fill=\"#8a8072\">몫 + 나머지?</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "41",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "46",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "56",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "51",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 36,
+   "id": "math-ch2_12_photo_l11_21_common_digit_sum_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "7□36 > 7435 가 되도록 □에 들어갈 수 있는 숫자를 모두 찾아 더하면 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "□가 4이면 7436>7435로 성립해요. 가능한 숫자는 4,5,6,7,8,9이고 합은 39입니다.",
+   "figure": "<svg viewBox=\"0 0 520 120\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"120\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"66\" y=\"34\" width=\"388\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#d98acc\" stroke-width=\"2\"/>\n        <text x=\"260\" y=\"69\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">7□36 > 7435</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "35",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "39",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "43",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "47",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 37,
+   "id": "math-ch2_13_photo_l11_23_custom_operator_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "기호 ※의 규칙에 따라 52※□=481이 되려면 □ 안에 알맞은 수는 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "52※□=(52×□)+(52÷4)=52×□+13이에요. 481-13=468, 468÷52=9입니다.",
+   "figure": "<svg viewBox=\"0 0 500 160\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"500\" height=\"160\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"72\" y=\"30\" width=\"356\" height=\"48\" rx=\"12\" fill=\"#fff\" stroke=\"#d98acc\" stroke-width=\"2\"/>\n        <text x=\"250\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"900\">㉠※㉡ = (㉠×㉡) + (㉠÷4)</text>\n        <text x=\"250\" y=\"122\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"900\" fill=\"#312a35\">52※□ = 481</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "9",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "10",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "8",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "11",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 38,
+   "id": "math-ch2_14_photo_l15_23_pencils",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "색연필 174자루를 한 상자에 26자루씩 빈 공간 없이 모두 담으려면 색연필은 적어도 몇 자루 더 필요할까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "26×6=156, 26×7=182이므로 174자루에서 다음 26의 배수까지 182-174=8자루가 더 필요합니다.",
+   "figure": "<svg viewBox=\"0 0 430 150\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"150\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"35\" y=\"38\" font-size=\"16\" font-weight=\"900\">색연필 174자루</text>\n        <text x=\"35\" y=\"72\" font-size=\"16\" font-weight=\"900\">한 상자에 26자루씩</text>\n        <rect x=\"180\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"215\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"250\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"285\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"320\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"355\" y=\"45\" width=\"28\" height=\"46\" rx=\"4\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/>\n        <text x=\"292\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">꽉 찬 상자 다음까지 채우기</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "6 자루"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "9 자루"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "7 자루"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "8 자루"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "5 자루"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 39,
+   "id": "math-ch2_15_photo_l15_18_skipcount",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "어떤 수에서 350억씩 뛰어 세기를 4번 하였더니 5조 7300억이 되었습니다. 어떤 수는 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "350억씩 4번 커졌으므로 처음 수는 5조7300억에서 1400억을 뺀 5조5900억입니다.",
+   "figure": "<svg viewBox=\"0 0 470 150\" width=\"470\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"470\" height=\"150\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"52\" y=\"56\" font-size=\"17\" font-weight=\"900\">처음 수</text>\n        <text x=\"152\" y=\"56\" font-size=\"22\" font-weight=\"900\" fill=\"#8a8072\">+350억</text>\n        <text x=\"250\" y=\"56\" font-size=\"22\" font-weight=\"900\" fill=\"#8a8072\">× 4</text>\n        <text x=\"315\" y=\"56\" font-size=\"17\" font-weight=\"900\">5조 7300억</text>\n        <line x1=\"90\" y1=\"92\" x2=\"355\" y2=\"92\" stroke=\"#312a35\" stroke-width=\"3\" marker-end=\"url(#skipArr)\"/>\n        <defs><marker id=\"skipArr\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#312a35\"/></marker></defs>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "5조 6600억"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "5조 5200억"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "5조 5900억"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "5조 7000억"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "5조 5550억"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 40,
+   "id": "math-ch2_16_lv16_unknown_digit_cards_drag",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "0, 7, ? 카드가 각각 3장씩 있습니다. 9장의 카드 중 7장을 사용해 일곱 자리 수를 만들 때, 가장 큰 수와 가장 작은 수의 차가 4,772,993이라면 ?에 적힌 숫자는 무엇일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "?가 3이면 가장 큰 수는 7,773,330이고 가장 작은 수는 3,000,337입니다. 차는 4,772,993이므로 ?는 3입니다.",
+   "figure": "<svg viewBox=\"0 0 520 120\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"120\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"30\" y=\"32\" font-size=\"16\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">각각 3장씩 있는 숫자 카드</text>\n        <g transform=\"translate(170 32)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">0</text>\n      </g><g transform=\"translate(250 32)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">7</text>\n      </g><g transform=\"translate(330 32)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">?</text>\n      </g>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "3",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "1",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 41,
+   "id": "math-ch2_gen_01",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "86,432에서 어떤 수를 빼면 57,985가 됩니다. 어떤 수는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "86,432-57,985=28,447입니다.",
+   "type": "input",
+   "answers": [
+    "28447"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 42,
+   "id": "math-ch2_gen_02",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "3.75 + 2.48 + 6.25의 값을 구하세요.",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3.75+6.25=10이고, 10+2.48=12.48입니다.",
+   "type": "input",
+   "answers": [
+    "12.48"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 43,
+   "id": "math-ch2_gen_03",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "36×28 - 144÷6의 값을 구하세요.",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "36×28=1008, 144÷6=24이므로 1008-24=984입니다.",
+   "type": "input",
+   "answers": [
+    "984"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 44,
+   "id": "math-ch2_gen_04",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "72의 5/6는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "72÷6×5=60입니다.",
+   "type": "input",
+   "answers": [
+    "60"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 45,
+   "id": "math-ch2_gen_05",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "어떤 수에 8을 곱하고 96을 더했더니 560이 되었습니다. 어떤 수는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "560-96=464, 464÷8=58입니다.",
+   "type": "input",
+   "answers": [
+    "58"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 46,
+   "id": "math-ch2_gen_06",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "12,345를 천의 자리까지 반올림하면 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "백의 자리 3이 5보다 작으므로 12,000입니다.",
+   "type": "input",
+   "answers": [
+    "12000"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 47,
+   "id": "math-ch2_gen_07",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "0.125×800의 값을 구하세요.",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "0.125는 1/8이므로 800÷8=100입니다.",
+   "type": "input",
+   "answers": [
+    "100"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 48,
+   "id": "math-ch2_gen_08",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "9,999 + 8,888 - 7,777의 값을 구하세요.",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "9,999+8,888=18,887이고, 18,887-7,777=11,110입니다.",
+   "type": "input",
+   "answers": [
+    "11110"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 49,
+   "id": "math-ch2_gen_09",
+   "topic": "수와 연산(2)",
+   "stage": 2,
+   "prompt": "240과 360의 최대공약수는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "240과 360을 모두 나눌 수 있는 가장 큰 수는 120입니다.",
+   "type": "input",
+   "answers": [
+    "120"
+   ],
+   "playable": true
+  }
+ ]
+}

@@ -1,0 +1,737 @@
+{
+ "subject": "수학",
+ "topic": "도형",
+ "questions": [
+  {
+   "_order": 125,
+   "id": "math-ch6_01_n15_three_circles_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 원 ㉮의 반지름은 23cm예요. 원 ㉮와 원 ㉯는 서로 맞닿아 있고 두 원의 중심 사이 거리는 40cm예요. 원 ㉰는 원 ㉯와 크기가 같고, ㉮의 중심과 ㉰의 중심 사이 거리는 30cm예요. 그림처럼 중심을 잇는 직선 위에서 두 원 ㉮, ㉰가 겹치는 선분 ㄱㄴ의 길이는 몇 cm일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "맞닿은 두 원의 중심 거리는 반지름의 합! ㉯의 반지름은 40−23=17cm예요. ㉰도 반지름 17cm이고 중심 사이가 30cm라서, 겹친 길이 ㄱㄴ = 23+17−30 = 10cm!",
+   "figure": "<svg viewBox=\"0 0 400 215\" width=\"400\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"140\" cy=\"105\" r=\"92\" fill=\"#dfeeff\" fill-opacity=\"0.65\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n      <circle cx=\"260\" cy=\"105\" r=\"68\" fill=\"#ffe9cf\" fill-opacity=\"0.65\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n      <line x1=\"140\" y1=\"105\" x2=\"260\" y2=\"105\" stroke=\"#8a8072\" stroke-width=\"1.6\" stroke-dasharray=\"6 5\"/>\n      <circle cx=\"140\" cy=\"105\" r=\"4\" fill=\"#3a6fb0\"/>\n      <circle cx=\"260\" cy=\"105\" r=\"4\" fill=\"#d07b13\"/>\n      <line x1=\"192\" y1=\"105\" x2=\"232\" y2=\"105\" stroke=\"#ef5468\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n      <circle cx=\"192\" cy=\"105\" r=\"5\" fill=\"#ef5468\"/>\n      <circle cx=\"232\" cy=\"105\" r=\"5\" fill=\"#ef5468\"/>\n      <text x=\"188\" y=\"88\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"900\" fill=\"#c0392b\" font-family=\"inherit\">ㄱ</text>\n      <text x=\"238\" y=\"88\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"900\" fill=\"#c0392b\" font-family=\"inherit\">ㄴ</text>\n      <text x=\"86\" y=\"42\" font-size=\"18\" font-weight=\"900\" fill=\"#3a6fb0\" font-family=\"inherit\">㉮</text>\n      <text x=\"298\" y=\"52\" font-size=\"18\" font-weight=\"900\" fill=\"#d07b13\" font-family=\"inherit\">㉰</text>\n      <text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"800\" fill=\"#8a8072\" font-family=\"inherit\">중심 사이 30cm</text>\n    </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "12",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "10",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "11",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "9",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 126,
+   "id": "math-ch6_02_h1_p5_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 삼각형 모양 조각 264개로 가로 84cm, 세로 44cm인 직사각형을 빈틈없이 채웠어요. ㉠(삼각형의 높이)은 몇 cm일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "직사각형 넓이 84×44=3696㎠. 조각 하나는 3696÷264=14㎠. 7×㉠÷2=14 → ㉠=4cm!",
+   "figure": "<svg viewBox=\"0 0 400 165\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n      <rect x=\"8\" y=\"20\" width=\"128\" height=\"120\" rx=\"14\" fill=\"#fff\" stroke=\"#c9b8a0\" stroke-width=\"2\"/>\n      <path d=\"M36 114 L114 114 L36 50 Z\" fill=\"#cfcfcf\" stroke=\"#444\" stroke-width=\"2.5\"/>\n      <path d=\"M48 114 L48 102 L36 102\" fill=\"none\" stroke=\"#444\" stroke-width=\"2\"/>\n      <text x=\"76\" y=\"134\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">7 cm</text>\n      <text x=\"22\" y=\"88\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"900\" fill=\"#d07b13\" font-family=\"inherit\">㉠</text>\n      <text x=\"150\" y=\"90\" font-size=\"26\" font-weight=\"900\" fill=\"#8a8072\" font-family=\"inherit\">➡</text>\n      <rect x=\"190\" y=\"30\" width=\"180\" height=\"100\" fill=\"#cfcfcf\" stroke=\"#444\" stroke-width=\"2.5\"/>\n      <text x=\"280\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">84 cm</text>\n      <text x=\"396\" y=\"84\" text-anchor=\"end\" font-size=\"13\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">44cm</text>\n    </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "3",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 127,
+   "id": "math-ch6_03_g15_0_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 그림처럼 정삼각형 2개를 겹쳐 놓았어요. 선분 ㄱㄹ이 선분 ㄹㄴ의 2배이고 ㄱㄷ이 60cm일 때, 사각형 ㄱㄹㅁㄷ의 둘레는 몇 cm일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "ㄱㄴ=60이니 ㄹㄴ=20, ㄱㄹ=40. ㄹㅁ=ㄴㅁ=20, ㅁㄷ=40. 둘레 = 40+20+40+60 = 160cm!",
+   "figure": "<svg viewBox=\"0 0 390 340\" width=\"330\" xmlns=\"http://www.w3.org/2000/svg\">\n        <line x1=\"160\" y1=\"30\" x2=\"95\" y2=\"305\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"95\" y1=\"305\" x2=\"320\" y2=\"210\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"210\" x2=\"160\" y2=\"30\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"117\" y1=\"213\" x2=\"170\" y2=\"273\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/>\n        <path d=\"M 166 44 Q 280 90 314 200\" fill=\"none\" stroke=\"#8a8072\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\"/>\n        <text x=\"255\" y=\"118\" font-size=\"16\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">60 cm</text>\n        <text x=\"152\" y=\"22\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄱ</text><text x=\"85\" y=\"327\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄴ</text><text x=\"332\" y=\"216\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄷ</text><text x=\"93\" y=\"217\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄹ</text><text x=\"164\" y=\"295\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㅁ</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "176",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "192",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "160",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "144",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 128,
+   "id": "math-ch6_04_g15_1_select",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 5×5 격자에서 찾을 수 있는 크고 작은 정사각형은 모두 몇 개일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "1×1 25개, 2×2 16개… 모두 더하면 55개!",
+   "figure": "<svg viewBox=\"0 0 150 150\" width=\"175\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"20\" x2=\"130\" y2=\"20\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"42\" y1=\"20\" x2=\"42\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"42\" x2=\"130\" y2=\"42\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"64\" y1=\"20\" x2=\"64\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"64\" x2=\"130\" y2=\"64\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"86\" y1=\"20\" x2=\"86\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"86\" x2=\"130\" y2=\"86\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"108\" y1=\"20\" x2=\"108\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"108\" x2=\"130\" y2=\"108\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke=\"#5b5248\" stroke-width=\"3\"/></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "67"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "55"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "49"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "61"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 129,
+   "id": "math-ch6_05_g15_2_select",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 직사각형의 한 귀퉁이를 네모나게 잘라낸 도형이에요. 이 도형의 둘레는 몇 cm일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "잘라낸 안쪽 두 변이 바깥 두 변을 대신하므로 둘레는 그대로 (7+9)×2 = 32cm!",
+   "figure": "<svg viewBox=\"0 0 250 190\" width=\"270\" xmlns=\"http://www.w3.org/2000/svg\">\n        <polygon points=\"83,41 143,41 143,77 167,77 167,149 83,149\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n        <text x=\"125\" y=\"169\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">가로 7cm</text>\n        <text x=\"75\" y=\"95\" text-anchor=\"end\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">세로 9cm</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "35"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "32"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "29"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "38"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 130,
+   "id": "math-ch6_06_g15_3_select",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 성냥개비로 정삼각형 5개를 옆으로 이어 붙여 만들려고 해요. 성냥개비는 모두 몇 개 필요할까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "첫 삼각형 3개, 그 다음부터 2개씩 늘어요. 3+2×4 = 11개!",
+   "figure": "<svg viewBox=\"0 0 520 170\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"170\" rx=\"18\" fill=\"#fffdf8\"/><path d=\"M45 105 L74 42 L103 105 Z\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><path d=\"M103 105 L132 42 L161 105 Z\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><path d=\"M161 105 L190 42 L219 105 Z\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><path d=\"M219 105 L248 42 L277 105 Z\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><text x=\"455\" y=\"88\" font-size=\"30\" font-weight=\"900\" fill=\"#8a8072\">…</text></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "12"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "10"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "13"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "11"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 131,
+   "id": "math-ch6_07_g15_4_select",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 성냥개비로 정사각형 7개를 옆으로 이어 붙여 만들려고 해요. 성냥개비는 모두 몇 개 필요할까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "첫 사각형 4개, 그 다음부터 3개씩 늘어요. 4+3×6 = 22개!",
+   "figure": "<svg viewBox=\"0 0 520 170\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"170\" rx=\"18\" fill=\"#fffdf8\"/><rect x=\"45\" y=\"50\" width=\"54\" height=\"54\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\"/><rect x=\"99\" y=\"50\" width=\"54\" height=\"54\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\"/><rect x=\"153\" y=\"50\" width=\"54\" height=\"54\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\"/><rect x=\"207\" y=\"50\" width=\"54\" height=\"54\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\"/><text x=\"455\" y=\"88\" font-size=\"30\" font-weight=\"900\" fill=\"#8a8072\">…</text></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "22"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "20"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "24"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "26"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 132,
+   "id": "math-ch6_08_g15_5",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 정10각형의 모든 내각의 크기의 합은 몇 도일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "한 다각형의 내각의 합 = (변의 수−2)×180 = 8×180 = 1440°!",
+   "figure": "<svg viewBox=\"0 0 420 200\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"200\" rx=\"18\" fill=\"#fffdf8\"/>\n        <polygon points=\"210,18 258.1983906879828,33.660606461254304 287.9866343362026,74.66060646125432 287.9866343362026,125.33939353874568 258.1983906879828,166.3393935387457 210,182 161.8016093120172,166.3393935387457 132.0133656637974,125.3393935387457 132.0133656637974,74.66060646125432 161.8016093120172,33.66060646125432\" fill=\"#eef6ff\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n        <text x=\"210\" y=\"107\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"900\">정10각형</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "1440"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 133,
+   "id": "math-ch6_09_g15_6",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 정10각형의 한 내각의 크기는 몇 도일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "내각의 합 1440° ÷ 10 = 144°!",
+   "figure": "<svg viewBox=\"0 0 420 200\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"200\" rx=\"18\" fill=\"#fffdf8\"/>\n        <polygon points=\"210,18 258.1983906879828,33.660606461254304 287.9866343362026,74.66060646125432 287.9866343362026,125.33939353874568 258.1983906879828,166.3393935387457 210,182 161.8016093120172,166.3393935387457 132.0133656637974,125.3393935387457 132.0133656637974,74.66060646125432 161.8016093120172,33.66060646125432\" fill=\"#eef6ff\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n        <text x=\"210\" y=\"107\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"900\">정10각형</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "144"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 134,
+   "id": "math-ch6_10_g15_7",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 그림처럼 정삼각형 2개를 겹쳐 놓았어요. 선분 ㄱㄹ이 선분 ㄹㄴ의 2배이고 ㄱㄷ이 84cm일 때, 사각형 ㄱㄹㅁㄷ의 둘레는 몇 cm일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "ㄱㄴ=84이니 ㄹㄴ=28, ㄱㄹ=56. ㄹㅁ=ㄴㅁ=28, ㅁㄷ=56. 둘레 = 56+28+56+84 = 224cm!",
+   "figure": "<svg viewBox=\"0 0 390 340\" width=\"330\" xmlns=\"http://www.w3.org/2000/svg\">\n        <line x1=\"160\" y1=\"30\" x2=\"95\" y2=\"305\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"95\" y1=\"305\" x2=\"320\" y2=\"210\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"210\" x2=\"160\" y2=\"30\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/><line x1=\"117\" y1=\"213\" x2=\"170\" y2=\"273\" stroke=\"#2a2a2a\" stroke-width=\"2.5\"/>\n        <path d=\"M 166 44 Q 280 90 314 200\" fill=\"none\" stroke=\"#8a8072\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\"/>\n        <text x=\"255\" y=\"118\" font-size=\"16\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">84 cm</text>\n        <text x=\"152\" y=\"22\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄱ</text><text x=\"85\" y=\"327\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄴ</text><text x=\"332\" y=\"216\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄷ</text><text x=\"93\" y=\"217\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㄹ</text><text x=\"164\" y=\"295\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">ㅁ</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "224"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 135,
+   "id": "math-ch6_11_g15_8",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 4×4 격자에서 찾을 수 있는 크고 작은 정사각형은 모두 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "1×1 16개, 2×2 9개… 모두 더하면 30개!",
+   "figure": "<svg viewBox=\"0 0 150 150\" width=\"175\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"21\" y1=\"21\" x2=\"21\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"21\" y1=\"21\" x2=\"129\" y2=\"21\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"48\" y1=\"21\" x2=\"48\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"21\" y1=\"48\" x2=\"129\" y2=\"48\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"75\" y1=\"21\" x2=\"75\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"21\" y1=\"75\" x2=\"129\" y2=\"75\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"102\" y1=\"21\" x2=\"102\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"21\" y1=\"102\" x2=\"129\" y2=\"102\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"129\" y1=\"21\" x2=\"129\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/><line x1=\"21\" y1=\"129\" x2=\"129\" y2=\"129\" stroke=\"#5b5248\" stroke-width=\"3\"/></svg>",
+   "type": "input",
+   "answers": [
+    "30"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 136,
+   "id": "math-ch6_12_g15_9",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 직각을 낀 두 변의 길이가 12cm, 12cm인 직각삼각형의 넓이는 몇 ㎠일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "직각삼각형 넓이 = 12×12÷2 = 72㎠!",
+   "figure": "<svg viewBox=\"0 0 380 190\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"380\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <path d=\"M95 145 L275 145 L95 55 Z\" fill=\"#eef6ff\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <path d=\"M95 125 h20 v20\" fill=\"none\" stroke=\"#312a35\" stroke-width=\"2\"/>\n        <text x=\"185\" y=\"166\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\">12cm</text>\n        <text x=\"72\" y=\"102\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\">12cm</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "72"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 137,
+   "id": "math-ch6_13_g15_10",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 정삼각형의 각 변을 2등분하여 크기가 같은 작은 정삼각형으로 나누면, 작은 정삼각형은 모두 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "각 변을 2등분하면 작은 정삼각형은 2×2 = 4개!",
+   "figure": "<svg viewBox=\"0 0 380 210\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"380\" height=\"210\" rx=\"18\" fill=\"#fffdf8\"/>\n        <path d=\"M190 35 L75 170 L305 170 Z\" fill=\"#fff\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"132\" y1=\"170\" x2=\"190\" y2=\"35\" stroke=\"#d9c9b4\" stroke-width=\"2\"/>\n        <line x1=\"248\" y1=\"170\" x2=\"190\" y2=\"35\" stroke=\"#d9c9b4\" stroke-width=\"2\"/>\n        <line x1=\"132\" y1=\"102\" x2=\"248\" y2=\"102\" stroke=\"#d9c9b4\" stroke-width=\"2\"/>\n        <text x=\"190\" y=\"194\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">각 변을 2등분</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 138,
+   "id": "math-ch6_14_g15_11",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 한 모서리에 작은 정육면체가 3개씩 놓인 큰 정육면체는 작은 정육면체 몇 개로 이루어질까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3×3×3 = 27개!",
+   "figure": "<svg viewBox=\"0 0 380 230\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"380\" height=\"230\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"110\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"110\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/>\n        <text x=\"190\" y=\"205\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">3×3×3 정육면체</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "27"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 139,
+   "id": "math-ch6_15_g15_12",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "[경시대회] 겉면을 모두 색칠한 3×3×3 정육면체를 낱개로 분리했어요. 두 면만 색칠된 작은 정육면체는 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "모서리(꼭짓점 제외)에 있는 정육면체 = 12×1 = 12개!",
+   "figure": "<svg viewBox=\"0 0 380 230\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"380\" height=\"230\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"110\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"128\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"110\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"112\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"80\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"126\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"158\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"190\" y=\"48\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"96\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"64\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"142\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"174\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/><rect x=\"206\" y=\"32\" width=\"30\" height=\"30\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"2\"/>\n        <text x=\"190\" y=\"205\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">3×3×3 정육면체</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "12"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 140,
+   "id": "math-ch6_16_lv6_from_l9_0",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "사각형의 대각선은 모두 몇 개일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "한 꼭짓점에서 1개씩 → 4×1÷2 = 2개!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "3"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "2"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "4"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "5"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 141,
+   "id": "math-ch6_17_lv6_from_l9_1",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "다음 중 대각선을 그을 수 없는 도형은 무엇일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "삼각형은 이웃하지 않은 꼭짓점이 없어서 대각선을 그을 수 없어요!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "사각형"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "육각형"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "삼각형"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "오각형"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 142,
+   "id": "math-ch6_18_lv6_from_l9_2",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "한 변이 6cm인 정6각형의 둘레는 몇 cm일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "6 × 6 = 36cm!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "36"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "30"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "42"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "35"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 143,
+   "id": "math-ch6_19_photo_l11_07_flip_false_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "도형 뒤집기에 대한 설명 중 옳지 않은 것의 번호를 쓰세요. ① 왼쪽으로 뒤집으면 왼쪽과 오른쪽이 서로 바뀐다 ② 아래쪽으로 뒤집으면 위쪽과 아래쪽이 서로 바뀐다 ③ 위쪽으로 뒤집으면 왼쪽과 오른쪽이 서로 바뀐다",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "위쪽으로 뒤집으면 위아래가 바뀌어요. 왼쪽과 오른쪽이 바뀌는 것은 아니므로 ③이 옳지 않습니다.",
+   "figure": "<svg viewBox=\"0 0 500 160\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"500\" height=\"160\" rx=\"18\" fill=\"#fffdf8\"/>\n        <path d=\"M75 35 h82 v36 h-44 v54 h-38z\" fill=\"#dfeeff\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n        <text x=\"116\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">처음 도형</text>\n        <text x=\"232\" y=\"85\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"900\" fill=\"#8a8072\">↕</text>\n        <path d=\"M310 35 h38 v54 h44 v36 h-82z\" fill=\"#fff0e2\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"350\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">위/아래 뒤집기</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "2",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "3",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 144,
+   "id": "math-ch6_20_photo_l11_08_rotation_direction_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "화살표가 위쪽(↑)을 가리키고 있어요. 시계 방향으로 90°씩 3번 돌리면 화살표는 어느 쪽을 가리킬까요? (위쪽/아래쪽/왼쪽/오른쪽 중에서 쓰세요)",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "시계 방향 90°씩 3번 = 270°! 위 → 오른쪽 → 아래 → 왼쪽을 가리키게 됩니다.",
+   "figure": "<svg viewBox=\"0 0 520 145\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"145\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"52\" y=\"82\" font-size=\"50\" font-weight=\"900\" fill=\"#3a6fb0\">↑</text>\n        <text x=\"142\" y=\"76\" font-size=\"24\" font-weight=\"900\" fill=\"#8a8072\">시계 방향 90° × 3</text>\n        <text x=\"362\" y=\"82\" font-size=\"50\" font-weight=\"900\" fill=\"#d07b13\">?</text>\n        <path d=\"M110 72 C170 20 265 20 325 72\" fill=\"none\" stroke=\"#8a8072\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n        <defs><marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#8a8072\"/></marker></defs>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "왼쪽",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "오른쪽",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "아래쪽",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "위쪽",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 145,
+   "id": "math-ch6_21_photo_l11_24_transform_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "다음 알파벳 중 시계 방향으로 180° 돌렸을 때 처음과 같은 모양이 되는 것의 번호를 쓰세요. ① F ② G ③ H",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "H는 180° 돌려도 똑같은 모양이에요. F와 G는 뒤집힌 모양이 됩니다.",
+   "figure": "<svg viewBox=\"0 0 420 135\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"135\" rx=\"18\" fill=\"#fffdf8\"/>\n        <g transform=\"translate(80 35)\"><rect width=\"62\" height=\"62\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"31\" y=\"45\" text-anchor=\"middle\" font-size=\"38\" font-weight=\"900\">F</text><text x=\"31\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">1번</text></g><g transform=\"translate(175 35)\"><rect width=\"62\" height=\"62\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"31\" y=\"45\" text-anchor=\"middle\" font-size=\"38\" font-weight=\"900\">G</text><text x=\"31\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">2번</text></g><g transform=\"translate(270 35)\"><rect width=\"62\" height=\"62\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"31\" y=\"45\" text-anchor=\"middle\" font-size=\"38\" font-weight=\"900\">H</text><text x=\"31\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">3번</text></g>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "3",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "2",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 146,
+   "id": "math-ch6_22_photo_l15_28_angle_split",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "직선 위의 한 점에서 두 반직선을 그어 세 각을 만들었어요. 왼쪽 각은 가운데 각의 2배, 오른쪽 각은 가운데 각의 3배일 때, 가운데 각은 몇 도일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "가운데 각을 x라 하면 2x+x+3x=180이에요. 6x=180이므로 x=30도입니다.",
+   "figure": "<svg viewBox=\"0 0 420 190\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <line x1=\"70\" y1=\"118\" x2=\"350\" y2=\"118\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"145\" y2=\"42\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"300\" y2=\"48\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"146\" y=\"103\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">2x</text>\n        <text x=\"214\" y=\"72\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">x</text>\n        <text x=\"280\" y=\"107\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">3x</text>\n      </svg>",
+   "type": "input",
+   "answers": [
+    "30",
+    "30도",
+    "30°"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 147,
+   "id": "math-ch6_23_photo_l15_25_flipcards",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "그림의 수 카드 중에서 위·아래로 뒤집어도 똑같은 숫자인 카드만 골라, 가장 큰 세 자리 수와 가장 작은 세 자리 수를 만들었어요. 두 수의 차는 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "뒤집어도 같은 숫자는 1, 3, 8입니다. 가장 큰 수는 831, 가장 작은 수는 138이므로 차는 831-138=693입니다.",
+   "figure": "<svg viewBox=\"0 0 720 130\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"720\" height=\"130\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"28\" y=\"28\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">위쪽/아래쪽으로 뒤집어도 같은 수가 되는 카드 찾기</text>\n        <g transform=\"translate(30 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">1</text>\n      </g><g transform=\"translate(100 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">2</text>\n      </g><g transform=\"translate(170 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">3</text>\n      </g><g transform=\"translate(240 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">4</text>\n      </g><g transform=\"translate(310 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">5</text>\n      </g><g transform=\"translate(380 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">6</text>\n      </g><g transform=\"translate(450 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">7</text>\n      </g><g transform=\"translate(520 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">8</text>\n      </g><g transform=\"translate(590 44)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">9</text>\n      </g>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "643"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "713"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "693"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "598"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "697"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 148,
+   "id": "math-ch6_24_lv16_transparent_cards_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "투명 종이 위의 숫자 카드 1, 2, 9를 지시에 따라 움직인 뒤 보이는 숫자 카드로 만들 수 있는 가장 큰 세 자리 수는 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "1은 위아래로 뒤집어도 1, 2는 오른쪽으로 3번 뒤집으면 5, 9는 180° 돌리면 6이 됩니다. 1,5,6으로 만들 수 있는 가장 큰 수는 651입니다.",
+   "figure": "<svg viewBox=\"0 0 560 190\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"560\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <g transform=\"translate(38 55)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">1</text>\n      </g><g transform=\"translate(118 55)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">2</text>\n      </g><g transform=\"translate(198 55)\">\n        <rect x=\"0\" y=\"0\" width=\"58\" height=\"70\" rx=\"8\" fill=\"#f5f5f5\" stroke=\"#555\" stroke-width=\"2\"/>\n        <rect x=\"6\" y=\"6\" width=\"46\" height=\"58\" rx=\"5\" fill=\"#d8d8d8\" stroke=\"#777\" stroke-width=\"1.5\"/>\n        <text x=\"29\" y=\"49\" text-anchor=\"middle\" font-size=\"44\" font-weight=\"900\" fill=\"#312a35\" font-family=\"ui-monospace, SFMono-Regular, Menlo, monospace\">9</text>\n      </g>\n        <path d=\"M330 36 h160 a18 18 0 0 1 18 18 v64 a18 18 0 0 1 -18 18 h-88 l-38 32 10-32 h-44 a18 18 0 0 1 -18-18 v-64 a18 18 0 0 1 18-18z\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"2\"/>\n        <text x=\"346\" y=\"66\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">1은 위쪽으로 1번,</text>\n        <text x=\"346\" y=\"91\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">2는 오른쪽으로 3번,</text>\n        <text x=\"346\" y=\"116\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">9는 180° 돌렸어요.</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "586",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "716",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "651",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "781",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 149,
+   "id": "math-ch6_25_lv16_braille_transform_sum_drag",
+   "topic": "도형",
+   "stage": 5,
+   "prompt": "점자로 나타낸 낱말을 아래로 3번 뒤집고 시계 방향으로 90°씩 3번 돌렸더니 오른쪽 점 모양이 되었습니다. 낱말을 바르게 썼을 때 점이 놓인 칸의 숫자를 모두 더하면 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "아래로 3번 뒤집기는 위아래 뒤집기 1번과 같고, 시계 방향 90°씩 3번은 반시계 방향 90°와 같습니다. 역변환한 칸의 수를 모두 더하면 275입니다.",
+   "figure": "<svg viewBox=\"0 0 535 245\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"535\" height=\"245\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"118\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">원래 숫자 격자</text>\n        <rect x=\"22\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">1</text><rect x=\"46\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">2</text><rect x=\"70\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">3</text><rect x=\"94\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">4</text><rect x=\"118\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">5</text><rect x=\"142\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">6</text><rect x=\"166\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">7</text><rect x=\"190\" y=\"34\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">8</text><rect x=\"22\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">9</text><rect x=\"46\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">10</text><rect x=\"70\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">11</text><rect x=\"94\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">12</text><rect x=\"118\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">13</text><rect x=\"142\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">14</text><rect x=\"166\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">15</text><rect x=\"190\" y=\"58\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">16</text><rect x=\"22\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">17</text><rect x=\"46\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">18</text><rect x=\"70\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">19</text><rect x=\"94\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">20</text><rect x=\"118\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">21</text><rect x=\"142\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">22</text><rect x=\"166\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">23</text><rect x=\"190\" y=\"82\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">24</text><rect x=\"22\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">25</text><rect x=\"46\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">26</text><rect x=\"70\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">27</text><rect x=\"94\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">28</text><rect x=\"118\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">29</text><rect x=\"142\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">30</text><rect x=\"166\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">31</text><rect x=\"190\" y=\"106\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"123\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">32</text><rect x=\"22\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">33</text><rect x=\"46\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">34</text><rect x=\"70\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">35</text><rect x=\"94\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">36</text><rect x=\"118\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">37</text><rect x=\"142\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">38</text><rect x=\"166\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">39</text><rect x=\"190\" y=\"130\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"147\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">40</text><rect x=\"22\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">41</text><rect x=\"46\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">42</text><rect x=\"70\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">43</text><rect x=\"94\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">44</text><rect x=\"118\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">45</text><rect x=\"142\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">46</text><rect x=\"166\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">47</text><rect x=\"190\" y=\"154\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">48</text><rect x=\"22\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"34\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">49</text><rect x=\"46\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"58\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">50</text><rect x=\"70\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"82\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">51</text><rect x=\"94\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"106\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">52</text><rect x=\"118\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"130\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">53</text><rect x=\"142\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"154\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">54</text><rect x=\"166\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"178\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">55</text><rect x=\"190\" y=\"178\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><text x=\"202\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#312a35\" font-family=\"inherit\">56</text>\n        <text x=\"280\" y=\"132\" text-anchor=\"middle\" font-size=\"34\" font-weight=\"900\" fill=\"#8a8072\" font-family=\"inherit\">→</text>\n        <text x=\"414\" y=\"16\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">뒤집고 돌린 뒤 보인 점</text>\n        <rect x=\"330\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"402\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"426\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"450\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"22\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"402\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"426\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"438\" cy=\"58\" r=\"5\" fill=\"#312a35\"/><rect x=\"450\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"46\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"390\" cy=\"82\" r=\"5\" fill=\"#312a35\"/><rect x=\"402\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"426\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"438\" cy=\"82\" r=\"5\" fill=\"#312a35\"/><rect x=\"450\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"70\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"402\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"414\" cy=\"106\" r=\"5\" fill=\"#312a35\"/><rect x=\"426\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"450\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"94\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"390\" cy=\"130\" r=\"5\" fill=\"#312a35\"/><rect x=\"402\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"414\" cy=\"130\" r=\"5\" fill=\"#312a35\"/><rect x=\"426\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"438\" cy=\"130\" r=\"5\" fill=\"#312a35\"/><rect x=\"450\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"118\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"402\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"426\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"438\" cy=\"154\" r=\"5\" fill=\"#312a35\"/><rect x=\"450\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"142\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"390\" cy=\"178\" r=\"5\" fill=\"#312a35\"/><rect x=\"402\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"414\" cy=\"178\" r=\"5\" fill=\"#312a35\"/><rect x=\"426\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"450\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"166\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"330\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"378\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"402\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"426\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"450\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/><rect x=\"474\" y=\"190\" width=\"24\" height=\"24\" fill=\"#fff\" stroke=\"#555\" stroke-width=\"1.2\"/>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "247",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "331",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "303",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "275",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  }
+ ]
+}

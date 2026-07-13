@@ -1,0 +1,926 @@
+{
+ "subject": "영어",
+ "topic": "낱말 그림",
+ "questions": [
+  {
+   "_order": 75,
+   "id": "eng-01-l1-q1",
+   "topic": "낱말 그림",
+   "stage": 1,
+   "type": "single",
+   "prompt": "이 그림은 영어로 뭘까요?",
+   "hint": "그림에 맞는 영어 단어를 끌어다 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "banana"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "crayon"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🍌"
+  },
+  {
+   "_order": 76,
+   "id": "eng-01-l1-q2",
+   "topic": "낱말 그림",
+   "stage": 1,
+   "type": "single",
+   "prompt": "이 그림은 영어로 뭘까요?",
+   "hint": "그림에 맞는 영어 단어를 끌어다 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "bus"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "ruler"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🚌"
+  },
+  {
+   "_order": 77,
+   "id": "eng-01-l1-q3",
+   "topic": "낱말 그림",
+   "stage": 1,
+   "type": "single",
+   "prompt": "이 그림은 영어로 뭘까요?",
+   "hint": "그림에 맞는 영어 단어를 끌어다 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "milk"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "bag"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🥛"
+  },
+  {
+   "_order": 78,
+   "id": "eng-01-l1-q4",
+   "topic": "낱말 그림",
+   "stage": 1,
+   "type": "single",
+   "prompt": "이 그림은 영어로 뭘까요?",
+   "hint": "그림에 맞는 영어 단어를 끌어다 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "crayon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "ruler"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "📏"
+  },
+  {
+   "_order": 79,
+   "id": "eng-01-l1-q5",
+   "topic": "낱말 그림",
+   "stage": 1,
+   "type": "single",
+   "prompt": "이 그림은 영어로 뭘까요?",
+   "hint": "그림에 맞는 영어 단어를 끌어다 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "cap"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "rabbit"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐰"
+  },
+  {
+   "_order": 80,
+   "id": "eng-01-l2-q1",
+   "topic": "낱말 그림",
+   "stage": 2,
+   "type": "single",
+   "prompt": "이 그림에 맞는 영어 단어를 골라보세요.",
+   "hint": "알맞은 영어 단어를 골라 그림 위에 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "pig"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "pencil"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "bird"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pen"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "✏️"
+  },
+  {
+   "_order": 81,
+   "id": "eng-01-l2-q2",
+   "topic": "낱말 그림",
+   "stage": 2,
+   "type": "single",
+   "prompt": "이 그림에 맞는 영어 단어를 골라보세요.",
+   "hint": "알맞은 영어 단어를 골라 그림 위에 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "cat"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "duck"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "dog"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "bird"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🦆"
+  },
+  {
+   "_order": 82,
+   "id": "eng-01-l2-q3",
+   "topic": "낱말 그림",
+   "stage": 2,
+   "type": "single",
+   "prompt": "이 그림에 맞는 영어 단어를 골라보세요.",
+   "hint": "알맞은 영어 단어를 골라 그림 위에 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "grape"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "kiwi"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "pen"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "fish"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🖊️"
+  },
+  {
+   "_order": 83,
+   "id": "eng-01-l2-q4",
+   "topic": "낱말 그림",
+   "stage": 2,
+   "type": "single",
+   "prompt": "이 그림에 맞는 영어 단어를 골라보세요.",
+   "hint": "알맞은 영어 단어를 골라 그림 위에 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "lemon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "egg"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "kiwi"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "ruler"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🍋"
+  },
+  {
+   "_order": 84,
+   "id": "eng-01-l2-q5",
+   "topic": "낱말 그림",
+   "stage": 2,
+   "type": "single",
+   "prompt": "이 그림에 맞는 영어 단어를 골라보세요.",
+   "hint": "알맞은 영어 단어를 골라 그림 위에 놓아보세요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "lemon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "dog"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "cow"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "milk"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐮"
+  },
+  {
+   "_order": 85,
+   "id": "eng-01-l3-q1",
+   "topic": "낱말 그림",
+   "stage": 3,
+   "type": "single",
+   "prompt": "비슷한 단어를 잘 보고 정답을 골라보세요.",
+   "hint": "철자가 비슷한 단어가 섞여 있어요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "pencil"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "pen"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "pear"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pig"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐷"
+  },
+  {
+   "_order": 86,
+   "id": "eng-01-l3-q2",
+   "topic": "낱말 그림",
+   "stage": 3,
+   "type": "single",
+   "prompt": "비슷한 단어를 잘 보고 정답을 골라보세요.",
+   "hint": "철자가 비슷한 단어가 섞여 있어요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "frog"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "duck"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "fox"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "dog"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐶"
+  },
+  {
+   "_order": 87,
+   "id": "eng-01-l3-q3",
+   "topic": "낱말 그림",
+   "stage": 3,
+   "type": "single",
+   "prompt": "비슷한 단어를 잘 보고 정답을 골라보세요.",
+   "hint": "철자가 비슷한 단어가 섞여 있어요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "peach"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "bear"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "pear"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pen"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐻"
+  },
+  {
+   "_order": 88,
+   "id": "eng-01-l3-q4",
+   "topic": "낱말 그림",
+   "stage": 3,
+   "type": "single",
+   "prompt": "비슷한 단어를 잘 보고 정답을 골라보세요.",
+   "hint": "철자가 비슷한 단어가 섞여 있어요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "bag"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "ball"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "banana"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "bear"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "⚽"
+  },
+  {
+   "_order": 89,
+   "id": "eng-01-l3-q5",
+   "topic": "낱말 그림",
+   "stage": 3,
+   "type": "single",
+   "prompt": "비슷한 단어를 잘 보고 정답을 골라보세요.",
+   "hint": "철자가 비슷한 단어가 섞여 있어요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "cat"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "cap"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "car"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "cow"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "그림에 맞는 영어 낱말",
+   "image": "🐱"
+  },
+  {
+   "_order": 90,
+   "id": "eng-01-l4-q1",
+   "topic": "낱말 그림",
+   "stage": 4,
+   "type": "connect",
+   "prompt": "그림마다 맞는 영어 단어를 연결해보세요.",
+   "hint": "단어를 끌어서 알맞은 그림 위에 놓아요.",
+   "left": [
+    {
+     "id": "s1",
+     "text": "🍑"
+    },
+    {
+     "id": "s2",
+     "text": "🐟"
+    },
+    {
+     "id": "s3",
+     "text": "🍈"
+    }
+   ],
+   "right": [
+    {
+     "id": "w2",
+     "text": "melon"
+    },
+    {
+     "id": "w0",
+     "text": "peach"
+    },
+    {
+     "id": "w1",
+     "text": "fish"
+    }
+   ],
+   "answer": {
+    "s1": "w0",
+    "s2": "w1",
+    "s3": "w2"
+   },
+   "playable": true,
+   "explain": "그림-낱말 연결"
+  },
+  {
+   "_order": 91,
+   "id": "eng-01-l4-q2",
+   "topic": "낱말 그림",
+   "stage": 4,
+   "type": "connect",
+   "prompt": "그림마다 맞는 영어 단어를 연결해보세요.",
+   "hint": "단어를 끌어서 알맞은 그림 위에 놓아요.",
+   "left": [
+    {
+     "id": "s1",
+     "text": "🐸"
+    },
+    {
+     "id": "s2",
+     "text": "☀️"
+    },
+    {
+     "id": "s3",
+     "text": "🐦"
+    }
+   ],
+   "right": [
+    {
+     "id": "w1",
+     "text": "frog"
+    },
+    {
+     "id": "w0",
+     "text": "bird"
+    },
+    {
+     "id": "w2",
+     "text": "sun"
+    }
+   ],
+   "answer": {
+    "s1": "w1",
+    "s2": "w2",
+    "s3": "w0"
+   },
+   "playable": true,
+   "explain": "그림-낱말 연결"
+  },
+  {
+   "_order": 92,
+   "id": "eng-01-l4-q3",
+   "topic": "낱말 그림",
+   "stage": 4,
+   "type": "connect",
+   "prompt": "그림마다 맞는 영어 단어를 연결해보세요.",
+   "hint": "단어를 끌어서 알맞은 그림 위에 놓아요.",
+   "left": [
+    {
+     "id": "s1",
+     "text": "🚗"
+    },
+    {
+     "id": "s2",
+     "text": "🎂"
+    },
+    {
+     "id": "s3",
+     "text": "🥚"
+    }
+   ],
+   "right": [
+    {
+     "id": "w1",
+     "text": "car"
+    },
+    {
+     "id": "w2",
+     "text": "egg"
+    },
+    {
+     "id": "w0",
+     "text": "cake"
+    }
+   ],
+   "answer": {
+    "s1": "w1",
+    "s2": "w0",
+    "s3": "w2"
+   },
+   "playable": true,
+   "explain": "그림-낱말 연결"
+  },
+  {
+   "_order": 93,
+   "id": "eng-01-l4-q4",
+   "topic": "낱말 그림",
+   "stage": 4,
+   "type": "connect",
+   "prompt": "그림마다 맞는 영어 단어를 연결해보세요.",
+   "hint": "단어를 끌어서 알맞은 그림 위에 놓아요.",
+   "left": [
+    {
+     "id": "s1",
+     "text": "🪑"
+    },
+    {
+     "id": "s2",
+     "text": "🦁"
+    },
+    {
+     "id": "s3",
+     "text": "🦊"
+    }
+   ],
+   "right": [
+    {
+     "id": "w2",
+     "text": "lion"
+    },
+    {
+     "id": "w1",
+     "text": "chair"
+    },
+    {
+     "id": "w0",
+     "text": "fox"
+    }
+   ],
+   "answer": {
+    "s1": "w1",
+    "s2": "w2",
+    "s3": "w0"
+   },
+   "playable": true,
+   "explain": "그림-낱말 연결"
+  },
+  {
+   "_order": 94,
+   "id": "eng-01-l4-q5",
+   "topic": "낱말 그림",
+   "stage": 4,
+   "type": "connect",
+   "prompt": "그림마다 맞는 영어 단어를 연결해보세요.",
+   "hint": "단어를 끌어서 알맞은 그림 위에 놓아요.",
+   "left": [
+    {
+     "id": "s1",
+     "text": "🍊"
+    },
+    {
+     "id": "s2",
+     "text": "🎒"
+    },
+    {
+     "id": "s3",
+     "text": "🍎"
+    }
+   ],
+   "right": [
+    {
+     "id": "w0",
+     "text": "bag"
+    },
+    {
+     "id": "w2",
+     "text": "orange"
+    },
+    {
+     "id": "w1",
+     "text": "apple"
+    }
+   ],
+   "answer": {
+    "s1": "w2",
+    "s2": "w0",
+    "s3": "w1"
+   },
+   "playable": true,
+   "explain": "그림-낱말 연결"
+  },
+  {
+   "_order": 160,
+   "id": "eng-01-l5-q1",
+   "topic": "낱말 그림",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "조건에 맞는 영어 단어만 골라 상자에 넣어보세요.",
+   "hint": "과일 단어를 모두 찾아요.",
+   "bins": [
+    {
+     "id": "b1",
+     "label": "과일 담기 🧺"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "pig"
+    },
+    {
+     "id": "i5",
+     "text": "duck"
+    },
+    {
+     "id": "i4",
+     "text": "kiwi"
+    },
+    {
+     "id": "i1",
+     "text": "grape"
+    },
+    {
+     "id": "i3",
+     "text": "pear"
+    }
+   ],
+   "answer": {
+    "i4": "b1",
+    "i1": "b1",
+    "i3": "b1"
+   },
+   "placeCount": 3,
+   "playable": true,
+   "explain": "과일 낱말 골라 담기"
+  },
+  {
+   "_order": 161,
+   "id": "eng-01-l5-q2",
+   "topic": "낱말 그림",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "조건에 맞는 영어 단어만 골라 상자에 넣어보세요.",
+   "hint": "생활 단어를 모두 찾아요.",
+   "bins": [
+    {
+     "id": "b1",
+     "label": "생활 담기 🧺"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "egg"
+    },
+    {
+     "id": "i5",
+     "text": "melon"
+    },
+    {
+     "id": "i4",
+     "text": "cap"
+    },
+    {
+     "id": "i1",
+     "text": "pig"
+    },
+    {
+     "id": "i2",
+     "text": "ball"
+    }
+   ],
+   "answer": {
+    "i3": "b1",
+    "i4": "b1",
+    "i2": "b1"
+   },
+   "placeCount": 3,
+   "playable": true,
+   "explain": "생활 낱말 골라 담기"
+  },
+  {
+   "_order": 162,
+   "id": "eng-01-l5-q3",
+   "topic": "낱말 그림",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "조건에 맞는 영어 단어만 골라 상자에 넣어보세요.",
+   "hint": "학용품 단어를 모두 찾아요.",
+   "bins": [
+    {
+     "id": "b1",
+     "label": "학용품 담기 🧺"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "book"
+    },
+    {
+     "id": "i2",
+     "text": "sun"
+    },
+    {
+     "id": "i3",
+     "text": "crayon"
+    },
+    {
+     "id": "i1",
+     "text": "pen"
+    },
+    {
+     "id": "i4",
+     "text": "bear"
+    }
+   ],
+   "answer": {
+    "i5": "b1",
+    "i3": "b1",
+    "i1": "b1"
+   },
+   "placeCount": 3,
+   "playable": true,
+   "explain": "학용품 낱말 골라 담기"
+  },
+  {
+   "_order": 163,
+   "id": "eng-01-l5-q4",
+   "topic": "낱말 그림",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "조건에 맞는 영어 단어만 골라 상자에 넣어보세요.",
+   "hint": "동물 단어를 모두 찾아요.",
+   "bins": [
+    {
+     "id": "b1",
+     "label": "동물 담기 🧺"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "cow"
+    },
+    {
+     "id": "i2",
+     "text": "frog"
+    },
+    {
+     "id": "i4",
+     "text": "pear"
+    },
+    {
+     "id": "i5",
+     "text": "fox"
+    },
+    {
+     "id": "i1",
+     "text": "orange"
+    }
+   ],
+   "answer": {
+    "i3": "b1",
+    "i2": "b1",
+    "i5": "b1"
+   },
+   "placeCount": 3,
+   "playable": true,
+   "explain": "동물 낱말 골라 담기"
+  },
+  {
+   "_order": 164,
+   "id": "eng-01-l5-q5",
+   "topic": "낱말 그림",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "조건에 맞는 영어 단어만 골라 상자에 넣어보세요.",
+   "hint": "과일 단어를 모두 찾아요.",
+   "bins": [
+    {
+     "id": "b1",
+     "label": "과일 담기 🧺"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "frog"
+    },
+    {
+     "id": "i4",
+     "text": "lemon"
+    },
+    {
+     "id": "i2",
+     "text": "fox"
+    },
+    {
+     "id": "i1",
+     "text": "grape"
+    },
+    {
+     "id": "i3",
+     "text": "peach"
+    }
+   ],
+   "answer": {
+    "i4": "b1",
+    "i1": "b1",
+    "i3": "b1"
+   },
+   "placeCount": 3,
+   "playable": true,
+   "explain": "과일 낱말 골라 담기"
+  }
+ ]
+}

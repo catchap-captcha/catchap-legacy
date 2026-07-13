@@ -1,0 +1,725 @@
+{
+ "subject": "수학",
+ "topic": "측정",
+ "questions": [
+  {
+   "_order": 75,
+   "id": "math-ch4_01_n15_oil_tank_select",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "[경시대회] 기름 탱크에 33L 350mL의 기름이 들어 있습니다. 월요일에는 5L 700mL를 사용하고 화요일과 수요일에는 똑같은 양을 사용했습니다. 목요일에는 9L 810mL를 사용하였더니 기름 탱크에 남은 기름은 9L 120mL였습니다. 수요일에 사용한 기름의 양은 몇 L 몇 mL일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "전체 사용량은 33L350mL−9L120mL=24L230mL. 월요일과 목요일 사용량은 15L510mL이므로 화·수 합은 8L720mL. 둘이 같으니 수요일은 4L360mL!",
+   "figure": "<svg viewBox=\"0 0 560 175\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"560\" height=\"175\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"36\" y=\"50\" width=\"128\" height=\"72\" rx=\"18\" fill=\"#eef6ff\" stroke=\"#3a6fb0\" stroke-width=\"3\"/>\n        <text x=\"100\" y=\"92\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"900\">33L350mL</text>\n        <path d=\"M184 86 h315\" stroke=\"#8a8072\" stroke-width=\"3\" marker-end=\"url(#oilArr)\"/>\n        <defs><marker id=\"oilArr\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#8a8072\"/></marker></defs>\n        <g transform=\"translate(198 48)\"><rect width=\"70\" height=\"76\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"35\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">월</text><text x=\"35\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\">5L700mL</text></g><g transform=\"translate(276 48)\"><rect width=\"70\" height=\"76\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"35\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">화</text><text x=\"35\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\">x</text></g><g transform=\"translate(354 48)\"><rect width=\"70\" height=\"76\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"35\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">수</text><text x=\"35\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\">x</text></g><g transform=\"translate(432 48)\"><rect width=\"70\" height=\"76\" rx=\"12\" fill=\"#fff\" stroke=\"#d9c9b4\" stroke-width=\"3\"/><text x=\"35\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">목</text><text x=\"35\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\">9L810mL</text></g>\n        <text x=\"420\" y=\"150\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">남은 기름 9L120mL</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "4L 360mL"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "5L 360mL"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "3L 360mL"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "6L 360mL"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 76,
+   "id": "math-ch4_02_lv1_from_l5_0",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "삼각형의 두 각이 72°, 49°일 때 나머지 한 각은 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "삼각형 세 각의 합은 180°! 180−72−49 = 59°",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "69"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "59"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "49"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "108"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 77,
+   "id": "math-ch4_03_lv1_from_l5_1",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "직선 위에서 한 각이 89°일 때 나머지 각은 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "직선이 이루는 각은 180°! 180−89 = 91°",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "101"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "81"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "91"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "90"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 78,
+   "id": "math-ch4_04_lv1_from_l5_2",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "사각형의 세 각이 89°, 108°, 81°일 때 나머지 한 각은 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "사각형 네 각의 합은 360°! 360−89−108−81 = 82°",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "82"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "72"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "92"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "91"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 79,
+   "id": "math-ch4_05_lv1_from_l5_3",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "삼각형의 두 각이 53°, 60°일 때 나머지 한 각은 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "삼각형 세 각의 합은 180°! 180−53−60 = 67°",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "57"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "77"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "67"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "127"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 80,
+   "id": "math-ch4_06_lv1_from_l5_4",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "직선 위에서 한 각이 122°일 때 나머지 각은 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "직선이 이루는 각은 180°! 180−122 = 58°",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "68"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "48"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "90"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "58"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 81,
+   "id": "math-ch4_07_photo_l6_07_tape_overlap",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "길이가 16.3cm인 색 테이프 5장을 3.1cm씩 겹치게 한 줄로 이어 붙였습니다. 이어 붙인 색 테이프의 전체 길이는 몇 cm일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "테이프 5장의 길이는 16.3×5=81.5cm, 겹친 곳은 4곳이라 3.1×4=12.4cm를 빼요. 81.5-12.4=69.1cm!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "66.0 cm"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "69.1 cm"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "72.2 cm"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "81.5 cm"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 82,
+   "id": "math-ch4_08_photo_l11_03_quadrilateral_angle_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "사각형의 세 각이 100°, 90°, 90°일 때, 나머지 한 각 ㉠의 크기는 몇 도일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "사각형의 네 각의 합은 360도예요. 360-100-90-90=80도입니다.",
+   "figure": "<svg viewBox=\"0 0 520 230\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"230\" rx=\"18\" fill=\"#fffdf8\"/>\n        <path d=\"M150 170 L170 55 L390 55 L390 170 Z\" fill=\"#eef6ff\" stroke=\"#312a35\" stroke-width=\"3\" stroke-linejoin=\"round\"/>\n        <path d=\"M204 55 A34 34 0 0 1 164 89\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"195\" y=\"88\" font-size=\"18\" font-weight=\"900\" fill=\"#312a35\">100°</text>\n        <path d=\"M368 55 v22 h22 M368 170 v-22 h22\" fill=\"none\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"340\" y=\"92\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\">90°</text>\n        <text x=\"340\" y=\"154\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\">90°</text>\n        <path d=\"M184 170 A34 34 0 0 0 156 136\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"164\" y=\"151\" font-size=\"20\" font-weight=\"900\" fill=\"#d07b13\">㉠</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "96",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "72",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "88",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "80",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 83,
+   "id": "math-ch4_09_photo_l11_13_rectangle_angles_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "직선 위의 한 점에서 두 반직선을 그어 세 각 ㉠, 30°, ㉡을 만들었어요. 각 ㉠과 각 ㉡의 크기의 합은 몇 도일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "직선이 이루는 각은 180도예요. ㉠+㉡=180-30=150도입니다.",
+   "figure": "<svg viewBox=\"0 0 420 190\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <line x1=\"70\" y1=\"118\" x2=\"350\" y2=\"118\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"145\" y2=\"42\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"300\" y2=\"48\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"146\" y=\"103\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">㉠</text>\n        <text x=\"214\" y=\"72\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">30°</text>\n        <text x=\"280\" y=\"107\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">㉡</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "150",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "180",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "165",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "135",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 84,
+   "id": "math-ch4_10_photo_l11_14_quadrilateral_angle_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "사각형의 한 꼭짓점 바깥쪽 각이 115°이고(안쪽 각은 180°에서 빼서 구해요), 나머지 두 각이 88°, 90°일 때, 마지막 한 각 ㉠의 크기는 몇 도일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "바깥 각이 115도이면 안쪽 각은 180-115=65도예요. 360-65-88-90=117도입니다.",
+   "figure": "<svg viewBox=\"0 0 520 240\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"240\" rx=\"18\" fill=\"#fffdf8\"/>\n        <line x1=\"62\" y1=\"178\" x2=\"105\" y2=\"178\" stroke=\"#8a8072\" stroke-width=\"3\" stroke-dasharray=\"6 6\"/>\n        <path d=\"M105 178 L151 78 L390 70 L390 178 Z\" fill=\"#eef6ff\" stroke=\"#312a35\" stroke-width=\"3\" stroke-linejoin=\"round\"/>\n        <path d=\"M65 178 A40 40 0 0 1 122 142\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"76\" y=\"146\" font-size=\"18\" font-weight=\"900\" fill=\"#d07b13\">115°</text>\n        <path d=\"M186 77 A35 35 0 0 1 137 110\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"162\" y=\"109\" font-size=\"20\" font-weight=\"900\" fill=\"#d07b13\">㉠</text>\n        <path d=\"M390 104 A34 34 0 0 1 356 71\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"3\"/>\n        <text x=\"340\" y=\"108\" font-size=\"18\" font-weight=\"900\" fill=\"#d07b13\">88°</text>\n        <path d=\"M365 178 v-25 h25\" fill=\"none\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"332\" y=\"162\" font-size=\"15\" font-weight=\"900\" fill=\"#5b5248\">90°</text>\n        <text x=\"58\" y=\"200\" font-size=\"13\" font-weight=\"900\" fill=\"#5b5248\">변을 연장한 바깥각</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "117",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "141",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "105",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "129",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 85,
+   "id": "math-ch4_11_photo_l11_22_angle_difference_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "직선 위의 한 점에서 두 반직선을 그어 세 각을 만들었어요. 왼쪽 각이 47°, 오른쪽 각이 58°일 때 가운데 각은 몇 도일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "직선이 이루는 각은 180도예요. 180-47-58=75도입니다.",
+   "figure": "<svg viewBox=\"0 0 420 190\" width=\"420\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"420\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <line x1=\"70\" y1=\"118\" x2=\"350\" y2=\"118\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"145\" y2=\"42\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"118\" x2=\"300\" y2=\"48\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"146\" y=\"103\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">47°</text>\n        <text x=\"214\" y=\"72\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">?</text>\n        <text x=\"280\" y=\"107\" font-size=\"17\" font-weight=\"900\" fill=\"#d07b13\">58°</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "75",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "83",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "91",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "67",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 86,
+   "id": "math-ch4_12_photo_l11_27_clock_angles_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "오후 2시 30분과 오후 4시에 시침과 분침이 이루는 작은 각을 각각 구해 합하면 몇 도일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "2시 30분의 작은 각은 105도, 4시 정각의 작은 각은 120도예요. 105+120=225도입니다.",
+   "figure": "<svg viewBox=\"0 0 500 180\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"500\" height=\"180\" rx=\"18\" fill=\"#fffdf8\"/>\n        <g transform=\"translate(80 32) scale(1.15)\">\n      <circle cx=\"60\" cy=\"48\" r=\"40\" fill=\"#fff\" stroke=\"#5b5248\" stroke-width=\"4\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(0 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(30 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(60 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(90 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(120 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(150 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(180 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(210 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(240 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(270 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(300 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(330 60 48)\"/>\n      <line x1=\"60\" y1=\"48\" x2=\"60\" y2=\"28\" stroke=\"#2f6dcc\" stroke-width=\"5\" stroke-linecap=\"round\" transform=\"rotate(75 60 48)\"/>\n      <line x1=\"60\" y1=\"48\" x2=\"60\" y2=\"16\" stroke=\"#ef5468\" stroke-width=\"3.5\" stroke-linecap=\"round\" transform=\"rotate(180 60 48)\"/>\n      <circle cx=\"60\" cy=\"48\" r=\"4\" fill=\"#5b5248\"/>\n    </g>\n        <g transform=\"translate(295 32) scale(1.15)\">\n      <circle cx=\"60\" cy=\"48\" r=\"40\" fill=\"#fff\" stroke=\"#5b5248\" stroke-width=\"4\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(0 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(30 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(60 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(90 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(120 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(150 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(180 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(210 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(240 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(270 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(300 60 48)\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"15\" stroke=\"#8a8072\" stroke-width=\"2.5\" transform=\"rotate(330 60 48)\"/>\n      <line x1=\"60\" y1=\"48\" x2=\"60\" y2=\"28\" stroke=\"#2f6dcc\" stroke-width=\"5\" stroke-linecap=\"round\" transform=\"rotate(120 60 48)\"/>\n      <line x1=\"60\" y1=\"48\" x2=\"60\" y2=\"16\" stroke=\"#ef5468\" stroke-width=\"3.5\" stroke-linecap=\"round\" transform=\"rotate(0 60 48)\"/>\n      <circle cx=\"60\" cy=\"48\" r=\"4\" fill=\"#5b5248\"/>\n    </g>\n        <text x=\"145\" y=\"158\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">2시 30분</text>\n        <text x=\"360\" y=\"158\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\">4시</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "271",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "202",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "225",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "248",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 87,
+   "id": "math-ch4_13_photo_l15_22_line_angles",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "어느 직선 위의 세 각이 차례로 36°, 62°, ㉠이고, 다른 직선 위의 두 각이 115°, ㉡이에요. ㉠+㉡의 크기는 몇 도일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "위쪽 직선 위에서 36°+62°+㉠=180°이므로 ㉠=82°입니다. 또 ㉡=180°-115°=65°이므로 합은 147°입니다.",
+   "figure": "<svg viewBox=\"0 0 430 210\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"210\" rx=\"18\" fill=\"#fffdf8\"/>\n        <line x1=\"70\" y1=\"105\" x2=\"360\" y2=\"105\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"105\" x2=\"170\" y2=\"38\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"105\" x2=\"238\" y2=\"30\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <line x1=\"210\" y1=\"105\" x2=\"162\" y2=\"172\" stroke=\"#312a35\" stroke-width=\"3\"/>\n        <text x=\"158\" y=\"94\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">36°</text>\n        <text x=\"214\" y=\"68\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">62°</text>\n        <text x=\"266\" y=\"93\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">㉠</text>\n        <text x=\"246\" y=\"139\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">115°</text>\n        <text x=\"177\" y=\"132\" font-size=\"15\" font-weight=\"900\" fill=\"#d07b13\">㉡</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "147°"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "213°"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "193°"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "143°"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "157°"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 88,
+   "id": "math-ch4_14_lv16_walk_bus_difference_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "조건을 보고 버스를 타고 이동한 거리와 걸은 거리의 차를 ㉠ km ㉡ m로 나타냈을 때, ㉠과 ㉡에 알맞은 수의 합은 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "걷기: 70×20=1400m=1km400m. 버스: 750×60=45000m=45km. 차는 43km600m이므로 ㉠+㉡=43+600=643입니다.",
+   "figure": "<svg viewBox=\"0 0 560 178\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect x=\"12\" y=\"12\" width=\"536\" height=\"154\" rx=\"16\" fill=\"#fffdf8\" stroke=\"#d9c9b4\" stroke-width=\"2\"/>\n        <text x=\"38\" y=\"48\" font-size=\"16\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">• 전체 시간: 1시간 20분</text>\n        <text x=\"38\" y=\"78\" font-size=\"16\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">• 20분은 걷고, 1시간은 버스를 탔어요</text>\n        <text x=\"38\" y=\"108\" font-size=\"16\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">• 걷기 70m/분, 버스 750m/분</text>\n        <text x=\"38\" y=\"138\" font-size=\"16\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">• 거리 차 = ㉠ km ㉡ m</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "707",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "643",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "771",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "579",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 89,
+   "id": "math-ch4_gen_01_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "7L 350mL와 4L 800mL를 합하면 몇 L 몇 mL일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "350mL+800mL=1,150mL이므로 12L 150mL입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "14L150mL",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "13L150mL",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "12L150mL",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "11L150mL",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 90,
+   "id": "math-ch4_gen_02_drag",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "3m 20cm와 175cm를 합하면 몇 m 몇 cm일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "3m20cm=320cm, 320+175=495cm=4m95cm입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "5m95cm",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "4m95cm",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "6m95cm",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "3m95cm",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 91,
+   "id": "math-ch4_gen_03",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "2시간 35분과 1시간 50분을 합하면 몇 시간 몇 분일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "35분+50분=85분=1시간25분이므로 4시간25분입니다.",
+   "type": "input",
+   "answers": [
+    "4시간25분",
+    "4시간 25분"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 92,
+   "id": "math-ch4_gen_04",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "5kg 350g과 2kg 780g을 합하면 몇 kg 몇 g일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "350g+780g=1,130g이므로 8kg130g입니다.",
+   "type": "input",
+   "answers": [
+    "8kg130g",
+    "8kg 130g"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 93,
+   "id": "math-ch4_gen_05",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "1km 250m에서 680m를 빼면 몇 m일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "1km250m=1,250m이고, 1,250-680=570m입니다.",
+   "type": "input",
+   "answers": [
+    "570"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 94,
+   "id": "math-ch4_gen_06",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "9L 120mL에 850mL를 더하면 몇 L 몇 mL일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "120mL+850mL=970mL이므로 9L970mL입니다.",
+   "type": "input",
+   "answers": [
+    "9L970mL",
+    "9L 970mL"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 95,
+   "id": "math-ch4_gen_07",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "시계가 3시 30분을 가리킬 때, 시침과 분침이 이루는 작은 각은 몇 도일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3시30분의 시침은 105°, 분침은 180°에 있어 차이는 75°입니다.",
+   "type": "input",
+   "answers": [
+    "75",
+    "75도"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 96,
+   "id": "math-ch4_gen_08",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "400cm 리본을 35cm씩 자르면 35cm짜리 리본은 최대 몇 개 만들 수 있을까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "400÷35는 몫이 11이므로 최대 11개입니다.",
+   "type": "input",
+   "answers": [
+    "11"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 97,
+   "id": "math-ch4_gen_09",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "2시간 15분은 모두 몇 분일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "2시간은 120분이고, 120+15=135분입니다.",
+   "type": "input",
+   "answers": [
+    "135"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 98,
+   "id": "math-ch4_gen_10",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "정사각형의 둘레가 24cm입니다. 한 변의 길이는 몇 cm일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "정사각형은 네 변이 같으므로 24÷4=6cm입니다.",
+   "type": "input",
+   "answers": [
+    "6"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 99,
+   "id": "math-ch4_gen_11",
+   "topic": "측정",
+   "stage": 4,
+   "prompt": "3L 600mL의 주스를 6명이 똑같이 나누면 한 사람은 몇 mL씩 마실 수 있을까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3L600mL=3,600mL이고, 3,600÷6=600mL입니다.",
+   "type": "input",
+   "answers": [
+    "600"
+   ],
+   "playable": true
+  }
+ ]
+}

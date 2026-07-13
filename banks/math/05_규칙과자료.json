@@ -1,0 +1,725 @@
+{
+ "subject": "수학",
+ "topic": "규칙과 자료",
+ "questions": [
+  {
+   "_order": 100,
+   "id": "math-ch5_01_n15_snail_3months_select",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "[경시대회] 달팽이는 첫날 낮부터 움직이기 시작합니다. 하루는 낮에 30cm 올라간 뒤, 같은 날 밤에 6cm 미끄러져 내려가는 순서입니다. 3개월(90일) 동안 달팽이가 도달하는 최고 높이는 몇 m 몇 cm일까요? 단, 최고 높이는 각 낮이 끝난 직후, 밤에 미끄러지기 전 높이를 기준으로 합니다.",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "최고 높이는 밤에 내려가기 전, 낮이 끝난 직후를 봐야 해요. 89일 밤까지는 89×(30−6)=2136cm이고, 90일째 낮에 30cm 더 올라 2166cm = 21m 66cm입니다.",
+   "figure": "<svg viewBox=\"0 0 520 190\" width=\"520\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"520\" height=\"190\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"84\" y=\"24\" font-size=\"13\" font-weight=\"900\" fill=\"#5b5248\">하루 순서: 낮 먼저 → 밤 다음</text>\n        <line x1=\"112\" y1=\"154\" x2=\"112\" y2=\"30\" stroke=\"#5b5248\" stroke-width=\"4\"/>\n        <path d=\"M112 138 C180 98 250 58 330 36\" fill=\"none\" stroke=\"#3a6fb0\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n        <path d=\"M330 36 C315 53 304 64 292 74\" fill=\"none\" stroke=\"#d07b13\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n        <text x=\"156\" y=\"82\" font-size=\"16\" font-weight=\"900\" fill=\"#3a6fb0\">낮 +30cm</text>\n        <text x=\"314\" y=\"92\" font-size=\"16\" font-weight=\"900\" fill=\"#d07b13\">밤 -6cm</text>\n        <text x=\"112\" y=\"176\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">출발</text>\n        <text x=\"390\" y=\"48\" font-size=\"15\" font-weight=\"900\">90일째 낮 끝</text>\n        <text x=\"390\" y=\"70\" font-size=\"13\" font-weight=\"900\" fill=\"#5b5248\">밤에 내려가기 전 최고 높이</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "23m 66cm"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "25m 66cm"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "19m 66cm"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "21m 66cm"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 101,
+   "id": "math-ch5_02_lv6_from_l10_0",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "그래프에서 4일에 한 줄넘기는 몇 회일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "4일의 점의 눈금을 읽으면 11회!",
+   "figure": "<svg viewBox=\"0 0 340 255\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"52\" y1=\"205.0\" x2=\"320\" y2=\"205.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"210.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">0</text><line x1=\"52\" y1=\"196.2\" x2=\"320\" y2=\"196.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"187.3\" x2=\"320\" y2=\"187.3\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"178.4\" x2=\"320\" y2=\"178.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"169.6\" x2=\"320\" y2=\"169.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"160.8\" x2=\"320\" y2=\"160.8\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"165.8\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"151.9\" x2=\"320\" y2=\"151.9\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"143.1\" x2=\"320\" y2=\"143.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"134.2\" x2=\"320\" y2=\"134.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"125.4\" x2=\"320\" y2=\"125.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"116.5\" x2=\"320\" y2=\"116.5\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"121.5\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">10</text><line x1=\"52\" y1=\"107.7\" x2=\"320\" y2=\"107.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"98.8\" x2=\"320\" y2=\"98.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"90.0\" x2=\"320\" y2=\"90.0\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"81.1\" x2=\"320\" y2=\"81.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"72.3\" x2=\"320\" y2=\"72.3\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"77.3\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">15</text><line x1=\"52\" y1=\"63.4\" x2=\"320\" y2=\"63.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"54.6\" x2=\"320\" y2=\"54.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"45.7\" x2=\"320\" y2=\"45.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"36.8\" x2=\"320\" y2=\"36.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"28.0\" x2=\"320\" y2=\"28.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"33.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">20</text><polyline points=\"52,178.4 114,169.6 176,143.1 238,107.7 300,90.0\" fill=\"none\" stroke=\"#2a2a2a\" stroke-width=\"3\"/><circle cx=\"52\" cy=\"178.4\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"52\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">1</text><circle cx=\"114\" cy=\"169.6\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"114\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">2</text><circle cx=\"176\" cy=\"143.1\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"176\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">3</text><circle cx=\"238\" cy=\"107.7\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"238\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">4</text><circle cx=\"300\" cy=\"90.0\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"300\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"26\" x2=\"52\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"205\" x2=\"320\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><text x=\"16\" y=\"120\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\" transform=\"rotate(-90 16 120)\">횟수(회)</text><text x=\"176\" y=\"247\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">날짜(일)</text><text x=\"176\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#a0764a\" font-family=\"inherit\">날짜별 줄넘기 횟수</text></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "11"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "12"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "13"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "7"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 102,
+   "id": "math-ch5_03_lv6_from_l10_1",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "전날보다 줄넘기 횟수가 가장 많이 늘어난 날은 언제일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "3일에 4회나 늘었어요!",
+   "figure": "<svg viewBox=\"0 0 340 255\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"52\" y1=\"205.0\" x2=\"320\" y2=\"205.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"210.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">0</text><line x1=\"52\" y1=\"196.2\" x2=\"320\" y2=\"196.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"187.3\" x2=\"320\" y2=\"187.3\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"178.4\" x2=\"320\" y2=\"178.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"169.6\" x2=\"320\" y2=\"169.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"160.8\" x2=\"320\" y2=\"160.8\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"165.8\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"151.9\" x2=\"320\" y2=\"151.9\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"143.1\" x2=\"320\" y2=\"143.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"134.2\" x2=\"320\" y2=\"134.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"125.4\" x2=\"320\" y2=\"125.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"116.5\" x2=\"320\" y2=\"116.5\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"121.5\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">10</text><line x1=\"52\" y1=\"107.7\" x2=\"320\" y2=\"107.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"98.8\" x2=\"320\" y2=\"98.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"90.0\" x2=\"320\" y2=\"90.0\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"81.1\" x2=\"320\" y2=\"81.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"72.3\" x2=\"320\" y2=\"72.3\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"77.3\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">15</text><line x1=\"52\" y1=\"63.4\" x2=\"320\" y2=\"63.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"54.6\" x2=\"320\" y2=\"54.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"45.7\" x2=\"320\" y2=\"45.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"36.8\" x2=\"320\" y2=\"36.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"28.0\" x2=\"320\" y2=\"28.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"33.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">20</text><polyline points=\"52,178.4 114,160.8 176,125.4 238,98.8 300,90.0\" fill=\"none\" stroke=\"#2a2a2a\" stroke-width=\"3\"/><circle cx=\"52\" cy=\"178.4\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"52\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">1</text><circle cx=\"114\" cy=\"160.8\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"114\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">2</text><circle cx=\"176\" cy=\"125.4\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"176\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">3</text><circle cx=\"238\" cy=\"98.8\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"238\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">4</text><circle cx=\"300\" cy=\"90.0\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"300\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"26\" x2=\"52\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"205\" x2=\"320\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><text x=\"16\" y=\"120\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\" transform=\"rotate(-90 16 120)\">횟수(회)</text><text x=\"176\" y=\"247\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">날짜(일)</text><text x=\"176\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#a0764a\" font-family=\"inherit\">날짜별 줄넘기 횟수</text></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "2일"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "3일"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "4일"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "5일"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 103,
+   "id": "math-ch5_04_lv6_from_l10_2",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "그래프에서 2일에 한 줄넘기는 몇 회일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "2일의 점의 눈금을 읽으면 4회!",
+   "figure": "<svg viewBox=\"0 0 340 255\" width=\"380\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"52\" y1=\"205.0\" x2=\"320\" y2=\"205.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"210.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">0</text><line x1=\"52\" y1=\"196.2\" x2=\"320\" y2=\"196.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"187.3\" x2=\"320\" y2=\"187.3\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"178.4\" x2=\"320\" y2=\"178.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"169.6\" x2=\"320\" y2=\"169.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"160.8\" x2=\"320\" y2=\"160.8\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"165.8\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"151.9\" x2=\"320\" y2=\"151.9\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"143.1\" x2=\"320\" y2=\"143.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"134.2\" x2=\"320\" y2=\"134.2\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"125.4\" x2=\"320\" y2=\"125.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"116.5\" x2=\"320\" y2=\"116.5\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"121.5\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">10</text><line x1=\"52\" y1=\"107.7\" x2=\"320\" y2=\"107.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"98.8\" x2=\"320\" y2=\"98.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"90.0\" x2=\"320\" y2=\"90.0\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"81.1\" x2=\"320\" y2=\"81.1\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"72.3\" x2=\"320\" y2=\"72.3\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"77.3\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">15</text><line x1=\"52\" y1=\"63.4\" x2=\"320\" y2=\"63.4\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"54.6\" x2=\"320\" y2=\"54.6\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"45.7\" x2=\"320\" y2=\"45.7\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"36.8\" x2=\"320\" y2=\"36.8\" stroke=\"#e8e2d8\" stroke-width=\"1\"/><line x1=\"52\" y1=\"28.0\" x2=\"320\" y2=\"28.0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"44\" y=\"33.0\" text-anchor=\"end\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">20</text><polyline points=\"52,187.3 114,169.6 176,160.8 238,125.4 300,98.8\" fill=\"none\" stroke=\"#2a2a2a\" stroke-width=\"3\"/><circle cx=\"52\" cy=\"187.3\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"52\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">1</text><circle cx=\"114\" cy=\"169.6\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"114\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">2</text><circle cx=\"176\" cy=\"160.8\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"176\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">3</text><circle cx=\"238\" cy=\"125.4\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"238\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">4</text><circle cx=\"300\" cy=\"98.8\" r=\"5\" fill=\"#2a2a2a\"/><text x=\"300\" y=\"227\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#5b5248\" font-family=\"inherit\">5</text><line x1=\"52\" y1=\"26\" x2=\"52\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"205\" x2=\"320\" y2=\"205\" stroke=\"#5b5248\" stroke-width=\"2\"/><text x=\"16\" y=\"120\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\" transform=\"rotate(-90 16 120)\">횟수(회)</text><text x=\"176\" y=\"247\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"800\" fill=\"#5b5248\" font-family=\"inherit\">날짜(일)</text><text x=\"176\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"900\" fill=\"#a0764a\" font-family=\"inherit\">날짜별 줄넘기 횟수</text></svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "2"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "5"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "4"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "6"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 104,
+   "id": "math-ch5_05_photo_l11_09_bar_unit_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "막대그래프의 가로 눈금이 0분부터 120분까지 12칸으로 나뉘어 있어요. 눈금 한 칸은 몇 분을 나타낼까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "120÷12=10이므로 한 칸은 10분입니다.",
+   "figure": "<svg viewBox=\"0 0 500 130\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"500\" height=\"130\" rx=\"18\" fill=\"#fffdf8\"/>\n        <rect x=\"70\" y=\"35\" width=\"360\" height=\"51\" fill=\"#fff\" stroke=\"#5b5248\" stroke-width=\"2\"/>\n        <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"100\" y1=\"35\" x2=\"100\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"130\" y1=\"35\" x2=\"130\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"160\" y1=\"35\" x2=\"160\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"190\" y1=\"35\" x2=\"190\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"220\" y1=\"35\" x2=\"220\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"250\" y1=\"35\" x2=\"250\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"280\" y1=\"35\" x2=\"280\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"310\" y1=\"35\" x2=\"310\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"340\" y1=\"35\" x2=\"340\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"370\" y1=\"35\" x2=\"370\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"400\" y1=\"35\" x2=\"400\" y2=\"86\" stroke=\"#d6cbbb\"/><line x1=\"430\" y1=\"35\" x2=\"430\" y2=\"86\" stroke=\"#d6cbbb\"/><rect x=\"70\" y=\"35\" width=\"120\" height=\"51\" fill=\"#d9b2d5\" opacity=\".8\"/>\n        <text x=\"70\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">0</text>\n        <text x=\"250\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">60</text>\n        <text x=\"430\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">120분</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "9",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "12",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "10",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "11",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 105,
+   "id": "math-ch5_06_photo_l11_19_camp_students_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "캠프 전체 참가 인원은 75명이에요. 1반 남 12명·여 13명, 2반 남 11명·여 14명, 3반 여학생이 15명일 때, 3반 남학생은 몇 명일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "75-(12+13+11+14+15)=10명입니다.",
+   "figure": "<svg viewBox=\"0 0 430 195\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"195\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"215\" y=\"25\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\">캠프 참가 학생 수</text>\n        <line x1=\"52\" y1=\"40\" x2=\"52\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"150\" x2=\"390\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/>\n        <rect x=\"75\" y=\"84\" width=\"38\" height=\"66\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"94\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">1남</text><rect x=\"147\" y=\"78.5\" width=\"38\" height=\"71.5\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"166\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">1여</text><rect x=\"219\" y=\"89.5\" width=\"38\" height=\"60.50000000000001\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"238\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">2남</text><rect x=\"291\" y=\"73\" width=\"38\" height=\"77\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"310\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">2여</text><rect x=\"363\" y=\"95\" width=\"38\" height=\"55\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"382\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">3남</text><rect x=\"435\" y=\"67.5\" width=\"38\" height=\"82.5\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"454\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">3여</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "11",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "9",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "12",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "10",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 106,
+   "id": "math-ch5_07_photo_l11_20_academy_students_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "학생 88명이 다니는 학원을 조사했어요. 영어 15명, 기타 10명이고, 피아노는 영어의 2배보다 4명 적어요. 나머지가 모두 태권도라면 태권도 학원에 다니는 학생은 몇 명일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "피아노는 15×2-4=26명이에요. 88-15-26-10=37명입니다.",
+   "figure": "<svg viewBox=\"0 0 430 195\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"195\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"215\" y=\"25\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\">다니는 학원별 학생 수</text>\n        <line x1=\"52\" y1=\"40\" x2=\"52\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"150\" x2=\"390\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/>\n        <rect x=\"75\" y=\"40\" width=\"38\" height=\"110\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"94\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">태권도</text><rect x=\"147\" y=\"105.4054054054054\" width=\"38\" height=\"44.5945945945946\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"166\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">영어</text><rect x=\"219\" y=\"72.7027027027027\" width=\"38\" height=\"77.2972972972973\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"238\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">피아노</text><rect x=\"291\" y=\"120.27027027027027\" width=\"38\" height=\"29.72972972972973\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"310\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">기타</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "37",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "41",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "45",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "33",
+     "label": ""
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 107,
+   "id": "math-ch5_08_photo_l15_26_glasses_chairs",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "4학년에서 안경을 쓴 학생은 1반 15명, 2반 17명, 3반 14명, 4반 16명이에요. 의자 하나에 13명씩 앉을 때, 안경 쓴 학생이 모두 앉으려면 의자는 적어도 몇 개 필요할까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "그래프와 조건으로 안경을 쓴 학생 수를 모두 구하면 62명입니다. 의자 하나에 13명씩 앉으므로 62÷13=4나머지10, 적어도 5개가 필요합니다.",
+   "figure": "<svg viewBox=\"0 0 430 195\" width=\"430\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"430\" height=\"195\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"215\" y=\"25\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\">반별 안경을 쓴 학생 수</text>\n        <line x1=\"52\" y1=\"40\" x2=\"52\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/><line x1=\"52\" y1=\"150\" x2=\"390\" y2=\"150\" stroke=\"#5b5248\" stroke-width=\"2\"/>\n        <rect x=\"75\" y=\"67.5\" width=\"38\" height=\"82.5\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"94\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">1반</text><rect x=\"147\" y=\"56.5\" width=\"38\" height=\"93.5\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"166\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">2반</text><rect x=\"219\" y=\"73\" width=\"38\" height=\"77\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"238\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">3반</text><rect x=\"291\" y=\"62\" width=\"38\" height=\"88\" fill=\"#d9b2d5\" stroke=\"#5b5248\"/><text x=\"310\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"900\">4반</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "7 개"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "5 개"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "4 개"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "8 개"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "6 개"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 108,
+   "id": "math-ch5_09_photo_l15_28_matchsticks_select",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "성냥개비 86개로 만들 수 있는 정육각형은 모두 몇 개일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "첫 정육각형은 6개가 필요하고, 이후 정육각형은 한 변을 공유해 5개씩 더 필요합니다. 6+5×(n-1)=86이므로 n=17개입니다.",
+   "figure": "<svg viewBox=\"0 0 470 170\" width=\"470\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"470\" height=\"170\" rx=\"18\" fill=\"#fffdf8\"/>\n        <polygon points=\"114.64101615137756,90 80,110 45.35898384862246,90.00000000000001 45.358983848622444,50.000000000000014 79.99999999999999,30 114.64101615137756,50.000000000000014\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><polygon points=\"202.64101615137756,116 168,136 133.35898384862247,116.00000000000001 133.35898384862244,76.00000000000001 168,56 202.64101615137756,76.00000000000001\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><polygon points=\"290.6410161513775,90 256,110 221.35898384862247,90.00000000000001 221.35898384862244,50.000000000000014 256,30 290.6410161513776,50.000000000000014\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><polygon points=\"378.6410161513775,116 344,136 309.3589838486225,116.00000000000001 309.3589838486224,76.00000000000001 344,56 378.6410161513776,76.00000000000001\" fill=\"none\" stroke=\"#8a5a3c\" stroke-width=\"5\" stroke-linejoin=\"round\"/><text x=\"405\" y=\"85\" font-size=\"30\" font-weight=\"900\" fill=\"#8a8072\">…</text>\n      </svg>",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "19"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "17"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "15"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "21"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 109,
+   "id": "math-ch5_10_lv16_season_graph_statement_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "두 막대그래프를 보고 옳은 설명의 번호를 쓰세요. ① 가장 작은 계절은 겨울 ② 가을은 봄의 3배 ③ 수민이 그래프의 눈금 한 칸은 2명 ④ 학생 수가 모두 다름 ⑤ 여름과 가을의 차는 3명",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "수민이 그래프는 0부터 30까지 15칸이므로 눈금 한 칸은 2명입니다. 따라서 옳은 설명은 ③입니다.",
+   "figure": "<svg viewBox=\"0 0 560 230\" width=\"560\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect width=\"560\" height=\"230\" rx=\"18\" fill=\"#fffdf8\"/>\n        <text x=\"133\" y=\"24\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">민성이의 그래프</text><text x=\"36\" y=\"74\" font-size=\"13\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">봄</text><rect x=\"76\" y=\"54\" width=\"150\" height=\"24\" fill=\"#fff\" stroke=\"#555\"/><rect x=\"76\" y=\"54\" width=\"40\" height=\"24\" fill=\"#8a8a8a\"/><text x=\"36\" y=\"108\" font-size=\"13\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">여름</text><rect x=\"76\" y=\"88\" width=\"150\" height=\"24\" fill=\"#fff\" stroke=\"#555\"/><rect x=\"76\" y=\"88\" width=\"110\" height=\"24\" fill=\"#8a8a8a\"/><text x=\"36\" y=\"142\" font-size=\"13\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">가을</text><rect x=\"76\" y=\"122\" width=\"150\" height=\"24\" fill=\"#fff\" stroke=\"#555\"/><rect x=\"76\" y=\"122\" width=\"80\" height=\"24\" fill=\"#8a8a8a\"/><text x=\"36\" y=\"176\" font-size=\"13\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">겨울</text><rect x=\"76\" y=\"156\" width=\"150\" height=\"24\" fill=\"#fff\" stroke=\"#555\"/><rect x=\"76\" y=\"156\" width=\"110\" height=\"24\" fill=\"#8a8a8a\"/><text x=\"76\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\">0</text><text x=\"126\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\">10</text><text x=\"176\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\">20</text><text x=\"226\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\">30</text>\n        <text x=\"415\" y=\"24\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"900\" fill=\"#312a35\" font-family=\"inherit\">수민이의 그래프</text><line x1=\"348\" y1=\"176\" x2=\"528\" y2=\"176\" stroke=\"#555\"/><line x1=\"348\" y1=\"36\" x2=\"348\" y2=\"176\" stroke=\"#555\"/><line x1=\"348\" y1=\"176\" x2=\"528\" y2=\"176\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"168\" x2=\"528\" y2=\"168\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"160\" x2=\"528\" y2=\"160\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"152\" x2=\"528\" y2=\"152\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"144\" x2=\"528\" y2=\"144\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"136\" x2=\"528\" y2=\"136\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"128\" x2=\"528\" y2=\"128\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"120\" x2=\"528\" y2=\"120\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"112\" x2=\"528\" y2=\"112\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"104\" x2=\"528\" y2=\"104\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"96\" x2=\"528\" y2=\"96\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"88\" x2=\"528\" y2=\"88\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"80\" x2=\"528\" y2=\"80\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"72\" x2=\"528\" y2=\"72\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"64\" x2=\"528\" y2=\"64\" stroke=\"#ddd\"/><line x1=\"348\" y1=\"56\" x2=\"528\" y2=\"56\" stroke=\"#ddd\"/><rect x=\"366\" y=\"144\" width=\"25\" height=\"32\" fill=\"#8a8a8a\" stroke=\"#555\"/><text x=\"378\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"900\">봄</text><rect x=\"404\" y=\"88\" width=\"25\" height=\"88\" fill=\"#8a8a8a\" stroke=\"#555\"/><text x=\"416\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"900\">여름</text><rect x=\"442\" y=\"112\" width=\"25\" height=\"64\" fill=\"#8a8a8a\" stroke=\"#555\"/><text x=\"454\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"900\">가을</text><rect x=\"480\" y=\"88\" width=\"25\" height=\"88\" fill=\"#8a8a8a\" stroke=\"#555\"/><text x=\"492\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"900\">겨울</text><text x=\"332\" y=\"179\" text-anchor=\"end\" font-size=\"12\">0</text><text x=\"332\" y=\"99\" text-anchor=\"end\" font-size=\"12\">20</text><text x=\"332\" y=\"59\" text-anchor=\"end\" font-size=\"12\">30</text>\n      </svg>",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "1",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "4",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "3",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "2",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 110,
+   "id": "math-ch5_gen_01_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "2, 5, 11, 23, □의 규칙은 앞 수에 2를 곱하고 1을 더하는 것입니다. □에 들어갈 수는 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "23×2+1=47입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "52",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "42",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "47",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "57",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 111,
+   "id": "math-ch5_gen_02_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "어떤 규칙에서 입력한 수 n을 3n+2로 바꿉니다. n=14일 때 결과는 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "3×14+2=44입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "52",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "48",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "44",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "40",
+     "label": ""
+    }
+   ],
+   "answer": "d3",
+   "playable": true
+  },
+  {
+   "_order": 112,
+   "id": "math-ch5_gen_03_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "ABBA가 반복되는 규칙에서 37번째 글자는 무엇일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "4글자씩 반복되고 37÷4의 나머지는 1이므로 A입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "A보다 큼",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "알 수 없음",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "A보다 작음",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "A",
+     "label": ""
+    }
+   ],
+   "answer": "d4",
+   "playable": true
+  },
+  {
+   "_order": 113,
+   "id": "math-ch5_gen_04_drag",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "7□36 > 7435가 되도록 □에 들어갈 수 있는 숫자를 모두 더하면 얼마일까요?",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "□에는 4,5,6,7,8,9가 들어갈 수 있고 합은 39입니다.",
+   "type": "drag",
+   "target": {
+    "e": "?",
+    "label": "정답 카드를 여기로 끌어오세요"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "47",
+     "label": ""
+    },
+    {
+     "id": "d2",
+     "e": "39",
+     "label": ""
+    },
+    {
+     "id": "d3",
+     "e": "43",
+     "label": ""
+    },
+    {
+     "id": "d4",
+     "e": "35",
+     "label": ""
+    }
+   ],
+   "answer": "d2",
+   "playable": true
+  },
+  {
+   "_order": 114,
+   "id": "math-ch5_gen_05_select",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "㉠※㉡=(㉠×㉡)+(㉠÷4)입니다. 52※□=481일 때 □는 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "52÷4=13이므로 52×□+13=481, □=9입니다.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "9"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "10"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "11"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "8"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 115,
+   "id": "math-ch5_gen_06_select",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "1, 1, 2, 3, 5, 8, □의 규칙에서 □에 들어갈 수는 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "앞의 두 수를 더하는 규칙이므로 5+8=13입니다.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "15"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "13"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "12"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "14"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 116,
+   "id": "math-ch5_gen_07",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "도형 조각 수가 1번째 4개, 2번째 7개, 3번째 10개입니다. 같은 규칙이면 10번째는 몇 개일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "3개씩 늘어나므로 4+3×9=31개입니다.",
+   "type": "input",
+   "answers": [
+    "31"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 117,
+   "id": "math-ch5_gen_08",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "3, 6, 12, 24, □의 규칙에서 □에 들어갈 수는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "2배씩 커지는 규칙이므로 24×2=48입니다.",
+   "type": "input",
+   "answers": [
+    "48"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 118,
+   "id": "math-ch5_gen_09",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "1, 4, 9, 16, □의 규칙에서 □에 들어갈 수는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "1², 2², 3², 4² 다음은 5²=25입니다.",
+   "type": "input",
+   "answers": [
+    "25"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 119,
+   "id": "math-ch5_gen_10",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "빨강, 파랑, 노랑이 반복됩니다. 50번째 색은 무엇일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "50÷3의 나머지가 2이므로 두 번째 색인 파랑입니다.",
+   "type": "input",
+   "answers": [
+    "파랑"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 120,
+   "id": "math-ch5_gen_11",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "입력한 수를 두 배 한 뒤 5를 더하는 규칙입니다. 37을 넣으면 어떤 수가 나올까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "37×2+5=79입니다.",
+   "type": "input",
+   "answers": [
+    "79"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 121,
+   "id": "math-ch5_gen_12",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "5, 9, 17, 33, □의 규칙에서 더하는 수가 4, 8, 16처럼 두 배가 됩니다. □는 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "다음에는 32를 더하므로 33+32=65입니다.",
+   "type": "input",
+   "answers": [
+    "65"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 122,
+   "id": "math-ch5_gen_13",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "막대그래프에서 눈금 한 칸이 4명을 나타냅니다. 막대가 7칸이면 몇 명일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "4×7=28명입니다.",
+   "type": "input",
+   "answers": [
+    "28"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 123,
+   "id": "math-ch5_gen_14",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "1+3+5+7+9+11+13+15+17+19의 값은 얼마일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "처음 10개의 홀수의 합은 10×10=100입니다.",
+   "type": "input",
+   "answers": [
+    "100"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 124,
+   "id": "math-ch5_gen_15",
+   "topic": "규칙과 자료",
+   "stage": 5,
+   "prompt": "화살표가 ↑, →, ↓, ← 순서로 반복됩니다. 11번째 화살표 방향은 무엇일까요?",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "4개씩 반복되고 11번째는 세 번째 방향이므로 아래쪽입니다.",
+   "type": "input",
+   "answers": [
+    "↓",
+    "아래",
+    "아래쪽"
+   ],
+   "playable": true
+  }
+ ]
+}

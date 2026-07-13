@@ -1,0 +1,890 @@
+{
+ "subject": "영어",
+ "topic": "영어 듣기",
+ "questions": [
+  {
+   "_order": 200,
+   "id": "eng-listen-s1-q1",
+   "topic": "영어 듣기",
+   "stage": 1,
+   "type": "listen",
+   "prompt": "소리를 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 버튼을 눌러 단어를 들어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍇",
+     "text": "grape"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐦",
+     "text": "bird"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "grape",
+   "showLabel": true,
+   "audio": "snd-16.m4a"
+  },
+  {
+   "_order": 201,
+   "id": "eng-listen-s1-q2",
+   "topic": "영어 듣기",
+   "stage": 1,
+   "type": "listen",
+   "prompt": "소리를 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 버튼을 눌러 단어를 들어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐮",
+     "text": "cow"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐦",
+     "text": "bird"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "bird",
+   "showLabel": true,
+   "audio": "snd-06.m4a"
+  },
+  {
+   "_order": 202,
+   "id": "eng-listen-s1-q3",
+   "topic": "영어 듣기",
+   "stage": 1,
+   "type": "listen",
+   "prompt": "소리를 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 버튼을 눌러 단어를 들어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🧢",
+     "text": "cap"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍊",
+     "text": "orange"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "orange",
+   "showLabel": true,
+   "audio": "snd-18.m4a"
+  },
+  {
+   "_order": 203,
+   "id": "eng-listen-s1-q4",
+   "topic": "영어 듣기",
+   "stage": 1,
+   "type": "listen",
+   "prompt": "소리를 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 버튼을 눌러 단어를 들어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🟢",
+     "text": "green"
+    },
+    {
+     "id": "o2",
+     "emoji": "✏️",
+     "text": "pencil"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "green",
+   "showLabel": true,
+   "audio": "snd-17.m4a"
+  },
+  {
+   "_order": 204,
+   "id": "eng-listen-s1-q5",
+   "topic": "영어 듣기",
+   "stage": 1,
+   "type": "listen",
+   "prompt": "소리를 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 버튼을 눌러 단어를 들어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🎒",
+     "text": "bag"
+    },
+    {
+     "id": "o2",
+     "emoji": "🪑",
+     "text": "chair"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "bag",
+   "showLabel": true,
+   "audio": "snd-02.m4a"
+  },
+  {
+   "_order": 205,
+   "id": "eng-listen-s2-q1",
+   "topic": "영어 듣기",
+   "stage": 2,
+   "type": "listen",
+   "prompt": "영어 단어를 잘 듣고 알맞은 그림을 선택해요.",
+   "hint": "🔊 소리를 듣고 4개 중에서 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🪑",
+     "text": "chair"
+    },
+    {
+     "id": "o2",
+     "emoji": "🟢",
+     "text": "green"
+    },
+    {
+     "id": "o3",
+     "emoji": "⚽",
+     "text": "ball"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔵",
+     "text": "blue"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "chair",
+   "showLabel": true,
+   "audio": "snd-12.m4a"
+  },
+  {
+   "_order": 206,
+   "id": "eng-listen-s2-q2",
+   "topic": "영어 듣기",
+   "stage": 2,
+   "type": "listen",
+   "prompt": "영어 단어를 잘 듣고 알맞은 그림을 선택해요.",
+   "hint": "🔊 소리를 듣고 4개 중에서 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🖊️",
+     "text": "pen"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐦",
+     "text": "bird"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐟",
+     "text": "fish"
+    },
+    {
+     "id": "o4",
+     "emoji": "🟡",
+     "text": "yellow"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "pen",
+   "showLabel": true,
+   "audio": "snd-21.m4a"
+  },
+  {
+   "_order": 207,
+   "id": "eng-listen-s2-q3",
+   "topic": "영어 듣기",
+   "stage": 2,
+   "type": "listen",
+   "prompt": "영어 단어를 잘 듣고 알맞은 그림을 선택해요.",
+   "hint": "🔊 소리를 듣고 4개 중에서 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐶",
+     "text": "dog"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍎",
+     "text": "apple"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧢",
+     "text": "cap"
+    },
+    {
+     "id": "o4",
+     "emoji": "🚗",
+     "text": "car"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "dog",
+   "showLabel": true,
+   "audio": "snd-14.m4a"
+  },
+  {
+   "_order": 208,
+   "id": "eng-listen-s2-q4",
+   "topic": "영어 듣기",
+   "stage": 2,
+   "type": "listen",
+   "prompt": "영어 단어를 잘 듣고 알맞은 그림을 선택해요.",
+   "hint": "🔊 소리를 듣고 4개 중에서 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍐",
+     "text": "pear"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧢",
+     "text": "cap"
+    },
+    {
+     "id": "o3",
+     "emoji": "🍊",
+     "text": "orange"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔴",
+     "text": "red"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "cap",
+   "showLabel": true,
+   "audio": "snd-09.m4a"
+  },
+  {
+   "_order": 209,
+   "id": "eng-listen-s2-q5",
+   "topic": "영어 듣기",
+   "stage": 2,
+   "type": "listen",
+   "prompt": "영어 단어를 잘 듣고 알맞은 그림을 선택해요.",
+   "hint": "🔊 소리를 듣고 4개 중에서 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "✏️",
+     "text": "pencil"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐱",
+     "text": "cat"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐶",
+     "text": "dog"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍌",
+     "text": "banana"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "pencil",
+   "showLabel": true,
+   "audio": "snd-22.m4a"
+  },
+  {
+   "_order": 210,
+   "id": "eng-listen-s3-q1",
+   "topic": "영어 듣기",
+   "stage": 3,
+   "type": "listen",
+   "prompt": "비슷한 소리를 잘 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 발음을 여러 번 들어봐도 좋아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📘",
+     "text": "book"
+    },
+    {
+     "id": "o2",
+     "emoji": "🎒",
+     "text": "bag"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐦",
+     "text": "bird"
+    },
+    {
+     "id": "o4",
+     "emoji": "⚽",
+     "text": "ball"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "ball",
+   "showLabel": true,
+   "audio": "snd-03.m4a"
+  },
+  {
+   "_order": 211,
+   "id": "eng-listen-s3-q2",
+   "topic": "영어 듣기",
+   "stage": 3,
+   "type": "listen",
+   "prompt": "비슷한 소리를 잘 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 발음을 여러 번 들어봐도 좋아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚗",
+     "text": "car"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐱",
+     "text": "cat"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐮",
+     "text": "cow"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧢",
+     "text": "cap"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "car",
+   "showLabel": true,
+   "audio": "snd-10.m4a"
+  },
+  {
+   "_order": 212,
+   "id": "eng-listen-s3-q3",
+   "topic": "영어 듣기",
+   "stage": 3,
+   "type": "listen",
+   "prompt": "비슷한 소리를 잘 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 발음을 여러 번 들어봐도 좋아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐻",
+     "text": "bear"
+    },
+    {
+     "id": "o2",
+     "emoji": "🔵",
+     "text": "blue"
+    },
+    {
+     "id": "o3",
+     "emoji": "📘",
+     "text": "book"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍌",
+     "text": "banana"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "banana",
+   "showLabel": true,
+   "audio": "snd-04.m4a"
+  },
+  {
+   "_order": 213,
+   "id": "eng-listen-s3-q4",
+   "topic": "영어 듣기",
+   "stage": 3,
+   "type": "listen",
+   "prompt": "비슷한 소리를 잘 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 발음을 여러 번 들어봐도 좋아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍑",
+     "text": "peach"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍐",
+     "text": "pear"
+    },
+    {
+     "id": "o3",
+     "emoji": "🐻",
+     "text": "bear"
+    },
+    {
+     "id": "o4",
+     "emoji": "🖊️",
+     "text": "pen"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "pear",
+   "showLabel": true,
+   "audio": "snd-20.m4a"
+  },
+  {
+   "_order": 214,
+   "id": "eng-listen-s3-q5",
+   "topic": "영어 듣기",
+   "stage": 3,
+   "type": "listen",
+   "prompt": "비슷한 소리를 잘 듣고 맞는 그림을 골라보세요.",
+   "hint": "🔊 발음을 여러 번 들어봐도 좋아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍐",
+     "text": "pear"
+    },
+    {
+     "id": "o2",
+     "emoji": "🖊️",
+     "text": "pen"
+    },
+    {
+     "id": "o3",
+     "emoji": "✏️",
+     "text": "pencil"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍑",
+     "text": "peach"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "peach",
+   "showLabel": true,
+   "audio": "snd-19.m4a"
+  },
+  {
+   "_order": 215,
+   "id": "eng-listen-s4-q1",
+   "topic": "영어 듣기",
+   "stage": 4,
+   "type": "listen",
+   "prompt": "단어를 듣고 그림만 보고 맞혀보세요.",
+   "hint": "🔊 오디오는 2번까지만 들을 수 있어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🖊️",
+     "text": ""
+    },
+    {
+     "id": "o2",
+     "emoji": "🐻",
+     "text": ""
+    },
+    {
+     "id": "o3",
+     "emoji": "🐟",
+     "text": ""
+    },
+    {
+     "id": "o4",
+     "emoji": "🍊",
+     "text": ""
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "fish",
+   "plays": 2,
+   "audio": "snd-15.m4a"
+  },
+  {
+   "_order": 216,
+   "id": "eng-listen-s4-q2",
+   "topic": "영어 듣기",
+   "stage": 4,
+   "type": "listen",
+   "prompt": "단어를 듣고 그림만 보고 맞혀보세요.",
+   "hint": "🔊 오디오는 2번까지만 들을 수 있어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "⚽",
+     "text": ""
+    },
+    {
+     "id": "o2",
+     "emoji": "🔴",
+     "text": ""
+    },
+    {
+     "id": "o3",
+     "emoji": "🐮",
+     "text": ""
+    },
+    {
+     "id": "o4",
+     "emoji": "🍑",
+     "text": ""
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "cow",
+   "plays": 2,
+   "audio": "snd-13.m4a"
+  },
+  {
+   "_order": 217,
+   "id": "eng-listen-s4-q3",
+   "topic": "영어 듣기",
+   "stage": 4,
+   "type": "listen",
+   "prompt": "단어를 듣고 그림만 보고 맞혀보세요.",
+   "hint": "🔊 오디오는 2번까지만 들을 수 있어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐱",
+     "text": ""
+    },
+    {
+     "id": "o2",
+     "emoji": "🍌",
+     "text": ""
+    },
+    {
+     "id": "o3",
+     "emoji": "🐮",
+     "text": ""
+    },
+    {
+     "id": "o4",
+     "emoji": "🍎",
+     "text": ""
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "cat",
+   "plays": 2,
+   "audio": "snd-11.m4a"
+  },
+  {
+   "_order": 218,
+   "id": "eng-listen-s4-q4",
+   "topic": "영어 듣기",
+   "stage": 4,
+   "type": "listen",
+   "prompt": "단어를 듣고 그림만 보고 맞혀보세요.",
+   "hint": "🔊 오디오는 2번까지만 들을 수 있어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐦",
+     "text": ""
+    },
+    {
+     "id": "o2",
+     "emoji": "🚗",
+     "text": ""
+    },
+    {
+     "id": "o3",
+     "emoji": "🍌",
+     "text": ""
+    },
+    {
+     "id": "o4",
+     "emoji": "📘",
+     "text": ""
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "book",
+   "plays": 2,
+   "audio": "snd-08.m4a"
+  },
+  {
+   "_order": 219,
+   "id": "eng-listen-s4-q5",
+   "topic": "영어 듣기",
+   "stage": 4,
+   "type": "listen",
+   "prompt": "단어를 듣고 그림만 보고 맞혀보세요.",
+   "hint": "🔊 오디오는 2번까지만 들을 수 있어요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔴",
+     "text": ""
+    },
+    {
+     "id": "o2",
+     "emoji": "🐮",
+     "text": ""
+    },
+    {
+     "id": "o3",
+     "emoji": "🍊",
+     "text": ""
+    },
+    {
+     "id": "o4",
+     "emoji": "🍐",
+     "text": ""
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "red",
+   "plays": 2,
+   "audio": "snd-23.m4a"
+  },
+  {
+   "_order": 220,
+   "id": "eng-listen-seq-s5-q1",
+   "topic": "영어 듣기",
+   "stage": 5,
+   "type": "listen_seq",
+   "prompt": "소리를 듣고 순서대로 그림을 골라보세요.",
+   "hint": "🔊 들린 순서 그대로 눌러요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🟡",
+     "text": "yellow"
+    },
+    {
+     "id": "o2",
+     "emoji": "🐻",
+     "text": "bear"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔴",
+     "text": "red"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍊",
+     "text": "orange"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o1"
+   ],
+   "playable": true,
+   "explain": "bear → yellow",
+   "showLabel": true,
+   "audios": [
+    "snd-05.m4a",
+    "snd-24.m4a"
+   ]
+  },
+  {
+   "_order": 221,
+   "id": "eng-listen-seq-s5-q2",
+   "topic": "영어 듣기",
+   "stage": 5,
+   "type": "listen_seq",
+   "prompt": "소리를 듣고 순서대로 그림을 골라보세요.",
+   "hint": "🔊 단어 3개! 순서를 기억해요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🧢",
+     "text": "cap"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍎",
+     "text": "apple"
+    },
+    {
+     "id": "o3",
+     "emoji": "🖊️",
+     "text": "pen"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔵",
+     "text": "blue"
+    }
+   ],
+   "answer": [
+    "o4",
+    "o2",
+    "o3"
+   ],
+   "playable": true,
+   "explain": "blue → apple → pen",
+   "showLabel": true,
+   "audios": [
+    "snd-07.m4a",
+    "snd-01.m4a",
+    "snd-21.m4a"
+   ]
+  },
+  {
+   "_order": 222,
+   "id": "eng-listen-seq-s5-q3",
+   "topic": "영어 듣기",
+   "stage": 5,
+   "type": "listen_seq",
+   "prompt": "소리를 듣고 순서대로 그림을 골라보세요.",
+   "hint": "🔊 들린 순서 그대로 눌러요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍌",
+     "text": "banana"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍐",
+     "text": "pear"
+    },
+    {
+     "id": "o3",
+     "emoji": "🟢",
+     "text": "green"
+    },
+    {
+     "id": "o4",
+     "emoji": "🐮",
+     "text": "cow"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o2"
+   ],
+   "playable": true,
+   "explain": "green → pear",
+   "showLabel": true,
+   "audios": [
+    "snd-17.m4a",
+    "snd-20.m4a"
+   ]
+  },
+  {
+   "_order": 223,
+   "id": "eng-listen-seq-s5-q4",
+   "topic": "영어 듣기",
+   "stage": 5,
+   "type": "listen_seq",
+   "prompt": "소리를 듣고 순서대로 그림을 골라보세요.",
+   "hint": "🔊 단어 3개! 순서를 기억해요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🐱",
+     "text": "cat"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍇",
+     "text": "grape"
+    },
+    {
+     "id": "o3",
+     "emoji": "🖊️",
+     "text": "pen"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧢",
+     "text": "cap"
+    }
+   ],
+   "answer": [
+    "o4",
+    "o1",
+    "o3"
+   ],
+   "playable": true,
+   "explain": "cap → cat → pen",
+   "showLabel": true,
+   "audios": [
+    "snd-09.m4a",
+    "snd-11.m4a",
+    "snd-21.m4a"
+   ]
+  },
+  {
+   "_order": 224,
+   "id": "eng-listen-seq-s5-q5",
+   "topic": "영어 듣기",
+   "stage": 5,
+   "type": "listen_seq",
+   "prompt": "소리를 듣고 순서대로 그림을 골라보세요.",
+   "hint": "🔊 들린 순서 그대로 눌러요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍇",
+     "text": "grape"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍌",
+     "text": "banana"
+    },
+    {
+     "id": "o3",
+     "emoji": "🎒",
+     "text": "bag"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔵",
+     "text": "blue"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4"
+   ],
+   "playable": true,
+   "explain": "banana → blue",
+   "showLabel": true,
+   "audios": [
+    "snd-04.m4a",
+    "snd-07.m4a"
+   ]
+  }
+ ]
+}

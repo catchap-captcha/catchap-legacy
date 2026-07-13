@@ -1,0 +1,914 @@
+{
+ "subject": "영어",
+ "topic": "낱말 완성",
+ "questions": [
+  {
+   "_order": 135,
+   "id": "eng-06-p1-q1",
+   "topic": "낱말 완성",
+   "stage": 1,
+   "type": "order",
+   "prompt": "🚌  그림을 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "3글자 단어예요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "s"
+    },
+    {
+     "id": "c2",
+     "text": "u"
+    },
+    {
+     "id": "c3",
+     "text": "b"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "'bus' 완성"
+  },
+  {
+   "_order": 136,
+   "id": "eng-06-p1-q2",
+   "topic": "낱말 완성",
+   "stage": 1,
+   "type": "order",
+   "prompt": "🧢  그림을 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "3글자 단어예요!",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "p"
+    },
+    {
+     "id": "c3",
+     "text": "a"
+    },
+    {
+     "id": "c1",
+     "text": "c"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'cap' 완성"
+  },
+  {
+   "_order": 137,
+   "id": "eng-06-p1-q3",
+   "topic": "낱말 완성",
+   "stage": 1,
+   "type": "order",
+   "prompt": "🐮  그림을 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "3글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "c"
+    },
+    {
+     "id": "c2",
+     "text": "w"
+    },
+    {
+     "id": "c1",
+     "text": "o"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'cow' 완성"
+  },
+  {
+   "_order": 138,
+   "id": "eng-06-p1-q4",
+   "topic": "낱말 완성",
+   "stage": 1,
+   "type": "order",
+   "prompt": "🚗  그림을 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "3글자 단어예요!",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "c"
+    },
+    {
+     "id": "c3",
+     "text": "r"
+    },
+    {
+     "id": "c1",
+     "text": "a"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'car' 완성"
+  },
+  {
+   "_order": 139,
+   "id": "eng-06-p1-q5",
+   "topic": "낱말 완성",
+   "stage": 1,
+   "type": "order",
+   "prompt": "☀️  그림을 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "3글자 단어예요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "n"
+    },
+    {
+     "id": "c3",
+     "text": "s"
+    },
+    {
+     "id": "c2",
+     "text": "u"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "'sun' 완성"
+  },
+  {
+   "_order": 140,
+   "id": "eng-06-p2-q1",
+   "topic": "낱말 완성",
+   "stage": 2,
+   "type": "order",
+   "prompt": "🐟  알파벳을 바르게 옮겨 영어 단어를 완성해보세요.",
+   "hint": "4글자 단어예요!",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "f"
+    },
+    {
+     "id": "c3",
+     "text": "s"
+    },
+    {
+     "id": "c2",
+     "text": "i"
+    },
+    {
+     "id": "c1",
+     "text": "h"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c2",
+    "c3",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "'fish' 완성"
+  },
+  {
+   "_order": 141,
+   "id": "eng-06-p2-q2",
+   "topic": "낱말 완성",
+   "stage": 2,
+   "type": "order",
+   "prompt": "📘  알파벳을 바르게 옮겨 영어 단어를 완성해보세요.",
+   "hint": "4글자 단어예요!",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "o"
+    },
+    {
+     "id": "c4",
+     "text": "b"
+    },
+    {
+     "id": "c3",
+     "text": "k"
+    },
+    {
+     "id": "c1",
+     "text": "o"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'book' 완성"
+  },
+  {
+   "_order": 142,
+   "id": "eng-06-p2-q3",
+   "topic": "낱말 완성",
+   "stage": 2,
+   "type": "order",
+   "prompt": "🦆  알파벳을 바르게 옮겨 영어 단어를 완성해보세요.",
+   "hint": "4글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "k"
+    },
+    {
+     "id": "c2",
+     "text": "d"
+    },
+    {
+     "id": "c4",
+     "text": "u"
+    },
+    {
+     "id": "c1",
+     "text": "c"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'duck' 완성"
+  },
+  {
+   "_order": 143,
+   "id": "eng-06-p2-q4",
+   "topic": "낱말 완성",
+   "stage": 2,
+   "type": "order",
+   "prompt": "🐦  알파벳을 바르게 옮겨 영어 단어를 완성해보세요.",
+   "hint": "4글자 단어예요!",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "d"
+    },
+    {
+     "id": "c3",
+     "text": "r"
+    },
+    {
+     "id": "c2",
+     "text": "b"
+    },
+    {
+     "id": "c1",
+     "text": "i"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c1",
+    "c3",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "'bird' 완성"
+  },
+  {
+   "_order": 144,
+   "id": "eng-06-p2-q5",
+   "topic": "낱말 완성",
+   "stage": 2,
+   "type": "order",
+   "prompt": "🐻  알파벳을 바르게 옮겨 영어 단어를 완성해보세요.",
+   "hint": "4글자 단어예요!",
+   "cards": [
+    {
+     "id": "c4",
+     "text": "e"
+    },
+    {
+     "id": "c2",
+     "text": "r"
+    },
+    {
+     "id": "c1",
+     "text": "b"
+    },
+    {
+     "id": "c3",
+     "text": "a"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c3",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'bear' 완성"
+  },
+  {
+   "_order": 145,
+   "id": "eng-06-p3-q1",
+   "topic": "낱말 완성",
+   "stage": 3,
+   "type": "order",
+   "prompt": "🐷  필요한 알파벳만 골라 단어를 완성해보세요.",
+   "hint": "필요 없는 글자는 남겨요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "s"
+    },
+    {
+     "id": "c3",
+     "text": "i"
+    },
+    {
+     "id": "c2",
+     "text": "p"
+    },
+    {
+     "id": "c4",
+     "text": "g"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "'pig' 완성"
+  },
+  {
+   "_order": 146,
+   "id": "eng-06-p3-q2",
+   "topic": "낱말 완성",
+   "stage": 3,
+   "type": "order",
+   "prompt": "🥚  필요한 알파벳만 골라 단어를 완성해보세요.",
+   "hint": "필요 없는 글자는 남겨요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "g"
+    },
+    {
+     "id": "c2",
+     "text": "i"
+    },
+    {
+     "id": "c3",
+     "text": "e"
+    },
+    {
+     "id": "c4",
+     "text": "g"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "'egg' 완성"
+  },
+  {
+   "_order": 147,
+   "id": "eng-06-p3-q3",
+   "topic": "낱말 완성",
+   "stage": 3,
+   "type": "order",
+   "prompt": "🐸  필요한 알파벳만 골라 단어를 완성해보세요.",
+   "hint": "필요 없는 글자는 남겨요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "f"
+    },
+    {
+     "id": "c3",
+     "text": "o"
+    },
+    {
+     "id": "c5",
+     "text": "g"
+    },
+    {
+     "id": "c4",
+     "text": "r"
+    },
+    {
+     "id": "c6",
+     "text": "x"
+    },
+    {
+     "id": "c2",
+     "text": "n"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c3",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "'frog' 완성"
+  },
+  {
+   "_order": 148,
+   "id": "eng-06-p3-q4",
+   "topic": "낱말 완성",
+   "stage": 3,
+   "type": "order",
+   "prompt": "⚽  필요한 알파벳만 골라 단어를 완성해보세요.",
+   "hint": "필요 없는 글자는 남겨요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "l"
+    },
+    {
+     "id": "c6",
+     "text": "a"
+    },
+    {
+     "id": "c3",
+     "text": "b"
+    },
+    {
+     "id": "c4",
+     "text": "i"
+    },
+    {
+     "id": "c2",
+     "text": "l"
+    },
+    {
+     "id": "c5",
+     "text": "m"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c6",
+    "c1",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'ball' 완성"
+  },
+  {
+   "_order": 149,
+   "id": "eng-06-p3-q5",
+   "topic": "낱말 완성",
+   "stage": 3,
+   "type": "order",
+   "prompt": "🖊️  필요한 알파벳만 골라 단어를 완성해보세요.",
+   "hint": "필요 없는 글자는 남겨요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "n"
+    },
+    {
+     "id": "c4",
+     "text": "e"
+    },
+    {
+     "id": "c1",
+     "text": "p"
+    },
+    {
+     "id": "c2",
+     "text": "v"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'pen' 완성"
+  },
+  {
+   "_order": 150,
+   "id": "eng-06-p4-q1",
+   "topic": "낱말 완성",
+   "stage": 4,
+   "type": "order",
+   "prompt": "🪑  긴 단어도 차근차근 알파벳을 놓아 완성해보세요.",
+   "hint": "5글자 단어예요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "a"
+    },
+    {
+     "id": "c3",
+     "text": "c"
+    },
+    {
+     "id": "c4",
+     "text": "i"
+    },
+    {
+     "id": "c2",
+     "text": "h"
+    },
+    {
+     "id": "c5",
+     "text": "r"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1",
+    "c4",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "'chair' 완성"
+  },
+  {
+   "_order": 151,
+   "id": "eng-06-p4-q2",
+   "topic": "낱말 완성",
+   "stage": 4,
+   "type": "order",
+   "prompt": "🍇  긴 단어도 차근차근 알파벳을 놓아 완성해보세요.",
+   "hint": "5글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "a"
+    },
+    {
+     "id": "c2",
+     "text": "g"
+    },
+    {
+     "id": "c1",
+     "text": "p"
+    },
+    {
+     "id": "c5",
+     "text": "r"
+    },
+    {
+     "id": "c4",
+     "text": "e"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c5",
+    "c3",
+    "c1",
+    "c4"
+   ],
+   "playable": true,
+   "explain": "'grape' 완성"
+  },
+  {
+   "_order": 152,
+   "id": "eng-06-p4-q3",
+   "topic": "낱말 완성",
+   "stage": 4,
+   "type": "order",
+   "prompt": "✏️  긴 단어도 차근차근 알파벳을 놓아 완성해보세요.",
+   "hint": "6글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "l"
+    },
+    {
+     "id": "c2",
+     "text": "i"
+    },
+    {
+     "id": "c5",
+     "text": "e"
+    },
+    {
+     "id": "c1",
+     "text": "p"
+    },
+    {
+     "id": "c4",
+     "text": "c"
+    },
+    {
+     "id": "c6",
+     "text": "n"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c5",
+    "c6",
+    "c4",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'pencil' 완성"
+  },
+  {
+   "_order": 153,
+   "id": "eng-06-p4-q4",
+   "topic": "낱말 완성",
+   "stage": 4,
+   "type": "order",
+   "prompt": "📏  긴 단어도 차근차근 알파벳을 놓아 완성해보세요.",
+   "hint": "5글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "u"
+    },
+    {
+     "id": "c5",
+     "text": "r"
+    },
+    {
+     "id": "c4",
+     "text": "r"
+    },
+    {
+     "id": "c1",
+     "text": "e"
+    },
+    {
+     "id": "c2",
+     "text": "l"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c3",
+    "c2",
+    "c1",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "'ruler' 완성"
+  },
+  {
+   "_order": 154,
+   "id": "eng-06-p4-q5",
+   "topic": "낱말 완성",
+   "stage": 4,
+   "type": "order",
+   "prompt": "🍈  긴 단어도 차근차근 알파벳을 놓아 완성해보세요.",
+   "hint": "5글자 단어예요!",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "n"
+    },
+    {
+     "id": "c5",
+     "text": "l"
+    },
+    {
+     "id": "c1",
+     "text": "m"
+    },
+    {
+     "id": "c2",
+     "text": "o"
+    },
+    {
+     "id": "c4",
+     "text": "e"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c5",
+    "c2",
+    "c3"
+   ],
+   "playable": true,
+   "explain": "'melon' 완성"
+  },
+  {
+   "_order": 155,
+   "id": "eng-06-p5-q1",
+   "topic": "낱말 완성",
+   "stage": 5,
+   "type": "order",
+   "prompt": "힌트를 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "학용품 단어예요.",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "k"
+    },
+    {
+     "id": "c4",
+     "text": "o"
+    },
+    {
+     "id": "c1",
+     "text": "o"
+    },
+    {
+     "id": "c3",
+     "text": "b"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c4",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'book' 완성"
+  },
+  {
+   "_order": 156,
+   "id": "eng-06-p5-q2",
+   "topic": "낱말 완성",
+   "stage": 5,
+   "type": "order",
+   "prompt": "힌트를 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "동물 단어예요.",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "a"
+    },
+    {
+     "id": "c2",
+     "text": "i"
+    },
+    {
+     "id": "c6",
+     "text": "t"
+    },
+    {
+     "id": "c5",
+     "text": "b"
+    },
+    {
+     "id": "c1",
+     "text": "r"
+    },
+    {
+     "id": "c4",
+     "text": "b"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c4",
+    "c5",
+    "c2",
+    "c6"
+   ],
+   "playable": true,
+   "explain": "'rabbit' 완성"
+  },
+  {
+   "_order": 157,
+   "id": "eng-06-p5-q3",
+   "topic": "낱말 완성",
+   "stage": 5,
+   "type": "order",
+   "prompt": "힌트를 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "과일 단어예요.",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "n"
+    },
+    {
+     "id": "c5",
+     "text": "o"
+    },
+    {
+     "id": "c1",
+     "text": "e"
+    },
+    {
+     "id": "c3",
+     "text": "m"
+    },
+    {
+     "id": "c4",
+     "text": "l"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c1",
+    "c3",
+    "c5",
+    "c2"
+   ],
+   "playable": true,
+   "explain": "'lemon' 완성"
+  },
+  {
+   "_order": 158,
+   "id": "eng-06-p5-q4",
+   "topic": "낱말 완성",
+   "stage": 5,
+   "type": "order",
+   "prompt": "힌트를 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "학용품 단어예요.",
+   "cards": [
+    {
+     "id": "c3",
+     "text": "e"
+    },
+    {
+     "id": "c2",
+     "text": "l"
+    },
+    {
+     "id": "c4",
+     "text": "u"
+    },
+    {
+     "id": "c5",
+     "text": "r"
+    },
+    {
+     "id": "c1",
+     "text": "r"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c2",
+    "c3",
+    "c5"
+   ],
+   "playable": true,
+   "explain": "'ruler' 완성"
+  },
+  {
+   "_order": 159,
+   "id": "eng-06-p5-q5",
+   "topic": "낱말 완성",
+   "stage": 5,
+   "type": "order",
+   "prompt": "힌트를 보고 알파벳을 순서대로 놓아 단어를 완성해보세요.",
+   "hint": "동물 단어예요.",
+   "cards": [
+    {
+     "id": "c2",
+     "text": "o"
+    },
+    {
+     "id": "c1",
+     "text": "g"
+    },
+    {
+     "id": "c3",
+     "text": "d"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1"
+   ],
+   "playable": true,
+   "explain": "'dog' 완성"
+  }
+ ]
+}

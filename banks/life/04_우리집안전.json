@@ -1,0 +1,1026 @@
+{
+ "subject": "생활",
+ "topic": "우리집 안전",
+ "questions": [
+  {
+   "_order": 75,
+   "id": "life-04-l1-q1",
+   "topic": "우리집 안전",
+   "stage": 1,
+   "prompt": "집 안에서 위험한 물건을 상자에 담아보세요.",
+   "hint": "손을 다치게 하는 물건을 찾아요.",
+   "explain": "우리집 안전",
+   "boxLabel": "위험한 물건 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📖",
+     "text": "책"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧸",
+     "text": "인형"
+    },
+    {
+     "id": "o3",
+     "emoji": "📓",
+     "text": "공책"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔪",
+     "text": "칼"
+    }
+   ],
+   "answer": [
+    "o4"
+   ],
+   "playable": [
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 76,
+   "id": "life-04-l1-q2",
+   "topic": "우리집 안전",
+   "stage": 1,
+   "prompt": "위험한 물건을 상자에 담아보세요.",
+   "hint": "뾰족한 것을 조심해요.",
+   "explain": "우리집 안전",
+   "boxLabel": "위험한 물건 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🖍️",
+     "text": "크레용"
+    },
+    {
+     "id": "o2",
+     "emoji": "✂️",
+     "text": "가위"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧸",
+     "text": "곰인형"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧱",
+     "text": "블록"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 77,
+   "id": "life-04-l1-q3",
+   "topic": "우리집 안전",
+   "stage": 1,
+   "prompt": "위험한 물건을 찾아 담아보세요.",
+   "hint": "전기가 흐르는 곳이에요.",
+   "explain": "우리집 안전",
+   "boxLabel": "위험한 물건 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🏀",
+     "text": "공"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧣",
+     "text": "담요"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔌",
+     "text": "콘센트"
+    },
+    {
+     "id": "o4",
+     "emoji": "📕",
+     "text": "그림책"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 78,
+   "id": "life-04-l1-q4",
+   "topic": "우리집 안전",
+   "stage": 1,
+   "prompt": "위험한 물건을 담아보세요.",
+   "hint": "뜨거워서 데일 수 있어요.",
+   "explain": "우리집 안전",
+   "boxLabel": "위험한 물건 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🥄",
+     "text": "수저"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥤",
+     "text": "컵"
+    },
+    {
+     "id": "o3",
+     "emoji": "🍽️",
+     "text": "접시"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍲",
+     "text": "뜨거운 냄비"
+    }
+   ],
+   "answer": [
+    "o4"
+   ],
+   "playable": [
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 79,
+   "id": "life-04-l1-q5",
+   "topic": "우리집 안전",
+   "stage": 1,
+   "prompt": "위험한 물건을 찾아 담아보세요.",
+   "hint": "불이 붙는 물건이에요.",
+   "explain": "우리집 안전",
+   "boxLabel": "위험한 물건 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔥",
+     "text": "라이터"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍬",
+     "text": "사탕"
+    },
+    {
+     "id": "o3",
+     "emoji": "✏️",
+     "text": "색연필"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧸",
+     "text": "인형"
+    }
+   ],
+   "answer": [
+    "o1"
+   ],
+   "playable": [
+    "o1"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 80,
+   "id": "life-04-l2-q1",
+   "topic": "우리집 안전",
+   "stage": 2,
+   "prompt": "안전한 물건과 위험한 물건을 나눠 담아보세요.",
+   "hint": "다칠 수 있으면 위험해요.",
+   "explain": "우리집 안전",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "b_safe",
+     "label": "안전해요"
+    },
+    {
+     "id": "b_danger",
+     "label": "위험해요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "뜨거운 냄비"
+    },
+    {
+     "id": "i2",
+     "text": "가위"
+    },
+    {
+     "id": "i1",
+     "text": "인형"
+    },
+    {
+     "id": "i3",
+     "text": "책"
+    }
+   ],
+   "answer": {
+    "i1": "b_safe",
+    "i2": "b_danger",
+    "i3": "b_safe",
+    "i4": "b_danger"
+   },
+   "playable": true
+  },
+  {
+   "_order": 81,
+   "id": "life-04-l2-q2",
+   "topic": "우리집 안전",
+   "stage": 2,
+   "prompt": "두 상자에 알맞게 나눠 담아보세요.",
+   "hint": "불과 칼은 위험해요.",
+   "explain": "우리집 안전",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "b_safe",
+     "label": "안전해요"
+    },
+    {
+     "id": "b_danger",
+     "label": "위험해요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "블록"
+    },
+    {
+     "id": "i4",
+     "text": "성냥"
+    },
+    {
+     "id": "i2",
+     "text": "칼"
+    },
+    {
+     "id": "i3",
+     "text": "크레용"
+    }
+   ],
+   "answer": {
+    "i1": "b_safe",
+    "i2": "b_danger",
+    "i3": "b_safe",
+    "i4": "b_danger"
+   },
+   "playable": true
+  },
+  {
+   "_order": 82,
+   "id": "life-04-l2-q3",
+   "topic": "우리집 안전",
+   "stage": 2,
+   "prompt": "안전한 물건과 위험한 물건을 나눠보세요.",
+   "hint": "전기와 뜨거운 것을 조심해요.",
+   "explain": "우리집 안전",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "b_safe",
+     "label": "안전해요"
+    },
+    {
+     "id": "b_danger",
+     "label": "위험해요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "콘센트에 젓가락"
+    },
+    {
+     "id": "i4",
+     "text": "다리미"
+    },
+    {
+     "id": "i1",
+     "text": "담요"
+    },
+    {
+     "id": "i3",
+     "text": "공"
+    }
+   ],
+   "answer": {
+    "i1": "b_safe",
+    "i2": "b_danger",
+    "i3": "b_safe",
+    "i4": "b_danger"
+   },
+   "playable": true
+  },
+  {
+   "_order": 83,
+   "id": "life-04-l2-q4",
+   "topic": "우리집 안전",
+   "stage": 2,
+   "prompt": "알맞은 상자에 나눠 담아보세요.",
+   "hint": "깨지거나 뜨거우면 위험해요.",
+   "explain": "우리집 안전",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "b_safe",
+     "label": "안전해요"
+    },
+    {
+     "id": "b_danger",
+     "label": "위험해요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "뜨거운 물"
+    },
+    {
+     "id": "i1",
+     "text": "그림책"
+    },
+    {
+     "id": "i2",
+     "text": "깨진 유리"
+    },
+    {
+     "id": "i3",
+     "text": "베개"
+    }
+   ],
+   "answer": {
+    "i1": "b_safe",
+    "i2": "b_danger",
+    "i3": "b_safe",
+    "i4": "b_danger"
+   },
+   "playable": true
+  },
+  {
+   "_order": 84,
+   "id": "life-04-l2-q5",
+   "topic": "우리집 안전",
+   "stage": 2,
+   "prompt": "안전한 물건과 위험한 물건을 나눠보세요.",
+   "hint": "약과 불은 어른과 함께 다뤄요.",
+   "explain": "우리집 안전",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "b_safe",
+     "label": "안전해요"
+    },
+    {
+     "id": "b_danger",
+     "label": "위험해요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "약병"
+    },
+    {
+     "id": "i4",
+     "text": "라이터"
+    },
+    {
+     "id": "i3",
+     "text": "색연필"
+    },
+    {
+     "id": "i1",
+     "text": "곰인형"
+    }
+   ],
+   "answer": {
+    "i1": "b_safe",
+    "i2": "b_danger",
+    "i3": "b_safe",
+    "i4": "b_danger"
+   },
+   "playable": true
+  },
+  {
+   "_order": 85,
+   "id": "life-04-l3-q1",
+   "topic": "우리집 안전",
+   "stage": 3,
+   "prompt": "방 안에서 위험한 물건을 안전 상자에 치워보세요.",
+   "hint": "바닥에 있으면 밟아서 다쳐요.",
+   "explain": "우리집 안전",
+   "boxLabel": "안전 상자 🧺",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📖",
+     "text": "책상 위 책"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧸",
+     "text": "침대 위 인형"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔷",
+     "text": "바닥의 유리조각"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 86,
+   "id": "life-04-l3-q2",
+   "topic": "우리집 안전",
+   "stage": 3,
+   "prompt": "위험한 물건을 안전 상자로 치워보세요.",
+   "hint": "뜨거운 것을 조심해요.",
+   "explain": "우리집 안전",
+   "boxLabel": "안전 상자 🧺",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🛋️",
+     "text": "쿠션"
+    },
+    {
+     "id": "o2",
+     "emoji": "♨️",
+     "text": "켜진 다리미"
+    },
+    {
+     "id": "o3",
+     "emoji": "📕",
+     "text": "그림책"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 87,
+   "id": "life-04-l3-q3",
+   "topic": "우리집 안전",
+   "stage": 3,
+   "prompt": "위험한 물건을 치워보세요.",
+   "hint": "벌어진 날을 조심해요.",
+   "explain": "우리집 안전",
+   "boxLabel": "안전 상자 🧺",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "✂️",
+     "text": "벌어진 가위"
+    },
+    {
+     "id": "o2",
+     "emoji": "📓",
+     "text": "공책"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧣",
+     "text": "담요"
+    }
+   ],
+   "answer": [
+    "o1"
+   ],
+   "playable": [
+    "o1"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 88,
+   "id": "life-04-l3-q4",
+   "topic": "우리집 안전",
+   "stage": 3,
+   "prompt": "위험한 물건을 안전 상자로 치워보세요.",
+   "hint": "함부로 먹으면 위험해요.",
+   "explain": "우리집 안전",
+   "boxLabel": "안전 상자 🧺",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🧱",
+     "text": "블록"
+    },
+    {
+     "id": "o2",
+     "emoji": "💊",
+     "text": "약 봉지"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧸",
+     "text": "인형"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 89,
+   "id": "life-04-l3-q5",
+   "topic": "우리집 안전",
+   "stage": 3,
+   "prompt": "위험한 물건을 치워보세요.",
+   "hint": "불이 붙는 물건이에요.",
+   "explain": "우리집 안전",
+   "boxLabel": "안전 상자 🧺",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🎨",
+     "text": "색종이"
+    },
+    {
+     "id": "o2",
+     "emoji": "🔥",
+     "text": "성냥"
+    },
+    {
+     "id": "o3",
+     "emoji": "🖍️",
+     "text": "크레용"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 90,
+   "id": "life-04-l4-q1",
+   "topic": "우리집 안전",
+   "stage": 4,
+   "prompt": "이 장소에서 위험한 곳을 찾아 담아보세요.",
+   "hint": "미끄러지기 쉬운 곳이에요.",
+   "explain": "우리집 안전",
+   "scenario": "🛁 욕실이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🪥",
+     "text": "칫솔"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧼",
+     "text": "비누"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧻",
+     "text": "수건"
+    },
+    {
+     "id": "o4",
+     "emoji": "💧",
+     "text": "젖은 바닥"
+    }
+   ],
+   "answer": [
+    "o4"
+   ],
+   "playable": [
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 91,
+   "id": "life-04-l4-q2",
+   "topic": "우리집 안전",
+   "stage": 4,
+   "prompt": "부엌에서 위험한 곳을 찾아 담아보세요.",
+   "hint": "불이 켜져 있어요.",
+   "explain": "우리집 안전",
+   "scenario": "🍳 부엌이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🍽️",
+     "text": "접시"
+    },
+    {
+     "id": "o2",
+     "emoji": "🔥",
+     "text": "켜진 가스레인지"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧊",
+     "text": "냉장고"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍚",
+     "text": "밥그릇"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 92,
+   "id": "life-04-l4-q3",
+   "topic": "우리집 안전",
+   "stage": 4,
+   "prompt": "거실에서 위험한 곳을 찾아보세요.",
+   "hint": "전기 근처에 물은 위험해요.",
+   "explain": "우리집 안전",
+   "scenario": "🛋️ 거실이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📺",
+     "text": "텔레비전"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥤",
+     "text": "콘센트 옆 물컵"
+    },
+    {
+     "id": "o3",
+     "emoji": "🪴",
+     "text": "화분"
+    },
+    {
+     "id": "o4",
+     "emoji": "🛋️",
+     "text": "소파"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 93,
+   "id": "life-04-l4-q4",
+   "topic": "우리집 안전",
+   "stage": 4,
+   "prompt": "방에서 위험한 곳을 찾아 담아보세요.",
+   "hint": "발에 걸려 넘어질 수 있어요.",
+   "explain": "우리집 안전",
+   "scenario": "🛏️ 방이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔌",
+     "text": "바닥에 늘어진 전선"
+    },
+    {
+     "id": "o2",
+     "emoji": "🛏️",
+     "text": "이불"
+    },
+    {
+     "id": "o3",
+     "emoji": "📚",
+     "text": "책"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧸",
+     "text": "인형"
+    }
+   ],
+   "answer": [
+    "o1"
+   ],
+   "playable": [
+    "o1"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 94,
+   "id": "life-04-l4-q5",
+   "topic": "우리집 안전",
+   "stage": 4,
+   "prompt": "현관에서 위험한 곳을 찾아보세요.",
+   "hint": "미끄러운 물기를 조심해요.",
+   "explain": "우리집 안전",
+   "scenario": "🚪 현관이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "💧",
+     "text": "미끄러운 물기"
+    },
+    {
+     "id": "o2",
+     "emoji": "👟",
+     "text": "신발"
+    },
+    {
+     "id": "o3",
+     "emoji": "☂️",
+     "text": "우산"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔑",
+     "text": "열쇠"
+    }
+   ],
+   "answer": [
+    "o1"
+   ],
+   "playable": [
+    "o1"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 95,
+   "id": "life-04-l5-q1",
+   "topic": "우리집 안전",
+   "stage": 5,
+   "prompt": "집 안에서 위험한 곳을 모두 찾아 담아보세요.",
+   "hint": "위험한 것이 두 개 있어요.",
+   "explain": "우리집 안전",
+   "scenario": "🏠 집 안 그림이에요. 위험한 것을 모두 담아요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📕",
+     "text": "그림책"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥤",
+     "text": "콘센트 근처 물컵"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔥",
+     "text": "켜진 가스레인지"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧸",
+     "text": "인형"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o3"
+   ],
+   "playable": [
+    "o2",
+    "o3"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 96,
+   "id": "life-04-l5-q2",
+   "topic": "우리집 안전",
+   "stage": 5,
+   "prompt": "위험한 것을 모두 찾아 담아보세요.",
+   "hint": "뾰족하거나 뜨거운 것을 찾아요.",
+   "explain": "우리집 안전",
+   "scenario": "🍽️ 식탁 위 그림이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔪",
+     "text": "칼"
+    },
+    {
+     "id": "o2",
+     "emoji": "🍽️",
+     "text": "접시"
+    },
+    {
+     "id": "o3",
+     "emoji": "🥄",
+     "text": "수저"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍲",
+     "text": "뜨거운 냄비"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o4"
+   ],
+   "playable": [
+    "o1",
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 97,
+   "id": "life-04-l5-q3",
+   "topic": "우리집 안전",
+   "stage": 5,
+   "prompt": "위험한 것을 모두 담아보세요.",
+   "hint": "약과 불은 위험해요.",
+   "explain": "우리집 안전",
+   "scenario": "🗄️ 서랍 속 그림이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🖍️",
+     "text": "크레용"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧱",
+     "text": "블록"
+    },
+    {
+     "id": "o3",
+     "emoji": "🪔",
+     "text": "라이터"
+    },
+    {
+     "id": "o4",
+     "emoji": "💊",
+     "text": "약병"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o4"
+   ],
+   "playable": [
+    "o3",
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 98,
+   "id": "life-04-l5-q4",
+   "topic": "우리집 안전",
+   "stage": 5,
+   "prompt": "위험한 곳을 모두 찾아 담아보세요.",
+   "hint": "깨진 것과 젖은 곳을 조심해요.",
+   "explain": "우리집 안전",
+   "scenario": "🧺 바닥 그림이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🧣",
+     "text": "담요"
+    },
+    {
+     "id": "o2",
+     "emoji": "💧",
+     "text": "젖은 바닥"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛏️",
+     "text": "베개"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔷",
+     "text": "깨진 유리"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4"
+   ],
+   "playable": [
+    "o2",
+    "o4"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 99,
+   "id": "life-04-l5-q5",
+   "topic": "우리집 안전",
+   "stage": 5,
+   "prompt": "위험한 것을 모두 담아보세요.",
+   "hint": "뜨겁거나 불이 붙는 것을 찾아요.",
+   "explain": "우리집 안전",
+   "scenario": "🏠 거실 그림이에요.",
+   "boxLabel": "위험한 곳 상자 📦",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🎨",
+     "text": "색종이"
+    },
+    {
+     "id": "o2",
+     "emoji": "♨️",
+     "text": "켜진 다리미"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧸",
+     "text": "인형"
+    },
+    {
+     "id": "o4",
+     "emoji": "🔥",
+     "text": "성냥"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4"
+   ],
+   "playable": [
+    "o2",
+    "o4"
+   ],
+   "layout": "list"
+  }
+ ]
+}

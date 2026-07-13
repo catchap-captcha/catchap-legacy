@@ -1,0 +1,881 @@
+{
+ "subject": "국어",
+ "topic": "빈칸 추론",
+ "questions": [
+  {
+   "_order": 1,
+   "id": "KOR4-BLANK-001",
+   "topic": "빈칸 추론",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "우비"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "우산"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "연필"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "장화"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "비가 내려서 나는 ___을 손에 들고 학교에 갔다."
+  },
+  {
+   "_order": 8,
+   "id": "KOR4-BLANK-002",
+   "topic": "빈칸 추론",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "돌"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "모래"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "물"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "거름"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "화분의 흙이 바싹 말라 있어서 나는 화분에 ___을 듬뿍 주었다."
+  },
+  {
+   "_order": 15,
+   "id": "KOR4-BLANK-003",
+   "topic": "빈칸 추론",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "카드"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "편지"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "안경"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "선물"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "친구의 생일이라서 나는 예쁘게 포장한 ___을 준비했다."
+  },
+  {
+   "_order": 22,
+   "id": "KOR4-BLANK-004",
+   "topic": "빈칸 추론",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "선풍기"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "불"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "라디오"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "양초"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "밤이 되어 방이 어두워지자 나는 책을 읽으려고 스위치를 눌러 ___을 켰다."
+  },
+  {
+   "_order": 29,
+   "id": "KOR4-BLANK-005",
+   "topic": "빈칸 추론",
+   "stage": 1,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "김밥"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "샌드위치"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "라면"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "볶음밥"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "배가 고파서 나는 물을 끓여 ___을 만들어 먹었다."
+  },
+  {
+   "_order": 36,
+   "id": "KOR4-BLANK-006",
+   "topic": "빈칸 추론",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "눈사람"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "이글루"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "모래성"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "케이크"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "눈이 많이 와서 우리는 눈을 굴려서 둥글게 쌓아 ___을 만들었다."
+  },
+  {
+   "_order": 43,
+   "id": "KOR4-BLANK-007",
+   "topic": "빈칸 추론",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "인터넷"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "사전"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "안경"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "교과서"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "책을 읽다가 모르는 낱말이 나와서 나는 두꺼운 ___을 펼쳐서 찾아보았다."
+  },
+  {
+   "_order": 50,
+   "id": "KOR4-BLANK-008",
+   "topic": "빈칸 추론",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "약국"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "병원"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "학교"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "보건실"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "감기에 걸려서 열이 심하게 나자 나는 ___에 가서 진찰을 받았다."
+  },
+  {
+   "_order": 57,
+   "id": "KOR4-BLANK-009",
+   "topic": "빈칸 추론",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "지우개"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "크레파스"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "가위"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "풀"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "동생이 그림을 그리다가 크레파스가 부러져서 ___을 하나 더 꺼내 왔다."
+  },
+  {
+   "_order": 64,
+   "id": "KOR4-BLANK-010",
+   "topic": "빈칸 추론",
+   "stage": 2,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "빠르게"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "작은 소리로"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "즐겁게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "큰 소리로"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "도서관은 조용히 책을 읽는 곳이기 때문에 우리는 ___ 이야기하지 않았다."
+  },
+  {
+   "_order": 71,
+   "id": "KOR4-BLANK-011",
+   "topic": "빈칸 추론",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "급하게"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "억울하게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "편하게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "슬프게"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "형은 숙제를 미리 다 끝내 놓아서 시험 전날에도 ___ 잘 수 있었다."
+  },
+  {
+   "_order": 78,
+   "id": "KOR4-BLANK-012",
+   "topic": "빈칸 추론",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "아껴서"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "마음껏"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "시원하게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "달게"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "물통에 물이 조금밖에 남지 않아서 우리는 물을 ___ 마시기로 했다."
+  },
+  {
+   "_order": 85,
+   "id": "KOR4-BLANK-013",
+   "topic": "빈칸 추론",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "갑자기"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "미리"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "억지로"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "몰래"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "선생님께서 발표 순서를 칠판에 적어 주셔서 우리는 ___ 발표를 준비할 수 있었다."
+  },
+  {
+   "_order": 92,
+   "id": "KOR4-BLANK-014",
+   "topic": "빈칸 추론",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "무섭게"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "화나게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "슬프게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "반갑게"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "그 강아지는 낯선 사람을 보면 짖지만, 주인을 보면 ___ 꼬리를 흔든다."
+  },
+  {
+   "_order": 99,
+   "id": "KOR4-BLANK-015",
+   "topic": "빈칸 추론",
+   "stage": 3,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "신나게"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "힘들게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "여유롭게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가볍게"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "지호는 달리기 연습을 꾸준히 했지만 대회 날 갑자기 배가 아파서 ___ 결승선까지 뛰었다."
+  },
+  {
+   "_order": 106,
+   "id": "KOR4-BLANK-016",
+   "topic": "빈칸 추론",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "가방에"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "서랍에"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "냉동실에"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "신발장에"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "엄마는 음식이 상하지 않도록 남은 반찬을 ___ 넣어 두셨다."
+  },
+  {
+   "_order": 113,
+   "id": "KOR4-BLANK-017",
+   "topic": "빈칸 추론",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "억지로"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "일부러"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "저절로"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가까스로"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "그 이야기책은 결말이 슬퍼서 나는 마지막 장을 읽고 ___ 눈물을 흘렸다."
+  },
+  {
+   "_order": 120,
+   "id": "KOR4-BLANK-018",
+   "topic": "빈칸 추론",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "조심스럽게"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "억울해하며"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "포기하지 않고"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "자신 있게"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "우리 반은 체육 대회에서 계속 지고 있었지만 마지막 순간까지 ___ 최선을 다했다."
+  },
+  {
+   "_order": 127,
+   "id": "KOR4-BLANK-019",
+   "topic": "빈칸 추론",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "그 시간이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "그 장소가"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "그 일이"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "그 사람이"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "할머니께서는 옛날이야기를 하실 때마다 마치 ___ 눈앞에서 벌어지는 것처럼 생생하게 설명하셨다."
+  },
+  {
+   "_order": 134,
+   "id": "KOR4-BLANK-020",
+   "topic": "빈칸 추론",
+   "stage": 4,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "좋아서"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "편해서"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "쉬워서"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "싫어서"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "동생은 자신의 실수를 인정하기 ___ 오히려 다른 사람 탓을 했다."
+  },
+  {
+   "_order": 141,
+   "id": "KOR4-BLANK-021",
+   "topic": "빈칸 추론",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "고개를 들고"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "숨을 쉬며"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "이를 악물고"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "눈을 감고"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "그 선수는 부상을 당했는데도 ___ 경기를 끝까지 마쳤다."
+  },
+  {
+   "_order": 148,
+   "id": "KOR4-BLANK-022",
+   "topic": "빈칸 추론",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "오랫동안"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "억지로"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "조용히"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "갑자기"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "우리 마을 어른들은 다음 세대에게 전통을 물려주기 위해 옛 풍습을 ___ 지켜 오셨다."
+  },
+  {
+   "_order": 155,
+   "id": "KOR4-BLANK-023",
+   "topic": "빈칸 추론",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "직접"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "몰래"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "대신"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가끔"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "그 문제는 여러 번 읽어도 이해가 되지 않아서 나는 결국 선생님께 ___ 여쭈어보았다."
+  },
+  {
+   "_order": 162,
+   "id": "KOR4-BLANK-024",
+   "topic": "빈칸 추론",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "계획대로"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "생각보다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "예상대로"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "노력한 만큼"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "그 상품은 광고에서 본 것과 달리 실제로는 ___ 실망스러웠다."
+  },
+  {
+   "_order": 169,
+   "id": "KOR4-BLANK-025",
+   "topic": "빈칸 추론",
+   "stage": 5,
+   "type": "single",
+   "prompt": "빈칸에 알맞은 낱말을 골라 넣어보세요.",
+   "hint": "문장을 읽고 빈칸에 알맞은 낱말을 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "의외로"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "분명히"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "당연히"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "확실히"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문맥에 알맞은 낱말 고르기",
+   "sentence": "발표를 앞두고 나는 실수할까 봐 걱정했지만, 끝나고 나니 ___ 별일 아니었다는 생각이 들었다."
+  }
+ ]
+}

@@ -1,0 +1,1053 @@
+{
+ "subject": "사회",
+ "topic": "안전 응급처치",
+ "questions": [
+  {
+   "_order": 225,
+   "id": "soc-10-l1-q1",
+   "topic": "안전 응급처치",
+   "stage": 1,
+   "prompt": "쓰러진 사람을 발견했을 때 하면 안 되는 행동을 골라보세요.",
+   "hint": "환자를 위험하게 하는 행동을 찾아요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "현장이 안전한지 확인한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "환자를 세게 흔들어 깨운다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "어깨를 가볍게 두드리며 반응을 확인한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "119에 신고를 요청한다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 226,
+   "id": "soc-10-l1-q2",
+   "topic": "안전 응급처치",
+   "stage": 1,
+   "prompt": "심폐소생술 중 하면 안 되는 행동을 골라보세요.",
+   "hint": "집중하지 않는 행동을 찾아요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "압박 후 가슴이 다시 올라오게 한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "가슴 압박을 규칙적으로 한다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "119 구급대가 올 때까지 계속 돕는다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가슴 압박 중 계속 장난을 친다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4"
+  },
+  {
+   "_order": 227,
+   "id": "soc-10-l1-q3",
+   "topic": "안전 응급처치",
+   "stage": 1,
+   "prompt": "자동심장충격기 사용 중 하면 안 되는 행동을 골라보세요.",
+   "hint": "분석 중에는 환자를 만지면 안 돼요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "기계의 음성 안내를 듣는다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "심전도 분석 중 환자를 만진다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "충격 전 주변 사람에게 물러나라고 말한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "패드를 안내 그림에 맞게 붙인다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 228,
+   "id": "soc-10-l1-q4",
+   "topic": "안전 응급처치",
+   "stage": 1,
+   "prompt": "반응을 확인할 때 하면 안 되는 행동을 골라보세요.",
+   "hint": "환자를 다치게 할 수 있는 행동을 찾아요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "몸을 심하게 흔들거나 뺨을 때린다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "양쪽 어깨를 가볍게 두드린다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "반응이 없으면 곧바로 119에 신고한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "\"괜찮으세요?\" 하고 물어본다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 229,
+   "id": "soc-10-l1-q5",
+   "topic": "안전 응급처치",
+   "stage": 1,
+   "prompt": "도움을 요청할 때 하면 안 되는 행동을 골라보세요.",
+   "hint": "혼자 해결하려는 것은 위험해요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "가까운 사람에게 자동심장충격기를 가져오라고 한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "큰 소리로 도움을 요청한다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "아무에게도 알리지 않고 혼자 해결하려 한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "주변 사람을 지목해 119 신고를 부탁한다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 230,
+   "id": "soc-10-l2-q1",
+   "topic": "안전 응급처치",
+   "stage": 2,
+   "prompt": "쓰러진 사람이 반응이 없을 때 가장 먼저 해야 할 일을 골라보세요.",
+   "hint": "도움부터 요청해요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "돕지 않고 장난으로 사진만 찍는다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "환자를 혼자 둔 채로 가만히 기다린다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "환자를 두고 혼자 그냥 집으로 간다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "119에 신고하고 주변에 도움을 요청한다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4"
+  },
+  {
+   "_order": 231,
+   "id": "soc-10-l2-q2",
+   "topic": "안전 응급처치",
+   "stage": 2,
+   "prompt": "환자의 호흡을 확인하는 방법으로 알맞은 것을 골라보세요.",
+   "hint": "가슴이 오르내리는지 봐요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "얼굴과 가슴이 오르내리는지 관찰한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "머리카락을 만져 길이를 확인한다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "입고 있는 옷의 색깔을 살펴본다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "환자의 발바닥을 간지럽혀 본다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 232,
+   "id": "soc-10-l2-q3",
+   "topic": "안전 응급처치",
+   "stage": 2,
+   "prompt": "가슴 압박에 대한 설명으로 알맞은 것을 골라보세요.",
+   "hint": "성인은 분당 100~120회예요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "성인 기준 분당 100~120회 속도로 압박한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "아주 느린 속도로 한 번씩만 눌러 준다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "환자를 의자에 앉힌 상태로 압박한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가슴이 다시 올라오지 못하게 계속 누른다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 233,
+   "id": "soc-10-l2-q4",
+   "topic": "안전 응급처치",
+   "stage": 2,
+   "prompt": "가슴 압박의 위치와 깊이로 알맞은 것을 골라보세요.",
+   "hint": "가슴 중앙을 약 5cm 깊이로 눌러요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "가슴을 손끝으로 살짝 톡톡 두드린다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "목 한가운데를 아래로 지그시 누른다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "배 한가운데를 두 손으로 힘껏 누른다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "가슴 중앙을 약 5cm 깊이로 압박한다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4"
+  },
+  {
+   "_order": 234,
+   "id": "soc-10-l2-q5",
+   "topic": "안전 응급처치",
+   "stage": 2,
+   "prompt": "성인 심폐소생술에서 가슴 압박과 인공호흡의 비율로 알맞은 것을 골라보세요.",
+   "hint": "압박 30번에 인공호흡 2번이에요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "5 : 5"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "100 : 100"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "30 : 2"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "10 : 1"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 235,
+   "id": "soc-10-l3-q1",
+   "topic": "안전 응급처치",
+   "stage": 3,
+   "prompt": "심전도 분석을 할 때 알맞은 행동을 골라보세요.",
+   "hint": "분석 중에는 환자에게서 떨어져요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "분석 중에도 환자를 계속 만지고 있는다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "가슴에 붙인 패드를 서둘러 떼어낸다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "분석을 멈추려고 기계 전원을 끈다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "환자에게서 떨어져 접촉하지 않는다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4"
+  },
+  {
+   "_order": 236,
+   "id": "soc-10-l3-q2",
+   "topic": "안전 응급처치",
+   "stage": 3,
+   "prompt": "패드를 붙이기 전에 해야 할 일로 알맞은 것을 골라보세요.",
+   "hint": "붙는 부위를 깨끗이 해요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "가슴의 땀이나 이물질을 깨끗이 닦는다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "전원을 끈 채로 가만히 기다린다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "환자의 손을 계속 붙잡고 기다린다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "옷을 벗기지 않고 옷 위에 붙인다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 237,
+   "id": "soc-10-l3-q3",
+   "topic": "안전 응급처치",
+   "stage": 3,
+   "prompt": "심장충격 버튼을 누르기 전에 해야 할 말로 알맞은 것을 골라보세요.",
+   "hint": "모두 물러나게 해요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "모두 환자에게서 떨어지라고 외친다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "아무 말 없이 곧바로 버튼을 누른다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "충격기를 보이지 않게 숨기라고 한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "주변 사람에게 환자를 만지라고 한다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 238,
+   "id": "soc-10-l3-q4",
+   "topic": "안전 응급처치",
+   "stage": 3,
+   "prompt": "자동심장충격기 전원을 켠 뒤에 할 일로 알맞은 것을 골라보세요.",
+   "hint": "기계가 시키는 대로 해요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "켜 둔 전원을 다시 꺼 버린다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "기계의 음성 안내에 따라 행동한다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "붙여 둔 패드를 떼어내 버린다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "안내를 무시하고 마음대로 누른다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 239,
+   "id": "soc-10-l3-q5",
+   "topic": "안전 응급처치",
+   "stage": 3,
+   "prompt": "자동심장충격기를 사용해야 하는 경우로 알맞은 것을 골라보세요.",
+   "hint": "반응과 호흡이 없는 환자에게 써요.",
+   "explain": "안전 응급처치",
+   "layout": "grid",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "물에 젖은 바닥에서 아무렇게나 사용한다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "장난감처럼 아무 때나 가지고 논다"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "반응과 호흡이 없는 환자에게 바로 사용한다"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "의식이 또렷하고 멀쩡한 사람에게 사용한다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 240,
+   "id": "soc-10-l4-q1",
+   "topic": "안전 응급처치",
+   "stage": 4,
+   "prompt": "심폐소생술 시행 방법 사진을 순서대로 선택하세요.",
+   "hint": "나의 안전 확보와 반응 확인부터예요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c2",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c3",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c4",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    },
+    {
+     "id": "c5",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c5",
+    "c2",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 241,
+   "id": "soc-10-l4-q2",
+   "topic": "안전 응급처치",
+   "stage": 4,
+   "prompt": "심폐소생술 순서를 사진으로 맞춰보세요.",
+   "hint": "반응→신고→호흡→압박→인공호흡이에요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c2",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    },
+    {
+     "id": "c3",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c4",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c5",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c3",
+    "c2",
+    "c1",
+    "c5"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 242,
+   "id": "soc-10-l4-q3",
+   "topic": "안전 응급처치",
+   "stage": 4,
+   "prompt": "인공호흡을 빼고, 앞 4단계 사진을 순서대로 선택하세요.",
+   "hint": "반응→신고→호흡→압박이에요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c2",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c3",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c4",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c2",
+    "c4",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 243,
+   "id": "soc-10-l4-q4",
+   "topic": "안전 응급처치",
+   "stage": 4,
+   "prompt": "호흡 확인 없이, 나머지 4단계 사진을 순서대로 선택하세요.",
+   "hint": "반응→신고→압박→인공호흡이에요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c2",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c3",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c4",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c3",
+    "c1",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 244,
+   "id": "soc-10-l4-q5",
+   "topic": "안전 응급처치",
+   "stage": 4,
+   "prompt": "심폐소생술 시행 방법 사진을 순서대로 선택하세요.",
+   "hint": "가장 먼저 현장의 안전과 반응을 확인해요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c2",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    },
+    {
+     "id": "c3",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c4",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c5",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c4",
+    "c5",
+    "c3",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 245,
+   "id": "soc-10-l5-q1",
+   "topic": "안전 응급처치",
+   "stage": 5,
+   "prompt": "심폐소생술과 자동심장충격기 사진을 전체 순서대로 선택하세요.",
+   "hint": "심폐소생술 5단계 뒤에 AED 4단계예요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    },
+    {
+     "id": "c2",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c3",
+     "text": "심장충격 시행",
+     "img": "assets/aed/aed-4.png"
+    },
+    {
+     "id": "c4",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c5",
+     "text": "전원 켜기",
+     "img": "assets/aed/aed-1.png"
+    },
+    {
+     "id": "c6",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    },
+    {
+     "id": "c7",
+     "text": "패드 부착",
+     "img": "assets/aed/aed-2.png"
+    },
+    {
+     "id": "c8",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c9",
+     "text": "심전도 분석",
+     "img": "assets/aed/aed-3.png"
+    }
+   ],
+   "answer": [
+    "c8",
+    "c4",
+    "c6",
+    "c2",
+    "c1",
+    "c5",
+    "c7",
+    "c9",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 246,
+   "id": "soc-10-l5-q2",
+   "topic": "안전 응급처치",
+   "stage": 5,
+   "prompt": "응급처치 전체 순서를 사진으로 맞춰보세요.",
+   "hint": "반응 확인부터 심장충격까지 이어져요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c2",
+     "text": "전원 켜기",
+     "img": "assets/aed/aed-1.png"
+    },
+    {
+     "id": "c3",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c4",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c5",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    },
+    {
+     "id": "c6",
+     "text": "패드 부착",
+     "img": "assets/aed/aed-2.png"
+    },
+    {
+     "id": "c7",
+     "text": "심전도 분석",
+     "img": "assets/aed/aed-3.png"
+    },
+    {
+     "id": "c8",
+     "text": "심장충격 시행",
+     "img": "assets/aed/aed-4.png"
+    },
+    {
+     "id": "c9",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c1",
+    "c9",
+    "c4",
+    "c5",
+    "c2",
+    "c6",
+    "c7",
+    "c8"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 247,
+   "id": "soc-10-l5-q3",
+   "topic": "안전 응급처치",
+   "stage": 5,
+   "prompt": "심폐소생술 뒤 자동심장충격기 사용까지, 필요한 사진만 순서대로 선택하세요.",
+   "hint": "반응→신고→압박→전원→패드→분석→충격이에요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "전원 켜기",
+     "img": "assets/aed/aed-1.png"
+    },
+    {
+     "id": "c2",
+     "text": "심장충격 시행",
+     "img": "assets/aed/aed-4.png"
+    },
+    {
+     "id": "c3",
+     "text": "패드 부착",
+     "img": "assets/aed/aed-2.png"
+    },
+    {
+     "id": "c4",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c5",
+     "text": "심전도 분석",
+     "img": "assets/aed/aed-3.png"
+    },
+    {
+     "id": "c6",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c7",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    }
+   ],
+   "answer": [
+    "c7",
+    "c6",
+    "c4",
+    "c1",
+    "c3",
+    "c5",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 248,
+   "id": "soc-10-l5-q4",
+   "topic": "안전 응급처치",
+   "stage": 5,
+   "prompt": "가슴 압박부터 자동심장충격기 사용까지 사진을 순서대로 선택하세요.",
+   "hint": "압박→전원→패드→분석→충격이에요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "심전도 분석",
+     "img": "assets/aed/aed-3.png"
+    },
+    {
+     "id": "c2",
+     "text": "심장충격 시행",
+     "img": "assets/aed/aed-4.png"
+    },
+    {
+     "id": "c3",
+     "text": "전원 켜기",
+     "img": "assets/aed/aed-1.png"
+    },
+    {
+     "id": "c4",
+     "text": "패드 부착",
+     "img": "assets/aed/aed-2.png"
+    },
+    {
+     "id": "c5",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    }
+   ],
+   "answer": [
+    "c5",
+    "c3",
+    "c4",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 249,
+   "id": "soc-10-l5-q5",
+   "topic": "안전 응급처치",
+   "stage": 5,
+   "prompt": "심폐소생술과 자동심장충격기 사진을 전체 순서대로 선택하세요.",
+   "hint": "119 신고 뒤에 압박, 그다음 AED예요.",
+   "explain": "안전 응급처치",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "인공호흡",
+     "img": "assets/cpr/cpr-5.png"
+    },
+    {
+     "id": "c2",
+     "text": "심장충격 시행",
+     "img": "assets/aed/aed-4.png"
+    },
+    {
+     "id": "c3",
+     "text": "호흡 확인",
+     "img": "assets/cpr/cpr-3.png"
+    },
+    {
+     "id": "c4",
+     "text": "반응 확인",
+     "img": "assets/cpr/cpr-1.png"
+    },
+    {
+     "id": "c5",
+     "text": "119 신고",
+     "img": "assets/cpr/cpr-2.png"
+    },
+    {
+     "id": "c6",
+     "text": "전원 켜기",
+     "img": "assets/aed/aed-1.png"
+    },
+    {
+     "id": "c7",
+     "text": "가슴 압박",
+     "img": "assets/cpr/cpr-4.png"
+    },
+    {
+     "id": "c8",
+     "text": "심전도 분석",
+     "img": "assets/aed/aed-3.png"
+    },
+    {
+     "id": "c9",
+     "text": "패드 부착",
+     "img": "assets/aed/aed-2.png"
+    }
+   ],
+   "answer": [
+    "c4",
+    "c5",
+    "c3",
+    "c7",
+    "c1",
+    "c6",
+    "c9",
+    "c8",
+    "c2"
+   ],
+   "playable": true
+  }
+ ]
+}

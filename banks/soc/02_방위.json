@@ -1,0 +1,2263 @@
+{
+ "subject": "사회",
+ "topic": "방위",
+ "questions": [
+  {
+   "_order": 25,
+   "id": "soc-02-l1-q1",
+   "topic": "방위",
+   "stage": 1,
+   "prompt": "방위 약자를 우리말 방향으로 끌어다 연결하세요.",
+   "hint": "N은 북쪽(North)이에요.",
+   "explain": "방위",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "N"
+    },
+    {
+     "id": "b",
+     "text": "S"
+    },
+    {
+     "id": "c",
+     "text": "E"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "북쪽"
+    },
+    {
+     "id": "z",
+     "text": "동쪽"
+    },
+    {
+     "id": "y",
+     "text": "남쪽"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 26,
+   "id": "soc-02-l1-q2",
+   "topic": "방위",
+   "stage": 1,
+   "prompt": "설명을 알맞은 방향으로 끌어다 연결하세요.",
+   "hint": "해가 뜨는 쪽이 동쪽이에요.",
+   "explain": "방위",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "해가 뜨는 쪽"
+    },
+    {
+     "id": "b",
+     "text": "해가 지는 쪽"
+    },
+    {
+     "id": "c",
+     "text": "나침반 바늘이 가리키는 쪽"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "동쪽"
+    },
+    {
+     "id": "z",
+     "text": "북쪽"
+    },
+    {
+     "id": "y",
+     "text": "서쪽"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 27,
+   "id": "soc-02-l1-q3",
+   "topic": "방위",
+   "stage": 1,
+   "prompt": "지도에서의 위치를 방향으로 끌어다 연결하세요.",
+   "hint": "지도는 위쪽이 북쪽이에요.",
+   "explain": "방위",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "지도의 위쪽"
+    },
+    {
+     "id": "b",
+     "text": "지도의 아래쪽"
+    },
+    {
+     "id": "c",
+     "text": "지도의 오른쪽"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "북쪽"
+    },
+    {
+     "id": "z",
+     "text": "동쪽"
+    },
+    {
+     "id": "y",
+     "text": "남쪽"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 28,
+   "id": "soc-02-l1-q4",
+   "topic": "방위",
+   "stage": 1,
+   "prompt": "대각선 방위(8방위)를 뜻으로 끌어다 연결하세요.",
+   "hint": "두 방향 사이의 이름이에요.",
+   "explain": "방위",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "북동쪽"
+    },
+    {
+     "id": "b",
+     "text": "남서쪽"
+    },
+    {
+     "id": "c",
+     "text": "북서쪽"
+    }
+   ],
+   "right": [
+    {
+     "id": "z",
+     "text": "북쪽과 서쪽 사이"
+    },
+    {
+     "id": "x",
+     "text": "북쪽과 동쪽 사이"
+    },
+    {
+     "id": "y",
+     "text": "남쪽과 서쪽 사이"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 29,
+   "id": "soc-02-l1-q5",
+   "topic": "방위",
+   "stage": 1,
+   "prompt": "방위를 서로 반대 방향으로 끌어다 연결하세요.",
+   "hint": "마주 보는 방향끼리 이어요.",
+   "explain": "방위",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "북쪽의 반대"
+    },
+    {
+     "id": "b",
+     "text": "동쪽의 반대"
+    },
+    {
+     "id": "c",
+     "text": "북동쪽의 반대"
+    }
+   ],
+   "right": [
+    {
+     "id": "z",
+     "text": "남서쪽"
+    },
+    {
+     "id": "x",
+     "text": "남쪽"
+    },
+    {
+     "id": "y",
+     "text": "서쪽"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 30,
+   "id": "soc-02-l2-q1",
+   "topic": "방위",
+   "stage": 2,
+   "prompt": "학교의 동쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "동쪽은 나침반에서 오른쪽이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "police",
+   "playable": "police",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 31,
+   "id": "soc-02-l2-q2",
+   "topic": "방위",
+   "stage": 2,
+   "prompt": "학교의 북쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "북쪽은 지도의 위쪽이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "hospital",
+   "playable": "hospital",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 32,
+   "id": "soc-02-l2-q3",
+   "topic": "방위",
+   "stage": 2,
+   "prompt": "학교의 서쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "서쪽은 왼쪽이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "park",
+   "playable": "park",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 33,
+   "id": "soc-02-l2-q4",
+   "topic": "방위",
+   "stage": 2,
+   "prompt": "병원의 남쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "병원 바로 아래 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "school",
+   "playable": "school",
+   "reference": "hospital",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 34,
+   "id": "soc-02-l2-q5",
+   "topic": "방위",
+   "stage": 2,
+   "prompt": "경찰서의 남쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "경찰서 바로 아래 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "bank",
+   "playable": "bank",
+   "reference": "police",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 35,
+   "id": "soc-02-l3-q1",
+   "topic": "방위",
+   "stage": 3,
+   "prompt": "아래 지도에서 학교를 기준으로 각 건물이 어느 쪽에 있는지 끌어다 분류하세요.",
+   "hint": "학교는 지도 한가운데예요.",
+   "explain": "방위",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "n",
+     "label": "북쪽"
+    },
+    {
+     "id": "s",
+     "label": "남쪽"
+    },
+    {
+     "id": "e",
+     "label": "동쪽"
+    },
+    {
+     "id": "w",
+     "label": "서쪽"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "경찰서"
+    },
+    {
+     "id": "i2",
+     "text": "소방서"
+    },
+    {
+     "id": "i1",
+     "text": "병원"
+    },
+    {
+     "id": "i4",
+     "text": "공원"
+    }
+   ],
+   "answer": {
+    "i1": "n",
+    "i2": "s",
+    "i3": "e",
+    "i4": "w"
+   },
+   "playable": true,
+   "mapRef": {
+    "zones": [
+     {
+      "id": "library",
+      "label": "도서관",
+      "x": 6,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "hospital",
+      "label": "병원",
+      "x": 38,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "post",
+      "label": "우체국",
+      "x": 70,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "park",
+      "label": "공원",
+      "x": 6,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "school",
+      "label": "학교",
+      "x": 38,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "police",
+      "label": "경찰서",
+      "x": 70,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "market",
+      "label": "시장",
+      "x": 6,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "fire",
+      "label": "소방서",
+      "x": 38,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "bank",
+      "label": "은행",
+      "x": 70,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     }
+    ],
+    "highlight": "school",
+    "compass": true
+   }
+  },
+  {
+   "_order": 36,
+   "id": "soc-02-l3-q2",
+   "topic": "방위",
+   "stage": 3,
+   "prompt": "아래 지도에서 도서관을 기준으로 각 건물이 어느 쪽에 있는지 끌어다 분류하세요.",
+   "hint": "도서관은 지도 왼쪽 위 모서리예요.",
+   "explain": "방위",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "e",
+     "label": "동쪽"
+    },
+    {
+     "id": "s",
+     "label": "남쪽"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "시장"
+    },
+    {
+     "id": "i1",
+     "text": "병원"
+    },
+    {
+     "id": "i2",
+     "text": "우체국"
+    },
+    {
+     "id": "i3",
+     "text": "공원"
+    }
+   ],
+   "answer": {
+    "i1": "e",
+    "i2": "e",
+    "i3": "s",
+    "i4": "s"
+   },
+   "playable": true,
+   "mapRef": {
+    "zones": [
+     {
+      "id": "library",
+      "label": "도서관",
+      "x": 6,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "hospital",
+      "label": "병원",
+      "x": 38,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "post",
+      "label": "우체국",
+      "x": 70,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "park",
+      "label": "공원",
+      "x": 6,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "school",
+      "label": "학교",
+      "x": 38,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "police",
+      "label": "경찰서",
+      "x": 70,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "market",
+      "label": "시장",
+      "x": 6,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "fire",
+      "label": "소방서",
+      "x": 38,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "bank",
+      "label": "은행",
+      "x": 70,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     }
+    ],
+    "highlight": "library",
+    "compass": true
+   }
+  },
+  {
+   "_order": 37,
+   "id": "soc-02-l3-q3",
+   "topic": "방위",
+   "stage": 3,
+   "prompt": "아래 지도에서 은행을 기준으로 각 건물이 어느 쪽에 있는지 끌어다 분류하세요.",
+   "hint": "은행은 지도 오른쪽 아래 모서리예요.",
+   "explain": "방위",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "n",
+     "label": "북쪽"
+    },
+    {
+     "id": "w",
+     "label": "서쪽"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "경찰서"
+    },
+    {
+     "id": "i2",
+     "text": "우체국"
+    },
+    {
+     "id": "i4",
+     "text": "시장"
+    },
+    {
+     "id": "i3",
+     "text": "소방서"
+    }
+   ],
+   "answer": {
+    "i1": "n",
+    "i2": "n",
+    "i3": "w",
+    "i4": "w"
+   },
+   "playable": true,
+   "mapRef": {
+    "zones": [
+     {
+      "id": "library",
+      "label": "도서관",
+      "x": 6,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "hospital",
+      "label": "병원",
+      "x": 38,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "post",
+      "label": "우체국",
+      "x": 70,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "park",
+      "label": "공원",
+      "x": 6,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "school",
+      "label": "학교",
+      "x": 38,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "police",
+      "label": "경찰서",
+      "x": 70,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "market",
+      "label": "시장",
+      "x": 6,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "fire",
+      "label": "소방서",
+      "x": 38,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "bank",
+      "label": "은행",
+      "x": 70,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     }
+    ],
+    "highlight": "bank",
+    "compass": true
+   }
+  },
+  {
+   "_order": 38,
+   "id": "soc-02-l3-q4",
+   "topic": "방위",
+   "stage": 3,
+   "prompt": "아래 지도에서 시장을 기준으로 각 건물이 어느 쪽에 있는지 끌어다 분류하세요.",
+   "hint": "시장은 지도 왼쪽 아래 모서리예요.",
+   "explain": "방위",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "n",
+     "label": "북쪽"
+    },
+    {
+     "id": "e",
+     "label": "동쪽"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "공원"
+    },
+    {
+     "id": "i3",
+     "text": "소방서"
+    },
+    {
+     "id": "i4",
+     "text": "은행"
+    },
+    {
+     "id": "i2",
+     "text": "도서관"
+    }
+   ],
+   "answer": {
+    "i1": "n",
+    "i2": "n",
+    "i3": "e",
+    "i4": "e"
+   },
+   "playable": true,
+   "mapRef": {
+    "zones": [
+     {
+      "id": "library",
+      "label": "도서관",
+      "x": 6,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "hospital",
+      "label": "병원",
+      "x": 38,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "post",
+      "label": "우체국",
+      "x": 70,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "park",
+      "label": "공원",
+      "x": 6,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "school",
+      "label": "학교",
+      "x": 38,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "police",
+      "label": "경찰서",
+      "x": 70,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "market",
+      "label": "시장",
+      "x": 6,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "fire",
+      "label": "소방서",
+      "x": 38,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "bank",
+      "label": "은행",
+      "x": 70,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     }
+    ],
+    "highlight": "market",
+    "compass": true
+   }
+  },
+  {
+   "_order": 39,
+   "id": "soc-02-l3-q5",
+   "topic": "방위",
+   "stage": 3,
+   "prompt": "아래 지도에서 병원을 기준으로 각 건물이 어느 쪽에 있는지 끌어다 분류하세요.",
+   "hint": "병원은 지도 위쪽 가운데예요.",
+   "explain": "방위",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "s",
+     "label": "남쪽"
+    },
+    {
+     "id": "w",
+     "label": "서쪽"
+    },
+    {
+     "id": "e",
+     "label": "동쪽"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "학교"
+    },
+    {
+     "id": "i2",
+     "text": "소방서"
+    },
+    {
+     "id": "i3",
+     "text": "도서관"
+    },
+    {
+     "id": "i4",
+     "text": "우체국"
+    }
+   ],
+   "answer": {
+    "i1": "s",
+    "i2": "s",
+    "i3": "w",
+    "i4": "e"
+   },
+   "playable": true,
+   "mapRef": {
+    "zones": [
+     {
+      "id": "library",
+      "label": "도서관",
+      "x": 6,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "hospital",
+      "label": "병원",
+      "x": 38,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "post",
+      "label": "우체국",
+      "x": 70,
+      "y": 5,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "park",
+      "label": "공원",
+      "x": 6,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "school",
+      "label": "학교",
+      "x": 38,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "police",
+      "label": "경찰서",
+      "x": 70,
+      "y": 34,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "market",
+      "label": "시장",
+      "x": 6,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "fire",
+      "label": "소방서",
+      "x": 38,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     },
+     {
+      "id": "bank",
+      "label": "은행",
+      "x": 70,
+      "y": 63,
+      "w": 24,
+      "h": 24
+     }
+    ],
+    "highlight": "hospital",
+    "compass": true
+   }
+  },
+  {
+   "_order": 40,
+   "id": "soc-02-l4-q1",
+   "topic": "방위",
+   "stage": 4,
+   "prompt": "학교의 북동쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "북쪽과 동쪽 사이, 오른쪽 위 모서리예요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "post",
+   "playable": "post",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 41,
+   "id": "soc-02-l4-q2",
+   "topic": "방위",
+   "stage": 4,
+   "prompt": "학교의 북서쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "북쪽과 서쪽 사이, 왼쪽 위 모서리예요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "library",
+   "playable": "library",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 42,
+   "id": "soc-02-l4-q3",
+   "topic": "방위",
+   "stage": 4,
+   "prompt": "학교의 남동쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "남쪽과 동쪽 사이, 오른쪽 아래 모서리예요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "bank",
+   "playable": "bank",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 43,
+   "id": "soc-02-l4-q4",
+   "topic": "방위",
+   "stage": 4,
+   "prompt": "학교의 남서쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "남쪽과 서쪽 사이, 왼쪽 아래 모서리예요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "market",
+   "playable": "market",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 44,
+   "id": "soc-02-l4-q5",
+   "topic": "방위",
+   "stage": 4,
+   "prompt": "공원의 북쪽에 있는 건물에 핀을 놓아보세요.",
+   "hint": "공원 바로 위 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "library",
+   "playable": "library",
+   "reference": "park",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 45,
+   "id": "soc-02-l5-q1",
+   "topic": "방위",
+   "stage": 5,
+   "prompt": "학교에서 북쪽으로 한 칸, 동쪽으로 한 칸 이동한 곳에 핀을 놓아보세요.",
+   "hint": "위로 한 칸(병원), 오른쪽으로 한 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "post",
+   "playable": "post",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 46,
+   "id": "soc-02-l5-q2",
+   "topic": "방위",
+   "stage": 5,
+   "prompt": "학교에서 남쪽으로 한 칸, 서쪽으로 한 칸 이동한 곳에 핀을 놓아보세요.",
+   "hint": "아래로 한 칸(소방서), 왼쪽으로 한 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "market",
+   "playable": "market",
+   "reference": "school",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 47,
+   "id": "soc-02-l5-q3",
+   "topic": "방위",
+   "stage": 5,
+   "prompt": "도서관에서 동쪽으로 두 칸 이동한 곳에 핀을 놓아보세요.",
+   "hint": "맨 윗줄에서 오른쪽 끝까지 가요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "post",
+   "playable": "post",
+   "reference": "library",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 48,
+   "id": "soc-02-l5-q4",
+   "topic": "방위",
+   "stage": 5,
+   "prompt": "우체국에서 남쪽으로 두 칸 이동한 곳에 핀을 놓아보세요.",
+   "hint": "오른쪽 줄에서 맨 아래까지 내려가요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "bank",
+   "playable": "bank",
+   "reference": "post",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  },
+  {
+   "_order": 49,
+   "id": "soc-02-l5-q5",
+   "topic": "방위",
+   "stage": 5,
+   "prompt": "시장에서 북쪽으로 한 칸, 동쪽으로 한 칸 이동한 곳에 핀을 놓아보세요.",
+   "hint": "위로 한 칸(공원), 오른쪽으로 한 칸이에요.",
+   "explain": "방위",
+   "arrow": "지도의 핀을 알맞은 건물 위로 끌어다 놓아요",
+   "type": "place",
+   "zones": [
+    {
+     "id": "library",
+     "label": "도서관",
+     "x": 6,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "hospital",
+     "label": "병원",
+     "x": 38,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "post",
+     "label": "우체국",
+     "x": 70,
+     "y": 5,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "park",
+     "label": "공원",
+     "x": 6,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "school",
+     "label": "학교",
+     "x": 38,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "police",
+     "label": "경찰서",
+     "x": 70,
+     "y": 34,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "market",
+     "label": "시장",
+     "x": 6,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "fire",
+     "label": "소방서",
+     "x": 38,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "bank",
+     "label": "은행",
+     "x": 70,
+     "y": 63,
+     "w": 24,
+     "h": 24
+    }
+   ],
+   "answer": "school",
+   "playable": "school",
+   "reference": "market",
+   "mapStyle": true,
+   "compass": true,
+   "start": {
+    "x": 48,
+    "y": 96
+   }
+  }
+ ]
+}

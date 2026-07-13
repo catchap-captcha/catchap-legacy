@@ -1,0 +1,1071 @@
+{
+ "subject": "영어",
+ "topic": "그림·낱말 짝",
+ "questions": [
+  {
+   "_order": 175,
+   "id": "eng-07-k1-q1",
+   "topic": "그림·낱말 짝",
+   "stage": 1,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "peach",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🍑",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c1": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 176,
+   "id": "eng-07-k1-q2",
+   "topic": "그림·낱말 짝",
+   "stage": 1,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "☀️",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "sun",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c0": "c1"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 177,
+   "id": "eng-07-k1-q3",
+   "topic": "그림·낱말 짝",
+   "stage": 1,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🎒",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "bag",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c0": "c1"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 178,
+   "id": "eng-07-k1-q4",
+   "topic": "그림·낱말 짝",
+   "stage": 1,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐶",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "dog",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c0": "c1"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 179,
+   "id": "eng-07-k1-q5",
+   "topic": "그림·낱말 짝",
+   "stage": 1,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "cap",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🧢",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c1": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 180,
+   "id": "eng-07-k2-q1",
+   "topic": "그림·낱말 짝",
+   "stage": 2,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "grape",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🍇",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🦊",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "fox",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c0",
+    "c2": "c3"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 181,
+   "id": "eng-07-k2-q2",
+   "topic": "그림·낱말 짝",
+   "stage": 2,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "cow",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "car",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "🐮",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "🚗",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c3": "c1",
+    "c2": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 182,
+   "id": "eng-07-k2-q3",
+   "topic": "그림·낱말 짝",
+   "stage": 2,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "frog",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "cake",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "🐸",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "🎂",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c3": "c1",
+    "c2": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 183,
+   "id": "eng-07-k2-q4",
+   "topic": "그림·낱말 짝",
+   "stage": 2,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐱",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "cat",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "pan",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "🍳",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c0": "c1",
+    "c3": "c2"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 184,
+   "id": "eng-07-k2-q5",
+   "topic": "그림·낱말 짝",
+   "stage": 2,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "⚽",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🍐",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "pear",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "ball",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c2",
+    "c0": "c3"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 185,
+   "id": "eng-07-k3-q1",
+   "topic": "그림·낱말 짝",
+   "stage": 3,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "chair",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🍎",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🐷",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "pig",
+     "kind": "word"
+    },
+    {
+     "id": "c4",
+     "face": "🪑",
+     "kind": "image"
+    },
+    {
+     "id": "c5",
+     "face": "apple",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c4": "c0",
+    "c2": "c3",
+    "c1": "c5"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 186,
+   "id": "eng-07-k3-q2",
+   "topic": "그림·낱말 짝",
+   "stage": 3,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "📘",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🐻",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "bear",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "milk",
+     "kind": "word"
+    },
+    {
+     "id": "c4",
+     "face": "🥛",
+     "kind": "image"
+    },
+    {
+     "id": "c5",
+     "face": "book",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c4": "c3",
+    "c0": "c5",
+    "c1": "c2"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 187,
+   "id": "eng-07-k3-q3",
+   "topic": "그림·낱말 짝",
+   "stage": 3,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "pen",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🖊️",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "rabbit",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "🐰",
+     "kind": "image"
+    },
+    {
+     "id": "c4",
+     "face": "pencil",
+     "kind": "word"
+    },
+    {
+     "id": "c5",
+     "face": "✏️",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c1": "c0",
+    "c3": "c2",
+    "c5": "c4"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 188,
+   "id": "eng-07-k3-q4",
+   "topic": "그림·낱말 짝",
+   "stage": 3,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐟",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🍊",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "orange",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "🚌",
+     "kind": "image"
+    },
+    {
+     "id": "c4",
+     "face": "fish",
+     "kind": "word"
+    },
+    {
+     "id": "c5",
+     "face": "bus",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c2",
+    "c3": "c5",
+    "c0": "c4"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 189,
+   "id": "eng-07-k3-q5",
+   "topic": "그림·낱말 짝",
+   "stage": 3,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "bird",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "ruler",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "duck",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "📏",
+     "kind": "image"
+    },
+    {
+     "id": "c4",
+     "face": "🐦",
+     "kind": "image"
+    },
+    {
+     "id": "c5",
+     "face": "🦆",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c3": "c1",
+    "c5": "c2",
+    "c4": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 190,
+   "id": "eng-07-k4-q1",
+   "topic": "그림·낱말 짝",
+   "stage": 4,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "cat",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🐱",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🧢",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "cap",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c0",
+    "c2": "c3"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 191,
+   "id": "eng-07-k4-q2",
+   "topic": "그림·낱말 짝",
+   "stage": 4,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🍐",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🐻",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "pear",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "bear",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c3",
+    "c0": "c2"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 192,
+   "id": "eng-07-k4-q3",
+   "topic": "그림·낱말 짝",
+   "stage": 4,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "duck",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "🐶",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🦆",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "dog",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c3",
+    "c2": "c0"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 193,
+   "id": "eng-07-k4-q4",
+   "topic": "그림·낱말 짝",
+   "stage": 4,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐱",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "car",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "cat",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "🚗",
+     "kind": "image"
+    }
+   ],
+   "answer": {
+    "c0": "c2",
+    "c3": "c1"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 194,
+   "id": "eng-07-k4-q5",
+   "topic": "그림·낱말 짝",
+   "stage": 4,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🖊️",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🍳",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "pan",
+     "kind": "word"
+    },
+    {
+     "id": "c3",
+     "face": "pen",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c0": "c3",
+    "c1": "c2"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기"
+  },
+  {
+   "_order": 195,
+   "id": "eng-07-k5-q1",
+   "topic": "그림·낱말 짝",
+   "stage": 5,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "📘",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "🍌",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🚌",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "peach",
+     "kind": "word"
+    },
+    {
+     "id": "c4",
+     "face": "🍑",
+     "kind": "image"
+    },
+    {
+     "id": "c5",
+     "face": "banana",
+     "kind": "word"
+    },
+    {
+     "id": "c6",
+     "face": "bus",
+     "kind": "word"
+    },
+    {
+     "id": "c7",
+     "face": "book",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c1": "c5",
+    "c2": "c6",
+    "c0": "c7",
+    "c4": "c3"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기",
+   "timeLimitMs": 70000
+  },
+  {
+   "_order": 196,
+   "id": "eng-07-k5-q2",
+   "topic": "그림·낱말 짝",
+   "stage": 5,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "☀️",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "📏",
+     "kind": "image"
+    },
+    {
+     "id": "c2",
+     "face": "🐟",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "🍌",
+     "kind": "image"
+    },
+    {
+     "id": "c4",
+     "face": "sun",
+     "kind": "word"
+    },
+    {
+     "id": "c5",
+     "face": "ruler",
+     "kind": "word"
+    },
+    {
+     "id": "c6",
+     "face": "banana",
+     "kind": "word"
+    },
+    {
+     "id": "c7",
+     "face": "fish",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c2": "c7",
+    "c1": "c5",
+    "c0": "c4",
+    "c3": "c6"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기",
+   "timeLimitMs": 60000
+  },
+  {
+   "_order": 197,
+   "id": "eng-07-k5-q3",
+   "topic": "그림·낱말 짝",
+   "stage": 5,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐶",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "milk",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "🥛",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "book",
+     "kind": "word"
+    },
+    {
+     "id": "c4",
+     "face": "bus",
+     "kind": "word"
+    },
+    {
+     "id": "c5",
+     "face": "🚌",
+     "kind": "image"
+    },
+    {
+     "id": "c6",
+     "face": "📘",
+     "kind": "image"
+    },
+    {
+     "id": "c7",
+     "face": "dog",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c0": "c7",
+    "c6": "c3",
+    "c5": "c4",
+    "c2": "c1"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기",
+   "timeLimitMs": 65000
+  },
+  {
+   "_order": 198,
+   "id": "eng-07-k5-q4",
+   "topic": "그림·낱말 짝",
+   "stage": 5,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "cap",
+     "kind": "word"
+    },
+    {
+     "id": "c1",
+     "face": "rabbit",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "🎒",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "bag",
+     "kind": "word"
+    },
+    {
+     "id": "c4",
+     "face": "🧢",
+     "kind": "image"
+    },
+    {
+     "id": "c5",
+     "face": "🎂",
+     "kind": "image"
+    },
+    {
+     "id": "c6",
+     "face": "🐰",
+     "kind": "image"
+    },
+    {
+     "id": "c7",
+     "face": "cake",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c6": "c1",
+    "c5": "c7",
+    "c4": "c0",
+    "c2": "c3"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기",
+   "timeLimitMs": 60000
+  },
+  {
+   "_order": 199,
+   "id": "eng-07-k5-q5",
+   "topic": "그림·낱말 짝",
+   "stage": 5,
+   "type": "memory",
+   "prompt": "카드를 뒤집어 그림과 낱말의 짝을 찾아요.",
+   "hint": "먼저 5초 동안 위치를 외워요!",
+   "cards": [
+    {
+     "id": "c0",
+     "face": "🐶",
+     "kind": "image"
+    },
+    {
+     "id": "c1",
+     "face": "apple",
+     "kind": "word"
+    },
+    {
+     "id": "c2",
+     "face": "🧢",
+     "kind": "image"
+    },
+    {
+     "id": "c3",
+     "face": "🥛",
+     "kind": "image"
+    },
+    {
+     "id": "c4",
+     "face": "dog",
+     "kind": "word"
+    },
+    {
+     "id": "c5",
+     "face": "🍎",
+     "kind": "image"
+    },
+    {
+     "id": "c6",
+     "face": "cap",
+     "kind": "word"
+    },
+    {
+     "id": "c7",
+     "face": "milk",
+     "kind": "word"
+    }
+   ],
+   "answer": {
+    "c5": "c1",
+    "c0": "c4",
+    "c2": "c6",
+    "c3": "c7"
+   },
+   "previewMs": 5000,
+   "playable": true,
+   "explain": "그림-낱말 짝 기억하기",
+   "timeLimitMs": 60000
+  }
+ ]
+}

@@ -1,0 +1,1974 @@
+{
+ "subject": "생활",
+ "topic": "국기 완성",
+ "questions": [
+  {
+   "_order": 250,
+   "id": "flag-ch-l1-q1",
+   "topic": "국기 완성",
+   "stage": 1,
+   "type": "puzzle",
+   "prompt": "스위스 국기를 완성해보세요.",
+   "hint": "하얀 십자가를 떠올려요.",
+   "explain": "스위스 국기",
+   "flag": "ch",
+   "cols": 2,
+   "rows": 1,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "ch"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "ch"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 251,
+   "id": "flag-de-l1-q2",
+   "topic": "국기 완성",
+   "stage": 1,
+   "type": "puzzle",
+   "prompt": "독일 국기를 완성해보세요.",
+   "hint": "검정-빨강-노랑 가로 순서예요.",
+   "explain": "독일 국기",
+   "flag": "de",
+   "cols": 1,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 0,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 1,
+     "flag": "de"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "de"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 252,
+   "id": "flag-tr-l1-q3",
+   "topic": "국기 완성",
+   "stage": 1,
+   "type": "puzzle",
+   "prompt": "튀르키예 국기를 완성해보세요.",
+   "hint": "달과 별을 떠올려요.",
+   "explain": "튀르키예 국기",
+   "flag": "tr",
+   "cols": 2,
+   "rows": 1,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 0,
+     "flag": "tr"
+    },
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 0,
+     "flag": "tr"
+    }
+   ],
+   "answer": {
+    "s0": "p1",
+    "s1": "p0"
+   },
+   "playable": true
+  },
+  {
+   "_order": 253,
+   "id": "flag-es-l1-q4",
+   "topic": "국기 완성",
+   "stage": 1,
+   "type": "puzzle",
+   "prompt": "스페인 국기를 완성해보세요.",
+   "hint": "빨강-노랑-빨강 가로 순서예요.",
+   "explain": "스페인 국기",
+   "flag": "es",
+   "cols": 1,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 0,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 1,
+     "flag": "es"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "es"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 254,
+   "id": "flag-cn-l1-q5",
+   "topic": "국기 완성",
+   "stage": 1,
+   "type": "puzzle",
+   "prompt": "중국 국기를 완성해보세요.",
+   "hint": "노란 별들은 왼쪽 위에 있어요.",
+   "explain": "중국 국기",
+   "flag": "cn",
+   "cols": 2,
+   "rows": 1,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "cn"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "cn"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 255,
+   "id": "flag-au-l2-q1",
+   "topic": "국기 완성",
+   "stage": 2,
+   "type": "puzzle",
+   "prompt": "호주 국기의 빠진 조각을 넣어보세요.",
+   "hint": "남십자성 별들을 떠올려요.",
+   "explain": "호주 국기",
+   "flag": "au",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 1,
+     "flag": "gr"
+    },
+    {
+     "id": "p5",
+     "col": 1,
+     "row": 0,
+     "flag": "au"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 0,
+     "flag": "au"
+    },
+    {
+     "id": "p6",
+     "col": 0,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "au"
+    }
+   ],
+   "answer": {
+    "s3": "p1"
+   },
+   "prefilled": {
+    "s0": "p4",
+    "s1": "p5",
+    "s2": "p6"
+   },
+   "playable": true
+  },
+  {
+   "_order": 256,
+   "id": "flag-kr-l2-q2",
+   "topic": "국기 완성",
+   "stage": 2,
+   "type": "puzzle",
+   "prompt": "한국 국기의 빠진 조각을 넣어보세요.",
+   "hint": "태극과 건곤감리를 떠올려요.",
+   "explain": "한국 국기",
+   "flag": "kr",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 0,
+     "flag": "fr"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "tr"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "jp"
+    },
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 0,
+     "flag": "kr"
+    }
+   ],
+   "answer": {
+    "s2": "p4"
+   },
+   "prefilled": {
+    "s0": "p3",
+    "s1": "p6",
+    "s3": "p0"
+   },
+   "playable": true
+  },
+  {
+   "_order": 257,
+   "id": "flag-ca-l2-q3",
+   "topic": "국기 완성",
+   "stage": 2,
+   "type": "puzzle",
+   "prompt": "캐나다 국기의 빠진 조각을 넣어보세요.",
+   "hint": "가운데 단풍잎을 떠올려요.",
+   "explain": "캐나다 국기",
+   "flag": "ca",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 1,
+     "flag": "ca"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "in"
+    },
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 0,
+     "flag": "ch"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 1,
+     "flag": "ca"
+    },
+    {
+     "id": "p5",
+     "col": 1,
+     "row": 0,
+     "flag": "gr"
+    }
+   ],
+   "answer": {
+    "s2": "p0"
+   },
+   "prefilled": {
+    "s0": "p3",
+    "s1": "p4",
+    "s3": "p2"
+   },
+   "playable": true
+  },
+  {
+   "_order": 258,
+   "id": "flag-br-l2-q4",
+   "topic": "국기 완성",
+   "stage": 2,
+   "type": "puzzle",
+   "prompt": "브라질 국기의 빠진 조각을 넣어보세요.",
+   "hint": "초록 바탕에 노란 마름모를 떠올려요.",
+   "explain": "브라질 국기",
+   "flag": "br",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 1,
+     "flag": "se"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "br"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 1,
+     "flag": "br"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "br"
+    },
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 1,
+     "flag": "br"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p5",
+     "col": 1,
+     "row": 0,
+     "flag": "de"
+    }
+   ],
+   "answer": {
+    "s0": "p0"
+   },
+   "prefilled": {
+    "s1": "p1",
+    "s2": "p3",
+    "s3": "p6"
+   },
+   "playable": true
+  },
+  {
+   "_order": 259,
+   "id": "flag-gb-l2-q5",
+   "topic": "국기 완성",
+   "stage": 2,
+   "type": "puzzle",
+   "prompt": "영국 국기의 빠진 조각을 넣어보세요.",
+   "hint": "유니언잭의 선들을 떠올려요.",
+   "explain": "영국 국기",
+   "flag": "gb",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 1,
+     "flag": "it"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 0,
+     "flag": "in"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "gb"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "gb"
+    }
+   ],
+   "answer": {
+    "s3": "p0"
+   },
+   "prefilled": {
+    "s0": "p3",
+    "s1": "p1",
+    "s2": "p2"
+   },
+   "playable": true
+  },
+  {
+   "_order": 260,
+   "id": "flag-es-l3-q1",
+   "topic": "국기 완성",
+   "stage": 3,
+   "type": "puzzle",
+   "prompt": "섞인 조각을 맞춰 스페인 국기를 완성해보세요.",
+   "hint": "빨강-노랑-빨강 가로 순서예요.",
+   "explain": "스페인 국기",
+   "flag": "es",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 1,
+     "row": 0,
+     "flag": "es"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "es"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "es"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "es"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p3",
+    "s2": "p2",
+    "s3": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 261,
+   "id": "flag-de-l3-q2",
+   "topic": "국기 완성",
+   "stage": 3,
+   "type": "puzzle",
+   "prompt": "섞인 조각을 맞춰 독일 국기를 완성해보세요.",
+   "hint": "검정-빨강-노랑 가로 순서예요.",
+   "explain": "독일 국기",
+   "flag": "de",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "de"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "de"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 1,
+     "flag": "de"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "de"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p1",
+    "s2": "p2",
+    "s3": "p0"
+   },
+   "equivalentGroups": [
+    [
+     "p3",
+     "p1"
+    ],
+    [
+     "p2",
+     "p0"
+    ]
+   ],
+   "playable": true
+  },
+  {
+   "_order": 262,
+   "id": "flag-jp-l3-q3",
+   "topic": "국기 완성",
+   "stage": 3,
+   "type": "puzzle",
+   "prompt": "섞인 조각을 맞춰 일본 국기를 완성해보세요.",
+   "hint": "가운데 빨간 원을 떠올려요.",
+   "explain": "일본 국기",
+   "flag": "jp",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 1,
+     "flag": "jp"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 0,
+     "flag": "jp"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "jp"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 1,
+     "flag": "jp"
+    }
+   ],
+   "answer": {
+    "s0": "p2",
+    "s1": "p1",
+    "s2": "p3",
+    "s3": "p0"
+   },
+   "playable": true
+  },
+  {
+   "_order": 263,
+   "id": "flag-mx-l3-q4",
+   "topic": "국기 완성",
+   "stage": 3,
+   "type": "puzzle",
+   "prompt": "섞인 조각을 맞춰 멕시코 국기를 완성해보세요.",
+   "hint": "가운데 독수리 문양을 떠올려요.",
+   "explain": "멕시코 국기",
+   "flag": "mx",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 1,
+     "flag": "mx"
+    },
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 1,
+     "flag": "mx"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "mx"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 0,
+     "flag": "mx"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p0",
+    "s2": "p1",
+    "s3": "p2"
+   },
+   "playable": true
+  },
+  {
+   "_order": 264,
+   "id": "flag-nl-l3-q5",
+   "topic": "국기 완성",
+   "stage": 3,
+   "type": "puzzle",
+   "prompt": "섞인 조각을 맞춰 네덜란드 국기를 완성해보세요.",
+   "hint": "빨강-하양-파랑 가로 순서예요.",
+   "explain": "네덜란드 국기",
+   "flag": "nl",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "nl"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 1,
+     "flag": "nl"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "nl"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 0,
+     "flag": "nl"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p2",
+    "s2": "p0",
+    "s3": "p1"
+   },
+   "equivalentGroups": [
+    [
+     "p3",
+     "p2"
+    ],
+    [
+     "p0",
+     "p1"
+    ]
+   ],
+   "playable": true
+  },
+  {
+   "_order": 265,
+   "id": "flag-ca-l4-q1",
+   "topic": "국기 완성",
+   "stage": 4,
+   "type": "puzzle",
+   "prompt": "필요한 조각만 골라 캐나다 국기를 완성해보세요.",
+   "hint": "가운데 단풍잎을 떠올려요.",
+   "explain": "캐나다 국기",
+   "flag": "ca",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "jp"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 1,
+     "flag": "ca"
+    },
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 0,
+     "flag": "ca"
+    },
+    {
+     "id": "p3",
+     "col": 1,
+     "row": 1,
+     "flag": "ca"
+    }
+   ],
+   "answer": {
+    "s0": "p1",
+    "s1": "p2",
+    "s2": "p0",
+    "s3": "p3"
+   },
+   "playable": true
+  },
+  {
+   "_order": 266,
+   "id": "flag-us-l4-q2",
+   "topic": "국기 완성",
+   "stage": 4,
+   "type": "puzzle",
+   "prompt": "필요한 조각만 골라 미국 국기를 완성해보세요.",
+   "hint": "별과 줄무늬를 떠올려요.",
+   "explain": "미국 국기",
+   "flag": "us",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "us"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "us"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 0,
+     "flag": "ch"
+    },
+    {
+     "id": "p1",
+     "col": 0,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 0,
+     "flag": "us"
+    },
+    {
+     "id": "p5",
+     "col": 1,
+     "row": 1,
+     "flag": "us"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p4",
+    "s2": "p2",
+    "s3": "p5"
+   },
+   "equivalentGroups": [
+    [
+     "p2",
+     "p5"
+    ]
+   ],
+   "playable": true
+  },
+  {
+   "_order": 267,
+   "id": "flag-gb-l4-q3",
+   "topic": "국기 완성",
+   "stage": 4,
+   "type": "puzzle",
+   "prompt": "필요한 조각만 골라 영국 국기를 완성해보세요.",
+   "hint": "유니언잭의 선들을 떠올려요.",
+   "explain": "영국 국기",
+   "flag": "gb",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "es"
+    },
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "gb"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 0,
+     "flag": "gb"
+    },
+    {
+     "id": "p3",
+     "col": 1,
+     "row": 0,
+     "flag": "tr"
+    }
+   ],
+   "answer": {
+    "s0": "p5",
+    "s1": "p0",
+    "s2": "p4",
+    "s3": "p2"
+   },
+   "playable": true
+  },
+  {
+   "_order": 268,
+   "id": "flag-kr-l4-q4",
+   "topic": "국기 완성",
+   "stage": 4,
+   "type": "puzzle",
+   "prompt": "필요한 조각만 골라 한국 국기를 완성해보세요.",
+   "hint": "태극과 건곤감리를 떠올려요.",
+   "explain": "한국 국기",
+   "flag": "kr",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 1,
+     "flag": "gb"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 0,
+     "flag": "it"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p2",
+    "s2": "p0",
+    "s3": "p1"
+   },
+   "playable": true
+  },
+  {
+   "_order": 269,
+   "id": "flag-cn-l4-q5",
+   "topic": "국기 완성",
+   "stage": 4,
+   "type": "puzzle",
+   "prompt": "필요한 조각만 골라 중국 국기를 완성해보세요.",
+   "hint": "노란 별들은 왼쪽 위에 있어요.",
+   "explain": "중국 국기",
+   "flag": "cn",
+   "cols": 2,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s3",
+     "col": 1,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 0,
+     "flag": "cn"
+    },
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "se"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 1,
+     "flag": "cn"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "cn"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 0,
+     "flag": "cn"
+    }
+   ],
+   "answer": {
+    "s0": "p4",
+    "s1": "p0",
+    "s2": "p3",
+    "s3": "p1"
+   },
+   "equivalentGroups": [
+    [
+     "p0",
+     "p3",
+     "p1"
+    ]
+   ],
+   "playable": true
+  },
+  {
+   "_order": 270,
+   "id": "flag-br-l5-q1",
+   "topic": "국기 완성",
+   "stage": 5,
+   "type": "puzzle",
+   "prompt": "국가 이름을 보고 브라질 국기를 완성해보세요.",
+   "hint": "초록 바탕에 노란 마름모를 떠올려요.",
+   "explain": "브라질 국기",
+   "flag": "br",
+   "cols": 3,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 2,
+     "row": 0
+    },
+    {
+     "id": "s3",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "s5",
+     "col": 2,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p6",
+     "col": 0,
+     "row": 1,
+     "flag": "br"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "br"
+    },
+    {
+     "id": "p7",
+     "col": 2,
+     "row": 1,
+     "flag": "br"
+    },
+    {
+     "id": "p2",
+     "col": 2,
+     "row": 0,
+     "flag": "br"
+    },
+    {
+     "id": "p5",
+     "col": 2,
+     "row": 1,
+     "flag": "se"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 1,
+     "flag": "br"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "cn"
+    },
+    {
+     "id": "p0",
+     "col": 0,
+     "row": 0,
+     "flag": "br"
+    }
+   ],
+   "answer": {
+    "s0": "p0",
+    "s1": "p1",
+    "s2": "p2",
+    "s3": "p6",
+    "s4": "p4",
+    "s5": "p7"
+   },
+   "preview": false,
+   "playable": true
+  },
+  {
+   "_order": 271,
+   "id": "flag-es-l5-q2",
+   "topic": "국기 완성",
+   "stage": 5,
+   "type": "puzzle",
+   "prompt": "국가 이름을 보고 스페인 국기를 완성해보세요.",
+   "hint": "빨강-노랑-빨강 가로 순서예요.",
+   "explain": "스페인 국기",
+   "flag": "es",
+   "cols": 3,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 2,
+     "row": 0
+    },
+    {
+     "id": "s3",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "s5",
+     "col": 2,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "es"
+    },
+    {
+     "id": "p0",
+     "col": 2,
+     "row": 0,
+     "flag": "es"
+    },
+    {
+     "id": "p7",
+     "col": 1,
+     "row": 1,
+     "flag": "cn"
+    },
+    {
+     "id": "p1",
+     "col": 2,
+     "row": 1,
+     "flag": "es"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 1,
+     "flag": "es"
+    },
+    {
+     "id": "p3",
+     "col": 2,
+     "row": 1,
+     "flag": "ch"
+    },
+    {
+     "id": "p2",
+     "col": 1,
+     "row": 0,
+     "flag": "es"
+    },
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 1,
+     "flag": "es"
+    }
+   ],
+   "answer": {
+    "s0": "p5",
+    "s1": "p2",
+    "s2": "p0",
+    "s3": "p4",
+    "s4": "p6",
+    "s5": "p1"
+   },
+   "equivalentGroups": [
+    [
+     "p2",
+     "p0"
+    ],
+    [
+     "p6",
+     "p1"
+    ]
+   ],
+   "preview": false,
+   "playable": true
+  },
+  {
+   "_order": 272,
+   "id": "flag-za-l5-q3",
+   "topic": "국기 완성",
+   "stage": 5,
+   "type": "puzzle",
+   "prompt": "국가 이름을 보고 남아프리카공화국 국기를 완성해보세요.",
+   "hint": "Y자 모양을 떠올려요.",
+   "explain": "남아프리카공화국 국기",
+   "flag": "za",
+   "cols": 3,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 2,
+     "row": 0
+    },
+    {
+     "id": "s3",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "s5",
+     "col": 2,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p0",
+     "col": 1,
+     "row": 1,
+     "flag": "za"
+    },
+    {
+     "id": "p5",
+     "col": 2,
+     "row": 0,
+     "flag": "za"
+    },
+    {
+     "id": "p3",
+     "col": 1,
+     "row": 0,
+     "flag": "za"
+    },
+    {
+     "id": "p4",
+     "col": 0,
+     "row": 1,
+     "flag": "za"
+    },
+    {
+     "id": "p7",
+     "col": 2,
+     "row": 1,
+     "flag": "za"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 0,
+     "flag": "se"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 0,
+     "flag": "za"
+    },
+    {
+     "id": "p6",
+     "col": 1,
+     "row": 0,
+     "flag": "mx"
+    }
+   ],
+   "answer": {
+    "s0": "p2",
+    "s1": "p3",
+    "s2": "p5",
+    "s3": "p4",
+    "s4": "p0",
+    "s5": "p7"
+   },
+   "preview": false,
+   "playable": true
+  },
+  {
+   "_order": 273,
+   "id": "flag-kr-l5-q4",
+   "topic": "국기 완성",
+   "stage": 5,
+   "type": "puzzle",
+   "prompt": "국가 이름을 보고 한국 국기를 완성해보세요.",
+   "hint": "태극과 건곤감리를 떠올려요.",
+   "explain": "한국 국기",
+   "flag": "kr",
+   "cols": 3,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 2,
+     "row": 0
+    },
+    {
+     "id": "s3",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "s5",
+     "col": 2,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p3",
+     "col": 1,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p2",
+     "col": 0,
+     "row": 1,
+     "flag": "se"
+    },
+    {
+     "id": "p0",
+     "col": 2,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p5",
+     "col": 0,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p1",
+     "col": 2,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p6",
+     "col": 0,
+     "row": 1,
+     "flag": "kr"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 0,
+     "flag": "kr"
+    },
+    {
+     "id": "p7",
+     "col": 2,
+     "row": 1,
+     "flag": "es"
+    }
+   ],
+   "answer": {
+    "s0": "p5",
+    "s1": "p4",
+    "s2": "p1",
+    "s3": "p6",
+    "s4": "p3",
+    "s5": "p0"
+   },
+   "preview": false,
+   "playable": true
+  },
+  {
+   "_order": 274,
+   "id": "flag-au-l5-q5",
+   "topic": "국기 완성",
+   "stage": 5,
+   "type": "puzzle",
+   "prompt": "국가 이름을 보고 호주 국기를 완성해보세요.",
+   "hint": "남십자성 별들을 떠올려요.",
+   "explain": "호주 국기",
+   "flag": "au",
+   "cols": 3,
+   "rows": 2,
+   "slots": [
+    {
+     "id": "s0",
+     "col": 0,
+     "row": 0
+    },
+    {
+     "id": "s1",
+     "col": 1,
+     "row": 0
+    },
+    {
+     "id": "s2",
+     "col": 2,
+     "row": 0
+    },
+    {
+     "id": "s3",
+     "col": 0,
+     "row": 1
+    },
+    {
+     "id": "s4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "s5",
+     "col": 2,
+     "row": 1
+    }
+   ],
+   "pieces": [
+    {
+     "id": "p2",
+     "col": 2,
+     "row": 0,
+     "flag": "gr"
+    },
+    {
+     "id": "p1",
+     "col": 1,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p6",
+     "col": 0,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p0",
+     "col": 2,
+     "row": 0,
+     "flag": "au"
+    },
+    {
+     "id": "p4",
+     "col": 1,
+     "row": 1,
+     "flag": "fr"
+    },
+    {
+     "id": "p5",
+     "col": 1,
+     "row": 0,
+     "flag": "au"
+    },
+    {
+     "id": "p7",
+     "col": 2,
+     "row": 1,
+     "flag": "au"
+    },
+    {
+     "id": "p3",
+     "col": 0,
+     "row": 0,
+     "flag": "au"
+    }
+   ],
+   "answer": {
+    "s0": "p3",
+    "s1": "p5",
+    "s2": "p0",
+    "s3": "p6",
+    "s4": "p1",
+    "s5": "p7"
+   },
+   "preview": false,
+   "playable": true
+  }
+ ]
+}

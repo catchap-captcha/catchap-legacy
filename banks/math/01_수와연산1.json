@@ -1,0 +1,821 @@
+{
+ "subject": "수학",
+ "topic": "수와 연산(1)",
+ "questions": [
+  {
+   "_order": 0,
+   "id": "math-ch1_01_lv1_from_l1_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "832 × 93 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "832 × 93 = 77376",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "76544"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "77376"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "74880"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "78208"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 1,
+   "id": "math-ch1_02_lv1_from_l1_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "655 × 18 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "655 × 18 = 11790",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "11135"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "11790"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "13100"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "11780"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 2,
+   "id": "math-ch1_03_lv1_from_l1_2",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "764 × 58 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "764 × 58 = 44312",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "44212"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "43548"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "44312"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "45840"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 3,
+   "id": "math-ch1_04_lv1_from_l1_3",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "589 × 47 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "589 × 47 = 27683",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "27094"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "27583"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "27683"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "28272"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 4,
+   "id": "math-ch1_05_lv1_from_l1_4",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "908 × 76 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "908 × 76 = 69008",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "69916"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "69108"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "69008"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "68100"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 5,
+   "id": "math-ch1_06_lv1_from_l2_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "500 × 20 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "500 × 20 = 10000",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "10500"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "1000"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "10000"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "9900"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 6,
+   "id": "math-ch1_07_lv1_from_l2_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "775 × 65 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "775 × 65 = 50375",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "50375"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "51150"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "42625"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "50310"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 7,
+   "id": "math-ch1_08_lv1_from_l2_2",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "940 × 60 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "940 × 60 = 56400",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "57340"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "56300"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "5640"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "56400"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 8,
+   "id": "math-ch1_09_lv1_from_l2_3",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "590 × 82 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "590 × 82 = 48380",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "42480"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "48298"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "48970"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "48380"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 9,
+   "id": "math-ch1_10_lv1_from_l2_4",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "130 × 90 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "130 × 90 = 11700",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "11600"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "1170"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "11700"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "11830"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 10,
+   "id": "math-ch1_11_lv1_from_l3_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "105 ÷ 15 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "15×7=105 → 몫은 7",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "7"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "8"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "9"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "6"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 11,
+   "id": "math-ch1_12_lv1_from_l3_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "238 ÷ 17 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "17×14=238 → 몫은 14",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "14"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "15"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "13"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "24"
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 12,
+   "id": "math-ch1_13_lv1_from_l3_2",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "163 ÷ 17 의 나머지는 얼마일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "17×9=153, 163−153=10 → 나머지는 10",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "11"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "7"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "9"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "10"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 13,
+   "id": "math-ch1_14_lv1_from_l3_3",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "108 ÷ 18 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "18×6=108 → 몫은 6",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "5"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "7"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "6"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "8"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 14,
+   "id": "math-ch1_15_lv1_from_l3_4",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "204 ÷ 17 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "17×12=204 → 몫은 12",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "22"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "12"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "11"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "13"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 15,
+   "id": "math-ch1_16_lv1_from_l4_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "매일 40분씩 1년(365일) 동안 책을 읽으면 모두 몇 분일까요?",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "365 × 40 = 14600분!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "14965"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "14640"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "14600"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "14235"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 16,
+   "id": "math-ch1_17_lv6_from_l6_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "5 10/17 + 4 3/17 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "자연수끼리 5+4=9, 분자끼리 10+3=13 → 9 13/17",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "8 13/17"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "9 14/17"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "9 13/17"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "10 13/17"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 17,
+   "id": "math-ch1_18_lv6_from_l6_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "7 2/11 − 5 4/11 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "분자 2<4이니 자연수 1을 11/11로 바꿔 계산하면 1 9/11!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "2 2/11"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "9/11"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "1 9/11"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "1 8/11"
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 18,
+   "id": "math-ch1_19_lv6_from_l6_2",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "6 2/7 + 4 2/7 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "자연수끼리 6+4=10, 분자끼리 2+2=4 → 10 4/7",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "11 4/7"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "10 5/7"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "9 4/7"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "10 4/7"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 19,
+   "id": "math-ch1_20_lv6_from_l7_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "계산 결과를 비교하여 ○에 알맞은 것을 고르세요:  8 5/13 − 5 10/13  ○  10 2/13 − 7 7/13",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "왼쪽은 2 8/13, 오른쪽은 2 8/13 → 답은 '='!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": ">"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "<"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "="
+    }
+   ],
+   "answer": "o3",
+   "playable": true
+  },
+  {
+   "_order": 20,
+   "id": "math-ch1_21_lv6_from_l7_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "계산 결과를 비교하여 ○에 알맞은 것을 고르세요:  7 9/17 − 6 4/17  ○  8 7/17 − 6 2/17",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "왼쪽은 1 5/17, 오른쪽은 2 5/17 → 답은 '<'!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "<"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": ">"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "="
+    }
+   ],
+   "answer": "o1",
+   "playable": true
+  },
+  {
+   "_order": 21,
+   "id": "math-ch1_22_lv6_from_l7_2",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "계산 결과를 비교하여 ○에 알맞은 것을 고르세요:  7 10/15 − 5 14/15  ○  6 10/15 − 5 10/15",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "왼쪽은 1 11/15, 오른쪽은 1 → 답은 '>'!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "="
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": ">"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "<"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 22,
+   "id": "math-ch1_23_lv6_from_l8_0",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "4.05 + 7.85 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "소수점 자리를 맞춰 더하면 11.90!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "12.00"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "11.90"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "11.89"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "12.90"
+    }
+   ],
+   "answer": "o2",
+   "playable": true
+  },
+  {
+   "_order": 23,
+   "id": "math-ch1_24_lv6_from_l8_1",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "4.54 − 2.65 를 계산하세요",
+   "hint": "알맞은 답을 골라요.",
+   "explain": "소수점 자리를 맞춰 빼면 1.89!",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "1.99"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "1.88"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "2.89"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "1.89"
+    }
+   ],
+   "answer": "o4",
+   "playable": true
+  },
+  {
+   "_order": 24,
+   "id": "math-ch1_gen_01",
+   "topic": "수와 연산(1)",
+   "stage": 1,
+   "prompt": "1,248 + 3,679의 값을 구하세요.",
+   "hint": "답을 직접 입력해 주세요.",
+   "explain": "1,248+3,679=4,927입니다.",
+   "type": "input",
+   "answers": [
+    "4927"
+   ],
+   "playable": true
+  }
+ ]
+}

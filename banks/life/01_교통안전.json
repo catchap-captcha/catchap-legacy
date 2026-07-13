@@ -1,0 +1,766 @@
+{
+ "subject": "생활",
+ "topic": "교통안전",
+ "questions": [
+  {
+   "_order": 0,
+   "id": "life-01-l1-q1",
+   "topic": "교통안전",
+   "stage": 1,
+   "prompt": "길을 건널 때 안전한 행동을 골라보세요.",
+   "hint": "신호등을 잘 보고 골라요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚗",
+     "text": "차도에서 장난치기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🟢",
+     "text": "초록불에 건너기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔴",
+     "text": "빨간불에 뛰어가기"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 1,
+   "id": "life-01-l1-q2",
+   "topic": "교통안전",
+   "stage": 1,
+   "prompt": "횡단보도를 건널 때 바른 행동은?",
+   "hint": "차가 멈췄는지 확인해요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "👀",
+     "text": "좌우를 살피고 건너기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🏃",
+     "text": "뒤돌아보며 뛰기"
+    },
+    {
+     "id": "o3",
+     "emoji": "📱",
+     "text": "휴대폰을 보며 건너기"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 2,
+   "id": "life-01-l1-q3",
+   "topic": "교통안전",
+   "stage": 1,
+   "prompt": "차에 탈 때 안전한 행동을 골라보세요.",
+   "hint": "몸을 지켜주는 것을 떠올려요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔒",
+     "text": "안전벨트 매기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🪟",
+     "text": "창밖으로 손 내밀기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🚪",
+     "text": "달리는 차에서 문 열기"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 3,
+   "id": "life-01-l1-q4",
+   "topic": "교통안전",
+   "stage": 1,
+   "prompt": "걸을 때 안전한 곳은 어디일까요?",
+   "hint": "사람이 다니는 길을 떠올려요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚧",
+     "text": "공사장 안으로 걷기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🚶",
+     "text": "인도(보도)로 걷기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛣️",
+     "text": "차도 한가운데로 걷기"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 4,
+   "id": "life-01-l1-q5",
+   "topic": "교통안전",
+   "stage": 1,
+   "prompt": "자전거를 탈 때 안전한 행동은?",
+   "hint": "머리를 지켜주는 것을 떠올려요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🌙",
+     "text": "불 없이 밤에 빠르게 타기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🙌",
+     "text": "두 손 놓고 타기"
+    },
+    {
+     "id": "o3",
+     "emoji": "⛑️",
+     "text": "헬멧을 쓰고 타기"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 5,
+   "id": "life-01-l2-q1",
+   "topic": "교통안전",
+   "stage": 2,
+   "prompt": "위험한 행동을 찾아보세요.",
+   "hint": "신호를 어기면 위험해요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🟢",
+     "text": "신호등을 보고 건너기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🔴",
+     "text": "빨간불에 뛰어가기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🚸",
+     "text": "횡단보도로 건너기"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 6,
+   "id": "life-01-l2-q2",
+   "topic": "교통안전",
+   "stage": 2,
+   "prompt": "하면 안 되는 위험한 행동은?",
+   "hint": "차 사이는 안 보여요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚗",
+     "text": "주차된 차 사이로 갑자기 뛰어나가기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🤚",
+     "text": "손을 들고 건너기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🚦",
+     "text": "신호를 기다리기"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 7,
+   "id": "life-01-l2-q3",
+   "topic": "교통안전",
+   "stage": 2,
+   "prompt": "위험한 행동을 골라보세요.",
+   "hint": "공은 차도로 굴러가기 쉬워요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🏞️",
+     "text": "공원에서 공놀이하기"
+    },
+    {
+     "id": "o2",
+     "emoji": "⚽",
+     "text": "차도에서 공놀이하기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛝",
+     "text": "놀이터에서 놀기"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 8,
+   "id": "life-01-l2-q4",
+   "topic": "교통안전",
+   "stage": 2,
+   "prompt": "버스를 기다릴 때 위험한 행동은?",
+   "hint": "차도 쪽은 위험해요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🛣️",
+     "text": "차도로 내려가 기웃거리기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧍",
+     "text": "줄 서서 기다리기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🚏",
+     "text": "정류장 안에서 기다리기"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 9,
+   "id": "life-01-l2-q5",
+   "topic": "교통안전",
+   "stage": 2,
+   "prompt": "길에서 위험한 행동을 찾아보세요.",
+   "hint": "앞을 못 보면 위험해요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚸",
+     "text": "횡단보도 앞에서 멈추기"
+    },
+    {
+     "id": "o2",
+     "emoji": "👀",
+     "text": "앞을 보며 걷기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🎧",
+     "text": "이어폰 크게 켜고 게임하며 걷기"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 10,
+   "id": "life-01-l3-q1",
+   "topic": "교통안전",
+   "stage": 3,
+   "prompt": "길을 건너기 전, 어디에 서 있어야 할까요?",
+   "hint": "차도에서 한 발 물러나요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚗",
+     "text": "차와 차 사이"
+    },
+    {
+     "id": "o2",
+     "emoji": "🟨",
+     "text": "보도(인도) 위 안전선 안쪽"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛣️",
+     "text": "차도로 한 발 내려간 곳"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 11,
+   "id": "life-01-l3-q2",
+   "topic": "교통안전",
+   "stage": 3,
+   "prompt": "초록불이 켜졌어요. 어디로 건너야 안전할까요?",
+   "hint": "하얀 줄무늬 길을 찾아요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚸",
+     "text": "횡단보도 위로"
+    },
+    {
+     "id": "o2",
+     "emoji": "↔️",
+     "text": "횡단보도 옆 빈 도로로"
+    },
+    {
+     "id": "o3",
+     "emoji": "🏃",
+     "text": "가장 가까운 아무 곳으로"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 12,
+   "id": "life-01-l3-q3",
+   "topic": "교통안전",
+   "stage": 3,
+   "prompt": "길이 어두운 밤, 어디로 다니는 게 안전할까요?",
+   "hint": "밝은 곳이 안전해요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🌑",
+     "text": "불 꺼진 골목 안쪽"
+    },
+    {
+     "id": "o2",
+     "emoji": "🛣️",
+     "text": "차가 다니는 도로 가장자리"
+    },
+    {
+     "id": "o3",
+     "emoji": "💡",
+     "text": "가로등이 있는 밝은 인도"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 13,
+   "id": "life-01-l3-q4",
+   "topic": "교통안전",
+   "stage": 3,
+   "prompt": "지하철을 기다릴 때 안전한 위치는?",
+   "hint": "노란 선을 떠올려요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🏃",
+     "text": "문이 열리기 전 뛰어들기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🚉",
+     "text": "선로 바로 앞"
+    },
+    {
+     "id": "o3",
+     "emoji": "🟡",
+     "text": "노란 안전선 뒤"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 14,
+   "id": "life-01-l3-q5",
+   "topic": "교통안전",
+   "stage": 3,
+   "prompt": "골목에서 차가 다닐 때, 아이는 어디로 가야 할까요?",
+   "hint": "벽 쪽으로 붙어요.",
+   "explain": "교통안전",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🛣️",
+     "text": "길 한가운데로 걷기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🚗",
+     "text": "차 뒤에 숨기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧱",
+     "text": "길 가장자리 벽 쪽으로 붙기"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 15,
+   "id": "life-01-l4-q1",
+   "topic": "교통안전",
+   "stage": 4,
+   "prompt": "길을 건너는 순서를 바르게 놓아보세요.",
+   "hint": "멈추고 → 확인하고 → 건너요.",
+   "explain": "교통안전",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "좌우 살피기"
+    },
+    {
+     "id": "c2",
+     "text": "횡단보도 건너기"
+    },
+    {
+     "id": "c3",
+     "text": "멈추기"
+    },
+    {
+     "id": "c4",
+     "text": "초록불 확인하기"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c4",
+    "c1",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 16,
+   "id": "life-01-l4-q2",
+   "topic": "교통안전",
+   "stage": 4,
+   "prompt": "횡단보도를 건너는 순서를 놓아보세요.",
+   "hint": "손을 들어 운전자에게 보여줘요.",
+   "explain": "교통안전",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "차가 멈췄는지 확인"
+    },
+    {
+     "id": "c2",
+     "text": "손 들기"
+    },
+    {
+     "id": "c3",
+     "text": "보도에 멈춰 서기"
+    },
+    {
+     "id": "c4",
+     "text": "천천히 건너기"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 17,
+   "id": "life-01-l4-q3",
+   "topic": "교통안전",
+   "stage": 4,
+   "prompt": "버스에서 내려 집에 가는 순서예요.",
+   "hint": "버스가 완전히 떠난 뒤 건너요.",
+   "explain": "교통안전",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "버스에서 내리기"
+    },
+    {
+     "id": "c2",
+     "text": "횡단보도로 건너기"
+    },
+    {
+     "id": "c3",
+     "text": "인도에서 기다리기"
+    },
+    {
+     "id": "c4",
+     "text": "버스가 지나갈 때까지 기다리기"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c4",
+    "c2"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 18,
+   "id": "life-01-l4-q4",
+   "topic": "교통안전",
+   "stage": 4,
+   "prompt": "자전거를 타기 전 준비 순서를 놓아보세요.",
+   "hint": "안전 장비부터 챙겨요.",
+   "explain": "교통안전",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "주변 살피기"
+    },
+    {
+     "id": "c2",
+     "text": "헬멧 쓰기"
+    },
+    {
+     "id": "c3",
+     "text": "출발하기"
+    },
+    {
+     "id": "c4",
+     "text": "브레이크 확인"
+    }
+   ],
+   "answer": [
+    "c2",
+    "c4",
+    "c1",
+    "c3"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 19,
+   "id": "life-01-l4-q5",
+   "topic": "교통안전",
+   "stage": 4,
+   "prompt": "신호등이 있는 길을 건너는 순서예요.",
+   "hint": "깜빡이면 기다려요.",
+   "explain": "교통안전",
+   "type": "order",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "좌우 살피기"
+    },
+    {
+     "id": "c2",
+     "text": "초록불로 바뀌길 기다리기"
+    },
+    {
+     "id": "c3",
+     "text": "빨간불에 멈추기"
+    },
+    {
+     "id": "c4",
+     "text": "건너기"
+    }
+   ],
+   "answer": [
+    "c3",
+    "c2",
+    "c1",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 20,
+   "id": "life-01-l5-q1",
+   "topic": "교통안전",
+   "stage": 5,
+   "prompt": "상황을 보고 가장 안전한 행동을 골라보세요.",
+   "hint": "차를 먼저 보내요.",
+   "explain": "교통안전",
+   "scenario": "🚗 좁은 골목길에서 차가 천천히 다가오고 있어요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "👬",
+     "text": "친구를 따라 무작정 건넌다"
+    },
+    {
+     "id": "o2",
+     "emoji": "🏃",
+     "text": "바로 뛰어서 지나간다"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛑",
+     "text": "멈추고 차가 지나간 뒤 이동한다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 21,
+   "id": "life-01-l5-q2",
+   "topic": "교통안전",
+   "stage": 5,
+   "prompt": "이럴 때 어떻게 해야 안전할까요?",
+   "hint": "차가 멈추는지 꼭 확인해요.",
+   "explain": "교통안전",
+   "scenario": "🟢 초록불인데 저 멀리 차가 빠르게 오고 있어요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "👀",
+     "text": "차가 멈추는지 확인하고 건넌다"
+    },
+    {
+     "id": "o2",
+     "emoji": "📱",
+     "text": "휴대폰을 보며 건넌다"
+    },
+    {
+     "id": "o3",
+     "emoji": "🏃",
+     "text": "초록불이니 그냥 뛰어 건넌다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 22,
+   "id": "life-01-l5-q3",
+   "topic": "교통안전",
+   "stage": 5,
+   "prompt": "가장 안전한 행동은 무엇일까요?",
+   "hint": "차도로 뛰어들면 위험해요.",
+   "explain": "교통안전",
+   "scenario": "⚽ 공이 차도로 굴러갔어요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🏃",
+     "text": "바로 차도로 뛰어가 줍는다"
+    },
+    {
+     "id": "o2",
+     "emoji": "🙈",
+     "text": "차 사이로 몰래 들어간다"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧑",
+     "text": "어른에게 도움을 요청한다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 23,
+   "id": "life-01-l5-q4",
+   "topic": "교통안전",
+   "stage": 5,
+   "prompt": "비 오는 날, 가장 안전한 행동은?",
+   "hint": "우산을 살짝 들어 앞을 봐요.",
+   "explain": "교통안전",
+   "scenario": "🌧️ 비가 와서 우산을 썼더니 앞이 잘 안 보여요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🚗",
+     "text": "차가 서줄 거라 믿고 그냥 건넌다"
+    },
+    {
+     "id": "o2",
+     "emoji": "🏃",
+     "text": "우산으로 앞을 가린 채 뛴다"
+    },
+    {
+     "id": "o3",
+     "emoji": "☂️",
+     "text": "우산을 들어 앞을 보며 천천히 건넌다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 24,
+   "id": "life-01-l5-q5",
+   "topic": "교통안전",
+   "stage": 5,
+   "prompt": "가장 안전한 행동을 골라보세요.",
+   "hint": "무리해서 차도로 나가지 않아요.",
+   "explain": "교통안전",
+   "scenario": "🚧 인도에 공사가 있어 막혀 있어요.",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "↩️",
+     "text": "어른과 함께 안전한 길로 돌아간다"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧗",
+     "text": "공사 울타리를 넘어간다"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛣️",
+     "text": "차도로 내려가 빠르게 지나간다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  }
+ ]
+}

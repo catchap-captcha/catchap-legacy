@@ -1,0 +1,1209 @@
+{
+ "subject": "사회",
+ "topic": "공공기관",
+ "questions": [
+  {
+   "_order": 50,
+   "id": "soc-03-l1-q1",
+   "topic": "공공기관",
+   "stage": 1,
+   "prompt": "공공기관을 하는 일로 끌어다 연결하세요.",
+   "hint": "기관이 맡은 일을 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "소방서"
+    },
+    {
+     "id": "b",
+     "text": "도서관"
+    },
+    {
+     "id": "c",
+     "text": "경찰서"
+    }
+   ],
+   "right": [
+    {
+     "id": "z",
+     "text": "안전을 지키고 범죄를 막아요"
+    },
+    {
+     "id": "y",
+     "text": "책을 빌려주고 읽게 해요"
+    },
+    {
+     "id": "x",
+     "text": "불을 끄고 사람을 구조해요"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 51,
+   "id": "soc-03-l1-q2",
+   "topic": "공공기관",
+   "stage": 1,
+   "prompt": "공공기관을 하는 일로 끌어다 연결하세요.",
+   "hint": "민원·건강·우편을 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "주민센터"
+    },
+    {
+     "id": "b",
+     "text": "보건소"
+    },
+    {
+     "id": "c",
+     "text": "우체국"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "주민등록등본을 떼 줘요"
+    },
+    {
+     "id": "z",
+     "text": "편지와 소포를 배달해요"
+    },
+    {
+     "id": "y",
+     "text": "예방접종과 건강검진을 해 줘요"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 52,
+   "id": "soc-03-l1-q3",
+   "topic": "공공기관",
+   "stage": 1,
+   "prompt": "공공기관을 하는 일로 끌어다 연결하세요.",
+   "hint": "돈·치료·교육을 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "은행"
+    },
+    {
+     "id": "b",
+     "text": "병원"
+    },
+    {
+     "id": "c",
+     "text": "학교"
+    }
+   ],
+   "right": [
+    {
+     "id": "z",
+     "text": "학생을 가르쳐요"
+    },
+    {
+     "id": "x",
+     "text": "돈을 맡기고 빌려줘요"
+    },
+    {
+     "id": "y",
+     "text": "아픈 사람을 치료해요"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 53,
+   "id": "soc-03-l1-q4",
+   "topic": "공공기관",
+   "stage": 1,
+   "prompt": "공공기관을 일하는 사람으로 끌어다 연결하세요.",
+   "hint": "누가 그 일을 하는지 생각해요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "소방서"
+    },
+    {
+     "id": "b",
+     "text": "경찰서"
+    },
+    {
+     "id": "c",
+     "text": "보건소"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "소방관"
+    },
+    {
+     "id": "y",
+     "text": "경찰관"
+    },
+    {
+     "id": "z",
+     "text": "의사·간호사"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 54,
+   "id": "soc-03-l1-q5",
+   "topic": "공공기관",
+   "stage": 1,
+   "prompt": "기관을 관련된 전화번호·표시로 끌어다 연결하세요.",
+   "hint": "급할 때 누르는 번호를 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "화재·구조 신고"
+    },
+    {
+     "id": "b",
+     "text": "범죄 신고"
+    },
+    {
+     "id": "c",
+     "text": "민원 상담"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "119"
+    },
+    {
+     "id": "y",
+     "text": "112"
+    },
+    {
+     "id": "z",
+     "text": "110"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 55,
+   "id": "soc-03-l2-q1",
+   "topic": "공공기관",
+   "stage": 2,
+   "prompt": "기관을 대표 업무로 끌어다 연결하세요.",
+   "hint": "조금 더 자세한 일이에요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "주민센터"
+    },
+    {
+     "id": "b",
+     "text": "보건소"
+    },
+    {
+     "id": "c",
+     "text": "경찰서"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "전입신고와 각종 증명서 발급"
+    },
+    {
+     "id": "y",
+     "text": "감염병 예방과 건강 상담"
+    },
+    {
+     "id": "z",
+     "text": "교통 단속과 실종 신고 접수"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 56,
+   "id": "soc-03-l2-q2",
+   "topic": "공공기관",
+   "stage": 2,
+   "prompt": "기관을 대표 업무로 끌어다 연결하세요.",
+   "hint": "재난·우편·금융을 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "소방서"
+    },
+    {
+     "id": "b",
+     "text": "우체국"
+    },
+    {
+     "id": "c",
+     "text": "은행"
+    }
+   ],
+   "right": [
+    {
+     "id": "x",
+     "text": "화재 진압과 응급환자 이송"
+    },
+    {
+     "id": "z",
+     "text": "예금·대출과 공과금 납부"
+    },
+    {
+     "id": "y",
+     "text": "우편물 배달과 우편 저금"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 57,
+   "id": "soc-03-l2-q3",
+   "topic": "공공기관",
+   "stage": 2,
+   "prompt": "기관을 대표 업무로 끌어다 연결하세요.",
+   "hint": "교육·문화·복지를 떠올려요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "도서관"
+    },
+    {
+     "id": "b",
+     "text": "학교"
+    },
+    {
+     "id": "c",
+     "text": "복지관"
+    }
+   ],
+   "right": [
+    {
+     "id": "y",
+     "text": "학생 교육과 급식·상담"
+    },
+    {
+     "id": "z",
+     "text": "어르신·이웃 돌봄 봉사"
+    },
+    {
+     "id": "x",
+     "text": "자료 대출과 독서·문화 프로그램"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 58,
+   "id": "soc-03-l2-q4",
+   "topic": "공공기관",
+   "stage": 2,
+   "prompt": "기관을 우리 생활에 주는 도움으로 끌어다 연결하세요.",
+   "hint": "무엇을 편하게 해 주는지 생각해요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "보건소"
+    },
+    {
+     "id": "b",
+     "text": "주민센터"
+    },
+    {
+     "id": "c",
+     "text": "소방서"
+    }
+   ],
+   "right": [
+    {
+     "id": "y",
+     "text": "이사·출생 신고를 도와줘요"
+    },
+    {
+     "id": "x",
+     "text": "병원비 부담 없이 건강을 돌봐줘요"
+    },
+    {
+     "id": "z",
+     "text": "위급 상황에서 목숨을 지켜줘요"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 59,
+   "id": "soc-03-l2-q5",
+   "topic": "공공기관",
+   "stage": 2,
+   "prompt": "비슷해 보이는 기관을 정확한 역할로 끌어다 연결하세요.",
+   "hint": "병원·보건소·약국의 차이를 생각해요.",
+   "explain": "공공기관",
+   "type": "connect",
+   "left": [
+    {
+     "id": "a",
+     "text": "병원"
+    },
+    {
+     "id": "b",
+     "text": "보건소"
+    },
+    {
+     "id": "c",
+     "text": "약국"
+    }
+   ],
+   "right": [
+    {
+     "id": "z",
+     "text": "처방전을 받아 약을 조제해요"
+    },
+    {
+     "id": "x",
+     "text": "진료와 수술을 해요"
+    },
+    {
+     "id": "y",
+     "text": "나라가 운영하며 예방·검진을 해요"
+    }
+   ],
+   "answer": {
+    "a": "x",
+    "b": "y",
+    "c": "z"
+   },
+   "playable": true
+  },
+  {
+   "_order": 60,
+   "id": "soc-03-l3-q1",
+   "topic": "공공기관",
+   "stage": 3,
+   "prompt": "상황 카드를 도움을 요청할 기관으로 끌어다 분류하세요.",
+   "hint": "누가 해결해 줄 수 있는지 생각해요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "police",
+     "label": "경찰서"
+    },
+    {
+     "id": "fire",
+     "label": "소방서"
+    },
+    {
+     "id": "center",
+     "label": "주민센터"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "등본이 필요해요"
+    },
+    {
+     "id": "i4",
+     "text": "교통사고가 났어요"
+    },
+    {
+     "id": "i2",
+     "text": "건물에 불이 났어요"
+    },
+    {
+     "id": "i3",
+     "text": "전입신고를 해야 해요"
+    },
+    {
+     "id": "i1",
+     "text": "지갑을 도둑맞았어요"
+    }
+   ],
+   "answer": {
+    "i1": "police",
+    "i2": "fire",
+    "i3": "center",
+    "i4": "police",
+    "i5": "center"
+   },
+   "playable": true
+  },
+  {
+   "_order": 61,
+   "id": "soc-03-l3-q2",
+   "topic": "공공기관",
+   "stage": 3,
+   "prompt": "상황 카드를 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "건강·안전·학습을 나눠요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "health",
+     "label": "보건소"
+    },
+    {
+     "id": "fire",
+     "label": "소방서"
+    },
+    {
+     "id": "library",
+     "label": "도서관"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "산에 불이 번져요"
+    },
+    {
+     "id": "i5",
+     "text": "응급환자를 옮겨야 해요"
+    },
+    {
+     "id": "i3",
+     "text": "책을 빌리고 싶어요"
+    },
+    {
+     "id": "i4",
+     "text": "금연 상담을 받고 싶어요"
+    },
+    {
+     "id": "i1",
+     "text": "예방접종을 맞고 싶어요"
+    }
+   ],
+   "answer": {
+    "i1": "health",
+    "i2": "fire",
+    "i3": "library",
+    "i4": "health",
+    "i5": "fire"
+   },
+   "playable": true
+  },
+  {
+   "_order": 62,
+   "id": "soc-03-l3-q3",
+   "topic": "공공기관",
+   "stage": 3,
+   "prompt": "상황 카드를 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "돈·우편·민원을 나눠요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "bank",
+     "label": "은행"
+    },
+    {
+     "id": "post",
+     "label": "우체국"
+    },
+    {
+     "id": "center",
+     "label": "주민센터"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "소포를 보내고 싶어요"
+    },
+    {
+     "id": "i1",
+     "text": "용돈을 저금하고 싶어요"
+    },
+    {
+     "id": "i4",
+     "text": "공과금을 내야 해요"
+    },
+    {
+     "id": "i3",
+     "text": "주민등록증을 재발급받아야 해요"
+    },
+    {
+     "id": "i5",
+     "text": "편지를 부치고 싶어요"
+    }
+   ],
+   "answer": {
+    "i1": "bank",
+    "i2": "post",
+    "i3": "center",
+    "i4": "bank",
+    "i5": "post"
+   },
+   "playable": true
+  },
+  {
+   "_order": 63,
+   "id": "soc-03-l3-q4",
+   "topic": "공공기관",
+   "stage": 3,
+   "prompt": "위급한 순간, 알맞은 신고처로 끌어다 분류하세요.",
+   "hint": "불·구조는 119, 범죄는 112예요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "n119",
+     "label": "119"
+    },
+    {
+     "id": "n112",
+     "label": "112"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "물건을 도둑맞았어요"
+    },
+    {
+     "id": "i3",
+     "text": "사람이 쓰러졌어요"
+    },
+    {
+     "id": "i2",
+     "text": "수상한 사람이 따라와요"
+    },
+    {
+     "id": "i1",
+     "text": "집에 불이 났어요"
+    }
+   ],
+   "answer": {
+    "i1": "n119",
+    "i2": "n112",
+    "i3": "n119",
+    "i4": "n112"
+   },
+   "playable": true
+  },
+  {
+   "_order": 64,
+   "id": "soc-03-l3-q5",
+   "topic": "공공기관",
+   "stage": 3,
+   "prompt": "상황 카드를 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "치료가 필요한지, 예방인지, 약인지 생각해요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "hospital",
+     "label": "병원"
+    },
+    {
+     "id": "health",
+     "label": "보건소"
+    },
+    {
+     "id": "pharm",
+     "label": "약국"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "무료 독감 예방접종을 맞고 싶어요"
+    },
+    {
+     "id": "i1",
+     "text": "팔이 부러져 수술이 필요해요"
+    },
+    {
+     "id": "i3",
+     "text": "처방전을 내고 약을 받아요"
+    },
+    {
+     "id": "i4",
+     "text": "깊게 베여 꿰매야 해요"
+    }
+   ],
+   "answer": {
+    "i1": "hospital",
+    "i2": "health",
+    "i3": "pharm",
+    "i4": "hospital"
+   },
+   "playable": true
+  },
+  {
+   "_order": 65,
+   "id": "soc-03-l4-q1",
+   "topic": "공공기관",
+   "stage": 4,
+   "prompt": "보건소에서 할 수 있는 일을 모두 골라 담아보세요.",
+   "hint": "보건소는 나라가 운영하는 건강 기관이에요.",
+   "explain": "공공기관",
+   "boxHint": "보건소가 하는 일만 이 상자로 끌어와요",
+   "boxLabel": "보건소에서 할 수 있는 일 담기",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "금연 상담"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "예방접종"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "건강검진"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "불 끄기"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "책 대출"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o3"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o3"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 66,
+   "id": "soc-03-l4-q2",
+   "topic": "공공기관",
+   "stage": 4,
+   "prompt": "주민센터에서 할 수 있는 일을 모두 골라 담아보세요.",
+   "hint": "서류·신고·생활 민원을 떠올려요.",
+   "explain": "공공기관",
+   "boxHint": "주민센터가 하는 일만 이 상자로 끌어와요",
+   "boxLabel": "주민센터에서 할 수 있는 일 담기",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "우편 배달"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "수술"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "주민등록증 발급"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "등본 발급"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "전입신고"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o4",
+    "o5"
+   ],
+   "playable": [
+    "o3",
+    "o4",
+    "o5"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 67,
+   "id": "soc-03-l4-q3",
+   "topic": "공공기관",
+   "stage": 4,
+   "prompt": "소방서에서 하는 일을 모두 골라 담아보세요.",
+   "hint": "불·구조·응급을 떠올려요.",
+   "explain": "공공기관",
+   "boxHint": "소방서가 하는 일만 이 상자로 끌어와요",
+   "boxLabel": "소방서에서 하는 일 담기",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "화재 진압"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "응급환자 이송"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "예금·대출"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "전입신고 접수"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "인명 구조"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o5"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o5"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 68,
+   "id": "soc-03-l4-q4",
+   "topic": "공공기관",
+   "stage": 4,
+   "prompt": "경찰서에서 하는 일을 모두 골라 담아보세요.",
+   "hint": "안전·질서·수사를 떠올려요.",
+   "explain": "공공기관",
+   "boxHint": "경찰서가 하는 일만 이 상자로 끌어와요",
+   "boxLabel": "경찰서에서 하는 일 담기",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "소포 배달"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "교통 단속"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "분실물 신고 접수"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "예방접종"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "범죄 수사"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o3",
+    "o5"
+   ],
+   "playable": [
+    "o2",
+    "o3",
+    "o5"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 69,
+   "id": "soc-03-l4-q5",
+   "topic": "공공기관",
+   "stage": 4,
+   "prompt": "도서관에서 할 수 있는 일을 모두 골라 담아보세요.",
+   "hint": "책과 배움을 떠올려요.",
+   "explain": "공공기관",
+   "boxHint": "도서관에서 할 수 있는 일만 이 상자로 끌어와요",
+   "boxLabel": "도서관에서 할 수 있는 일 담기",
+   "type": "multi",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "자료 찾아보기"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "책 빌리기"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "화재 진압"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "통장 개설"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "독서 프로그램 참여"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o5"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o5"
+   ],
+   "layout": "list"
+  },
+  {
+   "_order": 70,
+   "id": "soc-03-l5-q1",
+   "topic": "공공기관",
+   "stage": 5,
+   "prompt": "여러 상황을 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "기관의 역할을 종합해서 생각해요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "fire",
+     "label": "소방서"
+    },
+    {
+     "id": "library",
+     "label": "도서관"
+    },
+    {
+     "id": "center",
+     "label": "주민센터"
+    },
+    {
+     "id": "police",
+     "label": "경찰서"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "불이 났어요"
+    },
+    {
+     "id": "i4",
+     "text": "길을 잃었어요"
+    },
+    {
+     "id": "i3",
+     "text": "등본이 필요해요"
+    },
+    {
+     "id": "i2",
+     "text": "책을 빌리고 싶어요"
+    }
+   ],
+   "answer": {
+    "i1": "fire",
+    "i2": "library",
+    "i3": "center",
+    "i4": "police"
+   },
+   "playable": true
+  },
+  {
+   "_order": 71,
+   "id": "soc-03-l5-q2",
+   "topic": "공공기관",
+   "stage": 5,
+   "prompt": "여러 상황을 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "건강·저금·우편·안전을 떠올려요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "health",
+     "label": "보건소"
+    },
+    {
+     "id": "bank",
+     "label": "은행"
+    },
+    {
+     "id": "post",
+     "label": "우체국"
+    },
+    {
+     "id": "police",
+     "label": "경찰서"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "소포를 보내요"
+    },
+    {
+     "id": "i4",
+     "text": "도둑을 신고해요"
+    },
+    {
+     "id": "i2",
+     "text": "용돈을 저금해요"
+    },
+    {
+     "id": "i1",
+     "text": "예방접종을 맞아요"
+    }
+   ],
+   "answer": {
+    "i1": "health",
+    "i2": "bank",
+    "i3": "post",
+    "i4": "police"
+   },
+   "playable": true
+  },
+  {
+   "_order": 72,
+   "id": "soc-03-l5-q3",
+   "topic": "공공기관",
+   "stage": 5,
+   "prompt": "여러 상황을 알맞은 기관으로 끌어다 분류하세요.",
+   "hint": "치료·교육·구조·민원을 떠올려요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "hospital",
+     "label": "병원"
+    },
+    {
+     "id": "school",
+     "label": "학교"
+    },
+    {
+     "id": "fire",
+     "label": "소방서"
+    },
+    {
+     "id": "center",
+     "label": "주민센터"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "공부를 배워요"
+    },
+    {
+     "id": "i4",
+     "text": "이사 신고를 해요"
+    },
+    {
+     "id": "i1",
+     "text": "수술을 받아야 해요"
+    },
+    {
+     "id": "i3",
+     "text": "사람이 물에 빠졌어요"
+    }
+   ],
+   "answer": {
+    "i1": "hospital",
+    "i2": "school",
+    "i3": "fire",
+    "i4": "center"
+   },
+   "playable": true
+  },
+  {
+   "_order": 73,
+   "id": "soc-03-l5-q4",
+   "topic": "공공기관",
+   "stage": 5,
+   "prompt": "여러 상황을 알맞은 신고처·기관으로 끌어다 분류하세요.",
+   "hint": "급한 일과 서류 일을 나눠요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "n119",
+     "label": "119"
+    },
+    {
+     "id": "n112",
+     "label": "112"
+    },
+    {
+     "id": "center",
+     "label": "주민센터"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "가스 냄새가 나고 연기가 나요"
+    },
+    {
+     "id": "i3",
+     "text": "전입신고를 해야 해요"
+    },
+    {
+     "id": "i4",
+     "text": "교통사고를 목격했어요"
+    },
+    {
+     "id": "i2",
+     "text": "누가 물건을 훔쳐 갔어요"
+    }
+   ],
+   "answer": {
+    "i1": "n119",
+    "i2": "n112",
+    "i3": "center",
+    "i4": "n112"
+   },
+   "playable": true
+  },
+  {
+   "_order": 74,
+   "id": "soc-03-l5-q5",
+   "topic": "공공기관",
+   "stage": 5,
+   "prompt": "비슷한 건강 기관으로 여러 상황을 끌어다 분류하세요.",
+   "hint": "치료·예방·약을 정확히 나눠요.",
+   "explain": "공공기관",
+   "type": "sort",
+   "bins": [
+    {
+     "id": "hospital",
+     "label": "병원"
+    },
+    {
+     "id": "health",
+     "label": "보건소"
+    },
+    {
+     "id": "pharm",
+     "label": "약국"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "골절 수술"
+    },
+    {
+     "id": "i3",
+     "text": "처방약 조제"
+    },
+    {
+     "id": "i2",
+     "text": "무료 건강검진"
+    },
+    {
+     "id": "i4",
+     "text": "독감 예방접종"
+    }
+   ],
+   "answer": {
+    "i1": "hospital",
+    "i2": "health",
+    "i3": "pharm",
+    "i4": "health"
+   },
+   "playable": true
+  }
+ ]
+}

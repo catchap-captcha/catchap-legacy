@@ -1,0 +1,1276 @@
+{
+ "subject": "영어",
+ "topic": "낱말 분류",
+ "questions": [
+  {
+   "_order": 115,
+   "id": "eng-05-c1-q1",
+   "topic": "낱말 분류",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "과일 단어를 찾아 상자에 넣어보세요. (과일)",
+   "hint": "딱 하나만 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "fox"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "bag"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "kiwi"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list",
+   "explain": "과일 낱말 고르기"
+  },
+  {
+   "_order": 116,
+   "id": "eng-05-c1-q2",
+   "topic": "낱말 분류",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "동물 단어를 찾아 상자에 넣어보세요. (동물)",
+   "hint": "딱 하나만 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "crayon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "orange"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "bear"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list",
+   "explain": "동물 낱말 고르기"
+  },
+  {
+   "_order": 117,
+   "id": "eng-05-c1-q3",
+   "topic": "낱말 분류",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "과일 단어를 찾아 상자에 넣어보세요. (과일)",
+   "hint": "딱 하나만 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "duck"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "pencil"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "apple"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list",
+   "explain": "과일 낱말 고르기"
+  },
+  {
+   "_order": 118,
+   "id": "eng-05-c1-q4",
+   "topic": "낱말 분류",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "학용품 단어를 찾아 상자에 넣어보세요. (학용품)",
+   "hint": "딱 하나만 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "cat"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "ruler"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "fish"
+    }
+   ],
+   "answer": [
+    "o2"
+   ],
+   "playable": [
+    "o2"
+   ],
+   "layout": "list",
+   "explain": "학용품 낱말 고르기"
+  },
+  {
+   "_order": 119,
+   "id": "eng-05-c1-q5",
+   "topic": "낱말 분류",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "과일 단어를 찾아 상자에 넣어보세요. (과일)",
+   "hint": "딱 하나만 골라요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "pig"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "frog"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "banana"
+    }
+   ],
+   "answer": [
+    "o3"
+   ],
+   "playable": [
+    "o3"
+   ],
+   "layout": "list",
+   "explain": "과일 낱말 고르기"
+  },
+  {
+   "_order": 120,
+   "id": "eng-05-c2-q1",
+   "topic": "낱말 분류",
+   "stage": 2,
+   "type": "multi",
+   "prompt": "과일 단어를 모두 찾아 상자에 넣어보세요. (과일)",
+   "hint": "과일이면 전부!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "lemon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "dog"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "grape"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pear"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "rabbit"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o3",
+    "o4"
+   ],
+   "playable": [
+    "o1",
+    "o3",
+    "o4"
+   ],
+   "layout": "list",
+   "explain": "과일 낱말 고르기"
+  },
+  {
+   "_order": 121,
+   "id": "eng-05-c2-q2",
+   "topic": "낱말 분류",
+   "stage": 2,
+   "type": "multi",
+   "prompt": "과일 단어를 모두 찾아 상자에 넣어보세요. (과일)",
+   "hint": "과일이면 전부!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "pear"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "bird"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "chair"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "peach"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "melon"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o4",
+    "o5"
+   ],
+   "playable": [
+    "o1",
+    "o4",
+    "o5"
+   ],
+   "layout": "list",
+   "explain": "과일 낱말 고르기"
+  },
+  {
+   "_order": 122,
+   "id": "eng-05-c2-q3",
+   "topic": "낱말 분류",
+   "stage": 2,
+   "type": "multi",
+   "prompt": "학용품 단어를 모두 찾아 상자에 넣어보세요. (학용품)",
+   "hint": "학용품이면 전부!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "peach"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "cow"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "book"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pen"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "chair"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o4",
+    "o5"
+   ],
+   "playable": [
+    "o3",
+    "o4",
+    "o5"
+   ],
+   "layout": "list",
+   "explain": "학용품 낱말 고르기"
+  },
+  {
+   "_order": 123,
+   "id": "eng-05-c2-q4",
+   "topic": "낱말 분류",
+   "stage": 2,
+   "type": "multi",
+   "prompt": "동물 단어를 모두 찾아 상자에 넣어보세요. (동물)",
+   "hint": "동물이면 전부!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "melon"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "duck"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "grape"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "bear"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "frog"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4",
+    "o5"
+   ],
+   "playable": [
+    "o2",
+    "o4",
+    "o5"
+   ],
+   "layout": "list",
+   "explain": "동물 낱말 고르기"
+  },
+  {
+   "_order": 124,
+   "id": "eng-05-c2-q5",
+   "topic": "낱말 분류",
+   "stage": 2,
+   "type": "multi",
+   "prompt": "동물 단어를 모두 찾아 상자에 넣어보세요. (동물)",
+   "hint": "동물이면 전부!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "bird"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "pig"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "fox"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "pencil"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "grape"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2",
+    "o3"
+   ],
+   "playable": [
+    "o1",
+    "o2",
+    "o3"
+   ],
+   "layout": "list",
+   "explain": "동물 낱말 고르기"
+  },
+  {
+   "_order": 125,
+   "id": "eng-05-c3-q1",
+   "topic": "낱말 분류",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "단어를 알맞은 주제 상자에 넣어보세요.",
+   "hint": "학용품과 동물로 나눠요.",
+   "bins": [
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "pencil"
+    },
+    {
+     "id": "i1",
+     "text": "frog"
+    },
+    {
+     "id": "i3",
+     "text": "pig"
+    },
+    {
+     "id": "i4",
+     "text": "bag"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "supply",
+    "i3": "animal",
+    "i4": "supply"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 126,
+   "id": "eng-05-c3-q2",
+   "topic": "낱말 분류",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "단어를 알맞은 주제 상자에 넣어보세요.",
+   "hint": "과일과 동물로 나눠요.",
+   "bins": [
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "pear"
+    },
+    {
+     "id": "i3",
+     "text": "melon"
+    },
+    {
+     "id": "i1",
+     "text": "cow"
+    },
+    {
+     "id": "i2",
+     "text": "duck"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "animal",
+    "i3": "fruit",
+    "i4": "fruit"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 127,
+   "id": "eng-05-c3-q3",
+   "topic": "낱말 분류",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "단어를 알맞은 주제 상자에 넣어보세요.",
+   "hint": "과일과 동물로 나눠요.",
+   "bins": [
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "fox"
+    },
+    {
+     "id": "i1",
+     "text": "bear"
+    },
+    {
+     "id": "i3",
+     "text": "grape"
+    },
+    {
+     "id": "i2",
+     "text": "pear"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "fruit",
+    "i3": "fruit",
+    "i4": "animal"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 128,
+   "id": "eng-05-c3-q4",
+   "topic": "낱말 분류",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "단어를 알맞은 주제 상자에 넣어보세요.",
+   "hint": "동물과 과일로 나눠요.",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "lemon"
+    },
+    {
+     "id": "i3",
+     "text": "dog"
+    },
+    {
+     "id": "i1",
+     "text": "cow"
+    },
+    {
+     "id": "i4",
+     "text": "kiwi"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "fruit",
+    "i3": "animal",
+    "i4": "fruit"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 129,
+   "id": "eng-05-c3-q5",
+   "topic": "낱말 분류",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "단어를 알맞은 주제 상자에 넣어보세요.",
+   "hint": "동물과 과일로 나눠요.",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    }
+   ],
+   "items": [
+    {
+     "id": "i2",
+     "text": "cat"
+    },
+    {
+     "id": "i4",
+     "text": "apple"
+    },
+    {
+     "id": "i3",
+     "text": "peach"
+    },
+    {
+     "id": "i1",
+     "text": "fox"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "animal",
+    "i3": "fruit",
+    "i4": "fruit"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 130,
+   "id": "eng-05-c4-q1",
+   "topic": "낱말 분류",
+   "stage": 4,
+   "type": "sort",
+   "prompt": "각 단어가 어울리는 상자에 넣어보세요.",
+   "hint": "세 상자로 나눠요!",
+   "bins": [
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "rabbit"
+    },
+    {
+     "id": "i3",
+     "text": "ruler"
+    },
+    {
+     "id": "i2",
+     "text": "kiwi"
+    },
+    {
+     "id": "i1",
+     "text": "orange"
+    },
+    {
+     "id": "i6",
+     "text": "book"
+    },
+    {
+     "id": "i4",
+     "text": "bear"
+    }
+   ],
+   "answer": {
+    "i1": "fruit",
+    "i2": "fruit",
+    "i3": "supply",
+    "i4": "animal",
+    "i5": "animal",
+    "i6": "supply"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 131,
+   "id": "eng-05-c4-q2",
+   "topic": "낱말 분류",
+   "stage": 4,
+   "type": "sort",
+   "prompt": "각 단어가 어울리는 상자에 넣어보세요.",
+   "hint": "세 상자로 나눠요!",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "orange"
+    },
+    {
+     "id": "i6",
+     "text": "crayon"
+    },
+    {
+     "id": "i5",
+     "text": "melon"
+    },
+    {
+     "id": "i4",
+     "text": "fox"
+    },
+    {
+     "id": "i2",
+     "text": "rabbit"
+    },
+    {
+     "id": "i1",
+     "text": "ruler"
+    }
+   ],
+   "answer": {
+    "i1": "supply",
+    "i2": "animal",
+    "i3": "fruit",
+    "i4": "animal",
+    "i5": "fruit",
+    "i6": "supply"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 132,
+   "id": "eng-05-c4-q3",
+   "topic": "낱말 분류",
+   "stage": 4,
+   "type": "sort",
+   "prompt": "각 단어가 어울리는 상자에 넣어보세요.",
+   "hint": "세 상자로 나눠요!",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "crayon"
+    },
+    {
+     "id": "i3",
+     "text": "chair"
+    },
+    {
+     "id": "i1",
+     "text": "bird"
+    },
+    {
+     "id": "i4",
+     "text": "kiwi"
+    },
+    {
+     "id": "i2",
+     "text": "lemon"
+    },
+    {
+     "id": "i6",
+     "text": "fox"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "fruit",
+    "i3": "supply",
+    "i4": "fruit",
+    "i5": "supply",
+    "i6": "animal"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 133,
+   "id": "eng-05-c4-q4",
+   "topic": "낱말 분류",
+   "stage": 4,
+   "type": "sort",
+   "prompt": "각 단어가 어울리는 상자에 넣어보세요.",
+   "hint": "세 상자로 나눠요!",
+   "bins": [
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "chair"
+    },
+    {
+     "id": "i2",
+     "text": "crayon"
+    },
+    {
+     "id": "i3",
+     "text": "dog"
+    },
+    {
+     "id": "i1",
+     "text": "apple"
+    },
+    {
+     "id": "i4",
+     "text": "peach"
+    },
+    {
+     "id": "i6",
+     "text": "pig"
+    }
+   ],
+   "answer": {
+    "i1": "fruit",
+    "i2": "supply",
+    "i3": "animal",
+    "i4": "fruit",
+    "i5": "supply",
+    "i6": "animal"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 134,
+   "id": "eng-05-c4-q5",
+   "topic": "낱말 분류",
+   "stage": 4,
+   "type": "sort",
+   "prompt": "각 단어가 어울리는 상자에 넣어보세요.",
+   "hint": "세 상자로 나눠요!",
+   "bins": [
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i6",
+     "text": "bird"
+    },
+    {
+     "id": "i5",
+     "text": "crayon"
+    },
+    {
+     "id": "i3",
+     "text": "fox"
+    },
+    {
+     "id": "i1",
+     "text": "pencil"
+    },
+    {
+     "id": "i2",
+     "text": "lemon"
+    },
+    {
+     "id": "i4",
+     "text": "pear"
+    }
+   ],
+   "answer": {
+    "i1": "supply",
+    "i2": "fruit",
+    "i3": "animal",
+    "i4": "fruit",
+    "i5": "supply",
+    "i6": "animal"
+   },
+   "playable": true,
+   "explain": "주제별 낱말 분류"
+  },
+  {
+   "_order": 170,
+   "id": "eng-05-c5-q1",
+   "topic": "낱말 분류",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "알맞은 단어만 골라 주제 상자에 넣어보세요.",
+   "hint": "어울리지 않는 단어는 남겨요! (필요 없는 단어는 남겨요!)",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    }
+   ],
+   "items": [
+    {
+     "id": "i4",
+     "text": "frog"
+    },
+    {
+     "id": "i3",
+     "text": "kiwi"
+    },
+    {
+     "id": "i6",
+     "text": "happy"
+    },
+    {
+     "id": "i5",
+     "text": "apple"
+    },
+    {
+     "id": "i2",
+     "text": "bag"
+    },
+    {
+     "id": "i1",
+     "text": "green"
+    },
+    {
+     "id": "i8",
+     "text": "pen"
+    },
+    {
+     "id": "i7",
+     "text": "duck"
+    }
+   ],
+   "answer": {
+    "i2": "supply",
+    "i3": "fruit",
+    "i4": "animal",
+    "i5": "fruit",
+    "i7": "animal",
+    "i8": "supply"
+   },
+   "placeCount": 6,
+   "playable": true,
+   "explain": "주제별 낱말 분류(방해 단어 제외)"
+  },
+  {
+   "_order": 171,
+   "id": "eng-05-c5-q2",
+   "topic": "낱말 분류",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "알맞은 단어만 골라 주제 상자에 넣어보세요.",
+   "hint": "어울리지 않는 단어는 남겨요! (필요 없는 단어는 남겨요!)",
+   "bins": [
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i7",
+     "text": "bag"
+    },
+    {
+     "id": "i6",
+     "text": "green"
+    },
+    {
+     "id": "i4",
+     "text": "cat"
+    },
+    {
+     "id": "i8",
+     "text": "banana"
+    },
+    {
+     "id": "i5",
+     "text": "happy"
+    },
+    {
+     "id": "i3",
+     "text": "rabbit"
+    },
+    {
+     "id": "i1",
+     "text": "pencil"
+    },
+    {
+     "id": "i2",
+     "text": "grape"
+    }
+   ],
+   "answer": {
+    "i1": "supply",
+    "i2": "fruit",
+    "i3": "animal",
+    "i4": "animal",
+    "i7": "supply",
+    "i8": "fruit"
+   },
+   "placeCount": 6,
+   "playable": true,
+   "explain": "주제별 낱말 분류(방해 단어 제외)"
+  },
+  {
+   "_order": 172,
+   "id": "eng-05-c5-q3",
+   "topic": "낱말 분류",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "알맞은 단어만 골라 주제 상자에 넣어보세요.",
+   "hint": "어울리지 않는 단어는 남겨요! (필요 없는 단어는 남겨요!)",
+   "bins": [
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    },
+    {
+     "id": "animal",
+     "label": "동물"
+    }
+   ],
+   "items": [
+    {
+     "id": "i3",
+     "text": "book"
+    },
+    {
+     "id": "i7",
+     "text": "happy"
+    },
+    {
+     "id": "i8",
+     "text": "peach"
+    },
+    {
+     "id": "i4",
+     "text": "blue"
+    },
+    {
+     "id": "i2",
+     "text": "lemon"
+    },
+    {
+     "id": "i6",
+     "text": "chair"
+    },
+    {
+     "id": "i1",
+     "text": "pig"
+    },
+    {
+     "id": "i5",
+     "text": "cow"
+    }
+   ],
+   "answer": {
+    "i1": "animal",
+    "i2": "fruit",
+    "i3": "supply",
+    "i5": "animal",
+    "i6": "supply",
+    "i8": "fruit"
+   },
+   "placeCount": 6,
+   "playable": true,
+   "explain": "주제별 낱말 분류(방해 단어 제외)"
+  },
+  {
+   "_order": 173,
+   "id": "eng-05-c5-q4",
+   "topic": "낱말 분류",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "알맞은 단어만 골라 주제 상자에 넣어보세요.",
+   "hint": "어울리지 않는 단어는 남겨요! (필요 없는 단어는 남겨요!)",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    }
+   ],
+   "items": [
+    {
+     "id": "i5",
+     "text": "lemon"
+    },
+    {
+     "id": "i8",
+     "text": "yellow"
+    },
+    {
+     "id": "i2",
+     "text": "duck"
+    },
+    {
+     "id": "i6",
+     "text": "melon"
+    },
+    {
+     "id": "i7",
+     "text": "frog"
+    },
+    {
+     "id": "i4",
+     "text": "crayon"
+    },
+    {
+     "id": "i3",
+     "text": "happy"
+    },
+    {
+     "id": "i1",
+     "text": "pencil"
+    }
+   ],
+   "answer": {
+    "i1": "supply",
+    "i2": "animal",
+    "i4": "supply",
+    "i5": "fruit",
+    "i6": "fruit",
+    "i7": "animal"
+   },
+   "placeCount": 6,
+   "playable": true,
+   "explain": "주제별 낱말 분류(방해 단어 제외)"
+  },
+  {
+   "_order": 174,
+   "id": "eng-05-c5-q5",
+   "topic": "낱말 분류",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "알맞은 단어만 골라 주제 상자에 넣어보세요.",
+   "hint": "어울리지 않는 단어는 남겨요! (필요 없는 단어는 남겨요!)",
+   "bins": [
+    {
+     "id": "animal",
+     "label": "동물"
+    },
+    {
+     "id": "fruit",
+     "label": "과일"
+    },
+    {
+     "id": "supply",
+     "label": "학용품"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "lemon"
+    },
+    {
+     "id": "i3",
+     "text": "happy"
+    },
+    {
+     "id": "i4",
+     "text": "red"
+    },
+    {
+     "id": "i2",
+     "text": "pear"
+    },
+    {
+     "id": "i5",
+     "text": "bag"
+    },
+    {
+     "id": "i8",
+     "text": "cow"
+    },
+    {
+     "id": "i7",
+     "text": "fox"
+    },
+    {
+     "id": "i6",
+     "text": "chair"
+    }
+   ],
+   "answer": {
+    "i1": "fruit",
+    "i2": "fruit",
+    "i5": "supply",
+    "i6": "supply",
+    "i7": "animal",
+    "i8": "animal"
+   },
+   "placeCount": 6,
+   "playable": true,
+   "explain": "주제별 낱말 분류(방해 단어 제외)"
+  }
+ ]
+}

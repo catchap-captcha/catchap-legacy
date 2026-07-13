@@ -1,0 +1,522 @@
+{
+ "subject": "과학",
+ "topic": "생활 과학/안전",
+ "questions": [
+  {
+   "_order": 1,
+   "id": "sci-rainy",
+   "topic": "생활 과학/안전",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "비 오는 날 필요한 물건을 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "비가 오면 우산과 장화가 필요해요. 선글라스와 부채는 맑고 더운 날에 쓰지요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "☂️",
+     "text": "우산"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥾",
+     "text": "장화"
+    },
+    {
+     "id": "o3",
+     "emoji": "🕶️",
+     "text": "선글라스"
+    },
+    {
+     "id": "o4",
+     "emoji": "🍦",
+     "text": "아이스크림"
+    },
+    {
+     "id": "o5",
+     "emoji": "🧢",
+     "text": "모자"
+    },
+    {
+     "id": "o6",
+     "emoji": "🪭",
+     "text": "부채"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2"
+   ],
+   "playable": [
+    "o1",
+    "o2"
+   ]
+  },
+  {
+   "_order": 2,
+   "id": "sci-danger",
+   "topic": "생활 과학/안전",
+   "stage": 1,
+   "type": "multi",
+   "prompt": "만지면 위험한 물건을 골라주세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "가위와 칼은 날카로워서 다칠 수 있어요. 어른과 함께 조심해서 사용해요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "📖",
+     "text": "책"
+    },
+    {
+     "id": "o2",
+     "emoji": "🖍️",
+     "text": "크레용"
+    },
+    {
+     "id": "o3",
+     "emoji": "🧸",
+     "text": "인형"
+    },
+    {
+     "id": "o4",
+     "emoji": "✂️",
+     "text": "가위"
+    },
+    {
+     "id": "o5",
+     "emoji": "⚽",
+     "text": "공"
+    },
+    {
+     "id": "o6",
+     "emoji": "🔪",
+     "text": "칼"
+    }
+   ],
+   "answer": [
+    "o4",
+    "o6"
+   ],
+   "playable": [
+    "o4",
+    "o6"
+   ]
+  },
+  {
+   "_order": 5,
+   "id": "sci-handwash",
+   "topic": "생활 과학/안전",
+   "stage": 1,
+   "type": "order",
+   "prompt": "손 씻는 순서를 맞춰주세요",
+   "hint": "카드를 눌러 1번부터 차례대로 놓아요!",
+   "explain": "물 묻히기 → 비누칠 → 거품 문지르기 → 헹구고 닦기 순서예요!",
+   "cards": [
+    {
+     "id": "c1",
+     "text": "물 묻히기"
+    },
+    {
+     "id": "c2",
+     "text": "거품 문지르기"
+    },
+    {
+     "id": "c3",
+     "text": "비누칠하기"
+    },
+    {
+     "id": "c4",
+     "text": "헹구고 닦기"
+    }
+   ],
+   "answer": [
+    "c1",
+    "c3",
+    "c2",
+    "c4"
+   ],
+   "playable": true
+  },
+  {
+   "_order": 11,
+   "id": "sci-trash",
+   "topic": "생활 과학/안전",
+   "stage": 1,
+   "type": "drag",
+   "prompt": "쓰레기를 쓰레기통에 넣어주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "바나나 껍질 같은 쓰레기는 쓰레기통에 버려요. 꽃과 책은 소중히 아껴야지요!",
+   "target": {
+    "e": "🗑️",
+    "label": "쓰레기통에 쏙!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🍌",
+     "label": "바나나 껍질"
+    },
+    {
+     "id": "d2",
+     "e": "🌷",
+     "label": "꽃"
+    },
+    {
+     "id": "d3",
+     "e": "📖",
+     "label": "책"
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 14,
+   "id": "sci-icecream",
+   "topic": "생활 과학/안전",
+   "stage": 1,
+   "type": "drag",
+   "prompt": "아이스크림을 냉동실에 넣어주세요",
+   "hint": "알맞은 카드를 골라 끌어다 놓아요!",
+   "explain": "아이스크림처럼 차갑게 보관해야 하는 음식은 냉동실에 넣어야 녹지 않아요!",
+   "target": {
+    "e": "🧊",
+    "label": "냉동실에 쏙!"
+   },
+   "items": [
+    {
+     "id": "d1",
+     "e": "🍦",
+     "label": "아이스크림"
+    },
+    {
+     "id": "d2",
+     "e": "👟",
+     "label": "운동화"
+    },
+    {
+     "id": "d3",
+     "e": "🧸",
+     "label": "곰인형"
+    }
+   ],
+   "answer": "d1",
+   "playable": true
+  },
+  {
+   "_order": 26,
+   "id": "sci-labsafe",
+   "topic": "생활 과학/안전",
+   "stage": 3,
+   "type": "multi",
+   "prompt": "실험할 때 안전한 행동을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "보안경과 장갑으로 몸을 보호하고, 모르면 선생님께 여쭤봐요. 함부로 맛보거나 뛰어다니면 위험해요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "👅",
+     "text": "함부로 맛보기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥽",
+     "text": "보안경 쓰기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🏃",
+     "text": "뛰어다니기"
+    },
+    {
+     "id": "o4",
+     "emoji": "🙋",
+     "text": "모르면 선생님께 묻기"
+    },
+    {
+     "id": "o5",
+     "emoji": "🧤",
+     "text": "실험용 장갑 끼기"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4",
+    "o5"
+   ],
+   "playable": [
+    "o2",
+    "o4",
+    "o5"
+   ]
+  },
+  {
+   "_order": 33,
+   "id": "sci-recycle",
+   "topic": "생활 과학/안전",
+   "stage": 3,
+   "type": "sort",
+   "prompt": "재활용과 일반 쓰레기를 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "페트병·캔·신문지는 재활용할 수 있어요. 쓴 휴지와 먹다 남은 뼈는 일반 쓰레기예요!",
+   "bins": [
+    {
+     "id": "re",
+     "label": "♻️ 재활용"
+    },
+    {
+     "id": "trash",
+     "label": "🗑️ 일반 쓰레기"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "신문지"
+    },
+    {
+     "id": "i2",
+     "text": "쓴 휴지"
+    },
+    {
+     "id": "i3",
+     "text": "닭뼈"
+    },
+    {
+     "id": "i4",
+     "text": "페트병"
+    },
+    {
+     "id": "i5",
+     "text": "캔"
+    }
+   ],
+   "answer": {
+    "i1": "re",
+    "i2": "trash",
+    "i3": "trash",
+    "i4": "re",
+    "i5": "re"
+   },
+   "playable": true
+  },
+  {
+   "_order": 62,
+   "id": "sci-extinguish",
+   "topic": "생활 과학/안전",
+   "stage": 3,
+   "type": "multi",
+   "prompt": "불을 끄는 올바른 방법을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "물을 뿌려 온도를 낮추거나, 담요를 덮고 소화기를 뿌려 산소를 막으면 불이 꺼져요. 기름을 붓거나 부채질하면 더 커져요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🛢️",
+     "text": "기름 붓기"
+    },
+    {
+     "id": "o2",
+     "emoji": "💦",
+     "text": "물 뿌리기"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "담요 덮기",
+     "svg": "<svg viewBox=\"0 0 80 80\" xmlns=\"http://www.w3.org/2000/svg\">\n      <rect x=\"12\" y=\"48\" width=\"56\" height=\"15\" rx=\"5\" fill=\"#b83f52\"/>\n      <rect x=\"12\" y=\"35\" width=\"56\" height=\"15\" rx=\"5\" fill=\"#d8546a\"/>\n      <rect x=\"12\" y=\"22\" width=\"56\" height=\"15\" rx=\"5\" fill=\"#ef7a89\"/>\n      <line x1=\"20\" y1=\"29.5\" x2=\"60\" y2=\"29.5\" stroke=\"#fff\" stroke-width=\"1.6\" opacity=\".55\"/>\n      <line x1=\"20\" y1=\"42.5\" x2=\"60\" y2=\"42.5\" stroke=\"#fff\" stroke-width=\"1.6\" opacity=\".5\"/>\n      <line x1=\"20\" y1=\"55.5\" x2=\"60\" y2=\"55.5\" stroke=\"#fff\" stroke-width=\"1.6\" opacity=\".45\"/>\n    </svg>"
+    },
+    {
+     "id": "o4",
+     "emoji": "🪭",
+     "text": "부채질하기"
+    },
+    {
+     "id": "o5",
+     "emoji": "🧯",
+     "text": "소화기 뿌리기"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o3",
+    "o5"
+   ],
+   "playable": [
+    "o2",
+    "o3",
+    "o5"
+   ]
+  },
+  {
+   "_order": 69,
+   "id": "sci-ecoact",
+   "topic": "생활 과학/안전",
+   "stage": 5,
+   "type": "sort",
+   "prompt": "지구를 지키는 행동과 아닌 행동을 나눠주세요",
+   "hint": "카드를 알맞은 곳에 나눠 담아요!",
+   "explain": "자전거 타기·나무 심기·분리배출은 지구를 지켜요. 물을 틀어놓거나 쓰레기를 함부로 버리면 지구가 아파요!",
+   "bins": [
+    {
+     "id": "good",
+     "label": "💚 지구를 지켜요"
+    },
+    {
+     "id": "bad",
+     "label": "💔 지구가 아파요"
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "물 틀어놓기"
+    },
+    {
+     "id": "i2",
+     "text": "자전거 타기"
+    },
+    {
+     "id": "i3",
+     "text": "분리배출하기"
+    },
+    {
+     "id": "i4",
+     "text": "쓰레기 함부로 버리기"
+    },
+    {
+     "id": "i5",
+     "text": "나무 심기"
+    }
+   ],
+   "answer": {
+    "i1": "bad",
+    "i2": "good",
+    "i3": "good",
+    "i4": "bad",
+    "i5": "good"
+   },
+   "playable": true
+  },
+  {
+   "_order": 81,
+   "id": "sci-fireact",
+   "topic": "생활 과학/안전",
+   "stage": 5,
+   "type": "multi",
+   "prompt": "불이 났을 때 올바른 행동을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "연기는 위로 올라가니 몸을 낮추고, 젖은 수건으로 코와 입을 막고 대피해요. 엘리베이터는 위험해요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🛗",
+     "text": "엘리베이터 타기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧻",
+     "text": "젖은 수건으로 코 막기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🛏️",
+     "text": "침대 밑에 숨기"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧎",
+     "text": "몸을 낮춰 이동하기"
+    }
+   ],
+   "answer": [
+    "o2",
+    "o4"
+   ],
+   "playable": [
+    "o2",
+    "o4"
+   ]
+  },
+  {
+   "_order": 82,
+   "id": "sci-elecsafe",
+   "topic": "생활 과학/안전",
+   "stage": 5,
+   "type": "multi",
+   "prompt": "전기를 안전하게 사용하는 행동을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "플러그는 머리를 잡고 바르게 뽑고, 물 묻은 손으로는 절대 만지지 않아요. 콘센트에 물건을 넣으면 큰일나요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "💦",
+     "text": "젖은 손으로 만지기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🥢",
+     "text": "콘센트에 젓가락 넣기"
+    },
+    {
+     "id": "o3",
+     "emoji": "🔌",
+     "text": "플러그 바르게 뽑기"
+    },
+    {
+     "id": "o4",
+     "emoji": "🧻",
+     "text": "손 닦고 만지기"
+    }
+   ],
+   "answer": [
+    "o3",
+    "o4"
+   ],
+   "playable": [
+    "o3",
+    "o4"
+   ]
+  },
+  {
+   "_order": 83,
+   "id": "sci-foodstore",
+   "topic": "생활 과학/안전",
+   "stage": 5,
+   "type": "multi",
+   "prompt": "음식이 상하지 않게 하는 방법을 모두 고르세요",
+   "hint": "알맞은 그림을 모두 골라 눌러요!",
+   "explain": "차가운 냉장고에 넣거나 잘 익히면 세균이 자라기 어려워 음식이 상하지 않아요!",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "🔥",
+     "text": "잘 익혀 먹기"
+    },
+    {
+     "id": "o2",
+     "emoji": "🧊",
+     "text": "냉장고에 넣기"
+    },
+    {
+     "id": "o3",
+     "emoji": "☀️",
+     "text": "햇볕에 두기"
+    },
+    {
+     "id": "o4",
+     "emoji": "🪰",
+     "text": "뚜껑 열어두기"
+    }
+   ],
+   "answer": [
+    "o1",
+    "o2"
+   ],
+   "playable": [
+    "o1",
+    "o2"
+   ]
+  }
+ ]
+}

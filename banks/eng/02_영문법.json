@@ -1,0 +1,781 @@
+{
+ "subject": "영어",
+ "topic": "영문법",
+ "questions": [
+  {
+   "_order": 25,
+   "id": "eng-09-g1-q1",
+   "image": "😊",
+   "sentence": "Yesterday I ___ happy.",
+   "topic": "영문법",
+   "stage": 1,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "어제 있었던 일이에요 (과거).",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "were"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "was"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "am"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 26,
+   "id": "eng-09-g1-q2",
+   "image": "🏫",
+   "sentence": "They ___ at school yesterday.",
+   "topic": "영문법",
+   "stage": 1,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "They(여럿) 다음엔?",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "was"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "are"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "were"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 27,
+   "id": "eng-09-g1-q3",
+   "image": "🤒",
+   "sentence": "She ___ sick last night.",
+   "topic": "영문법",
+   "stage": 1,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "지난밤 = 과거!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "is"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "were"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "was"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 28,
+   "id": "eng-09-g1-q4",
+   "image": "🏞️",
+   "sentence": "We ___ in the park an hour ago.",
+   "topic": "영문법",
+   "stage": 1,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "We 다음엔? (한 시간 전 = 과거)",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "was"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "were"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "are"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 29,
+   "id": "eng-09-g1-q5",
+   "image": "🎬",
+   "sentence": "The movie ___ fun yesterday.",
+   "topic": "영문법",
+   "stage": 1,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "하나(영화) + 과거!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "is"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "was"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "were"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 30,
+   "id": "eng-09-g2-q1",
+   "image": "⚽",
+   "sentence": "I ___ soccer yesterday.",
+   "topic": "영문법",
+   "stage": 2,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "어제 한 일 (과거형 -ed).",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "play"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "plays"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "played"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 31,
+   "id": "eng-09-g2-q2",
+   "image": "🚌",
+   "sentence": "She ___ to school yesterday.",
+   "topic": "영문법",
+   "stage": 2,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "go의 과거형은?",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "go"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "goes"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "went"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 32,
+   "id": "eng-09-g2-q3",
+   "image": "🍕",
+   "sentence": "We ___ pizza last night.",
+   "topic": "영문법",
+   "stage": 2,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "eat의 과거형은?",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "ate"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "eat"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "eats"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 33,
+   "id": "eng-09-g2-q4",
+   "image": "✉️",
+   "sentence": "He ___ a letter yesterday.",
+   "topic": "영문법",
+   "stage": 2,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "write의 과거형은?",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "wrote"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "write"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "writes"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 34,
+   "id": "eng-09-g2-q5",
+   "image": "📺",
+   "sentence": "They ___ TV last night.",
+   "topic": "영문법",
+   "stage": 2,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "규칙 과거형 -ed!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "watched"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "watches"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "watch"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 35,
+   "id": "eng-09-g3-q1",
+   "image": "👶",
+   "sentence": "Look! The baby ___ crying.",
+   "topic": "영문법",
+   "stage": 3,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "지금 하고 있어요. (하나)",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "is"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "am"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "are"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 36,
+   "id": "eng-09-g3-q2",
+   "image": "🧒",
+   "sentence": "The children ___ playing outside.",
+   "topic": "영문법",
+   "stage": 3,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "children은 여럿!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "are"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "am"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "is"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 37,
+   "id": "eng-09-g3-q3",
+   "image": "📖",
+   "sentence": "I ___ reading a book now.",
+   "topic": "영문법",
+   "stage": 3,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "I 다음엔?",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "is"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "am"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "are"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 38,
+   "id": "eng-09-g3-q4",
+   "image": "🎤",
+   "sentence": "She is ___ a song now.",
+   "topic": "영문법",
+   "stage": 3,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "be동사 다음엔 ~ing!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "sing"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "sang"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "singing"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 39,
+   "id": "eng-09-g3-q5",
+   "image": "⚽",
+   "sentence": "We are ___ soccer now.",
+   "topic": "영문법",
+   "stage": 3,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "be동사 다음엔 ~ing!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "playing"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "played"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "play"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 40,
+   "id": "eng-09-g4-q1",
+   "image": "🐘",
+   "sentence": "An elephant is ___ than a cat.",
+   "topic": "영문법",
+   "stage": 4,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "둘을 비교해요 (-er than).",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "biggest"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "big"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "bigger"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 41,
+   "id": "eng-09-g4-q2",
+   "image": "🐆",
+   "sentence": "A cheetah is ___ than a dog.",
+   "topic": "영문법",
+   "stage": 4,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "더 빠른! (-er than)",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "fast"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "faster"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "fastest"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 42,
+   "id": "eng-09-g4-q3",
+   "image": "📦",
+   "sentence": "This box is ___ than that one.",
+   "topic": "영문법",
+   "stage": 4,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "무게를 비교해요 (-ier than).",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "heavier"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "heaviest"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "heavy"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 43,
+   "id": "eng-09-g4-q4",
+   "image": "🐦",
+   "sentence": "Birds ___ fly high.",
+   "topic": "영문법",
+   "stage": 4,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "~할 수 있다!",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "do"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "can"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "cans"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 44,
+   "id": "eng-09-g4-q5",
+   "image": "📏",
+   "sentence": "He is ___ than his brother.",
+   "topic": "영문법",
+   "stage": 4,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "키를 비교해요 (-er than).",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "tall"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "tallest"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "taller"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 45,
+   "id": "eng-09-g5-q1",
+   "image": "🐱",
+   "sentence": "The cat is ___ the box.",
+   "topic": "영문법",
+   "stage": 5,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "고양이가 상자 위에 있어요.",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "in"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "on"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "under"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2"
+  },
+  {
+   "_order": 46,
+   "id": "eng-09-g5-q2",
+   "image": "🎂",
+   "sentence": "___ is your birthday?",
+   "topic": "영문법",
+   "stage": 5,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "\"언제\"인지 물어봐요.",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "When"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "Who"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "What"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  },
+  {
+   "_order": 47,
+   "id": "eng-09-g5-q3",
+   "image": "🚶",
+   "sentence": "___ are you going?",
+   "topic": "영문법",
+   "stage": 5,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "\"어디로\" 가는지 물어봐요.",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "What"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "When"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "Where"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 48,
+   "id": "eng-09-g5-q4",
+   "image": "⚽",
+   "sentence": "The ball is ___ the table.",
+   "topic": "영문법",
+   "stage": 5,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "공이 탁자 아래에 있어요.",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "on"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "next"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "under"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3"
+  },
+  {
+   "_order": 49,
+   "id": "eng-09-g5-q5",
+   "image": "👧",
+   "sentence": "___ is that girl?",
+   "topic": "영문법",
+   "stage": 5,
+   "prompt": "빈칸에 들어갈 알맞은 말을 골라보세요.",
+   "hint": "\"누구\"인지 물어봐요.",
+   "explain": "영문법",
+   "type": "single",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "Who"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "What"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "Where"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1"
+  }
+ ]
+}

@@ -1,0 +1,781 @@
+{
+ "subject": "국어",
+ "topic": "문장의 짜임",
+ "questions": [
+  {
+   "_order": 4,
+   "id": "KOR4-STRUCT-001",
+   "topic": "문장의 짜임",
+   "stage": 1,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  강아지가 공을 물고 왔다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "강아지가"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "공을"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "물고"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "왔다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 11,
+   "id": "KOR4-STRUCT-002",
+   "topic": "문장의 짜임",
+   "stage": 1,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  동생이 그림을 그렸다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "동생이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "그림을"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "그렸다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 18,
+   "id": "KOR4-STRUCT-003",
+   "topic": "문장의 짜임",
+   "stage": 1,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  아침에 나는 일찍 일어났다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "아침에"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "나는"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "일찍"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "일어났다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 25,
+   "id": "KOR4-STRUCT-004",
+   "topic": "문장의 짜임",
+   "stage": 1,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  오늘 할머니께서 맛있는 떡을 만드셨다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "오늘"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "할머니께서"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "맛있는"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "떡을"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "만드셨다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 32,
+   "id": "KOR4-STRUCT-005",
+   "topic": "문장의 짜임",
+   "stage": 1,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  하루 종일 비가 내렸다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "하루"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "종일"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "비가"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "내렸다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 39,
+   "id": "KOR4-STRUCT-006",
+   "topic": "문장의 짜임",
+   "stage": 2,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  쉬는 시간에 친구들이 축구를 했다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "쉬는"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "시간에"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "친구들이"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "축구를"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "했다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 46,
+   "id": "KOR4-STRUCT-007",
+   "topic": "문장의 짜임",
+   "stage": 2,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  새들이 나무 위에서 노래한다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "새들이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "나무"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "위에서"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "노래한다"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 53,
+   "id": "KOR4-STRUCT-008",
+   "topic": "문장의 짜임",
+   "stage": 2,
+   "type": "single",
+   "prompt": "다음 문장에서 '주어'에 해당하는 말은?  저녁마다 아빠가 신문을 읽는다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "저녁마다"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "아빠가"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "신문을"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "읽는다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문장 성분 찾기 — 주어"
+  },
+  {
+   "_order": 60,
+   "id": "KOR4-STRUCT-009",
+   "topic": "문장의 짜임",
+   "stage": 2,
+   "type": "single",
+   "prompt": "다음 문장에서 '서술어'에 해당하는 말은?  토끼가 빠르게 달린다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "토끼가"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "빠르게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "달린다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 서술어"
+  },
+  {
+   "_order": 67,
+   "id": "KOR4-STRUCT-010",
+   "topic": "문장의 짜임",
+   "stage": 2,
+   "type": "single",
+   "prompt": "다음 문장에서 '서술어'에 해당하는 말은?  하늘이 오늘 유난히 맑다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "하늘이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "오늘"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "유난히"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "맑다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문장 성분 찾기 — 서술어"
+  },
+  {
+   "_order": 74,
+   "id": "KOR4-STRUCT-011",
+   "topic": "문장의 짜임",
+   "stage": 3,
+   "type": "single",
+   "prompt": "다음 문장에서 '서술어'에 해당하는 말은?  나는 친구에게 편지를 썼다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "나는"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "친구에게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "편지를"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "썼다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문장 성분 찾기 — 서술어"
+  },
+  {
+   "_order": 81,
+   "id": "KOR4-STRUCT-012",
+   "topic": "문장의 짜임",
+   "stage": 3,
+   "type": "single",
+   "prompt": "다음 문장에서 '서술어'에 해당하는 말은?  동생은 오늘 기분이 좋다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "동생은"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "오늘"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "기분이"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "좋다"
+    }
+   ],
+   "answer": "o4",
+   "playable": "o4",
+   "explain": "문장 성분 찾기 — 서술어"
+  },
+  {
+   "_order": 88,
+   "id": "KOR4-STRUCT-013",
+   "topic": "문장의 짜임",
+   "stage": 3,
+   "type": "single",
+   "prompt": "다음 문장에서 '서술어'에 해당하는 말은?  우리 반 친구들은 모두 친절하다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "우리"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "반"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "친구들은"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "모두"
+    },
+    {
+     "id": "o5",
+     "emoji": "",
+     "text": "친절하다"
+    }
+   ],
+   "answer": "o5",
+   "playable": "o5",
+   "explain": "문장 성분 찾기 — 서술어"
+  },
+  {
+   "_order": 95,
+   "id": "KOR4-STRUCT-014",
+   "topic": "문장의 짜임",
+   "stage": 3,
+   "type": "single",
+   "prompt": "다음 문장에서 '목적어'에 해당하는 말은?  나는 맛있는 빵을 먹었다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "나는"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "맛있는"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "빵을"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "먹었다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 목적어"
+  },
+  {
+   "_order": 102,
+   "id": "KOR4-STRUCT-015",
+   "topic": "문장의 짜임",
+   "stage": 3,
+   "type": "single",
+   "prompt": "다음 문장에서 '목적어'에 해당하는 말은?  동생이 내 장난감을 망가뜨렸다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "동생이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "내"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "장난감을"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "망가뜨렸다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 목적어"
+  },
+  {
+   "_order": 109,
+   "id": "KOR4-STRUCT-016",
+   "topic": "문장의 짜임",
+   "stage": 4,
+   "type": "single",
+   "prompt": "다음 문장에서 '목적어'에 해당하는 말은?  학생들이 교실을 깨끗하게 청소했다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "학생들이"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "교실을"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "깨끗하게"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "청소했다"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "문장 성분 찾기 — 목적어"
+  },
+  {
+   "_order": 116,
+   "id": "KOR4-STRUCT-017",
+   "topic": "문장의 짜임",
+   "stage": 4,
+   "type": "single",
+   "prompt": "다음 문장에서 '목적어'에 해당하는 말은?  아버지께서 나에게 자전거를 사주셨다",
+   "hint": "문장 성분의 역할을 잘 생각해 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "아버지께서"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "나에게"
+    },
+    {
+     "id": "o3",
+     "emoji": "",
+     "text": "자전거를"
+    },
+    {
+     "id": "o4",
+     "emoji": "",
+     "text": "사주셨다"
+    }
+   ],
+   "answer": "o3",
+   "playable": "o3",
+   "explain": "문장 성분 찾기 — 목적어"
+  },
+  {
+   "_order": 123,
+   "id": "KOR4-STRUCT-018",
+   "topic": "문장의 짜임",
+   "stage": 4,
+   "type": "single",
+   "prompt": "나는 아침에 우유를 마셨다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 130,
+   "id": "KOR4-STRUCT-019",
+   "topic": "문장의 짜임",
+   "stage": 4,
+   "type": "single",
+   "prompt": "나는 밥을 먹고 학교에 갔다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 137,
+   "id": "KOR4-STRUCT-020",
+   "topic": "문장의 짜임",
+   "stage": 4,
+   "type": "single",
+   "prompt": "강아지가 마당에서 신나게 뛰어놀았다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 144,
+   "id": "KOR4-STRUCT-021",
+   "topic": "문장의 짜임",
+   "stage": 5,
+   "type": "single",
+   "prompt": "비가 와서 소풍이 취소되었다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 151,
+   "id": "KOR4-STRUCT-022",
+   "topic": "문장의 짜임",
+   "stage": 5,
+   "type": "single",
+   "prompt": "동생은 어제 새 신발을 샀다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 158,
+   "id": "KOR4-STRUCT-023",
+   "topic": "문장의 짜임",
+   "stage": 5,
+   "type": "single",
+   "prompt": "형은 도서관에서 책을 읽고 나는 집에서 그림을 그렸다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 165,
+   "id": "KOR4-STRUCT-024",
+   "topic": "문장의 짜임",
+   "stage": 5,
+   "type": "single",
+   "prompt": "우리 가족은 주말에 놀이공원에 갔다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o1",
+   "playable": "o1",
+   "explain": "홑문장·겹문장 구별"
+  },
+  {
+   "_order": 172,
+   "id": "KOR4-STRUCT-025",
+   "topic": "문장의 짜임",
+   "stage": 5,
+   "type": "single",
+   "prompt": "동생은 키가 작지만 힘이 세다.  이 문장은 홑문장일까요, 겹문장일까요?",
+   "hint": "서술어가 몇 개인지 세어 보아요.",
+   "options": [
+    {
+     "id": "o1",
+     "emoji": "",
+     "text": "홑문장"
+    },
+    {
+     "id": "o2",
+     "emoji": "",
+     "text": "겹문장"
+    }
+   ],
+   "answer": "o2",
+   "playable": "o2",
+   "explain": "홑문장·겹문장 구별"
+  }
+ ]
+}

@@ -53,6 +53,7 @@ from fastapi.responses import FileResponse
 from jwt import PyJWTError
 from pydantic import BaseModel, Field
 from sqlalchemy import case, func, not_
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
@@ -61,6 +62,8 @@ from app.core.security import decode_token, new_uuid
 from app.db.session import SessionLocal, get_db
 from app.models import (
     Course,
+    CourseEnrollment,
+    CourseOrder,
     Lecture,
     LectureCheckpointEvent,
     LectureMaterial,
@@ -69,10 +72,12 @@ from app.models import (
     LectureQuestionReport,
     LectureTranscript,
     LectureWatchProgress,
+    Notification,
     User,
 )
 from app.services import auth_service, lecture_service
 from app.services.captcha_service import EDU_SUBJECTS
+from app.services.course_pricing import effective_course_price
 from app.utils.helpers import audit
 
 router = APIRouter(tags=["lectures"])
@@ -305,6 +310,37 @@ def _get_active_lecture(db: Session, lecture_id: str) -> Lecture:
     return lec
 
 
+def _require_paid_course_access(db: Session, student_id: str, lec: Lecture) -> None:
+    """유료 코스 강의는 결제로 활성화된 수강권이 있을 때만 접근시킨다.
+
+    무료 코스와 코스 미지정 강의는 기존 동작을 유지한다. 유료 코스만 서버에서 수강권을
+    검사하므로 강의 URL을 직접 호출해 결제 화면을 우회할 수 없다.
+    """
+    if not lec.course_id:
+        return
+    course = db.get(Course, lec.course_id)
+    if course is None or effective_course_price(course) == 0:
+        return
+    enrolled = (
+        db.query(CourseEnrollment.id)
+        .filter(
+            CourseEnrollment.student_id == student_id,
+            CourseEnrollment.course_id == lec.course_id,
+            CourseEnrollment.status == "active",
+        )
+        .first()
+    )
+    if enrolled is None:
+        raise HTTPException(
+            status.HTTP_402_PAYMENT_REQUIRED,
+            detail={
+                "reason": "payment_required",
+                "message": "결제를 완료한 뒤 강의를 이용할 수 있어요.",
+                "course_id": lec.course_id,
+            },
+        )
+
+
 # ================================================================ 학생
 def _progress_map(db: Session, student_id: str, lecture_ids: list[str]) -> dict:
     return {
@@ -448,6 +484,16 @@ def list_student_courses(
                 CourseCompletion.course_id.in_(course_ids or [""]))
         .all()
     }
+    enrolled_ids = {
+        row[0]
+        for row in db.query(CourseEnrollment.course_id)
+        .filter(
+            CourseEnrollment.student_id == principal.id,
+            CourseEnrollment.status == "active",
+            CourseEnrollment.course_id.in_(course_ids or [""]),
+        )
+        .all()
+    }
     out = []
     for c in courses:
         lec_ids = [
@@ -473,6 +519,15 @@ def list_student_courses(
                 "order_no": int(c.order_no or 0),
                 "instructor_name": names.get(c.instructor_id),
                 "lecture_count": len(lec_ids),
+                "pricing": {
+                    "price": int(c.price or 0),
+                    "sale_price": c.sale_price,
+                    "sale_ends_at": c.sale_ends_at.isoformat() if c.sale_ends_at else None,
+                    "effective_price": effective_course_price(c),
+                    "is_free": effective_course_price(c) == 0,
+                },
+                # 수강신청 여부 — true면 '내 코스'(신청함), false면 카탈로그(수강신청 버튼)
+                "enrolled": c.id in enrolled_ids,
                 # 코스 Q — 이 코스 강의에서 은행으로 배치된 문항 수. 화면 규칙:
                 # unlocked>0 → '이 코스 문제 풀기(N)' 버튼 / total>0 & unlocked=0 →
                 # "완주하면 열려요" 잠금 안내 / total=0 → 아무것도 안 보임(아직 없음).
@@ -508,6 +563,152 @@ def list_student_courses(
     return out
 
 
+def _notify_enroll(student_id: str, course_id: str, *, session_factory=SessionLocal) -> None:
+    """수강신청 완료 인앱 알림을 응답 후 별도 DB 세션으로 기록한다."""
+    db = session_factory()
+    try:
+        course = db.get(Course, course_id)
+        if course is None:
+            return
+        db.add(
+            Notification(
+                student_id=student_id,
+                user_id=None,
+                organization_id=None,
+                child_id=None,
+                read_at=None,
+                type="course_enrolled",
+                category="학습",
+                title="수강신청 완료",
+                message=f"‘{course.title}’ 코스 수강신청이 완료됐어요.",
+            )
+        )
+        db.commit()
+    except Exception:  # noqa: BLE001 — 알림 실패가 이미 확정된 결제를 되돌리면 안 된다
+        db.rollback()
+    finally:
+        db.close()
+
+
+def activate_enrollment(db: Session, student_id: str, course_id: str) -> bool:
+    """(student_id, course_id) 수강신청을 active로 upsert 하고, '새로 active가 됐는지'를 돌려준다.
+
+    무료 자유 신청과 결제 확정(payments.confirm) 두 경로가 공유하는 단일 진실원 — 재신청(취소했던
+    코스)이면 같은 행을 되살려 이전 진도를 이어가고(진도는 별도 테이블), 동시 신청 경합은 유니크
+    인덱스가 막으므로 IntegrityError를 롤백 후 멱등 처리한다. 커밋까지 여기서 한다.
+    반환값(newly_active)이 True일 때만 호출부가 완료 알림을 보낸다(중복 알림 방지)."""
+    e = (
+        db.query(CourseEnrollment)
+        .filter(
+            CourseEnrollment.student_id == student_id,
+            CourseEnrollment.course_id == course_id,
+        )
+        .first()
+    )
+    was_active = e is not None and e.status == "active"
+    if e is None:
+        e = CourseEnrollment(
+            student_id=student_id,
+            course_id=course_id,
+            status="active",
+            enrolled_at=datetime.now(),
+        )
+        db.add(e)
+    else:
+        e.status = "active"  # 재신청 — 진도(시청·시험)는 별도 테이블이라 그대로 이어간다
+    try:
+        db.commit()
+    except IntegrityError:
+        # 동시 신청 경합(두 탭/기기가 같이 e=None을 보고 INSERT) — 유니크 인덱스가 한쪽을
+        # 막는다. 신청 자체는 성공한 것이므로 롤백 후 기존 행을 active로 맞추고 멱등하게 성공 처리.
+        db.rollback()
+        e = (
+            db.query(CourseEnrollment)
+            .filter(
+                CourseEnrollment.student_id == student_id,
+                CourseEnrollment.course_id == course_id,
+            )
+            .first()
+        )
+        if e is not None and e.status != "active":
+            e.status = "active"
+            db.commit()
+    return not was_active
+
+
+@router.post("/courses/{course_id}/enroll")
+def enroll_course(
+    course_id: str,
+    background_tasks: BackgroundTasks,
+    principal: Principal = Depends(require_student),
+    db: Session = Depends(get_db),
+):
+    """코스 수강신청 — 무료 자유 신청(Coursera 무료 모델). 재신청(취소했던 코스)이면 같은 행을
+    active로 되살려 이전 진도를 이어간다((student_id, course_id) 1행 upsert). 활성 코스만 가능.
+
+    신청이 '새로 active가 되는 전환'일 때만 완료 알림을 보낸다(이미 수강 중인데 다시 눌러도
+    중복 알림 안 보냄). 알림은 응답 후 백그라운드(인앱+이메일). 유료 코스 결제 경로는
+    payments.py가 결제 확정 후 같은 activate_enrollment를 부른다."""
+    c = db.get(Course, course_id)
+    if c is None or c.status != "active":
+        raise HTTPException(status.HTTP_404_NOT_FOUND, detail="코스를 찾을 수 없어요.")
+    if effective_course_price(c) > 0:
+        raise HTTPException(
+            status.HTTP_402_PAYMENT_REQUIRED,
+            detail={
+                "reason": "payment_required",
+                "message": "유료 코스는 결제를 완료한 뒤 수강할 수 있어요.",
+                "course_id": c.id,
+                "amount": effective_course_price(c),
+            },
+        )
+    newly_active = activate_enrollment(db, principal.id, course_id)
+    if newly_active:
+        background_tasks.add_task(_notify_enroll, principal.id, course_id)
+    return {"ok": True, "enrolled": True}
+
+
+@router.delete("/courses/{course_id}/enroll")
+def unenroll_course(
+    course_id: str,
+    principal: Principal = Depends(require_student),
+    db: Session = Depends(get_db),
+):
+    """수강 취소 — 무료 수강권만 withdrawn 처리하며, 유료 수강권은 환불 API로 유도한다."""
+    e = (
+        db.query(CourseEnrollment)
+        .filter(
+            CourseEnrollment.student_id == principal.id,
+            CourseEnrollment.course_id == course_id,
+            CourseEnrollment.status == "active",
+        )
+        .first()
+    )
+    if e is not None:
+        # paid 주문이 있는 유료 수강권은 단순 수강취소로 회수하면 결제는 남고 접근만 끊긴다.
+        # 결제 취소 API가 PG 환불과 수강권 회수를 한 흐름으로 처리하도록 유도한다.
+        paid_order = (
+            db.query(CourseOrder.id)
+            .filter(
+                CourseOrder.student_id == principal.id,
+                CourseOrder.course_id == course_id,
+                CourseOrder.status == "paid",
+            )
+            .first()
+        )
+        if paid_order is not None:
+            raise HTTPException(
+                status.HTTP_409_CONFLICT,
+                detail={
+                    "reason": "paid_enrollment",
+                    "message": "결제한 코스는 결제 취소 메뉴에서 환불해 주세요.",
+                },
+            )
+        e.status = "withdrawn"
+        db.commit()
+    return {"ok": True, "enrolled": False}
+
+
 @router.get("/lectures/{lecture_id}")
 def lecture_detail(
     lecture_id: str,
@@ -515,6 +716,7 @@ def lecture_detail(
     db: Session = Depends(get_db),
 ):
     lec = _get_active_lecture(db, lecture_id)
+    _require_paid_course_access(db, principal.id, lec)
     progress = lecture_service.ensure_progress(db, principal.id, lec)
     db.commit()  # 최초 진입 시 진행 행(첫 체크포인트 예약 포함) 확정
     # 강의실 사이드바 목차 — 코스에 담긴 강의면 '그 코스'의 강의들(같은 커리큘럼 묶음),
@@ -580,6 +782,7 @@ def lecture_session_start(
         db, f"lect-ss:{principal.id}", limit=RATE_SESSION_PER_HOUR, window_seconds=3600
     )
     lec = _get_active_lecture(db, lecture_id)
+    _require_paid_course_access(db, principal.id, lec)
     progress = lecture_service.ensure_progress(db, principal.id, lec)
     session_id = new_uuid()  # 서버 발급 — 클라 입력이 끼어들 자리가 없다
     lecture_service.claim_session(db, progress, session_id)  # 동시 세션이면 409
@@ -618,6 +821,7 @@ def lecture_progress(
     )
     session_id = _verify_session_token(x_lecture_session, lecture_id, principal.id)
     lec = _get_active_lecture(db, lecture_id)
+    _require_paid_course_access(db, principal.id, lec)
     progress = lecture_service.ensure_progress(db, principal.id, lec)
     lecture_service.claim_session(db, progress, session_id)  # 동시 세션이면 409
     state = lecture_service.advance(db, progress, lec, req.position_sec)
@@ -642,6 +846,7 @@ def lecture_takeover(
         db, f"lect-tk:{principal.id}", limit=RATE_TAKEOVER_PER_HOUR, window_seconds=3600
     )
     lec = _get_active_lecture(db, lecture_id)
+    _require_paid_course_access(db, principal.id, lec)
     progress = lecture_service.ensure_progress(db, principal.id, lec)
     session_id = new_uuid()  # takeover도 서버 발급 — 이전 세션과 절대 겹치지 않는다
     lecture_service.claim_session(db, progress, session_id, force=True)
@@ -668,6 +873,7 @@ def lecture_stream(
     lru_cache 서빙(정적 에셋 방식)은 영상엔 금지(RAM 폭발 + Range 미지원)."""
     student_id, session_id = _verify_stream_token(t, lecture_id)
     lec = _get_active_lecture(db, lecture_id)
+    _require_paid_course_access(db, student_id, lec)
     progress = (
         db.query(LectureWatchProgress)
         .filter(
@@ -746,7 +952,8 @@ def lecture_material_download(
 
     항상 attachment + octet-stream으로 내려보낸다 — 브라우저 인라인 렌더(HTML/SVG류 XSS)를
     구조적으로 막는다. link 자료는 프론트가 url로 직접 이동하므로 이 엔드포인트 대상이 아니다."""
-    _get_active_lecture(db, lecture_id)  # hidden/deleted 강의의 자료는 학생에게 닫힌다
+    lec = _get_active_lecture(db, lecture_id)  # hidden/deleted 강의의 자료는 학생에게 닫힌다
+    _require_paid_course_access(db, principal.id, lec)
     mat = db.get(LectureMaterial, material_id)
     if mat is None or mat.lecture_id != lecture_id or mat.status != "active":
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="자료를 찾을 수 없습니다.")
@@ -857,6 +1064,22 @@ class _CourseUpdate(BaseModel):
     status: str | None = None  # active|hidden
 
 
+class _CoursePricingUpdate(BaseModel):
+    price: int = Field(ge=0, le=100_000_000)
+    sale_price: int | None = Field(default=None, ge=0, le=100_000_000)
+    sale_ends_at: datetime | None = None
+
+
+def _course_pricing_row(c: Course) -> dict:
+    return {
+        "price": int(c.price or 0),
+        "sale_price": c.sale_price,
+        "sale_ends_at": c.sale_ends_at.isoformat() if c.sale_ends_at else None,
+        "effective_price": effective_course_price(c),
+        "is_free": effective_course_price(c) == 0,
+    }
+
+
 def _get_ops_course(db: Session, course_id: str, principal: Principal) -> Course:
     """코스 로더 — 운영자는 전체, 강사는 자기 코스(instructor_id)만. 남의 코스는 403이
     아니라 404(강의 스코프 _get_ops_lecture와 동일 — 존재 여부를 흘리지 않는다)."""
@@ -875,6 +1098,12 @@ def _course_row(db: Session, c: Course) -> dict:
         .scalar()
         or 0
     )
+    enrolled_count = (
+        db.query(func.count(CourseEnrollment.id))
+        .filter(CourseEnrollment.course_id == c.id, CourseEnrollment.status == "active")
+        .scalar()
+        or 0
+    )
     return {
         "id": c.id,
         "title": c.title,
@@ -884,6 +1113,8 @@ def _course_row(db: Session, c: Course) -> dict:
         "status": c.status,
         "instructor_id": c.instructor_id,
         "lecture_count": int(lecture_count),
+        "enrolled_count": int(enrolled_count),
+        "pricing": _course_pricing_row(c),
         "created_at": c.created_at.isoformat() if c.created_at else None,
     }
 
@@ -969,6 +1200,43 @@ def ops_update_course(
     )
     db.commit()
     return _course_row(db, c)
+
+
+@router.put("/ops/courses/{course_id}/pricing")
+def ops_update_course_pricing(
+    course_id: str,
+    req: _CoursePricingUpdate,
+    principal: Principal = Depends(require_content_author),
+    db: Session = Depends(get_db),
+):
+    """강사가 자기 코스의 서버 정본 가격을 설정한다.
+
+    결제 주문은 이 값을 원 단위 정수로 스냅샷하므로 프런트가 다른 금액을 보내도 승인되지 않는다.
+    """
+    c = _get_ops_course(db, course_id, principal)
+    if req.sale_price is not None and req.sale_price > req.price:
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST, detail="할인가는 정상가보다 클 수 없습니다."
+        )
+    sale_ends_at = req.sale_ends_at
+    if sale_ends_at is not None and sale_ends_at.tzinfo is not None:
+        # 이 코드베이스의 DB 시각 규약은 KST local naive다.
+        sale_ends_at = sale_ends_at.astimezone().replace(tzinfo=None)
+    before = _course_pricing_row(c)
+    c.price = req.price
+    c.sale_price = req.sale_price
+    c.sale_ends_at = sale_ends_at if req.sale_price is not None else None
+    audit(
+        db,
+        action="course.pricing.update",
+        actor_user_id=principal.id,
+        target_type="course",
+        target_id=c.id,
+        before=before,
+        after=_course_pricing_row(c),
+    )
+    db.commit()
+    return _course_pricing_row(c)
 
 
 @router.delete("/ops/courses/{course_id}")

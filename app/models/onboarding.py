@@ -1,9 +1,33 @@
 from datetime import datetime
 
-from sqlalchemy import CHAR, DateTime, Integer, String
+from sqlalchemy import CHAR, JSON, DateTime, Integer, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base, Timestamps, UUIDPk
+
+
+class StudentOnboarding(Base, UUIDPk, Timestamps):
+    """가입 직후 온보딩(관심사 선택) 상태 — 학생당 1행.
+
+    관심사는 별도 테이블 대신 JSON 배열로 둔다: 값의 정본이 EDU_SUBJECTS 6과목으로 고정
+    (학생당 최대 6개)이고, 읽는 쪽이 언제나 '이 학생의 관심사 전체'라 조인·집계가 없다.
+    **배열 순서 = 선호 우선순위**(먼저 고른 과목이 추천 상단) — 저장 시 순서를 보존한다.
+
+    completed_at은 '온보딩 화면을 통과했다'는 표시다. 관심사를 하나도 안 고르고 건너뛰어도
+    (interests=[]) 채운다 — 프론트는 이 값 하나로 온보딩 재노출 여부를 판정하고, 빈 배열은
+    '아직 안 물어봤다'가 아니라 '물어봤고 안 골랐다'로 읽힌다. 나중에 설정에서 관심사를
+    고쳐도 최초 완료 시각은 유지한다(온보딩 통과 시점의 기록).
+    """
+
+    __tablename__ = "student_onboarding"
+    # 학생당 1행 — 동시 저장 요청이 행을 둘 만들지 못하게 DB에서 막는다.
+    # 조회는 전부 student_id 단건이라 이 유니크 인덱스가 조회 인덱스도 겸한다.
+    __table_args__ = (UniqueConstraint("student_id", name="uq_student_onboarding"),)
+
+    # 소프트 참조(FK 없음) — 신규 테이블 규약(collation 정합 회피).
+    student_id: Mapped[str] = mapped_column(CHAR(36))
+    interests: Mapped[list] = mapped_column(JSON, default=list)  # ["수학","과학"] — 선택 순서
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
 class StudentJoinCode(Base, UUIDPk, Timestamps):

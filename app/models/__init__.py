@@ -65,7 +65,7 @@ from app.models.misc import (
     SystemSetting,
     UserSetting,
 )
-from app.models.onboarding import ParentInviteCode, StudentJoinCode
+from app.models.onboarding import ParentInviteCode, StudentJoinCode, StudentOnboarding
 from app.models.organization import Institution, Organization, OrgRegistrationRequest
 from app.models.site import (
     ApiKey,
@@ -139,6 +139,7 @@ __all__ = [
     "ClassAssignment",
     "ParentStudentLink",
     "StudentJoinCode",
+    "StudentOnboarding",
     "PasswordResetToken",
     "PaymentMethod",
     "Plan",
